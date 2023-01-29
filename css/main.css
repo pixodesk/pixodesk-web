@@ -390,7 +390,7 @@ a { font-weight: 600; }
 
 .small-cards-grid { position: relative; display: grid; grid-template-columns: 1fr; grid-template-rows: auto; column-gap: 1em; row-gap: 1em; }
 
-.small-cards-grid .small-card { justify-self: center; max-width: 25em; }
+.small-cards-grid .small-card { justify-self: center; max-width: calc(min(25em, 100%)); }
 
 @media (max-width: 800px) { .small-cards-grid { grid-template-columns: 1fr; } .small-cards-grid .small-card { justify-self: stretch; } }
 
@@ -414,27 +414,25 @@ a { font-weight: 600; }
 
 .sea-bg { margin-top: -4px; width: 100%; height: 10vw; background: #63d4b2; }
 
-.section { position: relative; display: flex; flex-direction: column; align-items: center; margin-top: 4em; }
+.section { position: relative; display: flex; flex-direction: column; align-items: center; margin-top: 4em; width: 100%; box-sizing: border-box; padding: 1em; }
 
-.section.pixodesk-section .small-cards-grid { margin-left: 5%; margin-right: 5%; max-width: 70em; }
+.section.pixodesk-section .small-cards-grid { margin-left: 5%; margin-right: 5%; max-width: calc(min(70em, 100%)); }
 
-.section.lottie-section { padding: 32px 32px 16px 32px; background: #f8f8f8; border-radius: 16px; border: 1px solid rgba(0, 0, 0, 0.1); margin-left: 5%; margin-right: 5%; max-width: 70em; }
+.section.lottie-section { padding: 32px 32px 16px 32px; background: #f8f8f8; border-radius: 16px; border: 1px solid rgba(0, 0, 0, 0.1); max-width: calc(min(70em, 90%)); }
 
 .section.lottie-section .small-card { border: none; background: none; }
 
-.section .section-header { max-width: 60em; }
+.section .section-header { max-width: calc(min(60em, 90%)); }
 
 .section .section-header .section-title1 { position: relative; text-align: center; }
 
-.section .section-header .section-title2 { max-width: 40em; margin-top: 1em; margin-bottom: 2em; }
+.section .section-header .section-title2 { max-width: calc(min(40em, 100%)); margin-top: 1em; margin-bottom: 2em; }
 
-.section.icons-section, .section.splash-section { padding: 32px 32px 32px 32px; }
-
-.section.icons-section video, .section.splash-section video { padding: 42px; border-radius: 16px; background: #fff; border: 1px solid rgba(0, 0, 0, 0.1); }
+.section.icons-section video, .section.splash-section video { border-radius: 16px; background: #fff; border: 1px solid rgba(0, 0, 0, 0.1); }
 
 .section.icons-section { background: linear-gradient(90deg, #fafafa 0%, #e6e6e6 50%, #fafafa 100%); }
 
-.section.loaders-section video { padding: 42px; border-radius: 16px; background: #fff; }
+.section.loaders-section video { border-radius: 16px; background: #fff; }
 
 .section.splash-section { background: linear-gradient(90deg, #fafafa 0%, #e6e6e6 50%, #fafafa 100%); }
 

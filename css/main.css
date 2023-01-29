@@ -199,7 +199,7 @@ html, body { font-size: 18px; }
 
 .buttons-stores { flex-direction: row; justify-content: flex-end; }
 
-@media (max-width: 800px) { .site-titles h1.site-title1 { font-size: 3rem; } .buttons-stores { flex-direction: column; align-items: center; } }
+@media (max-width: 800px) { .site-titles h1.site-title1 { font-size: 3rem; } .page1-animations { margin-top: 42px; } .buttons-stores { flex-direction: column; align-items: center; } }
 
 .site-titles h1.site-title1 { font-weight: 400; }
 
@@ -226,6 +226,20 @@ html, body { font-size: 18px; }
 .buttons-stores .button-store svg { height: 24px; width: 24px; margin-right: 4px; }
 
 .sea-bg { margin-top: -4px; width: 100%; height: 10vw; background: #63d4b2; }
+
+.page1-animations { position: relative; width: 100%; max-width: 2500px; box-sizing: border-box; transform: translate(0, -6%); }
+
+.page1-animations .page1-bg-animation { box-sizing: border-box; width: 100%; padding-top: 48%; background-image: url("image/main-boat-bright.jpg"); background-size: cover; background-repeat: no-repeat; background-position: center center; }
+
+.page1-animations .page1-bg-animation video { position: absolute; left: 0; top: 0; width: 100%; }
+
+.page1-animations .page1-fg-animation-with-buttons { position: relative; box-sizing: border-box; margin-top: 32px; position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%); width: 38%; padding: 8px 16px; background: #222; border-radius: 16px; }
+
+.page1-animations .page1-fg-animation-with-buttons .page1-fg-animation-wrap { position: relative; width: 100%; }
+
+.page1-animations .page1-fg-animation-with-buttons .page1-fg-animation-wrap .page1-fg-animation { position: relative; box-sizing: border-box; width: 100%; padding-top: 71.4%; background: #fff; background-image: url("image/boat.jpg"); background-size: cover; background-repeat: no-repeat; background-position: center center; }
+
+.page1-animations .page1-fg-animation-with-buttons .page1-fg-animation-wrap .page1-fg-animation video { position: absolute; left: 0; top: 0; width: 100%; }
 
 html, body { font-size: 18px; }
 
@@ -412,11 +426,13 @@ body.fullbleed { margin: 0; height: 100vh; }
 
 .section.icons-section { background: linear-gradient(90deg, #fafafa 0%, #e6e6e6 50%, #fafafa 100%); }
 
-.section.icons-section video { padding: 0 42px; }
+.section.icons-section video { padding: 1em; box-sizing: border-box; width: 30em; max-width: 90%; }
 
-.section.loaders-section video { border-radius: 16px; background: #fff; }
+.section.loaders-section video { max-width: calc(min(30em, 90%)); border-radius: 16px; background: #fff; }
 
 .section.splash-section { background: linear-gradient(90deg, #fafafa 0%, #e6e6e6 50%, #fafafa 100%); }
+
+.section.splash-section video { padding: 1em; box-sizing: border-box; }
 
 html, body { font-size: 18px; }
 

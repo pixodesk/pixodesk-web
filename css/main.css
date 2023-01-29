@@ -348,17 +348,21 @@ html, body { font-size: 18px; color: #444; }
 
 .buttons-stores { flex-direction: row; justify-content: flex-end; }
 
-@media (max-width: 800px) { html, body { font-size: 16px; } .buttons-stores { flex-direction: column; align-items: center; } }
+.small-card-text, .small-card-text li { font-size: 0.8rem; font-weight: 300; }
 
-@media (min-width: 800px) and (max-width: 1700px) { html, body { font-size: 20px; } }
+.site-titles h1.site-title1 { font-size: 4rem; }
+
+@media (max-width: 800px) { html, body { font-size: 16px; } .buttons-stores { flex-direction: column; align-items: center; } .small-card-text, .small-card-text li { font-size: 1rem; } .site-titles h1.site-title1 { font-size: 3rem; } }
+
+@media (min-width: 800px) and (max-width: 1700px) { html, body { font-size: 22px; } }
 
 @media (min-width: 1700px) { html, body { font-size: 28px; } }
 
 a { font-weight: 600; }
 
-.site-titles h1.site-title1 { font-size: 4rem; font-weight: 400; }
+.site-titles h1.site-title1 { font-weight: 400; }
 
-.site-titles h1.site-title1 .strong-text { font-size: 4rem; font-weight: 600; color: #000; }
+.site-titles h1.site-title1 .strong-text { font-weight: 600; color: #000; }
 
 .site-titles .site-titles2 h2.site-title2 { font-size: 1rem; font-weight: 300; line-height: 140%; }
 
@@ -382,9 +386,7 @@ a { font-weight: 600; }
 
 .small-card-header .small-card-title .text-title { margin-right: 1em; line-height: 130%; }
 
-.small-card-text { font-size: 0.8rem; font-weight: 300; }
-
-.small-card-text li { text-align: justify; font-size: 0.8rem; line-height: 170%; }
+.small-card-text li { text-align: justify; line-height: 170%; }
 
 .small-cards-grid { position: relative; display: grid; grid-template-columns: 1fr; grid-template-rows: auto; column-gap: 1em; row-gap: 1em; }
 

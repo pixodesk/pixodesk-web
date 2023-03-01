@@ -2,7 +2,7 @@ html, body, ul, ul li, h1, h2, h3, h4, h5, h6, div, span, img { margin: 0; paddi
 
 html, body { margin: 0; padding: 0; font-family: "Montserrat", sans-serif; color: #444; }
 
-a { color: #06c; text-decoration: none; font-weight: 600; }
+a { color: #06c; text-decoration: none; }
 
 .strong-text { font-weight: bold; }
 
@@ -480,9 +480,9 @@ html, body { font-size: 18px; }
 
 .small-cards-grid { display: grid; column-gap: 1em; grid-template-columns: 1fr; }
 
-.small-cards-grid .small-card-header { align-self: end; }
+.small-cards-grid .small-card-header { align-self: start; }
 
-.small-cards-grid .small-card-text { margin-bottom: 2em; padding: 1em; border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 0.5em; }
+.small-cards-grid .small-card-text { margin-bottom: 2em; border-radius: 0.5em; }
 
 @media (max-width: 800px) { .small-cards-grid { grid-template-columns: 1fr; grid-template-areas: "h1" "t1" "h2" "t2" "h3" "t3" "h4" "t4" "h5" "t5" "h6" "t6" "h7" "t7" "h8" "t8" "h9" "t9"; } }
 

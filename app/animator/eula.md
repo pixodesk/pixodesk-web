@@ -1,6 +1,3 @@
-# --- DRAFT ---
-
-
 # END USER LICENSE AGREEMENT
 
 Please read this End User License Agreement ("EULA") before You purchase a License Key for the Pixodesk Animator application and subsequently download and use the Pixodesk Animator application.
@@ -51,7 +48,7 @@ Pixodesk Animator application may include various open source software component
 
 ### PERMITTED USE AND RESTRICTIONS
 
-In order to be able to install the Pixodesk Animator application and receive Updates and upgrades, Your computer shall have access to the Internet and shall meet the system requirements **DESCRIBED ON THE STORE YOU PURCHASING**
+In order to be able to install the Pixodesk Animator application and receive Updates and upgrades, Your computer shall have access to the Internet and shall meet the system requirements described either on Microsoft Store download page for Microsoft users or Apple App Store download page for Mac users.
 
 You shall Use the Pixodesk Animator application in accordance with applicable laws and shall not:
 rent, lease, lend, sell, redistribute, sublicense or otherwise commercially exploit the License;

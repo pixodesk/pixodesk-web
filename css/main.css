@@ -233,11 +233,11 @@ html, body { font-size: 18px; }
 
 .page1-animations .page1-bg-animation video { position: absolute; left: 0; top: 0; width: 100%; }
 
-.page1-animations .page1-fg-animation-with-buttons { position: relative; box-sizing: border-box; margin-top: 32px; position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%); width: 38%; padding: 8px 16px; background: #222; border-radius: 16px; }
+.page1-animations .page1-fg-animation-with-buttons { position: relative; box-sizing: border-box; margin-top: 32px; position: absolute; top: 37%; left: 50%; transform: translate(-50%, -50%); width: 50%; padding: 8px 16px; background: #222; border-radius: 16px; }
 
 .page1-animations .page1-fg-animation-with-buttons .page1-fg-animation-wrap { position: relative; width: 100%; }
 
-.page1-animations .page1-fg-animation-with-buttons .page1-fg-animation-wrap .page1-fg-animation { position: relative; box-sizing: border-box; width: 100%; padding-top: 71.4%; background: #fff; background-image: url("image/boat.jpg"); background-size: cover; background-repeat: no-repeat; background-position: center center; }
+.page1-animations .page1-fg-animation-with-buttons .page1-fg-animation-wrap .page1-fg-animation { position: relative; box-sizing: border-box; width: 100%; padding-top: 56%; background: #fff; background-image: url("image/boat.jpg"); background-size: cover; background-repeat: no-repeat; background-position: center center; }
 
 .page1-animations .page1-fg-animation-with-buttons .page1-fg-animation-wrap .page1-fg-animation video { position: absolute; left: 0; top: 0; width: 100%; }
 

@@ -414,7 +414,7 @@ body.fullbleed { margin: 0; height: 100vh; }
 
 .section.pixodesk-section .small-cards-grid { margin-left: 5%; margin-right: 5%; max-width: calc(min(70em, 100%)); }
 
-.section.lottie-section { padding: 32px 32px 16px 32px; background: #f8f8f8; border-radius: 16px; border: 1px solid rgba(0, 0, 0, 0.1); max-width: calc(min(70em, 90%)); }
+.section.lottie-section { padding: 32px 32px 16px 32px; border-radius: 16px; background: linear-gradient(90deg, #f2f2f2 0%, white 5%, white 95%, #f2f2f2 100%); max-width: calc(min(70em, 90%)); }
 
 .section.lottie-section .small-card { border: none; background: none; }
 
@@ -422,15 +422,15 @@ body.fullbleed { margin: 0; height: 100vh; }
 
 .section .section-header .section-title2, .section .section-header .section-title3 { max-width: calc(min(40em, 100%)); margin-top: 1em; margin-bottom: 2em; }
 
-.section.icons-section video, .section.splash-section video { border-radius: 16px; background: #fff; border: 1px solid rgba(0, 0, 0, 0.1); }
+.section.icons-section video, .section.splash-section video { border-radius: 16px; background: #fff; }
 
-.section.icons-section { background: linear-gradient(90deg, #fafafa 0%, #e6e6e6 50%, #fafafa 100%); }
+.section.icons-section { background: linear-gradient(90deg, white 0%, #f2f2f2 50%, white 100%); }
 
 .section.icons-section video { padding: 1em; box-sizing: border-box; width: 30em; max-width: 90%; }
 
 .section.loaders-section video { max-width: calc(min(30em, 90%)); border-radius: 16px; background: #fff; }
 
-.section.splash-section { background: linear-gradient(90deg, #fafafa 0%, #e6e6e6 50%, #fafafa 100%); }
+.section.splash-section { background: linear-gradient(90deg, white 0%, #f2f2f2 50%, white 100%); }
 
 .section.splash-section video { padding: 1em; box-sizing: border-box; }
 

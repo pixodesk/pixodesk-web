@@ -258,12 +258,11 @@
         <div class="page1-fg-animation-with-buttons shadow-12dp vertical layout center">
             <div class="page1-fg-animation-wrap">
                 <div class="page1-fg-animation">
-                    <video poster="image/office-small4.png" muted autoplay loop playsinline disablePictureInPicture>
+                    <video id="laptop-video" poster="image/office-small4.png" muted autoplay loop playsinline disablePictureInPicture>
                         <source src="image/office-small4.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
-
 
             <div class="store-buttons" style="position: absolute; bottom: calc(100% + 8px); right: 0; left: 0;">
                 
@@ -619,6 +618,13 @@
     </div>
 
 </div>
+
+
+<script>
+    let el = document.getElementById("laptop-video");
+    if (el) el.playbackRate = 0.25;
+</script>
+
 
 
 <div style="height: 2em;"></div>

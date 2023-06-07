@@ -404,6 +404,8 @@ body.fullbleed { margin: 0; height: 100vh; }
 
 .section div { position: relative; }
 
+.section.pixodesk-section { margin-top: 4rem; }
+
 .section.pixodesk-section .section-header .section-title1 { font-size: 2.5rem; }
 
 .section .section-header .section-title1 { font-size: 2rem; line-height: 170%; font-weight: 500; }
@@ -418,9 +420,31 @@ body.fullbleed { margin: 0; height: 100vh; }
 
 .section.pixodesk-section .small-cards-grid { margin-left: 5%; margin-right: 5%; max-width: calc(min(70em, 100%)); }
 
-.section.lottie-section { padding: 32px 32px 16px 32px; border-radius: 16px; background: linear-gradient(90deg, #f2f2f2 0%, white 5%, white 95%, #f2f2f2 100%); max-width: calc(min(70em, 90%)); }
+.section.lottie-section { margin-top: 0; padding-top: 8rem; padding-bottom: 8rem; max-width: calc(min(70em, 90%)); background: linear-gradient(90deg, white 0%, #f2f2f2 50%, white 100%); }
 
-.section.lottie-section .small-card { border: none; background: none; }
+.section.lottie-section .section-image { transform: translate(-1.5em, 0); }
+
+.section.lottie-section ._arrow1 { position: absolute; top: 80%; right: 100%; height: 8rem; color: rgba(0, 125, 255, 0.5); }
+
+.section.lottie-section ._arrow2 { position: absolute; top: 80%; left: 100%; height: 8rem; transform: scale(-1, 1); color: rgba(0, 200, 0, 0.5); }
+
+.section.lottie-section > ._first-col { width: 50%; }
+
+.section.lottie-section > ._first-col .small-card .small-card-header { margin-bottom: 2rem; }
+
+.section.lottie-section > ._first-col .small-card .small-card-header .small-card-title { font-size: 2rem; font-weight: 700; line-height: 100%; }
+
+.section.lottie-section > ._first-col .small-card .small-card-text, .section.lottie-section > ._first-col .small-card .small-card-text li { font-size: 1.25rem; font-weight: 300; line-height: 3em; }
+
+.section.lottie-section > ._second-col { width: 50%; }
+
+.section.lottie-section > ._second-col ul { list-style: none; }
+
+.section.lottie-section > ._second-col ._small-cards .small-card:not(:first-child) { margin-top: 2rem; }
+
+.section.lottie-section > ._second-col ._small-cards .small-card { background: #fff; box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); padding: 16px; border-radius: 16px; }
+
+.section.lottie-section > ._second-col ._small-cards .small-card .small-card-header { margin-bottom: 1.25em; }
 
 .section .section-header { max-width: calc(min(60em, 90%)); }
 

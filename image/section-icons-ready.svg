@@ -1,0 +1,1832 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 590 400" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <filter id="efShadow1" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceAlpha" result="drop_shadow_1" stdDeviation="0.5">
+      </feGaussianBlur>
+      <feOffset in="drop_shadow_1" result="drop_shadow_2" dx="0" dy="0">
+      </feOffset>
+      <feFlood result="drop_shadow_3" flood-color="rgb(207,230,255)" flood-opacity="100">
+      </feFlood>
+      <feComposite in="drop_shadow_3" in2="drop_shadow_2" operator="in" result="drop_shadow_4">
+      </feComposite>
+      <feMerge>
+        <feMergeNode>
+        </feMergeNode>
+        <feMergeNode in="SourceGraphic">
+        </feMergeNode>
+      </feMerge>
+    </filter>
+    <filter id="efShadow2" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceAlpha" result="drop_shadow_1" stdDeviation="0.5">
+      </feGaussianBlur>
+      <feOffset in="drop_shadow_1" result="drop_shadow_2" dx="0" dy="0">
+      </feOffset>
+      <feFlood result="drop_shadow_3" flood-color="rgb(207,230,255)" flood-opacity="100">
+      </feFlood>
+      <feComposite in="drop_shadow_3" in2="drop_shadow_2" operator="in" result="drop_shadow_4">
+      </feComposite>
+      <feMerge>
+        <feMergeNode>
+        </feMergeNode>
+        <feMergeNode in="SourceGraphic">
+        </feMergeNode>
+      </feMerge>
+    </filter>
+    <filter id="efShadow3" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceAlpha" result="drop_shadow_1" stdDeviation="0.5">
+      </feGaussianBlur>
+      <feOffset in="drop_shadow_1" result="drop_shadow_2" dx="0" dy="0">
+      </feOffset>
+      <feFlood result="drop_shadow_3" flood-color="rgb(207,230,255)" flood-opacity="100">
+      </feFlood>
+      <feComposite in="drop_shadow_3" in2="drop_shadow_2" operator="in" result="drop_shadow_4">
+      </feComposite>
+      <feMerge>
+        <feMergeNode>
+        </feMergeNode>
+        <feMergeNode in="SourceGraphic">
+        </feMergeNode>
+      </feMerge>
+    </filter>
+    <filter id="efShadow4" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceAlpha" result="drop_shadow_1" stdDeviation="0.5">
+      </feGaussianBlur>
+      <feOffset in="drop_shadow_1" result="drop_shadow_2" dx="0" dy="0">
+      </feOffset>
+      <feFlood result="drop_shadow_3" flood-color="rgb(207,230,255)" flood-opacity="100">
+      </feFlood>
+      <feComposite in="drop_shadow_3" in2="drop_shadow_2" operator="in" result="drop_shadow_4">
+      </feComposite>
+      <feMerge>
+        <feMergeNode>
+        </feMergeNode>
+        <feMergeNode in="SourceGraphic">
+        </feMergeNode>
+      </feMerge>
+    </filter>
+    <filter id="efShadow5" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceAlpha" result="drop_shadow_1" stdDeviation="0.5">
+      </feGaussianBlur>
+      <feOffset in="drop_shadow_1" result="drop_shadow_2" dx="0" dy="0">
+      </feOffset>
+      <feFlood result="drop_shadow_3" flood-color="rgb(207,230,255)" flood-opacity="100">
+      </feFlood>
+      <feComposite in="drop_shadow_3" in2="drop_shadow_2" operator="in" result="drop_shadow_4">
+      </feComposite>
+      <feMerge>
+        <feMergeNode>
+        </feMergeNode>
+        <feMergeNode in="SourceGraphic">
+        </feMergeNode>
+      </feMerge>
+    </filter>
+    <filter id="efShadow6" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceAlpha" result="drop_shadow_1" stdDeviation="0.5">
+      </feGaussianBlur>
+      <feOffset in="drop_shadow_1" result="drop_shadow_2" dx="0" dy="0">
+      </feOffset>
+      <feFlood result="drop_shadow_3" flood-color="rgb(207,230,255)" flood-opacity="100">
+      </feFlood>
+      <feComposite in="drop_shadow_3" in2="drop_shadow_2" operator="in" result="drop_shadow_4">
+      </feComposite>
+      <feMerge>
+        <feMergeNode>
+        </feMergeNode>
+        <feMergeNode in="SourceGraphic">
+        </feMergeNode>
+      </feMerge>
+    </filter>
+    <filter id="efShadow7" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceAlpha" result="drop_shadow_1" stdDeviation="0.5">
+      </feGaussianBlur>
+      <feOffset in="drop_shadow_1" result="drop_shadow_2" dx="0" dy="0">
+      </feOffset>
+      <feFlood result="drop_shadow_3" flood-color="rgb(207,230,255)" flood-opacity="100">
+      </feFlood>
+      <feComposite in="drop_shadow_3" in2="drop_shadow_2" operator="in" result="drop_shadow_4">
+      </feComposite>
+      <feMerge>
+        <feMergeNode>
+        </feMergeNode>
+        <feMergeNode in="SourceGraphic">
+        </feMergeNode>
+      </feMerge>
+    </filter>
+    <filter id="efShadow8" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceAlpha" result="drop_shadow_1" stdDeviation="0.5">
+      </feGaussianBlur>
+      <feOffset in="drop_shadow_1" result="drop_shadow_2" dx="0" dy="0">
+      </feOffset>
+      <feFlood result="drop_shadow_3" flood-color="rgb(207,230,255)" flood-opacity="100">
+      </feFlood>
+      <feComposite in="drop_shadow_3" in2="drop_shadow_2" operator="in" result="drop_shadow_4">
+      </feComposite>
+      <feMerge>
+        <feMergeNode>
+        </feMergeNode>
+        <feMergeNode in="SourceGraphic">
+        </feMergeNode>
+      </feMerge>
+    </filter>
+    <filter id="efShadow9" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceAlpha" result="drop_shadow_1" stdDeviation="0.5">
+      </feGaussianBlur>
+      <feOffset in="drop_shadow_1" result="drop_shadow_2" dx="0" dy="0">
+      </feOffset>
+      <feFlood result="drop_shadow_3" flood-color="rgb(207,230,255)" flood-opacity="100">
+      </feFlood>
+      <feComposite in="drop_shadow_3" in2="drop_shadow_2" operator="in" result="drop_shadow_4">
+      </feComposite>
+      <feMerge>
+        <feMergeNode>
+        </feMergeNode>
+        <feMergeNode in="SourceGraphic">
+        </feMergeNode>
+      </feMerge>
+    </filter>
+    <filter id="efShadow10" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceAlpha" result="drop_shadow_1" stdDeviation="0.5">
+      </feGaussianBlur>
+      <feOffset in="drop_shadow_1" result="drop_shadow_2" dx="0" dy="0">
+      </feOffset>
+      <feFlood result="drop_shadow_3" flood-color="rgb(207,230,255)" flood-opacity="100">
+      </feFlood>
+      <feComposite in="drop_shadow_3" in2="drop_shadow_2" operator="in" result="drop_shadow_4">
+      </feComposite>
+      <feMerge>
+        <feMergeNode>
+        </feMergeNode>
+        <feMergeNode in="SourceGraphic">
+        </feMergeNode>
+      </feMerge>
+    </filter>
+    <filter id="efShadow11" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceAlpha" result="drop_shadow_1" stdDeviation="0.5">
+      </feGaussianBlur>
+      <feOffset in="drop_shadow_1" result="drop_shadow_2" dx="0" dy="0">
+      </feOffset>
+      <feFlood result="drop_shadow_3" flood-color="rgb(207,230,255)" flood-opacity="100">
+      </feFlood>
+      <feComposite in="drop_shadow_3" in2="drop_shadow_2" operator="in" result="drop_shadow_4">
+      </feComposite>
+      <feMerge>
+        <feMergeNode>
+        </feMergeNode>
+        <feMergeNode in="SourceGraphic">
+        </feMergeNode>
+      </feMerge>
+    </filter>
+    <filter id="efShadow12" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceAlpha" result="drop_shadow_1" stdDeviation="0.5">
+      </feGaussianBlur>
+      <feOffset in="drop_shadow_1" result="drop_shadow_2" dx="0" dy="0">
+      </feOffset>
+      <feFlood result="drop_shadow_3" flood-color="rgb(207,230,255)" flood-opacity="100">
+      </feFlood>
+      <feComposite in="drop_shadow_3" in2="drop_shadow_2" operator="in" result="drop_shadow_4">
+      </feComposite>
+      <feMerge>
+        <feMergeNode>
+        </feMergeNode>
+        <feMergeNode in="SourceGraphic">
+        </feMergeNode>
+      </feMerge>
+    </filter>
+    <filter id="efShadow13" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceAlpha" result="drop_shadow_1" stdDeviation="0.5">
+      </feGaussianBlur>
+      <feOffset in="drop_shadow_1" result="drop_shadow_2" dx="0" dy="0">
+      </feOffset>
+      <feFlood result="drop_shadow_3" flood-color="rgb(207,230,255)" flood-opacity="100">
+      </feFlood>
+      <feComposite in="drop_shadow_3" in2="drop_shadow_2" operator="in" result="drop_shadow_4">
+      </feComposite>
+      <feMerge>
+        <feMergeNode>
+        </feMergeNode>
+        <feMergeNode in="SourceGraphic">
+        </feMergeNode>
+      </feMerge>
+    </filter>
+    <filter id="efShadow14" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceAlpha" result="drop_shadow_1" stdDeviation="0.5">
+      </feGaussianBlur>
+      <feOffset in="drop_shadow_1" result="drop_shadow_2" dx="0" dy="0">
+      </feOffset>
+      <feFlood result="drop_shadow_3" flood-color="rgb(207,230,255)" flood-opacity="100">
+      </feFlood>
+      <feComposite in="drop_shadow_3" in2="drop_shadow_2" operator="in" result="drop_shadow_4">
+      </feComposite>
+      <feMerge>
+        <feMergeNode>
+        </feMergeNode>
+        <feMergeNode in="SourceGraphic">
+        </feMergeNode>
+      </feMerge>
+    </filter>
+    <filter id="efShadow15" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceAlpha" result="drop_shadow_1" stdDeviation="0.5">
+      </feGaussianBlur>
+      <feOffset in="drop_shadow_1" result="drop_shadow_2" dx="0" dy="0">
+      </feOffset>
+      <feFlood result="drop_shadow_3" flood-color="rgb(207,230,255)" flood-opacity="100">
+      </feFlood>
+      <feComposite in="drop_shadow_3" in2="drop_shadow_2" operator="in" result="drop_shadow_4">
+      </feComposite>
+      <feMerge>
+        <feMergeNode>
+        </feMergeNode>
+        <feMergeNode in="SourceGraphic">
+        </feMergeNode>
+      </feMerge>
+    </filter>
+    <filter id="filter-msk2" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%">
+      <feComponentTransfer in="SourceGraphic">
+        <feFuncA type="table" tableValues="1.0 0.0">
+        </feFuncA>
+      </feComponentTransfer>
+    </filter>
+    <mask id="msk2" mask-type="alpha">
+      <g filter="url(#filter-msk2)">
+        <rect x="0" y="0" width="590" height="400" fill="#fff" opacity="0">
+        </rect>
+        <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,179.6569)translate(-277.2833,-173.6569)translate(245.9915,173.7589)scale(1.17,1.17)translate(-12,-12)translate(12,6)translate(-12,-5.9714)translate(12,11.6757)scale(0.7674,0.7674)translate(-12,-12.0774)">
+          <path d="M21,19L21,20L3,20L3,19L5,17L5,11C5,7.901,6.902,4.754,10,4.3C11.319,4.107,12.681,4.107,14,4.3C17.098,4.754,19,7.901,19,11L19,17L21,19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="rgb(0,0,0)" stroke="rgb(238,238,109)">
+          </path>
+        </g>
+      </g>
+    </mask>
+    <filter id="efShadow16" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceAlpha" result="drop_shadow_1" stdDeviation="2">
+      </feGaussianBlur>
+      <feOffset in="drop_shadow_1" result="drop_shadow_2" dx="0" dy="0">
+      </feOffset>
+      <feFlood result="drop_shadow_3" flood-color="rgb(100,174,255)" flood-opacity="100">
+      </feFlood>
+      <feComposite in="drop_shadow_3" in2="drop_shadow_2" operator="in" result="drop_shadow_4">
+      </feComposite>
+      <feMerge>
+        <feMergeNode>
+        </feMergeNode>
+        <feMergeNode in="SourceGraphic">
+        </feMergeNode>
+      </feMerge>
+    </filter>
+    <filter id="efShadow17" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceAlpha" result="drop_shadow_1" stdDeviation="2">
+      </feGaussianBlur>
+      <feOffset in="drop_shadow_1" result="drop_shadow_2" dx="0" dy="0">
+      </feOffset>
+      <feFlood result="drop_shadow_3" flood-color="rgb(100,174,255)" flood-opacity="100">
+      </feFlood>
+      <feComposite in="drop_shadow_3" in2="drop_shadow_2" operator="in" result="drop_shadow_4">
+      </feComposite>
+      <feMerge>
+        <feMergeNode>
+        </feMergeNode>
+        <feMergeNode in="SourceGraphic">
+        </feMergeNode>
+      </feMerge>
+    </filter>
+    <filter id="efShadow18" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceAlpha" result="drop_shadow_1" stdDeviation="2">
+      </feGaussianBlur>
+      <feOffset in="drop_shadow_1" result="drop_shadow_2" dx="0" dy="0">
+      </feOffset>
+      <feFlood result="drop_shadow_3" flood-color="rgb(100,174,255)" flood-opacity="100">
+      </feFlood>
+      <feComposite in="drop_shadow_3" in2="drop_shadow_2" operator="in" result="drop_shadow_4">
+      </feComposite>
+      <feMerge>
+        <feMergeNode>
+        </feMergeNode>
+        <feMergeNode in="SourceGraphic">
+        </feMergeNode>
+      </feMerge>
+    </filter>
+    <filter id="efShadow19" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceAlpha" result="drop_shadow_1" stdDeviation="2">
+      </feGaussianBlur>
+      <feOffset in="drop_shadow_1" result="drop_shadow_2" dx="0" dy="0">
+      </feOffset>
+      <feFlood result="drop_shadow_3" flood-color="rgb(100,174,255)" flood-opacity="100">
+      </feFlood>
+      <feComposite in="drop_shadow_3" in2="drop_shadow_2" operator="in" result="drop_shadow_4">
+      </feComposite>
+      <feMerge>
+        <feMergeNode>
+        </feMergeNode>
+        <feMergeNode in="SourceGraphic">
+        </feMergeNode>
+      </feMerge>
+    </filter>
+    <filter id="efShadow20" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceAlpha" result="drop_shadow_1" stdDeviation="2">
+      </feGaussianBlur>
+      <feOffset in="drop_shadow_1" result="drop_shadow_2" dx="0" dy="0">
+      </feOffset>
+      <feFlood result="drop_shadow_3" flood-color="rgb(100,174,255)" flood-opacity="100">
+      </feFlood>
+      <feComposite in="drop_shadow_3" in2="drop_shadow_2" operator="in" result="drop_shadow_4">
+      </feComposite>
+      <feMerge>
+        <feMergeNode>
+        </feMergeNode>
+        <feMergeNode in="SourceGraphic">
+        </feMergeNode>
+      </feMerge>
+    </filter>
+    <filter id="efShadow21" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceAlpha" result="drop_shadow_1" stdDeviation="2">
+      </feGaussianBlur>
+      <feOffset in="drop_shadow_1" result="drop_shadow_2" dx="0" dy="0">
+      </feOffset>
+      <feFlood result="drop_shadow_3" flood-color="rgb(100,174,255)" flood-opacity="100">
+      </feFlood>
+      <feComposite in="drop_shadow_3" in2="drop_shadow_2" operator="in" result="drop_shadow_4">
+      </feComposite>
+      <feMerge>
+        <feMergeNode>
+        </feMergeNode>
+        <feMergeNode in="SourceGraphic">
+        </feMergeNode>
+      </feMerge>
+    </filter>
+    <filter id="efShadow22" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceAlpha" result="drop_shadow_1" stdDeviation="2">
+      </feGaussianBlur>
+      <feOffset in="drop_shadow_1" result="drop_shadow_2" dx="0" dy="0">
+      </feOffset>
+      <feFlood result="drop_shadow_3" flood-color="rgb(100,174,255)" flood-opacity="100">
+      </feFlood>
+      <feComposite in="drop_shadow_3" in2="drop_shadow_2" operator="in" result="drop_shadow_4">
+      </feComposite>
+      <feMerge>
+        <feMergeNode>
+        </feMergeNode>
+        <feMergeNode in="SourceGraphic">
+        </feMergeNode>
+      </feMerge>
+    </filter>
+    <filter id="efShadow23" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceAlpha" result="drop_shadow_1" stdDeviation="2">
+      </feGaussianBlur>
+      <feOffset in="drop_shadow_1" result="drop_shadow_2" dx="0" dy="0">
+      </feOffset>
+      <feFlood result="drop_shadow_3" flood-color="rgb(100,174,255)" flood-opacity="100">
+      </feFlood>
+      <feComposite in="drop_shadow_3" in2="drop_shadow_2" operator="in" result="drop_shadow_4">
+      </feComposite>
+      <feMerge>
+        <feMergeNode>
+        </feMergeNode>
+        <feMergeNode in="SourceGraphic">
+        </feMergeNode>
+      </feMerge>
+    </filter>
+    <filter id="efShadow24" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceAlpha" result="drop_shadow_1" stdDeviation="2">
+      </feGaussianBlur>
+      <feOffset in="drop_shadow_1" result="drop_shadow_2" dx="0" dy="0">
+      </feOffset>
+      <feFlood result="drop_shadow_3" flood-color="rgb(100,174,255)" flood-opacity="100">
+      </feFlood>
+      <feComposite in="drop_shadow_3" in2="drop_shadow_2" operator="in" result="drop_shadow_4">
+      </feComposite>
+      <feMerge>
+        <feMergeNode>
+        </feMergeNode>
+        <feMergeNode in="SourceGraphic">
+        </feMergeNode>
+      </feMerge>
+    </filter>
+    <filter id="efShadow25" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceAlpha" result="drop_shadow_1" stdDeviation="2">
+      </feGaussianBlur>
+      <feOffset in="drop_shadow_1" result="drop_shadow_2" dx="0" dy="0">
+      </feOffset>
+      <feFlood result="drop_shadow_3" flood-color="rgb(100,174,255)" flood-opacity="100">
+      </feFlood>
+      <feComposite in="drop_shadow_3" in2="drop_shadow_2" operator="in" result="drop_shadow_4">
+      </feComposite>
+      <feMerge>
+        <feMergeNode>
+        </feMergeNode>
+        <feMergeNode in="SourceGraphic">
+        </feMergeNode>
+      </feMerge>
+    </filter>
+    <filter id="efShadow26" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceAlpha" result="drop_shadow_1" stdDeviation="2">
+      </feGaussianBlur>
+      <feOffset in="drop_shadow_1" result="drop_shadow_2" dx="0" dy="0">
+      </feOffset>
+      <feFlood result="drop_shadow_3" flood-color="rgb(100,174,255)" flood-opacity="100">
+      </feFlood>
+      <feComposite in="drop_shadow_3" in2="drop_shadow_2" operator="in" result="drop_shadow_4">
+      </feComposite>
+      <feMerge>
+        <feMergeNode>
+        </feMergeNode>
+        <feMergeNode in="SourceGraphic">
+        </feMergeNode>
+      </feMerge>
+    </filter>
+    <filter id="efShadow27" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceAlpha" result="drop_shadow_1" stdDeviation="2">
+      </feGaussianBlur>
+      <feOffset in="drop_shadow_1" result="drop_shadow_2" dx="0" dy="0">
+      </feOffset>
+      <feFlood result="drop_shadow_3" flood-color="rgb(100,174,255)" flood-opacity="100">
+      </feFlood>
+      <feComposite in="drop_shadow_3" in2="drop_shadow_2" operator="in" result="drop_shadow_4">
+      </feComposite>
+      <feMerge>
+        <feMergeNode>
+        </feMergeNode>
+        <feMergeNode in="SourceGraphic">
+        </feMergeNode>
+      </feMerge>
+    </filter>
+    <filter id="efShadow28" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceAlpha" result="drop_shadow_1" stdDeviation="2">
+      </feGaussianBlur>
+      <feOffset in="drop_shadow_1" result="drop_shadow_2" dx="0" dy="0">
+      </feOffset>
+      <feFlood result="drop_shadow_3" flood-color="rgb(100,174,255)" flood-opacity="100">
+      </feFlood>
+      <feComposite in="drop_shadow_3" in2="drop_shadow_2" operator="in" result="drop_shadow_4">
+      </feComposite>
+      <feMerge>
+        <feMergeNode>
+        </feMergeNode>
+        <feMergeNode in="SourceGraphic">
+        </feMergeNode>
+      </feMerge>
+    </filter>
+    <filter id="efShadow29" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceAlpha" result="drop_shadow_1" stdDeviation="2">
+      </feGaussianBlur>
+      <feOffset in="drop_shadow_1" result="drop_shadow_2" dx="0" dy="0">
+      </feOffset>
+      <feFlood result="drop_shadow_3" flood-color="rgb(100,174,255)" flood-opacity="100">
+      </feFlood>
+      <feComposite in="drop_shadow_3" in2="drop_shadow_2" operator="in" result="drop_shadow_4">
+      </feComposite>
+      <feMerge>
+        <feMergeNode>
+        </feMergeNode>
+        <feMergeNode in="SourceGraphic">
+        </feMergeNode>
+      </feMerge>
+    </filter>
+    <filter id="efShadow30" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceAlpha" result="drop_shadow_1" stdDeviation="2">
+      </feGaussianBlur>
+      <feOffset in="drop_shadow_1" result="drop_shadow_2" dx="0" dy="0">
+      </feOffset>
+      <feFlood result="drop_shadow_3" flood-color="rgb(100,174,255)" flood-opacity="100">
+      </feFlood>
+      <feComposite in="drop_shadow_3" in2="drop_shadow_2" operator="in" result="drop_shadow_4">
+      </feComposite>
+      <feMerge>
+        <feMergeNode>
+        </feMergeNode>
+        <feMergeNode in="SourceGraphic">
+        </feMergeNode>
+      </feMerge>
+    </filter>
+    <filter id="efBlur1" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="1.2 1.2" edgeMode="duplicate">
+      </feGaussianBlur>
+    </filter>
+    <mask id="msk1" mask-type="alpha">
+      <g transform="translate(270.2485,313.3713)scale(0.368,0.1975)translate(-565,-350.182)translate(565,500)translate(-565,-500)">
+        <g filter="url(#efBlur1)">
+          <g transform="translate(565,500)translate(-565,-500)">
+            <g transform="translate(-285,713)">
+              <path d="M0,0L565,-402" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(255,255,255)">
+              </path>
+            </g>
+            <g transform="translate(8,715)">
+              <path d="M0,0L379,-405" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(255,255,255)">
+              </path>
+            </g>
+            <g transform="translate(304,714)">
+              <path d="M0,0L192,-400" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(255,255,255)">
+              </path>
+            </g>
+            <g transform="translate(599,712)">
+              <path d="M0,0L3,-404" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(255,255,255)">
+              </path>
+            </g>
+            <g transform="translate(894,712)">
+              <path d="M0,0L-191,-406" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(255,255,255)">
+              </path>
+            </g>
+            <g transform="translate(1188,713)">
+              <path d="M0,0L-386,-417" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(255,255,255)">
+              </path>
+            </g>
+            <g transform="translate(1487,712)">
+              <path d="M0,0L-589,-427" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(255,255,255)">
+              </path>
+            </g>
+            <g transform="translate(-357,600)">
+              <path d="M0,0L520,-284" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(255,255,255)">
+              </path>
+            </g>
+          </g>
+          <g transform="translate(591,515)translate(-591,-515)">
+            <g transform="translate(-173,636)">
+              <path d="M0,0L1528,-2" fill="none" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(255,255,255)">
+              </path>
+            </g>
+            <g transform="translate(-140,523)">
+              <path d="M0,0L1488,0" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(255,255,255)">
+              </path>
+            </g>
+            <g transform="translate(-74,447)">
+              <path d="M0,0L1364,0" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(255,255,255)">
+              </path>
+            </g>
+            <g transform="translate(-79,394)">
+              <path d="M0,0L1389,0" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(255,255,255)">
+              </path>
+            </g>
+          </g>
+        </g>
+      </g>
+    </mask>
+  </defs>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(47.4264,288.4118)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(82.7919,288.4118)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(118.1574,288.4118)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(153.5229,288.4118)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(187.8884,288.4118)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(224.2539,288.4118)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(259.6193,288.4118)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(294.9848,288.4118)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(330.3503,288.4118)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(365.7158,288.4118)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(401.0813,288.4118)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(436.4468,288.4118)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(471.8122,288.4118)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(507.1777,288.4118)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(542.5432,288.4118)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(47.4264,270.729)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(82.7919,270.729)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(118.1574,270.729)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(73,154,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(153.5229,270.729)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(188.8884,270.729)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(224.2539,270.729)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(259.6193,270.729)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(294.9848,270.729)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(330.3503,270.729)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(365.7158,270.729)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(401.0813,270.729)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(436.4468,270.729)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(471.8122,270.729)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(507.1777,270.729)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(542.5432,270.729)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(47.4264,253.0463)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(82.7919,253.0463)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(73,154,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(118.1574,253.0463)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <g filter="url(#efShadow1)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(204,228,255)">
+      </rect>
+    </g>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(153.5229,253.0463)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(188.8884,253.0463)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(73,154,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(224.2539,253.0463)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(259.6193,253.0463)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(294.9848,253.0463)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(330.3503,253.0463)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(365.7158,253.0463)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(401.0813,253.0463)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(436.4468,253.0463)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(471.8122,253.0463)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(507.1777,253.0463)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(542.5432,253.0463)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(73,154,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(47.4264,235.3636)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(73,154,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(82.7919,235.3636)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <g filter="url(#efShadow2)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(204,228,255)">
+      </rect>
+    </g>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(153.5229,235.3636)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(188.8884,235.3636)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <g filter="url(#efShadow3)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(204,228,255)">
+      </rect>
+    </g>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(224.2539,235.3636)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(73,154,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(259.6193,235.3636)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(294.9848,235.3636)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(330.3503,235.3636)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(365.7158,235.3636)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(401.0813,235.3636)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(436.4468,235.3636)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(73,154,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(471.8122,235.3636)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(507.1777,235.3636)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(542.5432,235.3636)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <g filter="url(#efShadow4)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(204,228,255)">
+      </rect>
+    </g>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(47.4264,217.6808)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <g filter="url(#efShadow5)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(204,228,255)">
+      </rect>
+    </g>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(153.5229,217.6808)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(73,154,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(224.2539,217.6808)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <g filter="url(#efShadow6)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(204,228,255)">
+      </rect>
+    </g>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(259.6193,217.6808)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(73,154,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(294.9848,217.6808)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(330.3503,217.6808)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(365.7158,217.6808)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(401.0813,217.6808)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(73,154,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(436.4468,217.6808)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <g filter="url(#efShadow7)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(204,228,255)">
+      </rect>
+    </g>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(471.8122,217.6808)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(507.1777,217.6808)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(153.5229,199.9981)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <g filter="url(#efShadow8)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(204,228,255)">
+      </rect>
+    </g>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(259.6193,199.9981)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <g filter="url(#efShadow9)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(204,228,255)">
+      </rect>
+    </g>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(294.9848,199.9981)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(73,154,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(330.3503,199.9981)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(365.7158,199.9981)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(401.0813,199.9981)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <g filter="url(#efShadow10)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(204,228,255)">
+      </rect>
+    </g>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(471.8122,199.9981)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(507.1777,199.9981)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(294.9848,182.3153)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <g filter="url(#efShadow11)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(204,228,255)">
+      </rect>
+    </g>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(330.3503,182.3153)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(73,154,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(365.7158,182.3153)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(73,154,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(471.8122,182.3153)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(73,154,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(507.1777,182.3153)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(330.3503,164.6326)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <g filter="url(#efShadow12)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(204,228,255)">
+      </rect>
+    </g>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(365.7158,164.6326)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <g filter="url(#efShadow13)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(204,228,255)">
+      </rect>
+    </g>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(471.8122,164.6326)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <g filter="url(#efShadow14)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(204,228,255)">
+      </rect>
+    </g>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(507.1777,164.6326)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(73,154,255)">
+    </rect>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(507.1777,146.9499)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+    <g filter="url(#efShadow15)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(204,228,255)">
+      </rect>
+    </g>
+  </g>
+  <g transform="translate(294.7736,249.3611)translate(-294.7736,-236.3611)translate(294.7736,318.1437)translate(-294.7736,-318.1437)">
+    <g transform="translate(47.4264,310.5152)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(0,0,0)" opacity="0.05">
+      </rect>
+    </g>
+    <g transform="translate(82.7919,310.5152)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(0,0,0)" opacity="0.05">
+      </rect>
+    </g>
+    <g transform="translate(118.1574,310.5152)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(0,0,0)" opacity="0.05">
+      </rect>
+    </g>
+    <g transform="translate(153.5229,310.5152)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(0,0,0)" opacity="0.05">
+      </rect>
+    </g>
+    <g transform="translate(188.8884,310.5152)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(0,0,0)" opacity="0.05">
+      </rect>
+    </g>
+    <g transform="translate(224.2539,310.5152)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(0,0,0)" opacity="0.05">
+      </rect>
+    </g>
+    <g transform="translate(259.6193,310.5152)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(0,0,0)" opacity="0.05">
+      </rect>
+    </g>
+    <g transform="translate(294.9848,310.5152)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(0,0,0)" opacity="0.05">
+      </rect>
+    </g>
+    <g transform="translate(330.3503,310.5152)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(0,0,0)" opacity="0.05">
+      </rect>
+    </g>
+    <g transform="translate(365.7158,310.5152)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(0,0,0)" opacity="0.05">
+      </rect>
+    </g>
+    <g transform="translate(401.0813,310.5152)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(0,0,0)" opacity="0.05">
+      </rect>
+    </g>
+    <g transform="translate(436.4468,310.5152)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(0,0,0)" opacity="0.05">
+      </rect>
+    </g>
+    <g transform="translate(471.8122,310.5152)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(0,0,0)" opacity="0.05">
+      </rect>
+    </g>
+    <g transform="translate(507.1777,310.5152)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(0,0,0)" opacity="0.05">
+      </rect>
+    </g>
+    <g transform="translate(542.5432,310.5152)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(0,0,0)" opacity="0.05">
+      </rect>
+    </g>
+    <g transform="translate(47.4264,328.198)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(0,0,0)" opacity="0.05">
+      </rect>
+    </g>
+    <g transform="translate(82.7919,328.198)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(0,0,0)" opacity="0.05">
+      </rect>
+    </g>
+    <g transform="translate(118.1574,328.198)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(0,0,0)" opacity="0.05">
+      </rect>
+    </g>
+    <g transform="translate(153.5229,328.198)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(0,0,0)" opacity="0.05">
+      </rect>
+    </g>
+    <g transform="translate(188.8884,328.198)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(0,0,0)" opacity="0.05">
+      </rect>
+    </g>
+    <g transform="translate(224.2539,328.198)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(0,0,0)" opacity="0.05">
+      </rect>
+    </g>
+    <g transform="translate(259.6193,328.198)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(0,0,0)" opacity="0.05">
+      </rect>
+    </g>
+    <g transform="translate(294.9848,328.198)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(0,0,0)" opacity="0.05">
+      </rect>
+    </g>
+    <g transform="translate(330.3503,328.198)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(0,0,0)" opacity="0.05">
+      </rect>
+    </g>
+    <g transform="translate(365.7158,328.198)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(0,0,0)" opacity="0.05">
+      </rect>
+    </g>
+    <g transform="translate(401.0813,328.198)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(0,0,0)" opacity="0.05">
+      </rect>
+    </g>
+    <g transform="translate(436.4468,328.198)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(0,0,0)" opacity="0.05">
+      </rect>
+    </g>
+    <g transform="translate(471.8122,328.198)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(0,0,0)" opacity="0.05">
+      </rect>
+    </g>
+    <g transform="translate(507.1777,328.198)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(0,0,0)" opacity="0.05">
+      </rect>
+    </g>
+    <g transform="translate(542.5432,328.198)scale(4.4207,4.4207)translate(-0.0478,-0.2744)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(0,0,0)" opacity="0.05">
+      </rect>
+    </g>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(282.7027,215.296)scale(1.8983,1.8983)translate(-671.0553,-378.0062)">
+    <g transform="translate(673.2444,373.9021)translate(-671.0545,-378.0055)">
+      <path d="M710.042,422.762L710.042,423.399C710.042,429.514,706.121,434.715,700.656,436.621L700.656,480.3167L700.655,480.3907L636.669,480.3907L636.668,480.3167L636.667,436.621C631.203,434.714,627.282,429.514,627.282,423.399L627.282,422.762C621.624,419.729,715.7,419.729,710.042,422.762z" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" fill="rgb(0,0,0)" opacity="0.5" stroke="rgb(0,0,0)">
+      </path>
+    </g>
+    <g transform="translate(667.8988,357.7898)rotate(180)translate(-671.0545,-378.0055)">
+      <path d="M710.042,422.762L710.042,423.399C710.042,429.514,706.121,434.715,700.656,436.621L700.656,480.316L700.655,480.39L636.669,480.39L636.668,480.316L636.667,436.621C631.203,434.714,627.282,429.514,627.282,423.399L627.282,422.762C621.624,419.729,715.7,419.729,710.042,422.762z" stroke-linecap="round" stroke-linejoin="round" fill="rgb(66,73,89)" stroke="rgb(255,255,255)" stroke-opacity="0.2">
+      </path>
+    </g>
+    <g transform="translate(671.0553,371.26)translate(-671.0553,-371.26)">
+      <g transform="translate(668.6625,365.0043)">
+        <rect x="-50.8866" y="-59.8842" width="101.7733" height="119.7685" rx="18" ry="18" stroke-width="0.5" stroke-linejoin="round" fill="rgb(239,239,239)" stroke="rgb(0,0,0)">
+        </rect>
+      </g>
+      <g transform="translate(668.6625,365.0043)">
+        <rect x="-47.7343" y="-56.2967" width="95.4685" height="112.5934" rx="17" ry="17" fill="rgb(35,35,35)">
+        </rect>
+      </g>
+      <path d="M716.588,346.706L716.588,336.358C716.588,333.6,718.779,331.353,721.515,331.263L721.515,351.802C718.779,351.712,716.588,349.464,716.588,346.706z" fill="rgb(97,97,97)">
+      </path>
+      <g transform="translate(721.8679,341.5326)">
+        <rect x="-2.4668" y="-10.2724" width="4.9336" height="20.5447" rx="1" ry="1" stroke-width="0.5" stroke-linejoin="round" fill="rgb(255,255,255)" stroke="rgb(0,0,0)">
+        </rect>
+      </g>
+    </g>
+    <g transform="translate(668.5646,365.4294)scale(1,1)">
+      <rect x="-43.5852" y="-52.7665" width="87.1704" height="105.533" rx="15" ry="15" fill="rgb(0,0,0)">
+      </rect>
+    </g>
+    <g transform="translate(668.7605,364.5792)scale(1,1)">
+      <defs>
+        <linearGradient id="gradient1" gradientUnits="userSpaceOnUse" x1="-43.2773" y1="0.3136" x2="43.5852" y2="0">
+          <stop offset="0%" stop-color="rgb(255,255,255)">
+          </stop>
+          <stop offset="8%" stop-color="rgb(15,15,15)">
+          </stop>
+          <stop offset="50%" stop-color="rgb(0,0,0)">
+          </stop>
+          <stop offset="92%" stop-color="rgb(36,36,36)">
+          </stop>
+          <stop offset="100%" stop-color="rgb(255,255,255)">
+          </stop>
+        </linearGradient>
+        <linearGradient id="linearGradientMaskOpacity1" spreadMethod="pad" gradientUnits="userSpaceOnUse" x1="-43.2773" y1="0.3136" x2="43.5852" y2="0">
+          <stop stop-color="rgb(255,255,255)" offset="0%" stop-opacity="0.3568">
+          </stop>
+          <stop stop-color="rgb(255,255,255)" offset="50%" stop-opacity="1">
+          </stop>
+          <stop stop-color="rgb(255,255,255)" offset="100%" stop-opacity="0.3568">
+          </stop>
+        </linearGradient>
+        <mask id="linearGradientMask1">
+          <rect x="-43.5852" y="-52.7665" width="87.1704" height="105.533" rx="15" ry="15" fill="url(#linearGradientMaskOpacity1)">
+          </rect>
+        </mask>
+      </defs>
+      <rect x="-43.5852" y="-52.7665" width="87.1704" height="105.533" rx="15" ry="15" fill="url(#gradient1)" mask="url(#linearGradientMask1)">
+      </rect>
+    </g>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,179.6569)translate(-277.2833,-173.6569)translate(304.3045,123.4938)scale(0.191,0.191)translate(22.3634,16.5983)">
+    <rect x="-157.1378" y="-116.6291" width="314.2756" height="233.2582" rx="100" ry="100" fill="rgb(39,39,39)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,179.6569)translate(-277.2833,-173.6569)translate(241.7207,123.4938)scale(0.191,0.191)translate(22.3634,16.5983)">
+    <rect x="-157.1378" y="-116.6291" width="314.2756" height="233.2582" rx="100" ry="100" fill="rgb(254,82,82)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,179.6569)translate(-277.2833,-173.6569)translate(304.3045,170.5892)scale(0.191,0.191)translate(22.3634,16.5983)">
+    <rect x="-157.1378" y="-116.6291" width="314.2756" height="233.2582" rx="100" ry="100" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,179.6569)translate(-277.2833,-173.6569)translate(241.7207,170.5892)scale(0.191,0.191)translate(22.3634,16.5983)">
+    <rect x="-157.1378" y="-116.6291" width="314.2756" height="233.2582" rx="100" ry="100" fill="rgb(39,39,39)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,179.6569)translate(-277.2833,-173.6569)translate(304.3045,217.4804)scale(0.191,0.191)translate(22.3634,16.5983)">
+    <rect x="-157.1378" y="-116.6291" width="314.2756" height="233.2582" rx="100" ry="100" fill="rgb(39,39,39)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,179.6569)translate(-277.2833,-173.6569)translate(241.7207,217.4804)scale(0.191,0.191)translate(22.3634,16.5983)">
+    <rect x="-157.1378" y="-116.6291" width="314.2756" height="233.2582" rx="100" ry="100" fill="rgb(39,39,39)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,179.6569)translate(-277.2833,-173.6569)translate(308.5752,126.1039)scale(1.17,1.17)translate(-12,-11.5216)">
+    <g transform="translate(12,11.5216)translate(-12,-11.5216)">
+      <g transform="translate(12,12)translate(-12,-12)">
+        <g transform="translate(12,11.491)scale(0.9484,0.9484)translate(-12,-11.491)">
+          <g transform="translate(12,11.491)scale(0.7887,0.7887)translate(-12,-11.355)">
+            <path d="M12,4C13.3529,4,14.5804,4.5376,15.4807,5.4107" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(143,143,143)">
+            </path>
+          </g>
+        </g>
+        <g transform="translate(12,12)scale(0.7887,0.7887)translate(-12,-12)">
+          <path d="M12,2C15.865,2,19,5.135,19,9C19,14.25,12,22,12,22C12,22,5,14.25,5,9C5,5.135,8.135,2,12,2" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(143,143,143)">
+          </path>
+        </g>
+        <g transform="translate(12,9.634)scale(-0.7264,0.7887)translate(-12,-9)">
+          <path d="M12,6.5C13.38,6.5,14.5,7.62,14.5,9C14.5,10.38,13.38,11.5,12,11.5C10.62,11.5,9.5,10.38,9.5,9C9.5,7.62,10.62,6.5,12,6.5" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(143,143,143)">
+          </path>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,179.6569)translate(-277.2833,-173.6569)translate(245.9915,220.3585)scale(1.17,1.17)translate(-12,-11.3656)">
+    <g transform="translate(12,11.5)scale(0.8745,0.8745)translate(-12,-11.5)">
+      <g transform="translate(12,8)translate(-12,-8)">
+        <path d="M12,14C13.656,14,15,12.656,15,11L15,5C15,3.344,13.656,2,12,2C10.344,2,9,3.344,9,5L9,11C9,12.656,10.344,14,12,14z" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(143,143,143)">
+        </path>
+      </g>
+      <g transform="translate(12,16.2629)translate(-12,-16)">
+        <path d="M17.3,11C17.3,14,14.76,16.1,12,16.1C9.24,16.1,6.7,14,6.7,11L5,11C5,14.41,7.72,17.231,11,17.72L11,21L13,21L13,17.72C16.28,17.231,19,14.41,19,11" fill="rgb(143,143,143)">
+        </path>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,179.6569)translate(-277.2833,-173.6569)translate(309.6532,222.2754)scale(1.17,1.17)translate(-12.9214,-13.3891)">
+    <g transform="translate(12,12)translate(-11.75,-11.75)">
+      <path d="M14.44,13.73L14.71,14L15.5,14L20.5,19L19,20.5L14,15.5L14,14.71L13.73,14.44L14.44,13.73z" stroke-linecap="round" stroke-linejoin="round" fill="rgb(143,143,143)" stroke="rgb(143,143,143)">
+      </path>
+      <g transform="translate(9.5,9.5)scale(0.8828,0.8828)translate(-9.5,-9.5)">
+        <g transform="translate(9.5,9.5)rotate(20)translate(-9.5,-9.5)">
+          <path d="M6.8921,5.8236C7.6261,5.3042,8.525,5,9.5,5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(143,143,143)">
+          </path>
+        </g>
+      </g>
+      <g transform="translate(9.5,9.5)translate(-9.5,-9.5)">
+        <path d="M9.5,3C13.089,3,16,5.911,16,9.5C16,11.109,15.41,12.59,14.44,13.73L13.73,14.44C12.59,15.41,11.109,16,9.5,16C5.911,16,3,13.089,3,9.5C3,5.911,5.911,3,9.5,3" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(143,143,143)">
+        </path>
+      </g>
+    </g>
+    <g transform="translate(12,13)">
+    </g>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,179.6569)translate(-277.2833,-173.6569)translate(308.5752,173.7589)scale(1.17,1.17)translate(-12.0595,-12)">
+    <g transform="translate(12,11.995)translate(-12,-11.995)">
+      <g transform="translate(7.5,12)translate(-7.5,-12)">
+        <path d="M3,9L3,15L7,15L12,20L12,4L7,9L3,9z" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(255,255,255)">
+        </path>
+      </g>
+      <g transform="translate(19.867,11.995)translate(-19.748,-11.995)">
+        <path d="M18.503,19C20.045,17.211,21,14.733,21,11.999C21,9.261,20.041,6.78,18.496,4.99" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(255,255,255)">
+        </path>
+      </g>
+      <g transform="translate(17.465,11.995)translate(-17.1605,-11.995)">
+        <path d="M16.327,16C17.357,14.988,18,13.567,18,11.998C18,10.425,17.354,9.001,16.321,7.989" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(255,255,255)">
+        </path>
+      </g>
+      <g transform="translate(14.897,11.995)translate(-14.4985,-11.995)">
+        <path d="M14.003,14C14.608,13.543,15,12.815,15,11.997C15,11.176,14.605,10.445,13.997,9.989" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(255,255,255)">
+        </path>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,179.6569)translate(-277.2833,-173.6569)translate(245.9915,173.7589)scale(1.17,1.17)translate(-12,-12)translate(12.0347,5.4714)">
+    <ellipse cx="0" cy="0" rx="1.5" ry="1.5" fill="none" stroke-width="2" stroke="rgb(143,143,143)">
+    </ellipse>
+  </g>
+  <g mask="url(#msk2)">
+    <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,179.6569)translate(-277.2833,-173.6569)translate(245.9915,173.7589)scale(1.17,1.17)translate(-12,-12)translate(12,6)translate(-12,-5.9714)translate(12,18)">
+      <ellipse cx="0" cy="0" rx="2" ry="2" fill="none" stroke="rgb(143,143,143)">
+      </ellipse>
+    </g>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,179.6569)translate(-277.2833,-173.6569)translate(245.9915,173.7589)scale(1.17,1.17)translate(-12,-12)translate(12,6)translate(-12,-5.9714)translate(12,11.6757)scale(0.7674,0.7674)translate(-12,-12.0774)">
+    <path d="M21,19L21,20L3,20L3,19L5,17L5,11C5,7.901,6.902,4.754,10,4.3C11.319,4.107,12.681,4.107,14,4.3C17.098,4.754,19,7.901,19,11L19,17L21,19" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(143,143,143)">
+    </path>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,179.6569)translate(-277.2833,-173.6569)translate(245.9915,126.6636)scale(1.17,1.17)translate(-12,-12)">
+    <path d="M12,3C17.5,3,22,6.58,22,11C22,12.246,21.641,13.426,21.004,14.477C19.382,17.153,15.949,19,12,19C10.811,19,9.609,18.829,8.47,18.5C6.64,20,4.37,20.891,2,21C4.33,18.671,4.75,17.1,4.75,16.5C3.06,15.17,2.049,13.15,2,11C2,6.58,6.5,3,12,3" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(255,255,255)">
+    </path>
+    <g transform="translate(16,11)translate(-16,-11)">
+      <path d="M17,12L17,10L15,10L15,12L16.76,12" fill="rgb(255,255,255)">
+      </path>
+    </g>
+    <g transform="translate(12,11)translate(-12,-11)">
+      <path d="M13,12L13,10L11,10L11,12L12.76,12" fill="rgb(255,255,255)">
+      </path>
+    </g>
+    <g transform="translate(8,11)translate(-8,-11)">
+      <path d="M9,11.3333L9,10L7,10L7,12L9,12M9,12L9,11.3333" fill="rgb(255,255,255)">
+      </path>
+    </g>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(322.3209,100.3949)scale(0.5072,0.5072)translate(-313.0086,-101.991)translate(286.8582,107.391)">
+    <g class="drg tpbl" data-drg-tp="element" data-drg-v="5637" data-test-id="Watch.Day.Text" data-gn-el-type="text">
+      <g style="opacity:1">
+        <g transform="translate(0, 0)">
+          <path d="M 0 -16.2 L 10.332 -16.2 L 10.332 5.4 L 0 5.4 ZM 10.332 -16.2 L 24.588 -16.2 L 24.588 5.4 L 10.332 5.4 ZM 24.588 -16.2 L 36.63 -16.2 L 36.63 5.4 L 24.588 5.4 ZM 36.63 -16.2 L 36.63 -16.2 L 36.63 5.4 L 36.63 5.4 Z" fill="rgba(0,0,0,0)">
+          </path>
+          <g fill="rgb(254,82,82)" stroke-width="0" font-size="18px" style="font-family:Montserrat-Regular;font-style:normal;font-weight:400">
+            <path fill="rgb(254,82,82)" stroke-width="0" transform="matrix(1,0,0,1,0,0)" d="M4.5,0L4.5,-11.448L0.072,-11.448L0.072,-12.6L10.26,-12.6L10.26,-11.448L5.832,-11.448L5.832,0L4.5,0z">
+            </path>
+            <path fill="rgb(254,82,82)" stroke-width="0" transform="matrix(1,0,0,1,10.332,0)" d="M7.128,0.108C5.496,0.108,4.224,-0.36,3.312,-1.296C2.4,-2.232,1.944,-3.594,1.944,-5.382L1.944,-5.382L1.944,-12.6L3.276,-12.6L3.276,-5.436C3.276,-3.972,3.606,-2.88,4.266,-2.16C4.926,-1.44,5.88,-1.08,7.128,-1.08L7.128,-1.08C8.388,-1.08,9.348,-1.44,10.008,-2.16C10.668,-2.88,10.998,-3.972,10.998,-5.436L10.998,-5.436L10.998,-12.6L12.294,-12.6L12.294,-5.382C12.294,-3.594,11.841,-2.232,10.935,-1.296C10.029,-0.36,8.76,0.108,7.128,0.108L7.128,0.108z">
+            </path>
+            <path fill="rgb(254,82,82)" stroke-width="0" transform="matrix(1,0,0,1,24.588,0)" d="M3.384,-1.152L10.962,-1.152L10.962,0L2.052,0L2.052,-12.6L10.692,-12.6L10.692,-11.448L3.384,-11.448L3.384,-6.966L9.9,-6.966L9.9,-5.832L3.384,-5.832L3.384,-1.152z">
+            </path>
+            <path fill="rgb(254,82,82)" stroke-width="0" transform="matrix(1,0,0,1,36.63,0)">
+            </path>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(322.3209,100.3949)scale(0.5072,0.5072)translate(-313.0086,-101.991)translate(328.9709,107.391)">
+    <g class="drg tpbl" data-drg-tp="element" data-drg-v="5592" data-test-id="Watch.Day.Text" data-gn-el-type="text">
+      <g style="opacity:1">
+        <g transform="translate(0, 0)">
+          <path d="M 0 -16.2 L 10.188 -16.2 L 10.188 5.4 L 0 5.4 ZM 10.188 -16.2 L 10.188 -16.2 L 10.188 5.4 L 10.188 5.4 Z" fill="rgba(0,0,0,0)">
+          </path>
+          <g fill="rgb(255,255,255)" stroke-width="0" font-size="18px" style="font-family:Montserrat-Regular;font-style:normal;font-weight:400">
+            <path fill="rgb(255,255,255)" stroke-width="0" transform="matrix(1,0,0,1,0,0)" d="M4.248,-7.434C6.072,-7.434,7.401,-7.107,8.235,-6.453C9.069,-5.799,9.486,-4.884,9.486,-3.708L9.486,-3.708C9.486,-2.976,9.315,-2.322,8.973,-1.746C8.631,-1.17,8.118,-0.717,7.434,-0.387C6.75,-0.057,5.91,0.108,4.914,0.108L4.914,0.108C4.014,0.108,3.159,-0.039,2.349,-0.333C1.539,-0.627,0.888,-1.02,0.396,-1.512L0.396,-1.512L1.026,-2.538C1.446,-2.106,1.998,-1.755,2.682,-1.485C3.366,-1.215,4.104,-1.08,4.896,-1.08L4.896,-1.08C5.94,-1.08,6.747,-1.314,7.317,-1.782C7.887,-2.25,8.172,-2.874,8.172,-3.654L8.172,-3.654C8.172,-4.518,7.851,-5.172,7.209,-5.616C6.567,-6.06,5.484,-6.282,3.96,-6.282L3.96,-6.282L1.278,-6.282L1.926,-12.6L8.82,-12.6L8.82,-11.448L3.06,-11.448L2.628,-7.434L4.248,-7.434z">
+            </path>
+            <path fill="rgb(255,255,255)" stroke-width="0" transform="matrix(1,0,0,1,10.188,0)">
+            </path>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(219.9244,278.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(227.9244,278.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(235.9244,278.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(243.9244,278.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(251.9244,278.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(259.9244,278.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(267.9244,278.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(275.9244,278.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(283.9244,278.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(291.9244,278.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(299.9244,278.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(307.9244,278.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(315.9244,278.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(323.9244,278.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(331.9244,278.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(219.9244,274.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(227.9244,274.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(235.9244,274.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(73,154,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(243.9244,274.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(251.9244,274.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(259.9244,274.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(267.9244,274.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(275.9244,274.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(283.9244,274.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(291.9244,274.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(299.9244,274.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(307.9244,274.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(315.9244,274.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(323.9244,274.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(331.9244,274.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(219.9244,270.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(227.9244,270.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(73,154,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(235.9244,270.5487)translate(-0.0478,-0.2744)">
+    <g filter="url(#efShadow16)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(178,214,255)">
+      </rect>
+    </g>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(243.9244,270.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(251.9244,270.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(73,154,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(259.9244,270.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(267.9244,270.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(275.9244,270.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(283.9244,270.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(291.9244,270.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(299.9244,270.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(307.9244,270.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(315.9244,270.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(323.9244,270.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(331.9244,270.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(73,154,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(219.9244,266.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(73,154,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(227.9244,266.5487)translate(-0.0478,-0.2744)">
+    <g filter="url(#efShadow17)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(178,214,255)">
+      </rect>
+    </g>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(243.9244,266.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(251.9244,266.5487)translate(-0.0478,-0.2744)">
+    <g filter="url(#efShadow18)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(178,214,255)">
+      </rect>
+    </g>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(259.9244,266.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(73,154,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(267.9244,266.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(275.9244,266.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(283.9244,266.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(291.9244,266.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(299.9244,266.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(307.9244,266.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(73,154,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(315.9244,266.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(323.9244,266.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(331.9244,266.5487)translate(-0.0478,-0.2744)">
+    <g filter="url(#efShadow19)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(178,214,255)">
+      </rect>
+    </g>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(219.9244,262.5487)translate(-0.0478,-0.2744)">
+    <g filter="url(#efShadow20)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(178,214,255)">
+      </rect>
+    </g>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(243.9244,262.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(73,154,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(259.9244,262.5487)translate(-0.0478,-0.2744)">
+    <g filter="url(#efShadow21)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(178,214,255)">
+      </rect>
+    </g>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(267.9244,262.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(73,154,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(275.9244,262.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(283.9244,262.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(291.9244,262.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(299.9244,262.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(73,154,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(307.9244,262.5487)translate(-0.0478,-0.2744)">
+    <g filter="url(#efShadow22)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(178,214,255)">
+      </rect>
+    </g>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(315.9244,262.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(323.9244,262.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(243.9244,258.5487)translate(-0.0478,-0.2744)">
+    <g filter="url(#efShadow23)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(178,214,255)">
+      </rect>
+    </g>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(267.9244,258.5487)translate(-0.0478,-0.2744)">
+    <g filter="url(#efShadow24)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(178,214,255)">
+      </rect>
+    </g>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(275.9244,258.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(73,154,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(283.9244,258.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(291.9244,258.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(299.9244,258.5487)translate(-0.0478,-0.2744)">
+    <g filter="url(#efShadow25)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(178,214,255)">
+      </rect>
+    </g>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(315.9244,258.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(323.9244,258.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(275.9244,254.5487)translate(-0.0478,-0.2744)">
+    <g filter="url(#efShadow26)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(178,214,255)">
+      </rect>
+    </g>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(283.9244,254.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(73,154,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(291.9244,254.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(73,154,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(315.9244,254.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(73,154,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(323.9244,254.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(33,132,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(283.9244,250.5487)translate(-0.0478,-0.2744)">
+    <g filter="url(#efShadow27)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(178,214,255)">
+      </rect>
+    </g>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(291.9244,250.5487)translate(-0.0478,-0.2744)">
+    <g filter="url(#efShadow28)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(178,214,255)">
+      </rect>
+    </g>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(315.9244,250.5487)translate(-0.0478,-0.2744)">
+    <g filter="url(#efShadow29)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(178,214,255)">
+      </rect>
+    </g>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(323.9244,250.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(73,154,255)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(323.9244,246.5487)translate(-0.0478,-0.2744)">
+    <g filter="url(#efShadow30)">
+      <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(178,214,255)">
+      </rect>
+    </g>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(219.9244,283.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(8,35,69)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(227.9244,283.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(8,35,69)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(235.9244,283.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(8,35,69)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(243.9244,283.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(8,35,69)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(251.9244,283.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(8,35,69)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(259.9244,283.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(8,35,69)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(267.9244,283.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(8,35,69)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(275.9244,283.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(8,35,69)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(283.9244,283.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(8,35,69)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(291.9244,283.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(8,35,69)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(299.9244,283.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(8,35,69)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(307.9244,283.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(8,35,69)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(315.9244,283.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(8,35,69)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(323.9244,283.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(8,35,69)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(331.9244,283.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(8,35,69)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(219.9244,287.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(8,35,69)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(227.9244,287.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(8,35,69)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(235.9244,287.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(8,35,69)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(243.9244,287.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(8,35,69)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(251.9244,287.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(8,35,69)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(259.9244,287.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(8,35,69)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(267.9244,287.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(8,35,69)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(275.9244,287.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(8,35,69)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(283.9244,287.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(8,35,69)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(291.9244,287.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(8,35,69)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(299.9244,287.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(8,35,69)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(307.9244,287.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(8,35,69)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(315.9244,287.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(8,35,69)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(323.9244,287.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(8,35,69)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(277.2833,270.7744)scale(0.8282,0.8282)translate(-275.8766,-266.7744)translate(331.9244,287.5487)translate(-0.0478,-0.2744)">
+    <rect x="-2.4522" y="-1.2744" width="4.9044" height="2.5487" rx="1" ry="1" fill="rgb(8,35,69)">
+    </rect>
+  </g>
+  <g transform="translate(291.8966,222.8081)translate(-284.7805,-216.3998)translate(218.9829,103.1337)scale(0.5072,0.5072)">
+    <g class="drg tpbl" data-drg-tp="element" data-drg-v="35" data-test-id="Watch.Time" data-gn-el-type="text">
+      <g style="opacity:1">
+        <g transform="translate(0, 0)">
+          <path d="M 0 -16.2 L 10.962 -16.2 L 10.962 5.4 L 0 5.4 ZM 10.962 -16.2 L 14.778 -16.2 L 14.778 5.4 L 10.962 5.4 ZM 14.778 -16.2 L 26.676 -16.2 L 26.676 5.4 L 14.778 5.4 ZM 26.676 -16.2 L 36.864 -16.2 L 36.864 5.4 L 26.676 5.4 ZM 36.864 -16.2 L 36.864 -16.2 L 36.864 5.4 L 36.864 5.4 Z" fill="rgba(0,0,0,0)">
+          </path>
+          <g fill="rgb(255,255,255)" stroke-width="0" font-size="18px" style="font-family:Montserrat-Regular;font-style:normal;font-weight:400">
+            <path fill="rgb(255,255,255)" stroke-width="0" transform="matrix(1,0,0,1,0,0)" d="M4.86,-12.708C6.528,-12.708,7.806,-12.159,8.694,-11.061C9.582,-9.963,10.026,-8.412,10.026,-6.408L10.026,-6.408C10.026,-5.004,9.786,-3.816,9.306,-2.844C8.826,-1.872,8.154,-1.137,7.29,-0.639C6.426,-0.141,5.418,0.108,4.266,0.108L4.266,0.108C3.018,0.108,2.022,-0.12,1.278,-0.576L1.278,-0.576L1.8,-1.62C2.4,-1.224,3.216,-1.026,4.248,-1.026L4.248,-1.026C5.64,-1.026,6.732,-1.467,7.524,-2.349C8.316,-3.231,8.712,-4.512,8.712,-6.192L8.712,-6.192C8.712,-6.504,8.694,-6.846,8.658,-7.218L8.658,-7.218C8.346,-6.534,7.848,-6.003,7.164,-5.625C6.48,-5.247,5.694,-5.058,4.806,-5.058L4.806,-5.058C3.978,-5.058,3.243,-5.214,2.601,-5.526C1.959,-5.838,1.458,-6.279,1.098,-6.849C0.738,-7.419,0.558,-8.082,0.558,-8.838L0.558,-8.838C0.558,-9.606,0.744,-10.284,1.116,-10.872C1.488,-11.46,2.001,-11.913,2.655,-12.231C3.309,-12.549,4.044,-12.708,4.86,-12.708L4.86,-12.708zM5.004,-6.156C5.64,-6.156,6.201,-6.276,6.687,-6.516C7.173,-6.756,7.554,-7.086,7.83,-7.506C8.106,-7.926,8.244,-8.394,8.244,-8.91L8.244,-8.91C8.244,-9.39,8.115,-9.834,7.857,-10.242C7.599,-10.65,7.218,-10.98,6.714,-11.232C6.21,-11.484,5.61,-11.61,4.914,-11.61L4.914,-11.61C4.002,-11.61,3.261,-11.361,2.691,-10.863C2.121,-10.365,1.836,-9.702,1.836,-8.874L1.836,-8.874C1.836,-8.046,2.121,-7.386,2.691,-6.894C3.261,-6.402,4.032,-6.156,5.004,-6.156L5.004,-6.156z">
+            </path>
+            <path fill="rgb(255,255,255)" stroke-width="0" transform="matrix(1,0,0,1,10.962,0)" d="M1.908,-7.578C1.644,-7.578,1.419,-7.674,1.233,-7.866C1.047,-8.058,0.954,-8.292,0.954,-8.568L0.954,-8.568C0.954,-8.844,1.047,-9.075,1.233,-9.261C1.419,-9.447,1.644,-9.54,1.908,-9.54L1.908,-9.54C2.172,-9.54,2.4,-9.447,2.592,-9.261C2.784,-9.075,2.88,-8.844,2.88,-8.568L2.88,-8.568C2.88,-8.292,2.784,-8.058,2.592,-7.866C2.4,-7.674,2.172,-7.578,1.908,-7.578L1.908,-7.578zM1.908,0.09C1.644,0.09,1.419,-0.006,1.233,-0.198C1.047,-0.39,0.954,-0.624,0.954,-0.9L0.954,-0.9C0.954,-1.176,1.047,-1.407,1.233,-1.593C1.419,-1.779,1.644,-1.872,1.908,-1.872L1.908,-1.872C2.172,-1.872,2.4,-1.779,2.592,-1.593C2.784,-1.407,2.88,-1.176,2.88,-0.9L2.88,-0.9C2.88,-0.624,2.784,-0.39,2.592,-0.198C2.4,-0.006,2.172,0.09,1.908,0.09L1.908,0.09z">
+            </path>
+            <path fill="rgb(255,255,255)" stroke-width="0" transform="matrix(1,0,0,1,14.778,0)" d="M11.646,-4.464L11.646,-3.312L9.126,-3.312L9.126,0L7.83,0L7.83,-3.312L0.72,-3.312L0.72,-4.248L7.398,-12.6L8.838,-12.6L2.394,-4.464L7.866,-4.464L7.866,-7.38L9.126,-7.38L9.126,-4.464L11.646,-4.464z">
+            </path>
+            <path fill="rgb(255,255,255)" stroke-width="0" transform="matrix(1,0,0,1,26.676,0)" d="M4.248,-7.434C6.072,-7.434,7.401,-7.107,8.235,-6.453C9.069,-5.799,9.486,-4.884,9.486,-3.708L9.486,-3.708C9.486,-2.976,9.315,-2.322,8.973,-1.746C8.631,-1.17,8.118,-0.717,7.434,-0.387C6.75,-0.057,5.91,0.108,4.914,0.108L4.914,0.108C4.014,0.108,3.159,-0.039,2.349,-0.333C1.539,-0.627,0.888,-1.02,0.396,-1.512L0.396,-1.512L1.026,-2.538C1.446,-2.106,1.998,-1.755,2.682,-1.485C3.366,-1.215,4.104,-1.08,4.896,-1.08L4.896,-1.08C5.94,-1.08,6.747,-1.314,7.317,-1.782C7.887,-2.25,8.172,-2.874,8.172,-3.654L8.172,-3.654C8.172,-4.518,7.851,-5.172,7.209,-5.616C6.567,-6.06,5.484,-6.282,3.96,-6.282L3.96,-6.282L1.278,-6.282L1.926,-12.6L8.82,-12.6L8.82,-11.448L3.06,-11.448L2.628,-7.434L4.248,-7.434z">
+            </path>
+            <path fill="rgb(255,255,255)" stroke-width="0" transform="matrix(1,0,0,1,36.864,0)">
+            </path>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g mask="url(#msk1)">
+    <g transform="translate(270.2485,313.3713)scale(0.368,0.1975)translate(-565,-350.182)translate(601.0666,343.9101)scale(1.0469,1.0735)translate(-0.8402,5.8426)">
+      <defs>
+        <linearGradient id="gradient2" gradientUnits="userSpaceOnUse" x1="4.1755" y1="-17.1692" x2="4.0953" y2="274.8324">
+          <stop offset="100%" stop-color="rgb(0,0,0)">
+          </stop>
+        </linearGradient>
+        <linearGradient id="linearGradientMaskOpacity2" spreadMethod="pad" gradientUnits="userSpaceOnUse" x1="4.1755" y1="-17.1692" x2="4.0953" y2="274.8324">
+          <stop stop-color="rgb(255,255,255)" offset="0%" stop-opacity="0">
+          </stop>
+          <stop stop-color="rgb(255,255,255)" offset="100%" stop-opacity="1">
+          </stop>
+        </linearGradient>
+        <mask id="linearGradientMask2">
+          <rect x="-595.9798" y="-352.0791" width="1191.9595" height="704.1582" rx="0" ry="0" fill="url(#linearGradientMaskOpacity2)">
+          </rect>
+        </mask>
+      </defs>
+      <rect x="-595.9798" y="-352.0791" width="1191.9595" height="704.1582" rx="0" ry="0" fill="url(#gradient2)" mask="url(#linearGradientMask2)">
+      </rect>
+    </g>
+  </g>
+</svg>

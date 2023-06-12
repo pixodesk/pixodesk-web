@@ -221,6 +221,8 @@ html, body { font-size: 18px; }
 
 .store-buttons { display: flex; }
 
+.store-buttons a.store-button { text-decoration: none; }
+
 .store-buttons .store-button { display: inline-block; border-radius: 4px; height: 32px; padding-left: 4px; padding-right: 8px; cursor: pointer; user-select: none; }
 
 .store-buttons .store-button svg { height: 24px; width: 24px; margin-right: 4px; }
@@ -381,6 +383,14 @@ body.fullbleed { margin: 0; height: 100vh; }
 .product-title { font-size: 1.5rem; color: #fff; }
 
 .menu-item { color: #fff; font-size: 0.9rem; }
+
+.site-header { box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.25); position: fixed; top: 0; left: 0; right: 0; width: 100vw; height: 42px; padding-left: 16px; padding-right: 16px; box-sizing: border-box; background: #444; color: #fff; z-index: 10; }
+
+.site-header a { text-decoration: none; }
+
+.site-footer { font-size: 0.8em; width: 100%; height: 42px; background: #444; color: #fff; }
+
+.site-footer a { text-decoration: none; }
 
 .section .section-header { display: grid; grid-template-columns: 1fr; grid-template-rows: auto; grid-template-areas: "section-title1" "section-title2" "section-title3"; }
 

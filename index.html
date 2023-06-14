@@ -917,7 +917,7 @@
                 </div>
             </div>
             <div class="_second-col">
-                <video style="width: 350px;" poster="image/section--animation-auto.svg" muted autoplay loop
+                <video style="width: 100%; max-width: 450px;" poster="image/section--animation-auto.svg" muted autoplay loop
                     playsinline disablePictureInPicture>
                     <source src="image/section--animation-auto.mp4" type="video/mp4">
                 </video>
@@ -1015,11 +1015,14 @@
     </div>
 </div>
 <div class="section splash splash-section vertical layout">
-    <div 
-        class="section-content vertical layout center"
-        style="height: 32rem;"
-    >
-        <img src="image/section-splashScreens-ready.svg" style="position: absolute; top: 0; left: 0; height: 100%;"/>
+    <div class="section-content vertical layout center" style="height: 32rem;">
+        <img src="image/section-splashScreens-ready.svg" style="position: absolute; top: 0; left: 0; height: 100%;" />
+        <video 
+            style="position: absolute; top: 0; left: 0; height: 200px; transform: translate(696px,170px)scale(0.8);" 
+            poster="image/firework-ready.png" muted autoplay loop playsinline disablePictureInPicture
+        >
+            <source src="image/firework-ready3.mp4" type="video/mp4">
+        </video>
 
         <div class="horizontal layout start relative">
             <div class="_first-col">
@@ -1030,12 +1033,9 @@
                     <div class="card-text  it1">
                         <ul>
                             <li>Create visually stunning splash-screen animations to engage with users giving them a
-                                good
-                                first
-                                impression.</li>
+                                good first impression.</li>
                             <li>Use animation blocks, auto-keyframes, text, mask, clipping, gradient, along-path and
-                                other
-                                tools.</li>
+                                other tools.</li>
                         </ul>
                     </div>
                 </div>

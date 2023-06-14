@@ -426,6 +426,8 @@ body.fullbleed { margin: 0; height: 100vh; }
 
 .section .section-header .section-title2 li, .section .section-header .section-title3 li { text-align: justify; font-size: 1rem; line-height: 170%; font-weight: 300; }
 
+._first-col, ._second-col { position: relative; }
+
 .section { position: relative; display: flex; flex-direction: column; align-items: center; width: 100%; box-sizing: border-box; }
 
 .section ._columns { display: flex; flex-direction: row; align-items: center; align-content: center; flex-wrap: wrap; }
@@ -490,8 +492,6 @@ body.fullbleed { margin: 0; height: 100vh; }
 
 .section .section-header .section-title2, .section .section-header .section-title3 { max-width: calc(min(40em, 100%)); margin-top: 1em; margin-bottom: 2em; }
 
-.section.icons-section video, .section.splash-section video { border-radius: 16px; background: #fff; }
-
 .section.icons-section { background: linear-gradient(180deg, #00184d 20%, #0039b3 50%, #e6eeff 90%, white 100%); padding-top: 2rem; padding-bottom: 8rem; }
 
 .section.icons-section .card { filter: drop-shadow(0 0 0.5rem #000); }
@@ -515,8 +515,6 @@ body.fullbleed { margin: 0; height: 100vh; }
 .section.splash-section .card-header .card-title { color: #fff; }
 
 .section.splash-section .card-text { color: #fff; }
-
-.section.splash-section video { padding: 1em; box-sizing: border-box; }
 
 .pricing-section { display: flex; flex-direction: column; align-items: center; margin-top: 64px; margin-bottom: 120px; }
 

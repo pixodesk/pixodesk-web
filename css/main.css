@@ -223,13 +223,23 @@ html, body { font-size: 18px; }
 
 .store-buttons a.store-button { text-decoration: none; }
 
-.store-buttons .store-button { display: inline-block; border-radius: 4px; height: 32px; padding-left: 4px; padding-right: 8px; cursor: pointer; user-select: none; }
+.store-buttons .store-button { font-size: 0.7rem; white-space: nowrap; display: inline-block; border-radius: 4px; height: 32px; padding-left: 4px; padding-right: 8px; cursor: pointer; user-select: none; margin-left: 8px; margin-top: 8px; min-width: 32px; }
 
 .store-buttons .store-button svg { height: 24px; width: 24px; margin-right: 4px; }
 
+.store-buttons .store-button.explore-app-button { text-decoration: none; font-size: 0.7rem; font-family: Montserrat; font-weight: 500; font-style: italic; color: #0066cc; background: rgba(0, 125, 255, 0.1); padding-left: 4px; padding-right: 8px; height: 34px; border-radius: 4px; white-space: nowrap; }
+
+.store-buttons .store-button div { text-overflow: ellipsis; min-width: 0; overflow: hidden; }
+
 .sea-bg { margin-top: -4px; width: 100%; height: 10vw; background: #63d4b2; }
 
-.page1-animations { position: relative; width: 100%; max-width: 2500px; box-sizing: border-box; }
+@media (min-width: 1656px) { .page1-animations { margin-top: -42px; } }
+
+@media (max-width: 1000px) and (min-width: 700px) { .page1-animations { margin-top: 16px; } }
+
+@media (max-width: 700px) { .page1-animations { margin-top: 64px; } }
+
+.page1-animations { position: relative; width: 100%; max-width: 2000px; box-sizing: border-box; }
 
 .page1-animations .page1-bg-animation { box-sizing: border-box; width: 100%; padding-top: 48%; background-image: url("image/main-boat-bright.jpg"); background-size: cover; background-repeat: no-repeat; background-position: center center; }
 
@@ -380,7 +390,7 @@ body.fullbleed { margin: 0; height: 100vh; }
 
 .self-no-shrink { flex-shrink: 0 !important; flex-basis: auto !important; }
 
-.product-title { font-size: 1.5rem; color: #fff; }
+.product-title { font-size: 1.5rem; color: #fff; text-overflow: ellipsis; min-width: 0; overflow: hidden; }
 
 .menu-item { color: #fff; font-size: 0.9rem; }
 
@@ -426,7 +436,7 @@ body.fullbleed { margin: 0; height: 100vh; }
 
 .section .section-header .section-title2 li, .section .section-header .section-title3 li { text-align: justify; font-size: 1rem; line-height: 170%; font-weight: 300; }
 
-._first-col, ._second-col { position: relative; }
+._first-col, ._second-col { position: relative; max-width: 50%; min-width: 0; }
 
 .section { position: relative; display: flex; flex-direction: column; align-items: center; width: 100%; box-sizing: border-box; }
 
@@ -456,7 +466,7 @@ body.fullbleed { margin: 0; height: 100vh; }
 
 .section.pixodesk-section .card { padding-left: 2rem; padding-right: 2rem; }
 
-.section.lottie-section { position: relative; margin-top: 0; padding-top: 4rem; padding-bottom: 8rem; background: linear-gradient(180deg, #63d4b2 0%, #37c89d 20%, #37c89d 30%, #63d4b2 50%, white 90%); }
+.section.lottie-section { position: relative; margin-top: -1px; padding-top: 4rem; padding-bottom: 8rem; background: linear-gradient(180deg, #63d4b2 0%, #37c89d 20%, #37c89d 30%, #63d4b2 50%, white 90%); }
 
 .section.lottie-section .lottie-section-content { max-width: calc(min(58em, 90%)); }
 
@@ -478,7 +488,7 @@ body.fullbleed { margin: 0; height: 100vh; }
 
 .section.lottie-section .lottie-section-content > ._first-col .card .card-title, .section.lottie-section .lottie-section-content > ._first-col .card .card-text { filter: drop-shadow(0 0 0.5rem #fff); }
 
-.section.lottie-section .lottie-section-content > ._second-col { width: 50%; margin-left: 1rem; }
+.section.lottie-section .lottie-section-content > ._second-col { width: 50%; }
 
 .section.lottie-section .lottie-section-content > ._second-col ul { list-style: none; }
 

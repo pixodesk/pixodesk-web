@@ -1,0 +1,27 @@
+<html lang="en"><head><meta charset="UTF-8"><title>Pixodesk Animator</title><link rel="shortcut icon" href="/favicon.svg"/><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><script defer="defer" src="main.bundle.js"></script></head><body><div id="app"/><script src="https://euc-widget.freshworks.com/widgets/103000000459.js" async defer="defer"></script><script>try {
+            window.fwSettings = {
+                'widget_id': 103000000459,
+                'locale': 'en'
+            };
+            !function () { if ("function" != typeof window.FreshworksWidget) { var n = function () { n.q.push(arguments) }; n.q = [], window.FreshworksWidget = n } }()
+
+            FreshworksWidget('hide', 'launcher');
+
+            // Custom fields are not supported by the free plan
+            // FreshworksWidget('disable', 'ticketForm', ['custom_fields.cf_error']);
+
+            // FreshworksWidget("setLabels", {subject: 'Description', contact_form: {
+            //     subject: 'Description',
+            //     description: 'Error'
+            // }});
+            FreshworksWidget('disable', 'ticketForm', ['description', 'type']);
+
+            window.__prefillFeedbackFormAndShow = function(prefillMap) {
+                FreshworksWidget('clear', 'ticketForm');
+                FreshworksWidget('prefill', 'ticketForm', prefillMap);
+                FreshworksWidget('open', 'ticketForm');
+            };
+        } catch (e) {
+            console.log('FAILED OPENING WIDGET');
+            console.log(e);
+        }</script></body></html>

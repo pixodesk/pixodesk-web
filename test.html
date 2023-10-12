@@ -1,0 +1,120 @@
+<html>
+
+<body>
+    <style>
+        @keyframes a0 {
+            0% {
+                transform: translate(50px, 0px);
+                animation-timing-function: ease-in-out;
+            }
+
+            50% {
+                transform: translate(0, 0px);
+                animation-timing-function: ease-in-out;
+            }
+
+            100% {
+                transform: translate(50px, 0px);
+            }
+        }
+        .a0 {
+            animation: a0 12s infinite;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes a1 {
+            0% {
+                transform: translate(30px, 0px);
+                animation-timing-function: ease-in-out;
+            }
+
+            50% {
+                transform: translate(100px, 0px);
+                animation-timing-function: ease-in-out;
+            }
+
+            100% {
+                transform: translate(30px, 0px);
+            }
+        }
+        .a1 {
+            animation: a1 12s infinite;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes a2 {
+            0% {
+                transform: translate(100px, 0px);
+                animation-timing-function: ease-in-out;
+            }
+
+            50% {
+                transform: translate(0, 0px);
+                animation-timing-function: ease-in-out;
+            }
+
+            100% {
+                transform: translate(100px, 0px);
+            }
+        }
+        .a2 {
+            animation: a2 12s infinite;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes a3 {
+            0% {
+                transform: translate(0px, 0px);
+                animation-timing-function: ease-in-out;
+            }
+
+            50% {
+                transform: translate(200px, 0px);
+                animation-timing-function: ease-in-out;
+            }
+
+            100% {
+                transform: translate(0px, 0px);
+            }
+        }
+        .a3 {
+            animation: a3 12s infinite;
+            animation-fill-mode: forwards;            
+        }
+    </style>
+    <svg width="100%" height="100px">
+        <defs>
+            <pattern id="wave-pattern0" viewBox="0,0,100,40" x="0" y="0" width="200" height="100" patternUnits="userSpaceOnUse">
+                <g class="a0">
+                    <path transform="translate(20,0)" d="M-300,15C-282.0423,15,-267.9577,1.9055,-250,1.9055C-232.0423,1.9055,-217.9577,15,-200,15C-182.0423,15,-167.9577,1.9055,-150,1.9055C-132.0423,1.9055,-117.9577,15,-100,15C-82.0423,15,-67.9577,1.9055,-50,1.9055C-32.0423,1.9055,-17.9541,14.9911,0,15C17.9541,15.0089,32.0495,1.9629,50,1.9629C67.9505,1.9629,82.0495,15,100,15L100,70L-300,70L-300,15z"
+                        fill="#2fabdf" fill-opacity="0.4"></path>
+                </g>
+            </pattern>
+            <pattern id="wave-pattern1" viewBox="0,0,100,40" x="0" y="0" width="200" height="100" patternUnits="userSpaceOnUse">
+                <g class="a1">
+                    <path transform="translate(0,10)" d="M-300,15C-282.0423,15,-267.9577,1.9055,-250,1.9055C-232.0423,1.9055,-217.9577,15,-200,15C-182.0423,15,-167.9577,1.9055,-150,1.9055C-132.0423,1.9055,-117.9577,15,-100,15C-82.0423,15,-67.9577,1.9055,-50,1.9055C-32.0423,1.9055,-17.9541,14.9911,0,15C17.9541,15.0089,32.0495,1.9629,50,1.9629C67.9505,1.9629,82.0495,15,100,15L100,70L-300,70L-300,15z"
+                        fill="#24a0a0" fill-opacity="0.4"></path>
+                </g>
+            </pattern>
+            <pattern id="wave-pattern2" viewBox="0,0,100,40" x="30" y="00" width="200" height="100" patternUnits="userSpaceOnUse">
+                <g class="a2">
+                    <path transform="translate(0,20)" d="M-300,15C-282.0423,15,-267.9577,1.9055,-250,1.9055C-232.0423,1.9055,-217.9577,15,-200,15C-182.0423,15,-167.9577,1.9055,-150,1.9055C-132.0423,1.9055,-117.9577,15,-100,15C-82.0423,15,-67.9577,1.9055,-50,1.9055C-32.0423,1.9055,-17.9541,14.9911,0,15C17.9541,15.0089,32.0495,1.9629,50,1.9629C67.9505,1.9629,82.0495,15,100,15L100,70L-300,70L-300,15z"
+                        fill="#29c4a2" fill-opacity="0.7"></path>
+                </g>
+            </pattern>
+            <pattern id="wave-pattern3" viewBox="0,0,100,40" x="30" y="00" width="200" height="100" patternUnits="userSpaceOnUse">
+                <g class="a3">
+                    <path transform="translate(50,30)" d="M-300,15C-282.0423,15,-267.9577,1.9055,-250,1.9055C-232.0423,1.9055,-217.9577,15,-200,15C-182.0423,15,-167.9577,1.9055,-150,1.9055C-132.0423,1.9055,-117.9577,15,-100,15C-82.0423,15,-67.9577,1.9055,-50,1.9055C-32.0423,1.9055,-17.9541,14.9911,0,15C17.9541,15.0089,32.0495,1.9629,50,1.9629C67.9505,1.9629,82.0495,15,100,15L100,70L-300,70L-300,15z"
+                        fill="#5de9ca" fill-opacity="0.4"></path>
+                </g>
+            </pattern>
+        </defs>
+        <rect x="0" y="0" width="100%" height="100" fill="url(#wave-pattern0)" ></rect>
+        <rect x="0" y="0" width="100%" height="100" fill="url(#wave-pattern1)" ></rect>
+        <rect x="0" y="0" width="100%" height="100" fill="url(#wave-pattern2)" ></rect>
+        <rect x="0" y="0" width="100%" height="100" fill="url(#wave-pattern3)" ></rect>
+    </svg>
+    <div style="width: 100%; height: 200px; background: #53d3bb;"></div>
+</body>
+
+</html>

@@ -12,11 +12,7 @@
     <meta http-equiv="pragma" content="no-cache"> -->
 
     <link rel='shortcut icon' type='image/x-icon' href='pixodesk-logo.svg'>
-
     <link rel="stylesheet" href="/css/main.css">
-
-    <link rel="preload" as="image" href="/image/main-boat-bright.jpg">
-    <link rel="preload" as="image" href="/image/office-small4.png">
 </head>
 
 <body>
@@ -41,6 +37,7 @@
     });
 </script>
 <script type='text/javascript' src='https://euc-widget.freshworks.com/widgets/103000000459.js' async defer></script>
+<script type='text/javascript' src='/typewriter.js' async defer></script>
 
 
 <div style="position: absolute">
@@ -198,67 +195,217 @@
 </div>
 
 <div class="site-header horizontal layout center">
-    <!-- <img src="image/logos/app-logo.svg" height="32" style="margin-right: 8px" /> -->
-    <svg height="32" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox='0 0 32 32' preserveAspectRatio="xMidYMid meet">
-        <g transform="translate(-1,-1) scale(1.4,1.4)">
-            <path fill="#ccc" d="M21.192,14.121L14.121,21.192C12.95,22.363,11.049,22.363,9.878,21.192L2.807,14.121C2.48,13.794,2.243,13.409,2.099,13L6.282,13L11.292,18.01C11.682,18.4,12.317,18.4,12.707,18.01L17.717,13L21.9,12.999C21.756,13.408,21.519,13.794,21.192,14.121zM21.192,9.878C21.519,10.205,21.756,10.591,21.9,11L17.717,10.999L12.707,5.989C12.317,5.599,11.682,5.599,11.292,5.989L6.282,11L2.099,11C2.243,10.591,2.48,10.205,2.807,9.878L9.878,2.807C11.049,1.636,12.95,1.636,14.121,2.807L21.192,9.878z"></path>
-            <rect fill="#ccc" transform="matrix(0.707,0.707,-0.707,0.707,12,12)" x="-2.75" y="-2.75" width="5.5" height="5.5" ></rect>
-        </g>
-      </svg>
-    <a href="/" class="product-title" style="margin-left: 16px;">Pixodesk Animator</a>
-    <div class="flex"></div>
-    <a href="/pricing.html" class="menu-item">PRICING</a>
-    <!-- <div class="menu-item">Docs</div> -->
+        <!-- <img src="image/logos/app-logo.svg" height="32" style="margin-right: 8px" /> -->
+        <svg height="38" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox='0 0 32 32' preserveAspectRatio="xMidYMid meet">
+            <g transform="translate(-1,-1) scale(1.4,1.4)">
+                <path fill="#fff" d="M21.192,14.121L14.121,21.192C12.95,22.363,11.049,22.363,9.878,21.192L2.807,14.121C2.48,13.794,2.243,13.409,2.099,13L6.282,13L11.292,18.01C11.682,18.4,12.317,18.4,12.707,18.01L17.717,13L21.9,12.999C21.756,13.408,21.519,13.794,21.192,14.121zM21.192,9.878C21.519,10.205,21.756,10.591,21.9,11L17.717,10.999L12.707,5.989C12.317,5.599,11.682,5.599,11.292,5.989L6.282,11L2.099,11C2.243,10.591,2.48,10.205,2.807,9.878L9.878,2.807C11.049,1.636,12.95,1.636,14.121,2.807L21.192,9.878z"></path>
+                <rect fill="#fff" transform="matrix(0.707,0.707,-0.707,0.707,12,12)" x="-2.75" y="-2.75" width="5.5" height="5.5" ></rect>
+            </g>
+        </svg>
+        <a href="/" class="product-title" style="margin-left: 16px;">Pixodesk Animator</a>
+        <div class="flex"></div>
+        <a href="/pricing.html" class="menu-item">PRICING</a>
+        <!-- <div class="menu-item">Docs</div> -->
 </div>
 
-<div class="page1 vertical layout center">
+<style>
+    @keyframes aw0 {
+        0% {
+            transform: translate(50px, 0px);
+            animation-timing-function: ease-in-out;
+        }
 
-    <div class="site-titles vertical layout center center-justified" style="z-index: 3;">
+        50% {
+            transform: translate(0, 0px);
+            animation-timing-function: ease-in-out;
+        }
 
-        <h1 class="site-title1">
-            Create <span class="strong-text">Lottie</span> based animation
-        </h1>
+        100% {
+            transform: translate(50px, 0px);
+        }
+    }
 
-        <div class="vertical layout center center-justified site-titles2">
-            <h2 class="site-title2">
-                <span class="strong-text">Draw</span> and <span class="strong-text">compose</span> content, <span
-                    class="strong-text">animate</span>
-                and <span class="strong-text">export</span> to different formats.
-            </h2>
-            <h2 class="site-title2">
-                For any <span class="strong-text">website</span> and <span class="strong-text">native app</span>. A
-                complete solution in one application.
-            </h2>
-        </div>
-    </div>
+    .aw0 {
+        animation: aw0 21s infinite;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes aw1 {
+        0% {
+            transform: translate(30px, 0px);
+            animation-timing-function: ease-in-out;
+        }
+
+        50% {
+            transform: translate(100px, 0px);
+            animation-timing-function: ease-in-out;
+        }
+
+        100% {
+            transform: translate(30px, 0px);
+        }
+    }
+
+    .aw1 {
+        animation: aw1 21s infinite;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes aw2 {
+        0% {
+            transform: translate(100px, 0px);
+            animation-timing-function: ease-in-out;
+        }
+
+        50% {
+            transform: translate(0, 0px);
+            animation-timing-function: ease-in-out;
+        }
+
+        100% {
+            transform: translate(100px, 0px);
+        }
+    }
+
+    .aw2 {
+        animation: aw2 21s infinite;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes aw3 {
+        0% {
+            transform: translate(0px, 0px);
+            animation-timing-function: ease-in-out;
+        }
+
+        50% {
+            transform: translate(200px, 0px);
+            animation-timing-function: ease-in-out;
+        }
+
+        100% {
+            transform: translate(0px, 0px);
+        }
+    }
+
+    .aw3 {
+        animation: aw3 21s infinite;
+        animation-fill-mode: forwards;
+    }
 
 
-    <!-- ---------------- SCREEN ---------------- -->
+    @keyframes a0 {
+        0% {
+            transform: rotate(-1deg);
+            animation-timing-function: cubic-bezier(0.3333, 0.6667, 0.6667, 1);
+        }
 
-    <div class="page1-animations">
-        <div class="page1-bg-animation">
-            <video poster="image/main-boat-bright.jpg" muted autoplay loop playsinline disablePictureInPicture>
-                <source src="image/main-boat-bright.mp4" type="video/mp4">
-            </video>
-        </div>
+        32% {
+            transform: rotate(-5deg);
+            animation-timing-function: cubic-bezier(0, 0, 1, 1);
+        }
 
-        <div class="page1-fg-animation-with-buttons shadow-12dp vertical layout center">
-            <div class="page1-fg-animation-wrap">
-                <div class="page1-fg-animation">
-                    <video id="laptop-video" poster="image/office-small4.png" muted autoplay loop playsinline disablePictureInPicture>
-                        <source src="image/office-small4.mp4" type="video/mp4">
-                    </video>
-                </div>
-            </div>
+        35.3333% {
+            transform: rotate(-5deg);
+            animation-timing-function: cubic-bezier(0.3333, 0, 0.6667, 0.3333);
+        }
 
-            <div class="store-buttons horizontal layout wrap" style="position: absolute; bottom: calc(100% + 8px); right: 0; left: 0;">
-                <a class="explore-app-button store-button horizontal layout center" href="/app/animator/demo/" target="_blank">
-                    <svg width="24px" height="24px">
-                        <use xlink:href="#explore-app"></use>
-                    </svg>
-                    <div>Explore the app in the browser in restricted mode (no save/export)</div>
-                </a>
-                <a href="https://www.microsoft.com/store/apps/9PPD94XQFPC9" target="_blank"
+        46.6667% {
+            transform: rotate(-2.5778deg);
+            animation-timing-function: cubic-bezier(0.167, 0.167, 0.833, 0.833);
+        }
+
+        60% {
+            transform: rotate(-1deg);
+            animation-timing-function: cubic-bezier(0.3333, 0.6667, 0.6667, 1);
+        }
+
+        82.6667% {
+            transform: rotate(4deg);
+            animation-timing-function: cubic-bezier(0, 0, 1, 1);
+        }
+
+        86% {
+            transform: rotate(4deg);
+            animation-timing-function: cubic-bezier(0.3333, 0, 0.6667, 0.3333);
+        }
+
+        100% {
+            transform: rotate(-1deg)
+        }
+    }
+
+    .a0 {
+        animation: a0 9.375s infinite;
+        animation-fill-mode: forwards;
+    }
+</style>
+
+
+<div class="page-item vertical layout center" style="margin-top: 42px;">
+    <div class="page-item-content" style="position: relative;">
+
+        <div class="vertical layout" style="min-height: calc(100vh - 16rem); margin-top: 2rem; margin-bottom: 2rem;">
+
+            <div class="flex"></div>
+
+            <div class="horizontal-big-screen layout flex-big-screen" style="position: relative;">
+                <div style="padding-right: calc(var(--big-screen-switch) * 4rem); font-size: 4rem;">
+
+
+                    <div class="site-titles vertical layout start center-justified" style="z-index: 3;">
+
+                        <div class="vertical layout start site-title1" style="width: 38rem;">
+                            <div>
+                                <span style="color: rgb(0,125,255)">Animate</span> your</span>
+                            </div>
+                            <div>
+                                website or native app,
+                            </div>
+                            <div>
+                                make it <span id="coolWord" style="color: rgb(255,0,0)">cool</span>
+                            </div>
+                        </div>
+                        <div class="vertical layout start site-title2">
+                            <div style="margin-top: 1rem; margin-bottom: 0.5rem;">
+                                <span class="strong-text">splash screens</span>,
+                                <span class="strong-text">loaders</span> and <span class="strong-text">icons</span>
+                            </div>
+                            <div style="margin-top: 0.25rem; margin-bottom: 0.5rem;">
+                                customised to your
+                            </div>
+                            <div style="margin-top: 0.25rem; margin-bottom: 0.5rem;">
+                                <span class="strong-text">business</span>, <span class="strong-text">branding</span> and
+                                <span class="strong-text">content</span>
+                            </div>
+                        </div>
+                        <div class="vertical layout start site-title3">
+                            <div style="margin-top: 1rem;">
+                                <span class="strong-text">Pixodesk Animator</span> makes it <span class="strong-text"
+                                    style="color: red;">easy</span>
+                            </div>
+                        </div>
+                        <div class="vertical layout start site-title4">
+                            <div style="margin-top: 1rem; margin-bottom: 0.5rem;">
+                                It is an animation and vector editor
+                            </div>
+                            <div style="margin-top: 0.25rem; margin-bottom: 0.5rem;">
+                                based on popular <span class="strong-text"
+                                    style="color: green; font-size: 110%;">Lottie</span> file format
+                            </div>
+                        </div>
+
+                        <div class="store-buttons horizontal layout wrap _with-shadow"
+                            style="margin-top: 2rem; z-index: 1;">
+
+                            <!-- <a class="explore-app-button store-button horizontal layout center" href="/app/animator/demo/" target="_blank">
+                                <svg width="24px" height="24px">
+                                    <use xlink:href="#explore-app"></use>
+                                </svg>
+                                <div>Explore the app in the browser in restricted mode (no save/export)</div>
+                            </a> -->
+
+                            <a href="https://www.microsoft.com/store/apps/9PPD94XQFPC9" target="_blank"
     class="store-button horizontal layout center">
     <svg>
         <use xlink:href="#windows"></use>
@@ -272,602 +419,452 @@
     </svg>
     <div>Mac App Store</div>
 </a>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="flex-big-screen"
+                    style="background: #111; margin-top: calc(var(--small-screen-switch) * 4rem); padding: 0.8rem; border-radius: 1.5rem; box-shadow: 0 12px 16px 1px rgba(0, 0, 0, 0.4), 0 4px 22px 3px rgba(0, 0, 0, 0.4), 0 6px 7px -4px rgba(0, 0, 0, 1);">
+
+                    <video id="laptop-video" style="width: 100%; border-radius: 0.5rem;" muted autoplay loop playsinline
+                        disablePictureInPicture>
+                        <source src="image/firework-win3.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <svg width="100vw" height="100px"
+                    style="position: absolute; bottom: -65px; left: 50%; transform: translate(-50%,0);">
+                    <defs>
+                        <pattern id="wave-pattern0" viewBox="0,0,100,40" x="0" y="0" width="200" height="100"
+                            patternUnits="userSpaceOnUse">
+                            <g class="aw0">
+                                <path transform="translate(20,0)"
+                                    d="M-300,15C-282.0423,15,-267.9577,1.9055,-250,1.9055C-232.0423,1.9055,-217.9577,15,-200,15C-182.0423,15,-167.9577,1.9055,-150,1.9055C-132.0423,1.9055,-117.9577,15,-100,15C-82.0423,15,-67.9577,1.9055,-50,1.9055C-32.0423,1.9055,-17.9541,14.9911,0,15C17.9541,15.0089,32.0495,1.9629,50,1.9629C67.9505,1.9629,82.0495,15,100,15L100,70L-300,70L-300,15z"
+                                    fill="#2fabdf" fill-opacity="0.4"></path>
+                            </g>
+                        </pattern>
+                        <pattern id="wave-pattern1" viewBox="0,0,100,40" x="0" y="0" width="200" height="100"
+                            patternUnits="userSpaceOnUse">
+                            <g class="aw1">
+                                <path transform="translate(0,5)"
+                                    d="M-300,15C-282.0423,15,-267.9577,1.9055,-250,1.9055C-232.0423,1.9055,-217.9577,15,-200,15C-182.0423,15,-167.9577,1.9055,-150,1.9055C-132.0423,1.9055,-117.9577,15,-100,15C-82.0423,15,-67.9577,1.9055,-50,1.9055C-32.0423,1.9055,-17.9541,14.9911,0,15C17.9541,15.0089,32.0495,1.9629,50,1.9629C67.9505,1.9629,82.0495,15,100,15L100,70L-300,70L-300,15z"
+                                    fill="#24a0a0" fill-opacity="0.4"></path>
+                            </g>
+                        </pattern>
+                        <pattern id="wave-pattern2" viewBox="0,0,100,40" x="30" y="00" width="200" height="100"
+                            patternUnits="userSpaceOnUse">
+                            <g class="aw2">
+                                <path transform="translate(0,20)"
+                                    d="M-300,15C-282.0423,15,-267.9577,1.9055,-250,1.9055C-232.0423,1.9055,-217.9577,15,-200,15C-182.0423,15,-167.9577,1.9055,-150,1.9055C-132.0423,1.9055,-117.9577,15,-100,15C-82.0423,15,-67.9577,1.9055,-50,1.9055C-32.0423,1.9055,-17.9541,14.9911,0,15C17.9541,15.0089,32.0495,1.9629,50,1.9629C67.9505,1.9629,82.0495,15,100,15L100,70L-300,70L-300,15z"
+                                    fill="#29c4a2" fill-opacity="0.7"></path>
+                            </g>
+                        </pattern>
+                        <pattern id="wave-pattern3" viewBox="0,0,100,40" x="30" y="00" width="200" height="100"
+                            patternUnits="userSpaceOnUse">
+                            <g class="aw3">
+                                <path transform="translate(50,28)"
+                                    d="M-300,15C-282.0423,15,-267.9577,1.9055,-250,1.9055C-232.0423,1.9055,-217.9577,15,-200,15C-182.0423,15,-167.9577,1.9055,-150,1.9055C-132.0423,1.9055,-117.9577,15,-100,15C-82.0423,15,-67.9577,1.9055,-50,1.9055C-32.0423,1.9055,-17.9541,14.9911,0,15C17.9541,15.0089,32.0495,1.9629,50,1.9629C67.9505,1.9629,82.0495,15,100,15L100,70L-300,70L-300,15z"
+                                    fill="#5de9ca" fill-opacity="0.4"></path>
+                            </g>
+                        </pattern>
+                    </defs>
+                    <rect x="0" y="0" width="100%" height="100" fill="url(#wave-pattern0)"></rect>
+                    <rect x="0" y="0" width="100%" height="100" fill="url(#wave-pattern1)"></rect>
+                    <rect x="0" y="0" width="100%" height="100" fill="url(#wave-pattern2)"></rect>
+                    <rect x="0" y="0" width="100%" height="100" fill="url(#wave-pattern3)"></rect>
+                </svg>
+
+                <!-- BOAT -->
+                <!-- calc(var(--big-screen-switch) * -20%) -->
+                <svg width="12rem" viewBox="0 0 600 600" preserveAspectRatio="xMidYMid meet"
+                    style="position: absolute; bottom: -65px; left: calc(var(--big-screen-switch) * 380px); transform: translate(0, 4rem) scale(var(--small-screen-mult-05), var(--small-screen-mult-05));">
+                    <g>
+                        <g transform="matrix(1,0,0,1,304.9043,569.5637)">
+                            <g id="mbiej83" class="a0" transform="-0.0175">
+                                <g transform="matrix(1,0,0,1,-903,-1214)">
+                                    <g transform="matrix(1,0,0,1,89.5,0)">
+                                        <g>
+                                            <g transform="matrix(1,0,0,1,774,1078)">
+                                                <path
+                                                    d="M-16.5,0L-220,0C-92.27,-102.84,-31.487,-245.524,3.5,-395C-4.778,-286.753,-63.851,-111.7,-16.5,0z"
+                                                    fill="rgb(36,160,160)">
+                                                </path>
+                                            </g>
+                                            <g transform="matrix(1,0,0,1,783,1070)">
+                                                <defs>
+                                                    <linearGradient id="mbiej7v" gradientUnits="userSpaceOnUse"
+                                                        x1="315.02" y1="-296.3464" x2="185.762" y2="-199.193">
+                                                        <stop id="mbiej80" offset="0%" stop-color="rgb(255,255,255)">
+                                                        </stop>
+                                                        <stop id="mbiej81" offset="100%" stop-color="rgb(255,147,57)">
+                                                        </stop>
+                                                    </linearGradient>
+                                                </defs>
+                                                <path
+                                                    d="M8.667,8C97.799,-14.491,196.983,-25.722,292.5,7C242.978,-129.998,114.975,-290.684,-1,-387C-1,-387,83.878,-41.157,8.667,8z"
+                                                    fill="url(#mbiej7v)">
+                                                </path>
+                                            </g>
+                                            <g transform="matrix(1,0,0,1,777.5,913.5)">
+                                                <path
+                                                    d="M-1.5,-238.499C4.022,-238.499,8.5,-234.021,8.5,-228.499L8.5,228.499C8.5,234.021,4.022,238.499,-1.5,238.499L1.5,238.499C-4.022,238.499,-8.5,234.021,-8.5,228.499L-8.5,-228.499C-8.5,-234.021,-4.022,-238.499,1.5,-238.499L-1.5,-238.499z"
+                                                    fill="rgb(155,70,0)">
+                                                </path>
+                                            </g>
+                                            <g transform="matrix(1,0,0,1,783,1070)">
+                                                <path
+                                                    d="M8.667,8C48.598,-2.075,90.547,-9.892,133.279,-12.508C124.422,-108.942,99.415,-268.19,-1,-387C-1,-387,83.878,-41.157,8.667,8z"
+                                                    fill="rgb(198,90,0)">
+                                                </path>
+                                            </g>
+                                            <g transform="matrix(1,0,0,1,774,1078)">
+                                                <path
+                                                    d="M-16.5,0L-113.977,0C-81.724,-42.568,-21.462,-247.635,3.5,-395C-4.778,-286.753,-63.851,-111.7,-16.5,0z"
+                                                    fill="rgb(0,119,119)">
+                                                </path>
+                                            </g>
+                                        </g>
+                                        <g transform="matrix(1,0,0,1,777.5,681.7062)">
+                                            <path id="mbiej82"
+                                                d="M0,0L0,71C-33.541,50.998,-137.843,62.369,-182.666,36C-94.283,37.309,-51.47,-10.581,0,0z"
+                                                fill="rgb(255,39,12)">
+                                            </path>
+                                        </g>
+                                    </g>
+                                    <g transform="matrix(1,0,0,1,101.6332,0)">
+                                        <g transform="matrix(1,0,0,1,588.2971,1208.6194)">
+                                            <path
+                                                d="M439.143,-58.679C447.493,-67.33,453.122,-73.415,453.291,-73.606C468.356,-90.651,479.069,-103.781,479.069,-103.781L-58.929,-103.781C-58.929,-103.781,-54.874,-90.92,-48.18,-74.179C-46.176,-69.166,-43.934,-63.803,-41.494,-58.334C20.595,-45.36,376.997,-45.806,439.143,-58.679z"
+                                                fill="rgb(255,39,12)">
+                                            </path>
+                                        </g>
+                                        <g transform="matrix(1,0,0,1,600,1206)">
+                                            <path
+                                                d="M0,0C28.849,13.012,319.983,10.857,349,2C378.017,-6.857,452.381,-98,452.381,-98C408.481,-89.913,-9.662,-88.676,-55.647,-98C-55.647,-98,-28.849,-13.012,0,0z"
+                                                fill="rgb(255,39,12)">
+                                            </path>
+                                        </g>
+                                        <g transform="matrix(1,0,0,1,588.2971,1208.6194)">
+                                            <path
+                                                d="M439.143,-58.679C447.493,-67.33,453.122,-73.415,453.291,-73.606C401.223,-64.008,6.526,-62.914,-48.18,-74.179C-46.176,-69.166,-43.934,-63.803,-41.494,-58.334C2.025,-49.23,398.041,-49.268,439.143,-58.679z"
+                                                fill="rgb(155,0,0)">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
             </div>
 
-            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1400 800" preserveAspectRatio="xMidYMid meet" style="pointer-events: none; position: absolute; top: 0; left: 0; width: 200%; transform: translate(-25%,0); transform-origin: left top;">
-  <g transform="translate(1085.7266,159.0892)">
-    <g class="drg tpbl" data-drg-tp="element" data-drg-v="948" data-test-id="Text 4" data-gn-el-type="text">
-      <g style="opacity:1">
-        <g transform="translate(0, 0)">
-          <path d="M 3.2048 11.1497 L 13.3646 14.1017 L 6.668 37.1486 L -3.4918 34.1965 ZM 11.6205 13.5834 L 18.3504 14.913 L 13.6989 38.4579 L 6.9689 37.1283 ZM 17.2194 14.7318 L 24.7143 15.7214 L 21.5728 39.5149 L 14.0778 38.5253 ZM 23.7477 15.6071 L 30.7867 16.1509 L 28.9381 40.0796 L 21.8991 39.5358 ZM 30.016 16.1038 L 37.2119 16.3496 L 36.3926 40.3356 L 29.1968 40.0898 ZM 36.6216 16.3296 L 43.2416 16.3382 L 43.2104 40.3381 L 36.5904 40.3295 ZM 42.8625 16.3297 L 47.7015 16.234 L 48.176 40.2293 L 43.337 40.325 ZM 47.4176 16.2465 L 54.0334 16.011 L 54.8869 39.9958 L 48.2711 40.2313 ZM 53.8123 16.0176 L 60.8642 15.6798 L 62.0127 39.6523 L 54.9608 39.9901 ZM 60.7981 15.6761 L 60.7981 15.6761 L 62.0342 39.6442 L 62.0342 39.6442 ZM -3.7508 34.0897 L 5.8743 36.9463 L -0.9543 59.9543 L -10.5793 57.0977 ZM 6.4647 37.0504 L 15.3027 38.7502 L 10.7698 62.3182 L 1.9318 60.6184 ZM 15.6499 38.7277 L 19.3564 39.2266 L 16.1547 63.0121 L 12.4482 62.5132 ZM 19.6801 39.3586 L 30.846 40.2326 L 28.9733 64.1594 L 17.8074 63.2855 ZM 31.1973 40.199 L 39.9355 40.377 L 39.4469 64.372 L 30.7087 64.1941 ZM 40.3685 40.3539 L 46.988 40.2685 L 47.2976 64.2665 L 40.6781 64.3519 ZM 46.8706 40.2673 L 53.3672 40.0587 L 54.1371 64.0464 L 47.6405 64.2549 ZM 53.4531 40.0556 L 61.3046 39.6913 L 62.4169 63.6655 L 54.5654 64.0298 ZM 61.342 39.6816 L 66.1753 39.4269 L 67.4385 63.3936 L 62.6052 63.6483 ZM 66.2407 39.422 L 71.0737 39.1628 L 72.3588 63.1284 L 67.5257 63.3876 ZM 71.0092 39.1671 L 71.0092 39.1671 L 72.2757 63.1336 L 72.2757 63.1336 ZM -11.1145 56.8484 L -4.8251 58.8492 L -12.1009 81.7198 L -18.3903 79.719 ZM -3.0002 59.3357 L 1.6952 60.5101 L -4.1286 83.7928 L -8.824 82.6184 ZM 4.287 61.1373 L 13.5893 62.7434 L 9.506 86.3934 L 0.2037 84.7874 ZM 15.3722 62.9758 L 25.0469 63.9127 L 22.7335 87.801 L 13.0587 86.864 ZM 26.8863 64.0196 L 36.6003 64.3618 L 35.7552 88.3469 L 26.0412 88.0047 ZM 37.6404 64.3326 L 42.4803 64.3354 L 42.4661 88.3354 L 37.6261 88.3326 ZM 43.5097 64.3348 L 50.8079 64.171 L 51.3463 88.165 L 44.0482 88.3287 ZM 50.9739 64.1589 L 57.4689 63.9039 L 58.4105 87.8854 L 51.9155 88.1404 ZM 57.7808 63.8872 L 64.5924 63.5487 L 65.7835 87.5191 L 58.9719 87.8576 ZM 64.7094 63.5387 L 70.5211 63.2271 L 71.8059 87.1927 L 65.9943 87.5043 ZM 70.6807 63.2144 L 77.8712 62.8438 L 79.1064 86.812 L 71.916 87.1826 ZM 77.3401 62.859 L 86.0727 62.4992 L 87.0608 86.4788 L 78.3282 86.8386 ZM 85.2934 62.4931 L 96.4921 62.3228 L 96.8569 86.32 L 85.6582 86.4903 ZM 95.426 62.3529 L 101.9247 62.4853 L 101.436 86.4803 L 94.9373 86.3479 ZM 101.1613 62.448 L 107.9701 62.8385 L 106.5961 86.7991 L 99.7873 86.4087 ZM 106.8157 62.7666 L 111.6344 63.2196 L 109.388 87.1142 L 104.5693 86.6612 ZM 110.4144 63.0578 L 116.9538 63.9501 L 113.7092 87.7298 L 107.1698 86.8375 ZM 115.9346 63.8383 L 115.9346 63.8383 L 112.1194 87.5331 L 112.1194 87.5331 Z" fill="rgba(0,0,0,0)"/>
-          <g fill="rgb(85,85,85)" stroke-width="0" font-size="20px" style="font-family:Caveat-Regular;font-style:normal;font-weight:400">
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9603,0.279,-0.279,0.9603,-1.8176,28.4348)" data-testaaa="0">E</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.981,0.1938,-0.1938,0.981,8.1318,31.2421)" data-testaaa="0">x</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9914,0.1309,-0.1309,0.9914,14.8632,32.5769)" data-testaaa="0">p</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.997,0.077,-0.077,0.997,22.3613,33.5536)" data-testaaa="0">o</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9994,0.0341,-0.0341,0.9994,29.4016,34.0933)" data-testaaa="0">r</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(1,0.0013,-0.0013,1,36.5982,34.3296)" data-testaaa="0">t</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9998,-0.0198,0.0198,0.9998,43.2184,34.3262)" data-testaaa="0"/>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9994,-0.0356,0.0356,0.9994,48.0577,34.2351)" data-testaaa="0">t</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9989,-0.0479,0.0479,0.9989,54.6737,33.997)" data-testaaa="0">o</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9987,-0.0515,0.0515,0.9987,61.7252,33.6522)" data-testaaa="0"/>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9587,0.2845,-0.2845,0.9587,-8.8722,51.3457)" data-testaaa="0">A</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.982,0.1889,-0.1889,0.982,3.065,54.7264)" data-testaaa="0">n</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9911,0.1334,-0.1334,0.9911,13.2486,56.5668)" data-testaaa="0">i</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.997,0.078,-0.078,0.997,18.2756,57.3038)" data-testaaa="0">m</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9998,0.0204,-0.0204,0.9998,30.8308,58.1953)" data-testaaa="0">a</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9999,-0.0129,0.0129,0.9999,40.6007,58.3524)" data-testaaa="0">t</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9995,-0.0321,0.0321,0.9995,47.448,58.258)" data-testaaa="0">e</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9989,-0.0463,0.0463,0.9989,54.2873,58.0362)" data-testaaa="0">d</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9986,-0.0526,0.0526,0.9986,62.2894,57.6566)" data-testaaa="0"/>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9986,-0.0535,0.0535,0.9986,67.2045,57.3962)" data-testaaa="0"/>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9986,-0.0528,0.0528,0.9986,71.9591,57.142)" data-testaaa="0"/>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9529,0.3032,-0.3032,0.9529,-16.5713,74.0013)" data-testaaa="0">(</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9701,0.2427,-0.2427,0.9701,-7.368,76.7977)" data-testaaa="0"/>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9854,0.1701,-0.1701,0.9854,1.2245,78.8748)" data-testaaa="0">C</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9953,0.0964,-0.0964,0.9953,13.6371,80.892)" data-testaaa="0">S</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9994,0.0352,-0.0352,0.9994,26.2525,82.0084)" data-testaaa="0">S</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(1,0.0006,-0.0006,1,37.6296,82.3326)" data-testaaa="0"/>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9997,-0.0224,0.0224,0.9997,43.9136,82.3302)" data-testaaa="0">k</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9992,-0.0392,0.0392,0.9992,51.6801,82.145)" data-testaaa="0">e</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9988,-0.0496,0.0496,0.9988,58.6741,81.865)" data-testaaa="0">y</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9986,-0.0535,0.0535,0.9986,65.6731,81.5129)" data-testaaa="0">f</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9987,-0.0515,0.0515,0.9987,71.6072,81.1905)" data-testaaa="0">r</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9992,-0.0412,0.0412,0.9992,78.0812,80.8437)" data-testaaa="0">a</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9999,-0.0152,0.0152,0.9999,85.567,80.491)" data-testaaa="0">m</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9998,0.0204,-0.0204,0.9998,95.0595,80.3492)" data-testaaa="0">e</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9984,0.0572,-0.0572,0.9984,100.1308,80.4185)" data-testaaa="0">s</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9956,0.0936,-0.0936,0.9956,105.1309,80.6875)" data-testaaa="0"/>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9908,0.1352,-0.1352,0.9908,107.9809,80.8926)" data-testaaa="0">)</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9873,0.159,-0.159,0.9873,113.0732,81.6094)" data-testaaa="0"/>
-          </g>
-        </g>
-      </g>
-    </g>
-  </g>
-  <g transform="translate(937.1932,456.5617)">
-    <g class="drg tpbl" data-drg-tp="element" data-drg-v="884" data-test-id="Text 9" data-gn-el-type="text">
-      <g style="opacity:1">
-        <g transform="translate(0, 0)">
-          <path d="M -104.4387 -32.4537 L -95.0727 -33.6327 L -92.0751 -9.8207 L -101.4411 -8.6416 ZM -95.0104 -33.6405 L -85.7983 -34.7613 L -82.8998 -10.937 L -92.1118 -9.8162 ZM -85.7231 -34.7699 L -77.0426 -35.788 L -74.2468 -11.9514 L -82.9273 -10.9333 ZM -76.9612 -35.796 L -69.8069 -36.6054 L -67.1089 -12.7575 L -74.2633 -11.9481 ZM -69.7388 -36.6126 L -63.158 -37.3318 L -60.5504 -13.4739 L -67.1312 -12.7546 ZM -63.0878 -37.3397 L -56.3054 -38.0542 L -53.7911 -14.1862 L -60.5735 -13.4718 ZM -56.2553 -38.0571 L -52.3157 -38.4589 L -49.8805 -14.5827 L -53.8201 -14.1809 ZM -52.2589 -38.4653 L -47.4425 -38.9427 L -45.0752 -15.0597 L -49.8916 -14.5823 ZM -47.4146 -38.9435 L -47.4146 -38.9435 L -45.0858 -15.0567 L -45.0858 -15.0567 ZM -101.4422 -8.6419 L -91.7189 -9.8651 L -88.7231 13.9472 L -98.4464 15.1704 ZM -91.7556 -9.8597 L -83.0795 -10.9149 L -80.182 12.9095 L -88.858 13.9647 ZM -83.087 -10.9102 L -79.7306 -11.3086 L -76.9015 12.524 L -80.258 12.9225 ZM -79.7431 -11.3099 L -72.3924 -12.1626 L -69.6271 11.6776 L -76.9778 12.5302 ZM -72.4144 -12.1594 L -65.955 -12.8848 L -63.2763 10.9652 L -69.7357 11.6907 ZM -65.9786 -12.8804 L -62.0421 -13.3111 L -59.4321 10.5466 L -63.3686 10.9772 ZM -62.0647 -13.3092 L -57.2521 -13.8234 L -54.7024 10.0408 L -59.515 10.555 ZM -57.2866 -13.8255 L -47.5376 -14.8234 L -45.0939 9.0519 L -54.8429 10.0498 ZM -47.552 -14.8178 L -41.0823 -15.4451 L -38.7661 8.4429 L -45.2357 9.0702 ZM -41.1123 -15.4396 L -37.747 -15.7543 L -35.5128 8.1415 L -38.8781 8.4561 ZM -37.693 -15.7629 L -30.6612 -16.3928 L -28.5199 7.5115 L -35.5517 8.1414 ZM -30.7669 -16.3839 L -23.6918 -16.9786 L -21.6816 6.9371 L -28.7567 7.5317 ZM -23.7208 -16.9725 L -19.9925 -17.2689 L -18.0908 6.6556 L -21.8191 6.952 ZM -20.0236 -17.2699 L -13.4221 -17.7641 L -11.6304 6.1689 L -18.2319 6.6631 ZM -13.4504 -17.7627 L -6.6463 -18.2283 L -5.0079 5.7157 L -11.812 6.1813 ZM -6.6787 -18.2224 L -2.7265 -18.4709 L -1.2202 5.4818 L -5.1724 5.7303 ZM -2.7578 -18.4702 L 2.074 -18.7509 L 3.4659 5.2087 L -1.3659 5.4894 ZM 2.0145 -18.7596 L 12.0423 -19.2545 L 13.2254 4.7163 L 3.1976 5.2113 ZM 11.9802 -19.2445 L 19.0751 -19.5151 L 19.99 4.4674 L 12.8952 4.7381 ZM 19.0146 -19.5137 L 26.1118 -19.7111 L 26.7789 4.2796 L 19.6816 4.477 ZM 26.0318 -19.7083 L 32.5309 -19.8179 L 32.9358 4.1786 L 26.4367 4.2883 ZM 32.4897 -19.8109 L 35.8696 -19.8385 L 36.0655 4.1607 L 32.6856 4.1883 ZM 35.8163 -19.8459 L 42.3163 -19.8379 L 42.2867 4.1621 L 35.7867 4.154 ZM 42.2297 -19.8421 L 49.4288 -19.7301 L 49.0558 4.267 L 41.8566 4.155 ZM 49.3118 -19.742 L 58.0466 -19.4418 L 57.2223 4.5441 L 48.4874 4.2439 ZM 57.9217 -19.4381 L 64.5316 -19.074 L 63.2116 4.8897 L 56.6016 4.5256 ZM 64.5548 -19.0617 L 68.2853 -18.7966 L 66.5844 5.143 L 62.8538 4.878 ZM 68.3828 -18.8049 L 75.4147 -18.1751 L 73.2736 5.7292 L 66.2417 5.0994 ZM 75.0412 -18.2298 L 83.9789 -17.1724 L 81.1592 6.6614 L 72.2215 5.604 ZM 84.2184 -17.0987 L 84.2184 -17.0987 L 80.9418 6.6766 L 80.9418 6.6766 Z" fill="rgba(0,0,0,0)"/>
-          <g fill="rgb(85,85,85)" stroke-width="0" font-size="20px" style="font-family:Caveat-Regular;font-style:normal;font-weight:400">
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9922,-0.1249,0.1249,0.9922,-102.1905,-14.5946)" data-testaaa="0">C</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9927,-0.1208,0.1208,0.9927,-92.8365,-15.7723)" data-testaaa="0">h</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9932,-0.1165,0.1165,0.9932,-83.6263,-16.8925)" data-testaaa="0">a</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9937,-0.1124,0.1124,0.9937,-74.9378,-17.9101)" data-testaaa="0">r</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9941,-0.1087,0.1087,0.9941,-67.7831,-18.7191)" data-testaaa="0">t</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9945,-0.1048,0.1048,0.9945,-61.2021,-19.4388)" data-testaaa="0">s</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9948,-0.1015,0.1015,0.9948,-54.4289,-20.15)" data-testaaa="0">:</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9951,-0.0986,0.0986,0.9951,-50.4834,-20.553)" data-testaaa="0"/>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9953,-0.097,0.097,0.9953,-45.668,-21.0284)" data-testaaa="0"/>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9922,-0.1248,0.1248,0.9922,-99.1954,9.2174)" data-testaaa="0">V</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9927,-0.1207,0.1207,0.9927,-89.5824,8.0086)" data-testaaa="0">a</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.993,-0.1179,0.1179,0.993,-80.9652,6.9643)" data-testaaa="0">l</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9933,-0.1152,0.1152,0.9933,-77.6691,6.5702)" data-testaaa="0">u</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9938,-0.1116,0.1116,0.9938,-70.4054,5.7282)" data-testaaa="0">e</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9941,-0.1087,0.1087,0.9941,-64.0211,5.0128)" data-testaaa="0">,</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9943,-0.1062,0.1062,0.9943,-60.1524,4.5889)" data-testaaa="0"/>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9948,-0.1018,0.1018,0.9948,-55.4538,4.0809)" data-testaaa="0">V</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9953,-0.0965,0.0965,0.9953,-45.8148,3.0982)" data-testaaa="0">e</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9957,-0.0931,0.0931,0.9957,-39.4367,2.4822)" data-testaaa="0">l</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.996,-0.0892,0.0892,0.996,-36.087,2.1653)" data-testaaa="0">o</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9965,-0.0838,0.0838,0.9965,-29.2592,1.5528)" data-testaaa="0">c</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9969,-0.0792,0.0792,0.9969,-22.2945,0.9709)" data-testaaa="0">i</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9972,-0.0747,0.0747,0.9972,-18.6798,0.6798)" data-testaaa="0">t</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9977,-0.0683,0.0683,0.9977,-12.2216,0.1953)" data-testaaa="0">y</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.998,-0.0628,0.0628,0.998,-5.549,-0.2579)" data-testaaa="0">,</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9983,-0.058,0.058,0.9983,-1.7139,-0.5005)" data-testaaa="0"/>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9988,-0.0493,0.0493,0.9988,2.9018,-0.7814)" data-testaaa="0">A</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9993,-0.0381,0.0381,0.9993,12.6664,-1.2575)" data-testaaa="0">c</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9996,-0.0278,0.0278,0.9996,19.5149,-1.5207)" data-testaaa="0">c</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9999,-0.0169,0.0169,0.9999,26.3355,-1.7108)" data-testaaa="0">e</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(1,-0.0082,0.0082,1,32.6366,-1.8115)" data-testaaa="0">l</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(1,0.0012,-0.0012,1,35.7941,-1.846)" data-testaaa="0">e</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9999,0.0155,-0.0155,0.9999,41.9499,-1.8442)" data-testaaa="0">r</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9994,0.0343,-0.0343,0.9994,48.6935,-1.7526)" data-testaaa="0">a</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9985,0.055,-0.055,0.9985,56.9316,-1.4654)" data-testaaa="0">t</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9975,0.0709,-0.0709,0.9975,63.279,-1.107)" data-testaaa="0">i</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.996,0.0892,-0.0892,0.996,66.777,-0.8767)" data-testaaa="0">o</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9931,0.1175,-0.1175,0.9931,72.9264,-0.3545)" data-testaaa="0">n</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9906,0.1365,-0.1365,0.9906,81.761,0.7328)" data-testaaa="0"/>
-          </g>
-        </g>
-      </g>
-    </g>
-  </g>
-  <g transform="translate(19.4721,159.8)">
-    <g class="drg tpbl" data-drg-tp="element" data-drg-v="839" data-test-id="Text 3" data-gn-el-type="text">
-      <g style="opacity:1">
-        <path d="M0,-18l95.85993957519531,0l0,24l-95.85993957519531,0z" fill="rgba(0,0,0,0)"/>
-        <text transform="translate(0,0)" fill="rgb(85,85,85)" stroke-width="0" style="text-anchor:start;letter-spacing:0;font-size:20px;font-family:Caveat-Regular;font-style:normal;font-weight:400">
-          <tspan x="0" style="display:inherit" y="0">Import&#xA0;images</tspan>
-        </text>
-      </g>
-    </g>
-  </g>
-  <g transform="translate(461.4102,395.7706)">
-    <g class="drg tpbl" data-drg-tp="element" data-drg-v="775" data-test-id="Text 6" data-gn-el-type="text">
-      <g style="opacity:1">
-        <g transform="translate(0, 0)">
-          <path d="M -11.9742 34.1333 L -4.5505 27.4931 L 11.4498 45.3814 L 4.0262 52.0215 ZM -2.1245 25.884 L 3.4141 22.482 L 15.9751 42.9325 L 10.4365 46.3344 ZM 5.6357 21.3196 L 11.8851 18.5887 L 21.4952 40.5806 L 15.2459 43.3115 ZM 14.0509 17.8321 L 19.6189 16.138 L 26.605 39.0988 L 21.037 40.7929 ZM 21.0619 15.7488 L 28.1155 14.3042 L 32.931 37.8161 L 25.8774 39.2607 ZM 29.9117 14.005 L 38.6004 13.0592 L 41.1975 36.9183 L 32.5088 37.864 ZM 39.9508 12.9419 L 51.147 12.649 L 51.7747 36.6407 L 40.5786 36.9337 ZM 52.0893 12.7231 L 58.587 12.8929 L 57.9602 36.8847 L 51.4624 36.7149 ZM 59.0445 12.9238 L 63.878 13.1731 L 62.6415 37.1413 L 57.8079 36.8919 ZM 64.3086 13.181 L 72.9838 13.8367 L 71.175 37.7684 L 62.4998 37.1127 ZM 73.5226 13.8896 L 82.2205 14.7469 L 79.8663 38.6312 L 71.1685 37.7739 ZM 82.6878 14.8068 L 89.4648 15.5717 L 86.7729 39.4203 L 79.996 38.6553 ZM 89.2597 15.5498 L 95.7129 16.3286 L 92.8375 40.1557 L 86.3843 39.377 ZM 95.8126 16.3408 L 103.6105 17.3267 L 100.5999 41.1372 L 92.802 40.1512 ZM 103.6584 17.336 L 108.4585 17.956 L 105.3839 41.7583 L 100.5837 41.1382 ZM 108.4728 17.9582 L 117.1399 19.0849 L 114.046 42.8846 L 105.379 41.758 ZM 117.1096 19.0833 L 126.0365 20.2282 L 122.9832 44.0332 L 114.0564 42.8883 ZM 126.0941 20.2323 L 129.8051 20.6972 L 126.8222 44.5111 L 123.1112 44.0463 ZM 129.6076 20.6831 L 140.7274 22.0208 L 137.8609 45.849 L 126.7411 44.5113 ZM 140.5687 21.9989 L 149.2551 22.9657 L 146.6004 46.8184 L 137.914 45.8516 ZM 149.1049 22.9459 L 155.6902 23.6229 L 153.2359 47.4971 L 146.6507 46.8201 ZM 155.5767 23.6072 L 159.2995 23.966 L 156.9969 47.8553 L 153.2742 47.4965 ZM 159.1702 23.9602 L 166.2024 24.5872 L 164.0709 48.4924 L 157.0388 47.8654 ZM 165.994 24.5762 L 174.9671 25.2716 L 173.1127 49.1999 L 164.1396 48.5045 ZM 174.8449 25.247 L 174.8449 25.247 L 173.1569 49.1876 L 173.1569 49.1876 Z" fill="rgba(0,0,0,0)"/>
-          <g fill="rgb(85,85,85)" stroke-width="0" font-size="20px" style="font-family:Caveat-Regular;font-style:normal;font-weight:400">
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.7453,-0.6667,0.6667,0.7453,0.0261,47.5495)" data-testaaa="0">K</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.8521,-0.5234,0.5234,0.8521,7.2962,41.2218)" data-testaaa="0">e</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9163,-0.4004,0.4004,0.9163,12.8433,37.8136)" data-testaaa="0">y</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9567,-0.2911,0.2911,0.9567,19.2905,35.0527)" data-testaaa="0">f</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9797,-0.2006,0.2006,0.9797,24.6736,33.3828)" data-testaaa="0">r</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9941,-0.1082,0.1082,0.9941,31.8596,31.8993)" data-testaaa="0">a</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9997,-0.0262,0.0262,0.9997,40.4216,30.9357)" data-testaaa="0">m</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9997,0.0261,-0.0261,0.9997,51.6191,30.7169)" data-testaaa="0">e</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9987,0.0515,-0.0515,0.9987,58.1171,30.8999)" data-testaaa="0"/>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9972,0.0754,-0.0754,0.9972,62.952,31.1298)" data-testaaa="0">b</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9952,0.0981,-0.0981,0.9952,71.757,31.8028)" data-testaaa="0">a</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9937,0.1122,-0.1122,0.9937,80.6689,32.6932)" data-testaaa="0">s</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9928,0.1198,-0.1198,0.9928,87.1032,33.4202)" data-testaaa="0">e</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9921,0.1254,-0.1254,0.9921,93.5547,34.1986)" data-testaaa="0">d</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9918,0.1281,-0.1281,0.9918,101.3524,35.1876)" data-testaaa="0"/>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9917,0.1289,-0.1289,0.9917,106.1524,35.808)" data-testaaa="0">a</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9919,0.1272,-0.1272,0.9919,114.8197,36.937)" data-testaaa="0">n</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9922,0.1243,-0.1243,0.9922,123.8569,38.0928)" data-testaaa="0">i</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9928,0.1194,-0.1194,0.9928,127.4577,38.5542)" data-testaaa="0">m</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9939,0.1106,-0.1106,0.9939,138.5777,39.8885)" data-testaaa="0">a</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9948,0.1023,-0.1023,0.9948,147.2642,40.8516)" data-testaaa="0">t</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9954,0.0959,-0.0959,0.9954,153.8498,41.5242)" data-testaaa="0">i</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.996,0.0888,-0.0888,0.996,157.5717,41.8891)" data-testaaa="0">o</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.997,0.0773,-0.0773,0.997,164.6032,42.5224)" data-testaaa="0">n</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9975,0.0703,-0.0703,0.9975,173.5789,43.2024)" data-testaaa="0"/>
-          </g>
-        </g>
-      </g>
-    </g>
-  </g>
-  <g transform="translate(309,94)">
-    <g class="drg tpbl" data-drg-tp="element" data-drg-v="730" data-test-id="Text 7" data-gn-el-type="text">
-      <g style="opacity:1">
-        <g transform="translate(0, 0)">
-          <path d="M -143.6151 -21.6889 L -132.2892 -24.0036 L -127.4835 -0.4897 L -138.8094 1.825 ZM -131.7256 -24.0757 L -124.6295 -25.2946 L -120.5663 -1.6411 L -127.6624 -0.4221 ZM -124.1391 -25.3832 L -115.4877 -26.6241 L -112.0801 -2.8673 L -120.7315 -1.6263 ZM -114.8796 -26.7154 L -104.6003 -27.8336 L -102.0047 -3.9744 L -112.284 -2.8561 ZM -103.8598 -27.8643 L -99.0352 -28.2497 L -97.1242 -4.3259 L -101.9488 -3.9405 ZM -98.8756 -28.2727 L -91.8276 -28.6845 L -90.4278 -4.7253 L -97.4758 -4.3136 ZM -91.343 -28.7074 L -84.1465 -28.9336 L -83.3925 -4.9454 L -90.589 -4.7192 ZM -83.6752 -28.9293 L -78.8354 -28.9692 L -78.6379 -4.97 L -83.4777 -4.9302 ZM -78.099 -28.9801 L -70.9999 -28.8672 L -71.3814 -4.8702 L -78.4805 -4.9831 ZM -70.8868 -28.8637 L -63.833 -28.568 L -64.8382 -4.589 L -71.892 -4.8848 ZM -63.1944 -28.5666 L -52.0279 -27.7021 L -53.8803 -3.7737 L -65.0469 -4.6382 ZM -51.3811 -27.6069 L -43.8697 -26.7508 L -46.5874 -2.9052 L -54.0988 -3.7613 ZM -43.0174 -26.6372 L -36.0293 -25.6327 L -39.4437 -1.8769 L -46.4319 -2.8813 ZM -35.9123 -25.6128 L -29.1881 -24.4738 L -33.1963 -0.8108 L -39.9205 -1.9498 ZM -28.747 -24.3912 L -22.3673 -23.1463 L -26.9638 0.4095 L -33.3435 -0.8354 ZM -21.9905 -23.0596 L -17.2606 -22.0334 L -22.3493 1.4209 L -27.0793 0.3947 ZM -16.9293 -21.9629 L -11.2665 -20.6191 L -16.8077 2.7324 L -22.4704 1.3887 ZM -10.8588 -20.5253 L -3.8938 -18.7007 L -9.9758 4.5158 L -16.9408 2.6912 ZM -3.1828 -18.5033 L 3.5983 -16.5386 L -3.0805 6.5134 L -9.8616 4.5487 ZM 3.8615 -16.4896 L 14.521 -13.0524 L 7.1555 9.7894 L -3.504 6.3522 ZM 14.9541 -12.8619 L 19.5201 -11.2566 L 11.5598 11.3848 L 6.9938 9.7795 ZM 19.9996 -11.0743 L 19.9996 -11.0743 L 11.8397 11.496 L 11.8397 11.496 ZM -138.695 1.8385 L -132.3373 0.4855 L -127.3417 23.9598 L -133.6994 25.3128 ZM -132.5261 0.5212 L -125.7868 -0.7597 L -121.3055 22.8182 L -128.0449 24.0991 ZM -125.8898 -0.727 L -122.2037 -1.3593 L -118.1461 22.2952 L -121.8323 22.9275 ZM -122.3137 -1.3559 L -115.572 -2.3861 L -111.9465 21.3385 L -118.6882 22.3687 ZM -115.2397 -2.4317 L -108.6724 -3.2648 L -105.6518 20.5443 L -112.2191 21.3775 ZM -109.147 -3.1964 L -105.4292 -3.6028 L -102.8208 20.255 L -106.5386 20.6615 ZM -105.5676 -3.6203 L -96.6006 -4.3896 L -94.5492 19.5226 L -103.5162 20.2918 ZM -96.8914 -4.3553 L -89.8025 -4.7529 L -88.4585 19.2095 L -95.5474 19.6071 ZM -89.6185 -4.7477 L -84.781 -4.9037 L -84.0075 19.0839 L -88.845 19.2398 ZM -85.2527 -4.9166 L -76.733 -4.9846 L -76.5416 19.0147 L -85.0613 19.0826 ZM -76.9124 -4.975 L -69.8541 -4.8196 L -70.3825 19.1746 L -77.4408 19.0192 ZM -70.0125 -4.8223 L -63.4002 -4.5015 L -64.5633 19.4703 L -71.1756 19.1495 ZM -63.5535 -4.5109 L -56.9517 -4.0206 L -58.7291 19.9135 L -65.3309 19.4232 ZM -56.9618 -4.0067 L -53.2386 -3.6534 L -55.5057 20.2393 L -59.2289 19.886 ZM -53.4653 -3.6904 L -47.0075 -2.9517 L -49.7353 20.8928 L -56.1931 20.154 ZM -46.8545 -2.9228 L -42.0597 -2.2629 L -45.3318 21.513 L -50.1266 20.8531 ZM -42.4913 -2.3519 L -33.865 -0.9469 L -37.7232 22.7409 L -46.3495 21.3359 ZM -33.6839 -0.9159 L -24.8564 0.8379 L -29.5334 24.3778 L -38.3608 22.6239 ZM -25.0206 0.8349 L -21.3703 1.6491 L -26.5952 25.0734 L -30.2455 24.2592 ZM -21.8681 1.4826 L -11.0028 4.2 L -16.8257 27.4829 L -27.6911 24.7655 ZM -11.2102 4.1675 L -2.8107 6.5831 L -9.444 29.6483 L -17.8436 27.2326 ZM -2.9642 6.5518 L 3.3481 8.5467 L -3.8842 31.4311 L -10.1964 29.4362 ZM 3.2466 8.5268 L 6.7929 9.7147 L -0.8302 32.4719 L -4.3765 31.284 ZM 6.9841 9.7648 L 13.6361 12.1302 L 5.595 34.7431 L -1.057 32.3776 ZM 13.2544 12.0061 L 21.6858 15.1542 L 13.2909 37.638 L 4.8594 34.4899 ZM 21.6858 15.1542 L 28.075 17.5397 L 19.68 40.0236 L 13.2909 37.638 ZM 28.075 17.5397 L 28.075 17.5397 L 19.68 40.0236 L 19.68 40.0236 Z" fill="rgba(0,0,0,0)"/>
-          <g fill="rgb(85,85,85)" stroke-width="0" font-size="20px" style="font-family:Caveat-Regular;font-style:normal;font-weight:400">
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9797,-0.2002,0.2002,0.9797,-140.0108,-4.0535)" data-testaaa="0">D</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9856,-0.1693,0.1693,0.9856,-128.6782,-6.3355)" data-testaaa="0">r</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9899,-0.142,0.142,0.9899,-121.5834,-7.5656)" data-testaaa="0">a</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9941,-0.1081,0.1081,0.9941,-112.9329,-8.8209)" data-testaaa="0">w</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9968,-0.0796,0.0796,0.9968,-102.4266,-9.9214)" data-testaaa="0"/>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9983,-0.0583,0.0583,0.9983,-97.8257,-10.3033)" data-testaaa="0">o</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9995,-0.0314,0.0314,0.9995,-90.7775,-10.7163)" data-testaaa="0">r</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(1,-0.0082,0.0082,1,-83.5271,-10.93)" data-testaaa="0"/>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9999,0.0159,-0.0159,0.9999,-78.3851,-10.9823)" data-testaaa="0">c</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9991,0.0419,-0.0419,0.9991,-71.6407,-10.8795)" data-testaaa="0">o</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.997,0.0772,-0.0772,0.997,-64.5838,-10.6203)" data-testaaa="0">m</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9936,0.1132,-0.1132,0.9936,-53.4194,-9.7227)" data-testaaa="0">p</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9898,0.1423,-0.1423,0.9898,-45.5783,-8.8203)" data-testaaa="0">o</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.986,0.167,-0.167,0.986,-38.9185,-7.8656)" data-testaaa="0">s</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9815,0.1915,-0.1915,0.9815,-32.1944,-6.7244)" data-testaaa="0">e</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9773,0.212,-0.212,0.9773,-25.8071,-5.4689)" data-testaaa="0"/>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.973,0.2309,-0.2309,0.973,-21.0852,-4.4492)" data-testaaa="0">f</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9674,0.2534,-0.2534,0.9674,-15.4203,-3.1129)" data-testaaa="0">r</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9605,0.2783,-0.2783,0.9605,-8.1919,-1.2143)" data-testaaa="0">o</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9517,0.3069,-0.3069,0.9517,-1.6626,0.6418)" data-testaaa="0">m</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9434,0.3317,-0.3317,0.9434,8.9839,4.1191)" data-testaaa="0"/>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9404,0.34,-0.34,0.9404,13.8797,5.8534)" data-testaaa="0"/>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9781,-0.2081,0.2081,0.9781,-134.9483,19.4442)" data-testaaa="0">e</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9824,-0.1867,0.1867,0.9824,-129.1652,18.2046)" data-testaaa="0">x</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9856,-0.1691,0.1691,0.9856,-122.8467,17.0139)" data-testaaa="0">i</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9885,-0.1511,0.1511,0.9885,-119.5946,16.4376)" data-testaaa="0">s</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.992,-0.1259,0.1259,0.992,-112.9743,15.4252)" data-testaaa="0">t</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9941,-0.1087,0.1087,0.9941,-107.1907,14.697)" data-testaaa="0">i</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9963,-0.0855,0.0855,0.9963,-104.0291,14.3138)" data-testaaa="0">n</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9984,-0.056,0.056,0.9984,-95.8834,13.6165)" data-testaaa="0">g</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9995,-0.0322,0.0322,0.9995,-89.0384,13.243)" data-testaaa="0"/>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(1,-0.008,0.008,1,-85.1092,13.0828)" data-testaaa="0">L</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9998,0.022,-0.022,0.9998,-77.3087,13.0206)" data-testaaa="0">o</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9988,0.0485,-0.0485,0.9988,-70.8848,13.1565)" data-testaaa="0">t</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9973,0.0741,-0.0741,0.9973,-64.8866,13.4397)" data-testaaa="0">t</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9955,0.0945,-0.0945,0.9955,-58.6622,13.9129)" data-testaaa="0">i</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9935,0.1137,-0.1137,0.9935,-55.5112,14.1929)" data-testaaa="0">e</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9907,0.1363,-0.1363,0.9907,-49.3086,14.9092)" data-testaaa="0"/>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.987,0.1608,-0.1608,0.987,-45.3849,15.414)" data-testaaa="0">a</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9808,0.1949,-0.1949,0.9808,-37.1916,16.739)" data-testaaa="0">n</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.976,0.2177,-0.2177,0.976,-28.9393,18.4031)" data-testaaa="0">i</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9701,0.2426,-0.2426,0.9701,-26.2353,18.9448)" data-testaaa="0">m</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.961,0.2764,-0.2764,0.961,-16.1852,21.4663)" data-testaaa="0">a</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9535,0.3013,-0.3013,0.9535,-8.3884,23.7151)" data-testaaa="0">t</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9482,0.3176,-0.3176,0.9482,-2.4707,25.5947)" data-testaaa="0">i</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9422,0.335,-0.335,0.9422,0.9533,26.7244)" data-testaaa="0">o</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9368,0.3498,-0.3498,0.9368,6.9581,28.869)" data-testaaa="0">n</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9368,0.3498,-0.3498,0.9368,15.3896,32.0171)" data-testaaa="0">s</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9368,0.3498,-0.3498,0.9368,21.7788,34.4026)" data-testaaa="0"/>
-          </g>
-        </g>
-      </g>
-    </g>
-  </g>
-  <g transform="translate(227.65,205)">
-    <g class="drg tpbl" data-drg-tp="element" data-drg-v="685" data-test-id="Text 8" data-gn-el-type="text">
-      <g style="opacity:1">
-        <path d="M0,-18l88.49993896484375,0l0,24l-88.49993896484375,0z" fill="rgba(0,0,0,0)"/>
-        <text transform="translate(0,0)" fill="rgb(85,85,85)" stroke-width="0" style="text-anchor:start;letter-spacing:0;font-size:20px;font-family:Caveat-Regular;font-style:normal;font-weight:400">
-          <tspan x="0" style="display:inherit" y="0">Custom&#xA0;fonts</tspan>
-        </text>
-      </g>
-    </g>
-  </g>
-  <g transform="translate(1069,65)">
-    <g class="drg tpbl" data-drg-tp="element" data-drg-v="621" data-test-id="Text 10" data-gn-el-type="text">
-      <g style="opacity:1">
-        <g transform="translate(0, 0)">
-          <path d="M 0.2295 -8.399 L 9.8692 -8.3261 L 9.6877 15.6732 L 0.048 15.6003 ZM 9.7664 -8.3272 L 16.5863 -8.2792 L 16.4173 15.7202 L 9.5975 15.6722 ZM 16.5786 -8.2793 L 23.0784 -8.2363 L 22.9197 15.7631 L 16.4199 15.7202 ZM 23.0719 -8.2365 L 27.9118 -8.2063 L 27.7618 15.7933 L 22.9219 15.763 ZM 27.903 -8.2057 L 38.2428 -8.1461 L 38.1046 15.8535 L 27.7647 15.7939 ZM 38.2347 -8.1469 L 41.9747 -8.127 L 41.8472 15.8727 L 38.1073 15.8528 ZM 41.9687 -8.1268 L 48.5886 -8.0938 L 48.4691 15.9059 L 41.8492 15.8729 ZM 48.5794 -8.0935 L 57.8593 -8.0521 L 57.7521 15.9477 L 48.4722 15.9062 ZM 57.8512 -8.0526 L 62.6911 -8.0332 L 62.5947 15.9666 L 57.7548 15.9472 ZM 62.6834 -8.0328 L 71.2034 -8.0022 L 71.1172 15.9976 L 62.5973 15.967 ZM 71.1944 -8.0024 L 78.2543 -7.9806 L 78.1802 16.0192 L 71.1202 15.9974 ZM 78.2464 -7.9807 L 84.8664 -7.9632 L 84.8028 16.0368 L 78.1828 16.0192 ZM 85.1683 -7.9624 L 91.7883 -7.9478 L 91.7354 16.0521 L 85.1154 16.0375 ZM 91.5159 -7.9486 L 95.2559 -7.9415 L 95.2105 16.0584 L 91.4705 16.0513 ZM 95.2068 -7.9414 L 101.7068 -7.9312 L 101.6693 16.0687 L 95.1693 16.0586 ZM 101.7003 -7.9314 L 106.5403 -7.9256 L 106.5115 16.0744 L 101.6715 16.0686 ZM 106.7826 -7.9251 L 114.3426 -7.9191 L 114.3237 16.0809 L 106.7637 16.0749 ZM 114.0868 -7.9196 L 117.4668 -7.9181 L 117.4559 16.0819 L 114.0759 16.0804 ZM 117.4598 -7.9176 L 126.1998 -7.917 L 126.1982 16.083 L 117.4583 16.0824 ZM 126.1908 -7.9172 L 133.0108 -7.9202 L 133.0212 16.0798 L 126.2012 16.0828 ZM 133.0031 -7.9202 L 139.5031 -7.9258 L 139.5238 16.0742 L 133.0238 16.0798 ZM 139.4952 -7.9257 L 146.6952 -7.9351 L 146.7264 16.0649 L 139.5264 16.0742 ZM 146.6871 -7.9351 L 153.5071 -7.9471 L 153.5491 16.0529 L 146.7291 16.0648 ZM 153.5032 -7.9474 L 153.5032 -7.9474 L 153.5504 16.0525 L 153.5504 16.0525 Z" fill="rgba(0,0,0,0)"/>
-          <g fill="rgb(85,85,85)" stroke-width="0" font-size="20px" style="font-family:Caveat-Regular;font-style:normal;font-weight:400">
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(1,0.0076,-0.0076,1,0.0934,9.6005)" data-testaaa="0">U</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(1,0.007,-0.007,1,9.6397,9.6723)" data-testaaa="0">s</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(1,0.0066,-0.0066,1,16.4595,9.7203)" data-testaaa="0">e</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(1,0.0062,-0.0062,1,22.9594,9.7631)" data-testaaa="0"/>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(1,0.0058,-0.0058,1,27.7993,9.794)" data-testaaa="0">w</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(1,0.0053,-0.0053,1,38.1391,9.8529)" data-testaaa="0">i</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(1,0.005,-0.005,1,41.8791,9.873)" data-testaaa="0">t</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(1,0.0045,-0.0045,1,48.499,9.9063)" data-testaaa="0">h</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(1,0.004,-0.004,1,57.7789,9.9473)" data-testaaa="0"/>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(1,0.0036,-0.0036,1,62.6188,9.9671)" data-testaaa="0">L</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(1,0.0031,-0.0031,1,71.1388,9.9975)" data-testaaa="0">o</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(1,0.0026,-0.0026,1,78.1987,10.0192)" data-testaaa="0">t</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(1,0.0022,-0.0022,1,85.1286,10.0375)" data-testaaa="0">t</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(1,0.0019,-0.0019,1,91.4819,10.0514)" data-testaaa="0">i</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(1,0.0016,-0.0016,1,95.1787,10.0586)" data-testaaa="0">e</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(1,0.0012,-0.0012,1,101.6787,10.0686)" data-testaaa="0"/>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(1,0.0008,-0.0008,1,106.7684,10.0749)" data-testaaa="0">p</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(1,0.0005,-0.0005,1,114.0787,10.0804)" data-testaaa="0">l</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(1,0.0001,-0.0001,1,117.4586,10.0824)" data-testaaa="0">a</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(1,-0.0004,0.0004,1,126.1986,10.0828)" data-testaaa="0">y</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(1,-0.0009,0.0009,1,133.0186,10.0798)" data-testaaa="0">e</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(1,-0.0013,0.0013,1,139.5186,10.0742)" data-testaaa="0">r</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(1,-0.0018,0.0018,1,146.7186,10.0648)" data-testaaa="0">s</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(1,-0.002,0.002,1,153.5386,10.0525)" data-testaaa="0"/>
-          </g>
-        </g>
-      </g>
-    </g>
-  </g>
-  <g transform="translate(1087.1943,270.6136)">
-    <g class="drg tpbl" data-drg-tp="element" data-drg-v="557" data-test-id="Text 5" data-gn-el-type="text">
-      <g style="opacity:1">
-        <g transform="translate(0, 0)">
-          <path d="M -4.1118 30.4522 L 6.1889 28.0372 L 11.6671 51.4036 L 1.3665 53.8186 ZM 6.5426 27.9706 L 13.2488 26.5263 L 18.3019 49.9883 L 11.5957 51.4326 ZM 13.5655 26.4547 L 20.9862 25.0103 L 25.5715 48.5682 L 18.1507 50.0126 ZM 21.745 24.8722 L 28.7093 23.7137 L 32.6475 47.3884 L 25.6832 48.5469 ZM 29.3425 23.6134 L 36.4802 22.6679 L 39.6319 46.46 L 32.4943 47.4055 ZM 36.9526 22.6162 L 43.5435 21.9957 L 45.7928 45.8901 L 39.2019 46.5105 ZM 44.0824 21.9694 L 48.9144 21.6911 L 50.294 45.6515 L 45.462 45.9297 ZM 49.7674 21.6403 L 56.3865 21.53 L 56.7867 45.5266 L 50.1676 45.637 ZM 57.4565 21.5342 L 64.5127 21.7656 L 63.7261 45.7527 L 56.6699 45.5213 ZM 65.2825 21.83 L 70.11 22.1776 L 68.3863 46.1157 L 63.5588 45.7681 ZM 70.3118 22.202 L 74.0348 22.5573 L 71.7546 46.4487 L 68.0315 46.0934 ZM 74.5444 22.5577 L 85.6512 23.9994 L 82.5619 47.7997 L 71.4551 46.3581 ZM 86.3621 24.1366 L 94.992 25.5191 L 91.1956 49.2169 L 82.5657 47.8344 ZM 94.9734 25.5259 L 101.9701 26.7327 L 97.8908 50.3835 L 90.8941 49.1767 ZM 102.0609 26.7518 L 108.4605 27.8898 L 104.2585 51.5191 L 97.8589 50.3811 ZM 108.8773 27.9666 L 108.8773 27.9666 L 104.6455 51.5905 L 104.6455 51.5905 Z" fill="rgba(0,0,0,0)"/>
-          <g fill="rgb(85,85,85)" stroke-width="0" font-size="20px" style="font-family:Caveat-Regular;font-style:normal;font-weight:400">
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9736,-0.2283,0.2283,0.9736,-0.0031,47.977)" data-testaaa="0">E</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9776,-0.2105,0.2105,0.9776,10.3324,45.5671)" data-testaaa="0">x</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9816,-0.1911,0.1911,0.9816,17.0044,44.1231)" data-testaaa="0">p</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9864,-0.1641,0.1641,0.9864,24.6987,42.6282)" data-testaaa="0">o</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9913,-0.1313,0.1313,0.9913,31.7063,41.4575)" data-testaaa="0">r</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9956,-0.0937,0.0937,0.9956,38.6396,40.5369)" data-testaaa="0">t</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9983,-0.0575,0.0575,0.9983,45.1171,39.9396)" data-testaaa="0"/>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9999,-0.0167,0.0167,0.9999,50.0676,39.6378)" data-testaaa="0">t</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9995,0.0328,-0.0328,0.9995,56.8666,39.5245)" data-testaaa="0">o</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9974,0.0718,-0.0718,0.9974,63.9897,39.7835)" data-testaaa="0"/>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9955,0.095,-0.095,0.9955,68.6016,40.1205)" data-testaaa="0">i</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9917,0.1287,-0.1287,0.9917,72.2274,40.408)" data-testaaa="0">m</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9874,0.1582,-0.1582,0.9874,83.5148,41.91)" data-testaaa="0">a</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9854,0.17,-0.17,0.9854,91.9139,43.264)" data-testaaa="0">g</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9846,0.1751,-0.1751,0.9846,98.9094,44.4737)" data-testaaa="0">e</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9843,0.1763,-0.1763,0.9843,105.7035,45.6845)" data-testaaa="0"/>
-          </g>
-        </g>
-      </g>
-    </g>
-  </g>
-  <g transform="translate(1075.8592,343.8801)">
-    <g class="drg tpbl" data-drg-tp="element" data-drg-v="493" data-test-id="Text 11" data-gn-el-type="text">
-      <g style="opacity:1">
-        <g transform="translate(0, 0)">
-          <path d="M 3.7663 30.4364 L 14.1111 32.6548 L 9.0789 56.1213 L -1.2659 53.9029 ZM 13.7033 32.5503 L 20.4426 33.8315 L 15.9604 57.4092 L 9.2211 56.1281 ZM 20.2447 33.7996 L 27.6985 35.0627 L 23.6886 58.7254 L 16.2349 57.4622 ZM 27.1937 34.9799 L 34.1762 36.0229 L 30.6304 59.7595 L 23.6479 58.7165 ZM 34.204 36.0276 L 41.3455 36.943 L 38.2942 60.7483 L 31.1526 59.8329 ZM 40.6231 36.8545 L 47.2035 37.5772 L 44.5833 61.4337 L 38.0029 60.711 ZM 46.9177 37.541 L 51.7366 37.9923 L 49.4987 61.8877 L 44.6798 61.4364 ZM 51.4477 37.9748 L 58.048 38.486 L 56.1945 62.4144 L 49.5943 61.9031 ZM 57.7023 38.4648 L 64.7504 38.8743 L 63.358 62.8339 L 56.3099 62.4243 ZM 64.4887 38.852 L 69.3246 39.051 L 68.3376 63.0307 L 63.5017 62.8317 ZM 68.9934 39.0472 L 75.6114 39.2131 L 75.01 63.2056 L 68.3921 63.0397 ZM 75.772 39.2044 L 79.5118 39.2386 L 79.2924 63.2376 L 75.5525 63.2034 ZM 78.7926 39.253 L 86.6524 39.2059 L 86.7963 63.2055 L 78.9365 63.2526 ZM 86.667 39.1983 L 93.1646 39.0202 L 93.8224 63.0112 L 87.3248 63.1893 ZM 92.5292 39.0459 L 99.5819 38.7237 L 100.6772 62.6987 L 93.6246 63.0209 ZM 99.3151 38.7201 L 99.3151 38.7201 L 100.6422 62.6834 L 100.6422 62.6834 Z" fill="rgba(0,0,0,0)"/>
-          <g fill="rgb(85,85,85)" stroke-width="0" font-size="20px" style="font-family:Caveat-Regular;font-style:normal;font-weight:400">
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9778,0.2097,-0.2097,0.9778,-0.0078,48.0363)" data-testaaa="0">E</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9824,0.1868,-0.1868,0.9824,10.3417,50.2337)" data-testaaa="0">x</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9859,0.1671,-0.1671,0.9859,17.2373,51.5466)" data-testaaa="0">p</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.989,0.1477,-0.1477,0.989,24.5343,52.7823)" data-testaaa="0">o</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9919,0.1271,-0.1271,0.9919,31.9154,53.8815)" data-testaaa="0">r</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.994,0.1092,-0.1092,0.994,38.6579,54.7469)" data-testaaa="0">t</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9956,0.0932,-0.0932,0.9956,45.2393,55.4626)" data-testaaa="0"/>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.997,0.0772,-0.0772,0.997,50.0577,55.921)" data-testaaa="0">t</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9983,0.058,-0.058,0.9983,56.658,56.4344)" data-testaaa="0">o</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9992,0.0411,-0.0411,0.9992,63.7484,56.8367)" data-testaaa="0"/>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9997,0.0251,-0.0251,0.9997,68.5424,57.0416)" data-testaaa="0">v</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(1,0.0091,-0.0091,1,75.6074,57.2036)" data-testaaa="0">i</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(1,-0.006,0.006,1,78.9005,57.2527)" data-testaaa="0">d</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9996,-0.0274,0.0274,0.9996,87.1604,57.1916)" data-testaaa="0">e</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.999,-0.0456,0.0456,0.999,93.3508,57.0272)" data-testaaa="0">o</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9985,-0.0553,0.0553,0.9985,100.3104,56.6926)" data-testaaa="0"/>
-          </g>
-        </g>
-      </g>
-    </g>
-  </g>
-  <g transform="translate(1096.9186,374.8215)">
-    <g class="drg tpbl" data-drg-tp="element" data-drg-v="429" data-test-id="Text 12" data-gn-el-type="text">
-      <g style="opacity:1">
-        <g transform="translate(0, 0)">
-          <path d="M 1.1192 24.9941 L 9.8209 25.4174 L 8.4217 54.1833 L -0.28 53.7601 ZM 9.7095 25.4074 L 14.4569 25.6152 L 13.1973 54.3876 L 8.4498 54.1798 ZM 14.6732 25.636 L 27.0725 26.1001 L 25.9954 54.88 L 13.5961 54.4159 ZM 26.6442 26.0778 L 34.6564 26.3223 L 33.7782 55.1089 L 25.766 54.8644 ZM 34.4183 26.3198 L 45.0712 26.5778 L 44.3738 55.3694 L 33.721 55.1113 ZM 44.8857 26.5798 L 58.5399 26.8007 L 58.0742 55.5969 L 44.42 55.3761 ZM 58.4387 26.7842 L 58.4387 26.7842 L 58.0998 55.5822 L 58.0998 55.5822 Z" fill="rgba(0,0,0,0)"/>
-          <g fill="rgb(85,85,85)" stroke-width="0" font-size="24px" style="font-family:Caveat-Bold;font-style:normal;font-weight:400">
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9988,0.0486,-0.0486,0.9988,-0.0002,48.0069)" data-testaaa="0">*</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.999,0.0437,-0.0437,0.999,8.7018,48.4253)" data-testaaa="0">.</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9993,0.0374,-0.0374,0.9993,13.8115,48.6599)" data-testaaa="0">w</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9995,0.0305,-0.0305,0.9995,25.9416,49.1071)" data-testaaa="0">e</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9997,0.0242,-0.0242,0.9997,33.8604,49.353)" data-testaaa="0">b</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9999,0.0162,-0.0162,0.9999,44.5131,49.6168)" data-testaaa="0">m</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9999,0.0118,-0.0118,0.9999,58.1676,49.8226)" data-testaaa="0"/>
-          </g>
-        </g>
-      </g>
-    </g>
-  </g>
-  <g transform="translate(1173.456,210.04)">
-    <g class="drg tpbl" data-drg-tp="element" data-drg-v="384" data-test-id="Text 13" data-gn-el-type="text">
-      <g style="opacity:1">
-        <path d="M0,-23.04l38.54396057128906,0l0,28.799999999999997l-38.54396057128906,0z" fill="rgba(0,0,0,0)"/>
-        <text transform="translate(0,0)" fill="rgb(85,85,85)" stroke-width="0" style="text-anchor:start;letter-spacing:0;font-size:24px;font-family:Caveat-Bold;font-style:normal;font-weight:400">
-          <tspan x="0" style="display:inherit" y="0">*.svg</tspan>
-        </text>
-      </g>
-    </g>
-  </g>
-  <g transform="translate(18,190.04)">
-    <g class="drg tpbl" data-drg-tp="element" data-drg-v="339" data-test-id="Text 14" data-gn-el-type="text">
-      <g style="opacity:1">
-        <path d="M0,-23.04l146.3518829345703,0l0,28.799999999999997l-146.3518829345703,0z" fill="rgba(0,0,0,0)"/>
-        <text transform="translate(0,0)" fill="rgb(85,85,85)" stroke-width="0" style="text-anchor:start;letter-spacing:0;font-size:24px;font-family:Caveat-Bold;font-style:normal;font-weight:400">
-          <tspan x="0" style="display:inherit" y="0">*.svg,&#xA0;*.png,&#xA0;*.jpeg</tspan>
-        </text>
-      </g>
-    </g>
-  </g>
-  <g transform="translate(256.77,231.2)">
-    <g class="drg tpbl" data-drg-tp="element" data-drg-v="294" data-test-id="Text 15" data-gn-el-type="text">
-      <g style="opacity:1">
-        <path d="M0,-23.04l36.55195617675781,0l0,28.799999999999997l-36.55195617675781,0z" fill="rgba(0,0,0,0)"/>
-        <text transform="translate(0,0)" fill="rgb(85,85,85)" stroke-width="0" style="text-anchor:start;letter-spacing:0;font-size:24px;font-family:Caveat-Bold;font-style:normal;font-weight:400">
-          <tspan x="0" style="display:inherit" y="0">*.ttf</tspan>
-        </text>
-      </g>
-    </g>
-  </g>
-  <g transform="translate(281.68,141.24)">
-    <g class="drg tpbl" data-drg-tp="element" data-drg-v="249" data-test-id="Text 16" data-gn-el-type="text">
-      <g style="opacity:1">
-        <path d="M0,-23.04l46.679962158203125,0l0,28.799999999999997l-46.679962158203125,0z" fill="rgba(0,0,0,0)"/>
-        <text transform="translate(0,0)" fill="rgb(85,85,85)" stroke-width="0" style="text-anchor:end;letter-spacing:0;font-size:24px;font-family:Caveat-Bold;font-style:normal;font-weight:400">
-          <tspan x="0" style="display:inherit" y="0">*.json</tspan>
-        </text>
-      </g>
-    </g>
-  </g>
-  <g transform="translate(1066.1764,92.8364)">
-    <g class="drg tpbl" data-drg-tp="element" data-drg-v="185" data-test-id="Text 17" data-gn-el-type="text">
-      <g style="opacity:1">
-        <g transform="translate(0, 0)">
-          <path d="M 3.4935 -11.1448 L 17.6519 -8.518 L 13.2741 15.0793 L -0.8843 12.4526 ZM 17.2446 -8.632 L 23.8377 -7.5581 L 19.9795 16.1297 L 13.3864 15.0559 ZM 23.5276 -7.597 L 32.3141 -6.3119 L 28.8409 17.4354 L 20.0543 16.1503 ZM 32.4872 -6.3056 L 36.4133 -5.7885 L 33.2794 18.006 L 29.3533 17.4889 ZM 35.8149 -5.8631 L 40.6185 -5.2703 L 37.6792 18.549 L 32.8756 17.9563 ZM 40.238 -5.2664 L 54.5615 -3.7845 L 52.0917 20.0881 L 37.7682 18.6062 ZM 54.2151 -3.8658 L 58.1211 -3.5341 L 56.09 20.3798 L 52.1841 20.0481 ZM 57.8744 -3.5367 L 67.0307 -2.8772 L 65.3065 21.0608 L 56.1502 20.4013 ZM 66.7171 -2.9023 L 74.7447 -2.4561 L 73.4127 21.5069 L 65.3851 21.0607 ZM 74.4763 -2.4723 L 81.71 -2.1717 L 80.7136 21.8076 L 73.4798 21.507 ZM 81.4148 -2.1704 L 91.7512 -1.9 L 91.1236 22.0918 L 80.7872 21.8214 ZM 91.4769 -1.9178 L 98.4764 -1.8349 L 98.1921 22.1635 L 91.1926 22.0805 ZM 98.3121 -1.8428 L 102.2721 -1.8298 L 102.1932 22.1701 L 98.2333 22.1571 ZM 102.1819 -1.8284 L 107.0219 -1.8446 L 107.1024 22.1552 L 102.2624 22.1715 ZM 106.8648 -1.8452 L 110.7846 -1.8827 L 111.0147 22.1162 L 107.0949 22.1537 ZM 111.0682 -1.8718 L 121.1663 -2.0707 L 121.6389 21.9246 L 111.5409 22.1236 ZM 120.4655 -2.0545 L 130.3607 -2.3646 L 131.1124 21.6236 L 121.2172 21.9337 ZM 130.215 -2.3712 L 134.172 -2.5252 L 135.1052 21.4567 L 131.1482 21.6107 ZM 134.0876 -2.5208 L 138.9231 -2.7303 L 139.9619 21.2472 L 135.1264 21.4567 ZM 138.7929 -2.7157 L 149.0001 -3.2274 L 150.2018 20.7425 L 139.9947 21.2542 ZM 149.2064 -3.2419 L 158.3711 -3.7714 L 159.7552 20.1887 L 150.5905 20.7181 ZM 157.9231 -3.7466 L 165.9473 -4.2503 L 167.4509 19.7026 L 159.4267 20.2063 ZM 165.8779 -4.2472 L 173.0621 -4.7241 L 174.6521 19.2231 L 167.4679 19.7001 ZM 173.0134 -4.7213 L 180.2363 -5.2193 L 181.887 18.7239 L 174.6642 19.2218 ZM 180.2093 -5.2188 L 184.1197 -5.4939 L 185.8037 18.447 L 181.8934 18.722 ZM 184.1015 -5.4919 L 192.1211 -6.0637 L 193.8279 17.8756 L 185.8082 18.4473 ZM 192.4516 -6.0881 L 192.4516 -6.0881 L 194.1666 17.8506 L 194.1666 17.8506 Z" fill="rgba(0,0,0,0)"/>
-          <g fill="rgb(85,85,85)" stroke-width="0" font-size="20px" style="font-family:Caveat-Bold;font-style:normal;font-weight:400">
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9832,0.1824,-0.1824,0.9832,-0.0087,7.7331)" data-testaaa="0">W</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.987,0.1608,-0.1608,0.987,14.158,10.3183)" data-testaaa="0">e</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9895,0.1447,-0.1447,0.9895,20.749,11.4009)" data-testaaa="0">b</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9914,0.1306,-0.1306,0.9914,29.9801,12.73)" data-testaaa="0">,</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9925,0.1225,-0.1225,0.9925,33.4635,13.1924)" data-testaaa="0"/>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9947,0.1029,-0.1029,0.9947,38.2622,13.8317)" data-testaaa="0">W</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9964,0.0846,-0.0846,0.9964,52.5903,15.2653)" data-testaaa="0">i</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9974,0.0718,-0.0718,0.9974,56.4951,15.6137)" data-testaaa="0">n</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9985,0.0555,-0.0555,0.9985,65.6515,16.2681)" data-testaaa="0">d</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9991,0.0415,-0.0415,0.9991,73.6791,16.7112)" data-testaaa="0">o</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9997,0.0262,-0.0262,0.9997,80.9127,17.0231)" data-testaaa="0">w</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9999,0.0118,-0.0118,0.9999,91.2495,17.2809)" data-testaaa="0">s</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(1,0.0033,-0.0033,1,98.249,17.3571)" data-testaaa="0">,</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(1,-0.0034,0.0034,1,102.2463,17.3715)" data-testaaa="0"/>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(1,-0.0096,0.0096,1,107.0489,17.354)" data-testaaa="0">i</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9998,-0.0197,0.0197,0.9998,111.4464,17.3245)" data-testaaa="0">O</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9995,-0.0313,0.0313,0.9995,121.0669,17.1361)" data-testaaa="0">S</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9992,-0.0389,0.0389,0.9992,130.9616,16.8143)" data-testaaa="0">,</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9991,-0.0433,0.0433,0.9991,134.9187,16.6612)" data-testaaa="0"/>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9987,-0.0501,0.0501,0.9987,139.7543,16.4602)" data-testaaa="0">A</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9983,-0.0577,0.0577,0.9983,150.3136,15.9261)" data-testaaa="0">n</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.998,-0.0627,0.0627,0.998,159.126,15.4157)" data-testaaa="0">d</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9978,-0.0662,0.0662,0.9978,167.1499,14.9107)" data-testaaa="0">r</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9976,-0.0688,0.0688,0.9976,174.334,14.4332)" data-testaaa="0">o</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9975,-0.0702,0.0702,0.9975,181.5566,13.9339)" data-testaaa="0">i</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9975,-0.0711,0.0711,0.9975,185.4669,13.6595)" data-testaaa="0">d</text>
-            <text fill="rgb(85,85,85)" stroke-width="0" transform="matrix(0.9974,-0.0715,0.0715,0.9974,193.8236,13.0628)" data-testaaa="0"/>
-          </g>
-        </g>
-      </g>
-    </g>
-  </g>
-  <g transform="translate(280,62.7246)">
-    <path d="M-8,1C14.704,-14.9,32.151,-7.581,46,-2.953" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0,0,0)"/>
-  </g>
-  <g transform="translate(335,44.8163)">
-    <path d="M-4,5.092L0,17L-9,23" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0,0,0)"/>
-  </g>
-  <g transform="translate(1068,24.9996)">
-    <path d="M-12,-8.511C21.705,-18.332,39.865,-5.318,50,11" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0,0,0)"/>
-  </g>
-  <g transform="translate(1126,25.9996)">
-    <path d="M0,0L-3,18L-22,16" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0,0,0)"/>
-  </g>
-  <g transform="translate(1098.0644,342.1421)">
-    <g class="drg tpbl" data-drg-tp="element" data-drg-v="3222" data-test-id="Text 18" data-gn-el-type="text">
-      <g style="opacity:1">
-        <g transform="translate(0, 0)">
-          <path d="M -14.6731 -22.9964 L -6.072 -24.3818 L -1.4919 4.0516 L -10.093 5.4371 ZM -5.0154 -24.4969 L -0.3008 -25.0916 L 3.3032 3.482 L -1.4114 4.0767 ZM 0.2438 -25.177 L 8.6042 -25.9911 L 11.3956 2.6733 L 3.0351 3.4875 ZM 9.1615 -26.0305 L 17.0884 -26.5509 L 18.9751 2.1872 L 11.0482 2.7077 ZM 17.7633 -26.5888 L 26.4936 -26.9053 L 27.5369 1.8758 L 18.8067 2.1923 ZM 26.9901 -26.8955 L 31.7416 -26.9655 L 32.1654 1.8314 L 27.4139 1.9014 ZM 32.103 -26.9717 L 37.911 -26.9661 L 37.8833 1.8339 L 32.0753 1.8283 ZM 38.3745 -26.9746 L 47.0845 -26.7911 L 46.478 2.0025 L 37.7679 1.819 ZM 47.4834 -26.7615 L 52.2319 -26.579 L 51.1264 2.1997 L 46.3779 2.0173 ZM 52.6166 -26.5785 L 61.6748 -26.0792 L 60.0898 2.6772 L 51.0315 2.1779 ZM 62.1935 -26.0541 L 73.1764 -25.2004 L 70.9444 3.513 L 59.9615 2.6593 ZM 74.0972 -25.1053 L 82.7905 -24.2423 L 79.9452 4.4168 L 71.2519 3.5538 ZM 82.6431 -24.2451 L 87.3657 -23.7171 L 84.1654 4.9045 L 79.4428 4.3765 ZM 87.5958 -23.6927 L 93.3611 -22.9894 L 89.8736 5.5986 L 84.1084 4.8953 ZM 93.8797 -22.9323 L 102.5123 -21.7585 L 98.6318 6.7789 L 89.9992 5.605 ZM 102.7142 -21.7177 L 107.4148 -21.0212 L 103.1935 7.4678 L 98.4928 6.7713 ZM 107.9477 -20.9405 L 112.9973 -20.1443 L 108.512 8.3042 L 103.4624 7.5081 ZM 112.8087 -20.1868 L 121.753 -18.6702 L 116.9385 9.7245 L 107.9942 8.208 ZM 122.2129 -18.5846 L 130.0949 -17.1255 L 124.8524 11.1933 L 116.9704 9.7342 ZM 129.9768 -17.1473 L 138.5668 -15.5571 L 133.3243 12.7617 L 124.7343 11.1715 ZM 138.5668 -15.5571 L 138.5668 -15.5571 L 133.3243 12.7617 L 133.3243 12.7617 Z" fill="rgba(0,0,0,0)"/>
-          <g fill="rgb(68,68,68)" stroke-width="0" font-size="24px" style="font-family:Caveat-Bold;font-style:normal;font-weight:400">
-            <text fill="rgb(68,68,68)" stroke-width="0" transform="matrix(0.9873,-0.159,0.159,0.9873,-11.009,-0.2496)" data-testaaa="0">*</text>
-            <text fill="rgb(68,68,68)" stroke-width="0" transform="matrix(0.9921,-0.1251,0.1251,0.9921,-2.1322,-1.6381)" data-testaaa="0">.</text>
-            <text fill="rgb(68,68,68)" stroke-width="0" transform="matrix(0.9953,-0.0969,0.0969,0.9953,2.4768,-2.2454)" data-testaaa="0">s</text>
-            <text fill="rgb(68,68,68)" stroke-width="0" transform="matrix(0.9979,-0.0655,0.0655,0.9979,10.6709,-3.04)" data-testaaa="0">v</text>
-            <text fill="rgb(68,68,68)" stroke-width="0" transform="matrix(0.9993,-0.0362,0.0362,0.9993,18.598,-3.5639)" data-testaaa="0">g</text>
-            <text fill="rgb(68,68,68)" stroke-width="0" transform="matrix(0.9999,-0.0147,0.0147,0.9999,27.3292,-3.858)" data-testaaa="0">,</text>
-            <text fill="rgb(68,68,68)" stroke-width="0" transform="matrix(1,0.001,-0.001,1,32.0809,-3.9317)" data-testaaa="0"/>
-            <text fill="rgb(68,68,68)" stroke-width="0" transform="matrix(0.9998,0.0211,-0.0211,0.9998,37.8892,-3.9397)" data-testaaa="0">*</text>
-            <text fill="rgb(68,68,68)" stroke-width="0" transform="matrix(0.9993,0.0384,-0.0384,0.9993,46.599,-3.7384)" data-testaaa="0">.</text>
-            <text fill="rgb(68,68,68)" stroke-width="0" transform="matrix(0.9985,0.055,-0.055,0.9985,51.3485,-3.5734)" data-testaaa="0">p</text>
-            <text fill="rgb(68,68,68)" stroke-width="0" transform="matrix(0.997,0.0775,-0.0775,0.997,60.4079,-3.0834)" data-testaaa="0">n</text>
-            <text fill="rgb(68,68,68)" stroke-width="0" transform="matrix(0.9951,0.0988,-0.0988,0.9951,71.821,-2.1781)" data-testaaa="0">g</text>
-            <text fill="rgb(68,68,68)" stroke-width="0" transform="matrix(0.9938,0.1111,-0.1111,0.9938,80.0829,-1.3478)" data-testaaa="0">,</text>
-            <text fill="rgb(68,68,68)" stroke-width="0" transform="matrix(0.9926,0.1211,-0.1211,0.9926,84.8059,-0.8223)" data-testaaa="0"/>
-            <text fill="rgb(68,68,68)" stroke-width="0" transform="matrix(0.9909,0.1347,-0.1347,0.9909,90.7753,-0.1024)" data-testaaa="0">*</text>
-            <text fill="rgb(68,68,68)" stroke-width="0" transform="matrix(0.9892,0.1466,-0.1466,0.9892,99.3371,1.0735)" data-testaaa="0">.</text>
-            <text fill="rgb(68,68,68)" stroke-width="0" transform="matrix(0.9878,0.1557,-0.1557,0.9878,104.3594,1.8184)" data-testaaa="0">j</text>
-            <text fill="rgb(68,68,68)" stroke-width="0" transform="matrix(0.9859,0.1672,-0.1672,0.9859,108.9571,2.529)" data-testaaa="0">p</text>
-            <text fill="rgb(68,68,68)" stroke-width="0" transform="matrix(0.9833,0.182,-0.182,0.9833,118.0189,4.0704)" data-testaaa="0">e</text>
-            <text fill="rgb(68,68,68)" stroke-width="0" transform="matrix(0.9833,0.182,-0.182,0.9833,125.7828,5.5077)" data-testaaa="0">g</text>
-            <text fill="rgb(68,68,68)" stroke-width="0" transform="matrix(0.9833,0.182,-0.182,0.9833,134.3728,7.0979)" data-testaaa="0"/>
-          </g>
-        </g>
-      </g>
-    </g>
-  </g>
-</svg>
-        </div>
-    </div>
+            <div class="flex" style="position: relative; min-height: calc(65px + 5rem);">
+                <div
+                    style="position: absolute; top: 65px; left: 50%; transform: translate(-50%,0); width: 100vw; height: 100%; background: #53d3bb; z-index: -1;">
+                </div>
+            </div>
 
+
+        </div>
+
+
+
+
+        <!-- <div style="width: 100%; height: 200px; background: #53d3bb;"></div> -->
+
+
+
+        <!-- <video style="position: absolute; bottom: 0; left: 50%; transform: translate(-50%,0); height: 100%; z-index: -1;" muted autoplay loop playsinline disablePictureInPicture>
+            <source src="image/main-boat-bright.mp4" type="video/mp4">
+        </video> -->
+
+    </div>
 </div>
 
 
 <script>
     let el = document.getElementById("laptop-video");
     if (el) el.playbackRate = 0.25;
+
+    window.addEventListener("load", function () {
+        new window.Typewriter('#coolWord', {
+            strings: ['cool', 'impressive', 'awesome', 'breathtaking', 'amazing', 'stunning', 'magnificent', 'wonderful', 'spectacular', 'mind-blowing'],
+            autoStart: true,
+            loop: true,
+            // delay: 500,
+            // deleteSpeed: 500,
+            pauseFor: 3000
+        });
+    });
+
 </script>
 
 
-<div class="vertical layout center">
-    <div class="section lottie-section">
-        <div class="lottie-section-content horizontal layout start center-justified wrap">
-            <div class="_first-col">
-                <div class="card big-card">
-                    <div class="horizontal layout center card-header it1">
-                        <image class="section-image" style="height: 4.5em;" src="image/logos/lottie-logo.svg"></image>
-                        <div class="card-title"><span class="strong-text">Lottie</span> animation file</div>
-                    </div>
-                    <div class="card-text  it1">
-                        <ul>
-                            <li>JSON-based animation file format</li>
-                            <li>Allows to have vector, image and text content</li>
-                            <li>Resolution independent</li>
-                            <li>Frame-rate independent</li>
-                            <li>Keyframe based</li>
-                        </ul>
-                    </div>
-                </div>
+<!-- { % include_relative _parts/section1_lottie.html % } -->
+<!-- background: hsl(30,2%,20%) -->
+
+
+
+
+<div class="hide-small-screen" style="position: relative; color: #fff;">
+
+    <div style="position: absolute; top: 0; left: 0; z-index: -1; width: 100%; height: 40rem; background: #53d3bb;">
+    </div>
+
+
+    <div class="vertical layout center"  style="text-shadow: 2px 2px 4px rgba(0,0,0,0.15);">
+        <div style="position: relative; font-size: 3em; font-weight: 900;">
+            Try app features now
+        </div>
+        <div style="position: relative; font-size: 1.75em; font-weight: 900; margin-top: 0.5rem;">
+            straight in the browser
+        </div>
+        <div style="position: relative; font-size: 1.5em; font-weight: 900; margin-top: 0.5rem;">
+            (in restricted demo mode)
+        </div>
+    </div>
+    <div class="vertical layout center" style="font-size: 1.1em; font-weight: 400; margin-top: 2rem; color: #222; text-shadow: 2px 2px 24px rgba(255,255,255,1), 2px 2px 42px rgba(255,255,255,1);">
+        <div style="margin-bottom: 0.5rem;">
+            The app runs in a restricted demo mode, which means you cannot save files and have limited export options.
+        </div>
+        <div style="margin-bottom: 0.5rem;">
+            You can export animations containing a maximum of <span class="strong-text">3 shapes</span>,
+        </div>
+        <div style="margin-bottom: 0.5rem;">
+            with <span class="strong-text">no images</span>, and a frame range of up to <span class="strong-text">30 frames</span>.
+        </div>
+        <div style="margin-bottom: 0.5rem;">
+            If these limits are exceeded, the export feature becomes disabled,
+        </div>
+        <div style="margin-bottom: 0.5rem;">
+            but you will still be able to create and play the animation            
+        </div>
+        <div style="margin-bottom: 0.5rem;">
+            within your web browser session to discover what the app can do.
+        </div>
+    </div>
+
+
+    <!-- style="padding: 120px 0; background: linear-gradient(90deg, #fff 0%, #ddd 30%, #ddd 70%, #fff 100%);" -->
+    <!-- style="padding: 120px 0; background: linear-gradient(90deg, #ddd 0%, #f4f4f4 10%, #f4f4f4 90%, #ddd 100%);" -->
+    <div class="vertical layout center" style="padding: 4rem 0 8rem 0;">
+
+        <div
+            style="position: relative; width:calc(100vw - 200px); height: calc(100vh - 120px); padding: 0.75rem; background: #e4e4e4; border-radius: 2.5rem; border: 0.5rem solid #111; box-shadow: 0 12px 16px 1px rgba(0, 0, 0, 0.4), 0 4px 22px 3px rgba(0, 0, 0, 0.4), 0 6px 7px -4px rgba(0, 0, 0, 1);">
+            <iframe src="/app/animator/demo/"
+                style="background: #333; width:100%; height: 100%; border-radius: 1.5rem; border: none;"></iframe>
+
+            <!-- <div style="position: absolute; bottom: 100%; left: 0;">TOP-LEFT</div>
+            <div style="position: absolute; bottom: 100%; right: 0;">
+                <img src="image/embedded-app/try-export.svg" style="height: 120px;"></img>
             </div>
-            <div class="_second-col">
-                <div class="_cards">
-                    <div class="card">
-                        <div class="horizontal layout center card-header it1">
-                            <!-- <svg viewBox="0 0 24 24" style="height: 2.25em; margin-right: 0.5em;">
-                            <path fill="rgb(26,177,144)"
-                                d="M12.5,7.5C12.5,5.568,10.932,4,9,4C7.068,4,5.5,5.568,5.5,7.5C5.5,9.432,7.068,11,9,11C10.932,11,12.5,9.432,12.5,7.5M16,17L16,19L2,19L2,17C2,17,2,13,9,13C16,13,16,17,16,17Z" />
-                            <path fill="rgba(26,177,144,0.5)"
-                                d="M15,4C14.312,3.997,13.638,4.202,13.07,4.59C14.315,6.33,14.315,8.67,13.07,10.41C13.638,10.798,14.312,11.003,15,11C16.932,11,18.5,9.432,18.5,7.5C18.5,5.568,16.932,4,15,4zM15.94,13C17.184,13.963,17.939,15.428,18,17L18,19L22,19L22,17C22,17,22,13.369,15.94,13" />
-                        </svg> -->
-                            <div class="card-title">Lottie World</div>
-                        </div>
-                        <ul class="card-text  it1">
-                            <li>Big lottie community.</li>
-                            <li>Lottie <a href="#">documentation</a>.</li>
-                            <li>Collection of existing animations at
-                                <img style="height: 1.25em;" src="image/logos/lottiefiles-logo.svg" />
-                                <a href="#">LottieFiles</a>.
-                            </li>
-                        </ul>
-                        <svg class="_arrow1" viewBox="0 0 210 335" preserveAspectRatio="xMidYMid meet">
-                            <path fill="currentColor"
-                                d="M95.927,242.2533L95.6207,217.1641L183.927,262.2533L109.3019,334.1166L108.927,314.2533C-92.5705,249.9119,12.5132,-9.2223,204.927,0.2533C-7.89,50.8384,24.797,213.8591,95.927,242.2533z">
-                            </path>
-                        </svg>
-                    </div>
+            <div style="position: absolute; top: 100%; left: 0;">BOTTOM-LEFT</div>
+            <div style="position: absolute; top: 100%; right: 0;">BOTTOM-RIGHT</div> -->
 
-                    <div class="card">
-                        <div class="horizontal layout center card-header  it2">
-                            <!-- <svg viewBox="0 0 24 24" style="height: 2em; margin-right: 0.5em;">
-                            <path fill="rgb(60,124,242)"
-                                d="M21,2H3A2,2 0 0,0 1,4V20A2,2 0 0,0 3,22H21A2,2 0 0,0 23,20V4A2,2 0 0,0 21,2M11,17.5L9.5,19L5,14.5L9.5,10L11,11.5L8,14.5L11,17.5M14.5,19L13,17.5L16,14.5L13,11.5L14.5,10L19,14.5L14.5,19M21,7H3V4H21V7Z" />
-                        </svg> -->
-                            <div class="card-title">For developers</div>
-                        </div>
-                        <ul class="card-text it2">
-                            <li>
-                                Platform-independent.
-                            </li>
-                            <li>
-                                Open-source and free libraries that play Lottie files exist for many platforms:
-                                <img style="height: 1.25em;" src="image/logos/js-logo.svg" /> <a
-                                    href="https://github.com/airbnb/lottie-web">Web</a>,
-                                <img style="height: 1.25em;" src="image/logos/apple-logo.svg" /> <a
-                                    href="https://github.com/airbnb/lottie-ios">iOS</a>,
-                                <img style="height: 1.25em;" src="image/logos/android-robot-logo.svg" /> <a
-                                    href="https://github.com/airbnb/lottie-android">Android</a>,
-                                <img style="height: 1.25em;" src="image/logos/windows-logo.svg" /> <a
-                                    href="https://github.com/CommunityToolkit/Lottie-Windows">Windows</a>,
-                                <img style="height: 1.25em;" src="image/logos/react-logo.svg" /> <a
-                                    href="https://github.com/lottie-react-native/lottie-react-native">React Native</a>.
-                                <img style="height: 1.25em;" src="image/logos/c-logo.svg" /> <a
-                                    href="https://github.com/Samsung/rlottie">r-lottie</a>.
-                            </li>
-                        </ul>
-                        <svg class="_arrow2" viewBox="0 0 210 335" preserveAspectRatio="xMidYMid meet">
-                            <path fill="currentColor"
-                                d="M95.927,242.2533L95.6207,217.1641L183.927,262.2533L109.3019,334.1166L108.927,314.2533C-92.5705,249.9119,12.5132,-9.2223,204.927,0.2533C-7.89,50.8384,24.797,213.8591,95.927,242.2533z">
-                            </path>
-                        </svg>
-                    </div>
+        </div>
+    </div>
+</div>
 
-                    <div class="card">
-                        <div class="horizontal layout center card-header it3">
-                            <!-- <svg viewBox="0 0 24 24" style="height: 2em; margin-right: 0.5em;">
-                            <path fill="rgb(255,99,157)"
-                                d="M16,15H9V13H16M19,11H9V9H19M19,7H9V5H19M21,1H7C5.89,1 5,1.89 5,3V17C5,18.11 5.9,19 7,19H21C22.11,19 23,18.11 23,17V3C23,1.89 22.1,1 21,1M3,5V21H19V23H3A2,2 0 0,1 1,21V5H3Z" />
-                        </svg> -->
-                            <div class="card-title">Use for</div>
-                        </div>
-                        <ul class="card-text it3">
-                            <li>Animated icons, loaders, splash screens, stickers.</li>
-                            <li>
-                                <img style="height: 1.25em;" src="image/logos/figma-logo.svg" /> <a
-                                    href="https://www.figma.com/">Figma</a>,
-                                <a href="https://webflow.com/">Webflow</a>,
-                                <a href="https://elementor.com/">Elementor</a> have support for Lottie files.
-                            </li>
-                        </ul>
+
+<div class="page-item two-column-content vertical layout center pixodesk"
+    style="background: #222; color: #fff; padding-bottom: 8rem;">
+    <div class="page-item-content vertical layout center">
+
+        <div class="section-header horizontal layout" style="margin-bottom: 4rem;">
+            <!-- <img style="height: 4rem; opacity:0.7; margin-top: -0.5rem;" src="image/logos/app-logo.svg"></image> -->
+            <h3>Explore Pixodesk Animator features</h3>
+        </div>
+
+        <div class="horizontal-big-screen layout center-big-screen">
+            <div class="flex-big-screen">
+                <video style="width: 100%;" poster="image/pa-yoga.png" muted autoplay loop playsinline
+                    disablePictureInPicture>
+                    <source src="image/pa-yoga.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="flex-big-screen card123">
+                <div class="_header"></div>
+                <div class="_main">
+                    <div style="font-size: 1.25rem; max-width: 40rem;">
+                        Pixodesk Animator simplifies the creation of animated content by combining
+                        a powerful vector editor and animator while also offering a wide range of exporting options.
+                    </div>
+                    <div style="font-size: 1.25rem; max-width: 40rem; margin-top: 1rem;">
+                        The app is built upon the popular <span style="font-weight: 500; color: green;">Lottie</span>
+                        file format,
+                        offering you increased flexibility for using it with various other drawing and rendering tools.
+                    </div>
+                    <div style="font-size: 1.25rem; max-width: 40rem; margin-top: 1rem;">
+                        There is also a vast and active <span style="font-weight: 500; color: green;">Lottie</span>
+                        artwork
+                        community that you can tap into when crafting your own artwork.
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
+
+<div class="page-item vertical layout center" style="background: #222; color: #fff; padding-bottom: 4rem;">
+    <div class="page-item-content">
+        <div class="horizontal-big-screen layout">
+            <div class="flex card123 vertical layout stretch">
+                <div class="_img self-center">
+                    <!-- <img src="image/pa-3-columns-create.png" width="100%"> -->
+
+                    <video style="width: 100%;" muted autoplay loop playsinline disablePictureInPicture>
+                        <source src="image/pa-column-create-animated.mp4" type="video/mp4">
+                    </video>
+
+                </div>
+                <div class="_header">Create</div>
+                <div class="_main">
+                    <ul class="card-text it1">
+                        <li>
+                            Create vector drawings, import vector or raster images, use custom ttf fonts.
+                        </li>
+                        <li>
+                            Reuse and modify pre-existing animations from Lottie community, e.g. from here <a
+                                href="https://lottiefiles.com/" target="_blank">LottieFiles</a> .
+                        </li>
+                        <li>
+                            Compose complex animated scenes by using animation blocks.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex card123 vertical layout stretch">
+                <div class="_img self-center">
+                    <!-- <img src="image/pa-3-columns-animate.png" width="100%"> -->
+
+                    <video style="width: 100%;" muted autoplay loop playsinline disablePictureInPicture>
+                        <source src="image/pa-column-animated.mp4" type="video/mp4">
+                    </video>
+
+                </div>
+                <div class="_header">Animate</div>
+                <div class="_main">
+                    <ul class="card-text it1">
+                        <li>
+                            Create keyframe based animation in a traditional way by using "watch" and "diamond" buttons.
+                            Create animation loops, blocks and time-remaps.
+                        </li>
+                        <li>
+                            Automate the animation of objects on the page by freezing object states at one or more time
+                            points and making alterations at a different, non-frozen time point.
+                        </li>
+                        <li>
+                            Select a pre-defined easing function from a dropdown menu or customize the easing curve by
+                            editing it.
+                            Easing functions come with velocity and acceleration charts that enhance your comprehension
+                            of animation dynamics.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex card123 vertical layout stretch">
+                <div class="_img self-center">                
+                    <!-- <img src="image/pa-3-columns-export.png" width="100%"> -->
+                
+                    <video style="width: 100%;" muted autoplay loop playsinline disablePictureInPicture>
+                        <source src="image/pa-3-columns-export-animated.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+
+                <div class="_header">Export</div>
+                <div class="_main">
+                    <ul class="card-text it1">
+                        <li>
+                            Export a compact, animated SVG file for the web, using either JS or CSS animation types.
+                            You can then embed this SVG directly into your webpage, ensuring it looks good on screens
+                            with different resolution.
+                        </li>
+                        <li>
+                            Controll how the animation starts and ends on your webpage: on click, scroll, mouse in/out.
+                        </li>
+                        <li>
+                            Use your Lottie file with the Lottie rendering libraries to use in your native applications
+                            on Windows, iOS, Android, and ReactNative platforms.
+                        </li>
+                        <li>
+                            Export to other media formats: webm, gif, png, svg.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- <div class="vertical layout center center-justified">
     <img style="width: 80%;" src="image/site-design.png" />
 </div> -->
 
-<div class="section pixodesk pixodesk-section vertical layout center">
 
-    <div class="section-header-wrapper">
-        <div class="section-header _has-image">
-            <img class="section-image" style="height: 4em;" src="image/logos/pixodesk-logo-keyframe-blue.svg"></image>
-            <h3 class="section-title1" style="display: block;">
-                <span class="strong-text">Pixodesk Animator features</span>
-            </h3>
-            <h4 class="section-title2">
-                <ul>
-                    <li>Works with Lottie animation file natively</li>
-                    <li>Brings all tools together speeding up your work</li>
-                    <li>Easier to create more complex animation</li>
-                    <li>Easier to reuse animation</li>
-                </ul>
-            </h4>
+
+<div class="page-item two-column-content vertical layout center pixodesk">
+    <div class="page-item-content vertical layout center">
+
+        <div class="horizontal-big-screen layout center-big-screen">
+            <div class="flex-big-screen card123">
+                <div class="_header">Auto-animate</div>
+                <div class="_main">
+                    <ul>
+                        <li>
+                            Automate the animation of objects on the page by freezing object states at one or more time points and making alterations at a different, non-frozen time point.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="flex-big-screen">
+                <video style="width: 100%;" poster="image/section--animation-auto.png" muted autoplay loop playsinline
+                    disablePictureInPicture>
+                    <source src="image/section--animation-auto.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <div style="height: 8rem;"></div>
+
+        <div class="horizontal-big-screen layout center-big-screen">
+            <div class="flex-big-screen">
+                <video style="width: 100%;" poster="image/section--animation-charts-3.png" muted autoplay loop
+                    playsinline disablePictureInPicture>
+                    <source src="image/section--animation-charts.mp4" type="video/webm">
+                </video>
+            </div>
+
+            <div class="flex-big-screen card123">
+                <div class="_header">Easing</div>
+                <div class="_main">
+                    <ul>
+                        <li>
+                            Select a pre-defined easing function from a dropdown menu or customize the easing curve by editing it.
+                            Easing functions come with velocity and acceleration charts that enhance your comprehension of animation dynamics.
+                        </li>
+                        <li>
+                            Keyframe segments are visually represented as mini velocity charts, providing you with insights into the easing dynamics.
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
+</div>
 
 
-    <div class="section-content pixodesk-section-content vertical layout stretch">
-        <div class="_columns">
+
+<!-- <div class="_columns"
+            style="box-shadow1: 4px 4px 4px 0 rgba(0, 0, 0, 0.25); background1: linear-gradient(90deg, rgba(250,250,250,0) 0%, rgba(250,250,250,1) 100%);">
             <div class="_first-col">
-                <video style="width: 500px; transform:translate(0,0)" poster="image/section--create-compose-text.svg" muted autoplay loop
+                <video class="shadow-2dp1" poster="image/section--create-compose-text-2.svg" muted autoplay loop
                     playsinline disablePictureInPicture>
-                    <source src="image/section--create-compose-text.mp4" type="video/mp4">
+                    <source src="image/section--create-compose-text-ready.webm" type="video/webm">
                 </video>
             </div>
             <div class="_second-col">
@@ -877,16 +874,10 @@
                     </div>
                     <div class="card-text  it1">
                         <ul>
-                            <li><!-- <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="24" height="24" viewBox="0 0 24 24" class="card-text-icon">
-  <path fill="currentColor" d="M10.998,11.033C11.861,11.033,12.562,10.332,12.562,9.469C12.562,8.606,11.861,7.905,10.998,7.905C10.135,7.905,9.433,8.606,9.433,9.469C9.433,10.332,10.135,11.033,10.998,11.033zM5.131,16.509C4.484,16.509,3.958,15.983,3.958,15.336C3.958,14.689,4.484,14.162,5.131,14.162C5.31,14.162,5.484,14.202,5.639,14.28L8.526,11.385L8.26,11.033C6.547,12.017,4.535,12.598,2.393,12.598L1.611,12.574L1.611,11.002L2.393,11.033C4.41,11.033,6.305,10.446,7.869,9.438C7.869,7.728,9.256,6.34,10.966,6.34C11.974,4.776,12.562,2.882,12.562,0.865L12.531,0.082L14.103,0.082L14.127,0.865C14.127,3.007,13.546,5.018,12.562,6.731L12.914,6.997L15.808,4.111C15.73,3.956,15.691,3.781,15.691,3.602C15.691,2.955,16.217,2.429,16.864,2.429C17.511,2.429,18.038,2.955,18.038,3.602C18.038,4.249,17.511,4.776,16.864,4.776C16.685,4.776,16.512,4.735,16.356,4.658L13.47,7.553C13.884,8.076,14.127,8.751,14.127,9.469C14.127,11.196,12.725,12.598,10.998,12.598C10.28,12.598,9.604,12.355,9.081,11.941L6.187,14.827C6.264,14.983,6.304,15.157,6.304,15.336C6.304,15.983,5.778,16.509,5.131,16.509"/>
-  <path fill="currentColor" d="M14.285,13.09L16.353,23.661L16.889,23.771L19.08,20.371L23.069,19.701L23.179,19.165L14.285,13.09z"/>
-</svg> --> Create <span
-                                    class="strong-text">vector drawings</span>. </li>
+                            <li>Create <span class="strong-text">vector drawings</span>. </li>
                             <li><span class="strong-text">Reuse existing Lottie files</span>. Add, change or compose
                                 animations.</li>
-                            <li><!-- <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="mdi-toy-brick-plus-outline" width="24" height="24" viewBox="0 0 24 24" class="card-text-icon">
-  <path d="M19 6V5A2 2 0 0 0 17 3H15A2 2 0 0 0 13 5V6H11V5A2 2 0 0 0 9 3H7A2 2 0 0 0 5 5V6H3V20H14V18H5V8H19V13H21V6M21 15V18H24V20H21V23H19V20H16V18H19V15Z"/>
-</svg> -->
+                            <li>
                                 <span class="strong-text">Reuse animation blocks</span> multiple times.
                             </li>
                             <li><span class="strong-text">Import existing Lottie animations </span> into the project.
@@ -899,76 +890,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
-        <div style="height: 80px;"></div>
-
-        <div class="_columns">
-            <div class="_first-col">
-                <div class="card">
-                    <div class="horizontal layout center card-header it1">
-                        <div class="card-title">Animate<span class="normal-text">: Auto animation</div>
-                    </div>
-                    <div class="card-text  it1">
-                        <ul>
-                            <li><span class="strong-text">Automatically animate</span> objects on the page by freezing
-                                object states at one or multiple
-                                time points and changing something at another unfrozen time point.
-                            </li>
-                            <li><span class="strong-text">Keyframe based</span> animation.</li>
-                            <li>Make element property animated by clicking on a clock icon next to the option.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="_second-col">
-                <video style="width: 100%; max-width: 450px;" poster="image/section--animation-auto.svg" muted autoplay loop
-                    playsinline disablePictureInPicture>
-                    <source src="image/section--animation-auto.mp4" type="video/mp4">
-                </video>
-            </div>
-        </div>
-
-        <div style="height: 80px;"></div>
-
-        <div class="_columns">
-            <div class="_first-col">
-                <video style="width: 500px; transform:translate(0,0)" poster="image/section--animation-charts.svg" muted autoplay loop
-                    playsinline disablePictureInPicture>
-                    <source src="image/section--animation-charts3.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="_second-col">
-                <div class="card">
-                    <div class="horizontal layout center card-header it1">
-                        <div class="card-title">Animate<span class="normal-text">: Easing Charts</div>
-                    </div>
-                    <div class="card-text  it1">
-                        <ul>
-                            <li>Choose <span class="strong-text">predefined easing</span> function (accompanied by <span
-                                    class="strong-text">velocity</span> and <span
-                                    class="strong-text">acceleration</span>
-                                charts) from
-                                a dropdown or edit the easing curve.
-                            </li>
-                            <li>Keyframe segments/ranges are shown as <span class="strong-text">velocity mini
-                                    charts</span>
-                                that allow you to see what
-                                kind of easing is going on there.
-                            </li>
-                            <li>The animation timeline can be represented as <span class="strong-text">value, velocity
-                                    and
-                                    acceleration charts</span>.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- <div style="height: 80px;"></div> -->
-
-        <!-- <div class="horizontal layout center" style="width: 50%;">
+<!-- <div class="horizontal layout center" style="width: 50%;">
             <div class="card">
                 <div class="horizontal layout center card-header it1">
                     <div class="card-title">Animate<span class="normal-text">: Loop, blocks and time
@@ -988,9 +912,8 @@
             </div>
         </div> -->
 
-        <div style="height: 80px;"></div>
-
-        <div class="_columns">
+<!-- <div class="_columns"
+            style="box-shadow: -4px 4px 4px 0 rgba(0, 0, 0, 0.25); background: linear-gradient(-90deg, rgba(250,250,250,0) 0%, rgba(250,250,250,1) 100%);">
             <div class="_first-col">
                 <div class="card">
                     <div class="horizontal layout center card-header it1">
@@ -1004,7 +927,8 @@
                             <li>Export <span class="strong-text">SVG+CSS animation</span>.</li>
                             <li>Export animated <span class="strong-text">GIF</span>.</li>
                             <li>Export video (<span class="strong-text">*.webm</span>).</li>
-                            <li>Allows export big high quality animation in <span class="strong-text">small size</span>.</li>
+                            <li>Allows export big high quality animation in <span class="strong-text">small size</span>.
+                            </li>
                             <li>Improves page load speed.</li>
                         </ul>
                     </div>
@@ -1013,115 +937,137 @@
             <div class="_second-col">
                 <img style="width: 100%;" src="image/section-export.svg" />
             </div>
-        </div>
+        </div> -->
+<div style="height: 8rem;"></div>
+<div class="page-item two-column-content vertical layout center pixodesk" style="background: #f1f1f1; color: #222; padding: 8rem 0;">
+    <div class="page-item-content">        
+        <div class="horizontal-big-screen layout center-big-screen">
+            <div class="flex-big-screen">
+                <video style="width: 100%;"
+                    poster="image/section--icons-watch.png" 
+                    muted autoplay loop playsinline disablePictureInPicture
+                > 
+                    <source src="image/section--icons-watch.mp4" type="video/mp4">
+                </video>
+                <!-- <img src="image/section--icons-watch.png" width="100%"></img>                 -->
+            </div>
 
-        <!-- <img style="width: 70%;" src="image/site-design2.png" /> -->
-        <!-- <img style="width: 70%;" src="image/site-design.png" /> -->
-    </div>
-</div>
-<div class="section splash splash-section vertical layout">
-    <div class="section-content vertical layout center" style="height: 32rem;">
-        <img src="image/section-splashScreens-ready.svg" style="position: absolute; top: 0; left: 0; height: 100%;" />
-        <video 
-            style="position: absolute; top: 0; left: 0; height: 200px; transform: translate(696px,170px)scale(0.8);" 
-            poster="image/firework-ready.png" muted autoplay loop playsinline disablePictureInPicture
-        >
-            <source src="image/firework-ready3.mp4" type="video/mp4">
-        </video>
-
-        <div class="horizontal layout start relative">
-            <div class="_first-col">
-                <div class="card">
-                    <div class="horizontal layout center card-header it1">
-                        <div class="card-title">Create splash screens</div>
-                    </div>
-                    <div class="card-text  it1">
-                        <ul>
-                            <li>Create visually stunning splash-screen animations to engage with users giving them a
-                                good first impression.</li>
-                            <li>Use animation blocks, auto-keyframes, text, mask, clipping, gradient, along-path and
-                                other tools.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="_second-col" style="height: 500px; min-width: 50%;">
-            </div>
-        </div>
-    </div>
-</div>
-<div class="section icons-section vertical layout center">
-    <div class="section-content">
-        <div class="horizontal layout center">
-            <div class="_first-col" style="width: 50%;">
-                <img class="section-image" style="height: 18rem;" src="image/section-icons-ready.svg"></image>
-            </div>
-            <div class="_second-col" style="width: 50%;">
-                <div class="card">
-                    <div class="horizontal layout center card-header it1">
-                        <div class="card-title">Create animated icons</div>
-                    </div>
-                    <div class="card-text  it1">
-                        <ul>
-                            <li>
-                                Draw or import existing icon and easily animate it with such options as
-                                Trim path, Dash Array, Rotation, Scale, Skew, etc. to achieve such effects as
-                                fading,
-                                flipping,
-                                bounce, stroke disappearing, stroke moving along path.
-                            </li>
-                            <li>
-                                Use grid and snap modes to achieve precise and accurate drawing.
-                            </li>
-                            <li>
-                                Use your animated icon on your web site or mobile/desktop application.
-                            </li>
-                        </ul>
-                    </div>
+            <div class="flex-big-screen card123">
+                <div class="_header">Create animated icons</div>
+                <div class="_main">
+                    <ul>
+                        <li>
+                            Draw or import an existing icon, and effortlessly animate it using options like Trim Path, Dash Array, Rotation, Scale, Skew, and more. Achieve various effects such as fading, flipping, bouncing, stroke disappearing, and stroke moving along a path.
+                        </li>
+                        <li>
+                            Use grid and snap modes to achieve precise and accurate drawing.
+                        </li>
+                        <li>
+                            Use your animated icon on your website or mobile/desktop application.
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- <div class="section loaders loaders-section vertical layout">
-    <div class="section-header">
-        <h3 class="section-title1">
-            Create animated loaders
-        </h3>
-        <h4 class="section-title3">
-            <ul>
-                <li>
-                    You can easily create loader or progress indicator for your webpage or application with such
-                    tools as Shapes, Bezier and Repeater and animate it with Transform and Loop options.
-                </li>
-                <li>
-                    Make the animation play smoothly and look naturally by using
-                    pre-defined Easing Functions and then modifying them on value, velocity, acceleration charts.
-                </li>
-            </ul>
-        </h4>
+<!-- <div class="section-header">
+    <h3 class="section-title1" style="display: block;">
+        <span class="strong-text">Pixodesk Animator features</span>
+    </h3>
+</div>
+
+<ul class="section-list">
+    <li>Works with Lottie animation file natively</li>
+    <li>Brings all tools together speeding up your work</li>
+    <li>Easier to create more complex animation</li>
+    <li>Easier to reuse animation</li>
+</ul> -->
+
+
+<div class="page-item two-column-content vertical layout center pixodesk" style="background: #222; color: #fff; padding: 8rem 0;">
+    <div class="page-item-content">
+        <div class="horizontal-big-screen layout center-big-screen">
+            <div class="flex-big-screen card123">
+                <div class="_header">Create animated splash-screens</div>
+                <div class="_main">
+                    <ul>
+                        <li>
+                            Create visually stunning splash-screen animations to engage with users, giving them a good first impression.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="flex-big-screen">
+                <!-- <img src="image/splash-screen-dark-theme.png" width="100%"></img> -->
+
+                <video style="width: 100%;"
+                    poster="image/splash-screen-dark-theme.png" 
+                    muted autoplay loop playsinline disablePictureInPicture
+                > 
+                    <source src="image/splash-screen-dark-theme.mp4" type="video/mp4">
+                </video>
+            </div>
+
+
+            
+
+            <!-- <div class="flex-big-screen" style="height: 500px; min-width: 400px">
+                <div class="" style="position:relative;">
+                    <div style="position:relative; margin: 0 auto;">
+
+                        <img src="image/section-splashScreens-phone.png" style="position: absolute; top: 0; left: 0; height: 320px;
+                        transform: translate(0px,0px)scale(1);" />
+                        <video style="position: absolute; top: 0; left: 0;  
+                            transform: translate(-6px,0px)scale(0.85);" poster="" muted autoplay loop playsinline
+                            disablePictureInPicture>
+                            <source src="image/section--splashScreens-left-video.webm" type="video/webm">
+                        </video>
+                        <img src="image/section-splashScreens-phone.png" style="position: absolute; top: 0; left: 0; height: 320px;
+                        transform: translate(250px,0px)scale(1);" />
+                        <video style="position: absolute; top: 0; left: 0;  
+                                transform: translate(244px,0px)scale(0.85);" poster="" muted autoplay loop playsinline
+                            disablePictureInPicture>
+                            <source src="image/section--splashScreens-right-video.webm" type="video/webm">
+                        </video>
+                        <img src="image/section-splashScreens-phone.png" style="position: absolute; top: 0; left: 0; height: 320px;
+                        transform: translate(125px,40px)scale(1);" />
+                        <video style="position: absolute; top: 0; left: 0;  
+                                transform: translate(119px,40px)scale(0.85);" poster="" muted autoplay loop playsinline
+                            disablePictureInPicture>
+                            <source src="image/section--splashScreens-middle-video.webm" type="video/webm">
+                        </video>
+                    </div>
+                </div>
+            </div> -->
+        </div>
     </div>
-    <div class="loaders-animation vertical layout center">
-        <video src="image/loaders.mp4" muted autoplay loop playsinline disablePictureInPicture></video>
-    </div>
-</div> -->
-<div class="section section-devices vertical layout">
-    <div class="vertical layout center center-justified">
+</div>
+<!-- { % include_relative _parts/section4_loaders.html % } -->
+<div class="page-item two-column-content vertical layout center pixodesk" style="padding-bottom: 4rem;">
+    <div class="page-item-content vertical layout center">
+
         <div class="section-header">
-            <h3 class="section-title1">
-                Make It Once - Works Everywhere
-            </h3>
-            <h4 class="section-title3 vertical layout center">
-                <div>Pixodesk Animator is your ultimate application.</div>
-                <div>Powerful animation for Web, IOS, Windows.</div>
-            </h4>
+            <h3>Make It Once - Works Everywhere</h3>
         </div>
-        <video style="max-width: 80%;" src="image/devices.mp4" muted autoplay loop playsinline
-            disablePictureInPicture></video>
+
+        <ul class="section-list">
+            <li>Pixodesk Animator is your ultimate application.</li>
+            <li>Powerful animation for Web, IOS, Windows.</li>
+        </ul>
+
+        <div class="section section-devices vertical layout">
+            <div class="vertical layout center center-justified">
+                <video style="max-width: 80%;" src="image/devices-ready.mp4" muted autoplay loop playsinline
+                    disablePictureInPicture></video>
+            </div>
+        </div>
+
     </div>
 </div>
 
-<div class="vertical layout center center-justified" style="width: 100%; height: 100px; background: #eee;">
+<div class="vertical layout center center-justified pxd-address" style="width: 100%; height: 100px; background: #eee;">
     <div>&copy; Pixodesk LIMITED</div>
     <div style="height: 0.35em;"></div>
     <div>79 College Road, London, HA1 1BD, United Kingdom</div>

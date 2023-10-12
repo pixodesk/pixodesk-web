@@ -1,4 +1,4 @@
-<html lang="en"><head><meta charset="UTF-8"><title>Pixodesk Animator</title><link rel="shortcut icon" href="/favicon.svg"/><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><script defer="defer" src="main.bundle.js"></script></head><body><div id="app"/><script src="https://euc-widget.freshworks.com/widgets/103000000459.js" async defer="defer"></script><script>function ha(a){var b=0;return function(){return b<a.length?{done:!1,value:a[b++]}:{done:!0}}}function ia(a){var b="undefined"!=typeof Symbol&&Symbol.iterator&&a[Symbol.iterator];if(b)return b.call(a);if("number"==typeof a.length)return{next:ha(a)};throw Error(String(a)+" is not an iterable or ArrayLike");}var Ea="function"==typeof Object.defineProperties?Object.defineProperty:function(a,b,e){if(a==Array.prototype||a==Object.prototype)return a;a[b]=e.value;return a};
+function ha(a){var b=0;return function(){return b<a.length?{done:!1,value:a[b++]}:{done:!0}}}function ia(a){var b="undefined"!=typeof Symbol&&Symbol.iterator&&a[Symbol.iterator];if(b)return b.call(a);if("number"==typeof a.length)return{next:ha(a)};throw Error(String(a)+" is not an iterable or ArrayLike");}var Ea="function"==typeof Object.defineProperties?Object.defineProperty:function(a,b,e){if(a==Array.prototype||a==Object.prototype)return a;a[b]=e.value;return a};
 function Fa(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var b=0;b<a.length;++b){var e=a[b];if(e&&e.Math==Math)return e}throw Error("Cannot find global object");}var Ga=Fa(this);function sb(a,b){if(b)a:{var e=Ga;a=a.split(".");for(var d=0;d<a.length-1;d++){var c=a[d];if(!(c in e))break a;e=e[c]}a=a[a.length-1];d=e[a];b=b(d);b!=d&&null!=b&&Ea(e,a,{configurable:!0,writable:!0,value:b})}}
 sb("Symbol",function(a){function b(f){if(this instanceof b)throw new TypeError("Symbol is not a constructor");return new e(d+(f||"")+"_"+c++,f)}function e(f,g){this.R=f;Ea(this,"description",{configurable:!0,writable:!0,value:g})}if(a)return a;e.prototype.toString=function(){return this.R};var d="jscomp_symbol_"+(1E9*Math.random()>>>0)+"_",c=0;return b});
 sb("Symbol.iterator",function(a){if(a)return a;a=Symbol("Symbol.iterator");for(var b="Array Int8Array Uint8Array Uint8ClampedArray Int16Array Uint16Array Int32Array Uint32Array Float32Array Float64Array".split(" "),e=0;e<b.length;e++){var d=Ga[b[e]];"function"===typeof d&&"function"!=typeof d.prototype[a]&&Ea(d.prototype,a,{configurable:!0,writable:!0,value:function(){return tb(ha(this))}})}return a});function tb(a){a={next:a};a[Symbol.iterator]=function(){return this};return a}
@@ -45,30 +45,4 @@ b);h=O(f.pt,b);var k=O(f.r,b)/180*Math.PI,p=O(f.ir,b),q=O(f.or,b),l=O(f.is,b)/10
 function wc(a,b,e){a=a.tr||[];for(var d=0;d<a.length;d++){var c=a[d],f=c.r;if(f)e[d]=tc(void 0,{a:f.a?Q(f.a,b):[0,0],p:f.p?Q(f.p,b):[0,0],x:f.x?O(f.x,b):0,y:f.y?O(f.y,b):0,ga:f.s?Q(f.s,b):[1,1],r:f.r?O(f.r,b):0,Z:f.cc,c:f.c?O(f.c,b):0,ea:f.o?O(f.o,b):0});else{f=sc();c=c.tp||[];for(var g={},h=0;h<c.length;g={g:g.g},h++){var k=c[h];g.g=k[0];k=k[1];if(Array.isArray(k)||!k.sk){var p=C(k,b,function(q){return function(l,m,n){if(l===m)return l[1];var r=l[1];m=m[1];if("translateAo"!==q.g){if(0>=n)return r;
 if(1<=n)return m}return Array.isArray(r)?"position"===q.g?lc(l,r,m,!1,n)[0]:"translateAo"===q.g?lc(l,r,m,!0,n):y(r,m,n):r+(m-r)*n}}(g));"position"===g.g&&(g.g="translate");"anchor"===g.g&&(p=[-p[0],-p[1]],g.g="translate");"translateAo"===g.g?(k=p[0],p=p[1],f.translate(k[0],k[1]),f.rotate(p)):"translate"===g.g?f.translate(p[0],p[1]):"rotate"===g.g?f.rotate(p):"scale"===g.g&&f.scale(p[0],p[1])}}e[d]=tc(f)}}}
 function Jc(a,b,e,d){var c=a.a||[];a=a.el||[];for(var f=0;f<a.length;f++){var g=document.getElementById(a[f]);if(g){for(var h=c[f],k=Object.keys(h),p={},q={},l=0;l<k.length;q={j:q.j},l++){q.j=k[l];var m=h[q.j];if("d"===q.j&&"number"===typeof m)p[q.j]=e[m].map(function(r){return r.F.C()}).join("");else if("transform"===q.j){m="number"===typeof m?{k:m,ca:0}:m;var n=d[m.k];n&&(p[q.j]=n.H(m.i).C())}else"number"!==typeof m&&(m=C(m,b,function(r){return function(u,v,w){if(u===v)return u[1];var z=u[1];v=
-v[1];if("translateAo"!==r.j){if(0>=w)return z;if(1<=w)return v}return Array.isArray(z)?"d"===r.j?wb(z,v,w):"position"===r.j?lc(u,z,v,!1,w)[0]:"translateAo"===r.j?lc(u,z,v,!0,w):y(z,v,w):z+(v-z)*w}}(q)),p[q.j]=m)}p=rc(p);h=Object.keys(p);for(k=0;k<h.length;k++)q=h[k],l=p[q],void 0!==l&&g.setAttribute(q,l)}}}window.PixodeskAnimator={loadAnimation:function(a,b){a=vc(a,b);return{conf:a.O,setFrame:a.Y,play:a.play,playUntil:a.X,playFrom:a.W,stop:a.stop,pause:a.pause,isPlaying:a.V}}};</script><script>try {
-            window.fwSettings = {
-                'widget_id': 103000000459,
-                'locale': 'en'
-            };
-            !function () { if ("function" != typeof window.FreshworksWidget) { var n = function () { n.q.push(arguments) }; n.q = [], window.FreshworksWidget = n } }()
-
-            FreshworksWidget('hide', 'launcher');
-
-            // Custom fields are not supported by the free plan
-            // FreshworksWidget('disable', 'ticketForm', ['custom_fields.cf_error']);
-
-            // FreshworksWidget("setLabels", {subject: 'Description', contact_form: {
-            //     subject: 'Description',
-            //     description: 'Error'
-            // }});
-            FreshworksWidget('disable', 'ticketForm', ['description', 'type']);
-
-            window.__prefillFeedbackFormAndShow = function(prefillMap) {
-                FreshworksWidget('clear', 'ticketForm');
-                FreshworksWidget('prefill', 'ticketForm', prefillMap);
-                FreshworksWidget('open', 'ticketForm');
-            };
-        } catch (e) {
-            console.log('FAILED OPENING WIDGET');
-            console.log(e);
-        }</script></body></html>
+v[1];if("translateAo"!==r.j){if(0>=w)return z;if(1<=w)return v}return Array.isArray(z)?"d"===r.j?wb(z,v,w):"position"===r.j?lc(u,z,v,!1,w)[0]:"translateAo"===r.j?lc(u,z,v,!0,w):y(z,v,w):z+(v-z)*w}}(q)),p[q.j]=m)}p=rc(p);h=Object.keys(p);for(k=0;k<h.length;k++)q=h[k],l=p[q],void 0!==l&&g.setAttribute(q,l)}}}window.PixodeskAnimator={loadAnimation:function(a,b){a=vc(a,b);return{conf:a.O,setFrame:a.Y,play:a.play,playUntil:a.X,playFrom:a.W,stop:a.stop,pause:a.pause,isPlaying:a.V}}};

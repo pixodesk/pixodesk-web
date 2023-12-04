@@ -650,27 +650,29 @@
 
     <!-- style="padding: 120px 0; background: linear-gradient(90deg, #fff 0%, #ddd 30%, #ddd 70%, #fff 100%);" -->
     <!-- style="padding: 120px 0; background: linear-gradient(90deg, #ddd 0%, #f4f4f4 10%, #f4f4f4 90%, #ddd 100%);" -->
-    <div class="vertical layout center" style="padding: 4rem 0 8rem 0;">
-
-        <div
-            style="position: relative; width:calc(100vw - 200px); height: calc(100vh - 120px); padding: 0.75rem; background: #e4e4e4; border-radius: 2.5rem; border: 0.5rem solid #111; box-shadow: 0 12px 16px 1px rgba(0, 0, 0, 0.4), 0 4px 22px 3px rgba(0, 0, 0, 0.4), 0 6px 7px -4px rgba(0, 0, 0, 1);">
-            <iframe src="/app/animator/demo/"
-                style="background: #333; width:100%; height: 100%; border-radius: 1.5rem; border: none;"></iframe>
-
-            <!-- <div style="position: absolute; bottom: 100%; left: 0;">TOP-LEFT</div>
-            <div style="position: absolute; bottom: 100%; right: 0;">
-                <img src="image/embedded-app/try-export.svg" style="height: 120px;"></img>
-            </div>
-            <div style="position: absolute; top: 100%; left: 0;">BOTTOM-LEFT</div>
-            <div style="position: absolute; top: 100%; right: 0;">BOTTOM-RIGHT</div> -->
-
+    
+    
+    
+    
+    <div class="vertical layout center" style="padding: 4rem 0 2rem 0;">
+        <div style="position: relative; width:calc(100vw - 200px); height: calc(100vh - 120px); padding: 0.75rem; background: #e4e4e4; border-radius: 2.5rem; border: 0.5rem solid #111; box-shadow: 0 12px 16px 1px rgba(0, 0, 0, 0.4), 0 4px 22px 3px rgba(0, 0, 0, 0.4), 0 6px 7px -4px rgba(0, 0, 0, 1);">
+            <iframe src="/app/animator/demo/" style="background: #333; width:100%; height: 100%; border-radius: 1.5rem; border: none;"></iframe>
         </div>
     </div>
 </div>
 
 
 <div class="page-item two-column-content vertical layout center pixodesk"
-    style="background: #222; color: #fff; padding-bottom: 8rem;">
+    style="position: relative; background: #222; color: #fff; padding-bottom: 8rem;">
+
+
+    <div style="position: absolute; bottom:calc(100% - 2px); left: 0; right: 0; width: 100%; height: calc(100vh / 8); z-index: -1; background: #222;"></div>
+
+    <!-- <svg style="position: absolute; bottom:calc(100% - 2px); left: 0; right: 0; width: 100%; height: calc(100vh / 2); z-index: -1;" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path d="M0,100L100,0L100,100z" fill="#222"></path>
+    </svg> -->
+
+
     <div class="page-item-content vertical layout center">
 
         <div class="section-header horizontal layout" style="margin-bottom: 4rem;">
@@ -688,16 +690,16 @@
             <div class="flex-big-screen card123">
                 <div class="_header"></div>
                 <div class="_main">
-                    <div style="font-size: 1.25rem; max-width: 40rem;">
+                    <div style="font-size: 1.4rem; max-width: 40rem; font-weight: 300;">
                         Pixodesk Animator simplifies the creation of animated content by combining
                         a powerful vector editor and animator while also offering a wide range of exporting options.
                     </div>
-                    <div style="font-size: 1.25rem; max-width: 40rem; margin-top: 1rem;">
+                    <div style="font-size: 1.4rem; max-width: 40rem; margin-top: 1rem; font-weight: 300;">
                         The app is built upon the popular <span style="font-weight: 500; color: green;">Lottie</span>
                         file format,
                         offering you increased flexibility for using it with various other drawing and rendering tools.
                     </div>
-                    <div style="font-size: 1.25rem; max-width: 40rem; margin-top: 1rem;">
+                    <div style="font-size: 1.4rem; max-width: 40rem; margin-top: 1rem; font-weight: 300;">
                         There is also a vast and active <span style="font-weight: 500; color: green;">Lottie</span>
                         artwork
                         community that you can tap into when crafting your own artwork.
@@ -710,15 +712,15 @@
 
 
 
-<div class="page-item vertical layout center" style="background: #222; color: #fff; padding-bottom: 4rem;">
+<div class="page-item vertical layout center" style="background: #222; color: #fff;">
     <div class="page-item-content">
         <div class="horizontal-big-screen layout">
             <div class="flex card123 vertical layout stretch">
                 <div class="_img self-center">
                     <!-- <img src="image/pa-3-columns-create.png" width="100%"> -->
 
-                    <video style="width: 100%;" muted autoplay loop playsinline disablePictureInPicture>
-                        <source src="image/pa-column-create-animated.mp4" type="video/mp4">
+                    <video style="width: 100%;" poster="image/pa-create.png" muted autoplay loop playsinline disablePictureInPicture>
+                        <source src="image/pa-create.mp4" type="video/mp4">
                     </video>
 
                 </div>
@@ -742,8 +744,8 @@
                 <div class="_img self-center">
                     <!-- <img src="image/pa-3-columns-animate.png" width="100%"> -->
 
-                    <video style="width: 100%;" muted autoplay loop playsinline disablePictureInPicture>
-                        <source src="image/pa-column-animated.mp4" type="video/mp4">
+                    <video style="width: 100%;" poster="image/pa-animate.png" muted autoplay loop playsinline disablePictureInPicture>
+                        <source src="image/pa-animate.mp4" type="video/mp4">
                     </video>
 
                 </div>
@@ -771,8 +773,8 @@
                 <div class="_img self-center">                
                     <!-- <img src="image/pa-3-columns-export.png" width="100%"> -->
                 
-                    <video style="width: 100%;" muted autoplay loop playsinline disablePictureInPicture>
-                        <source src="image/pa-3-columns-export-animated.mp4" type="video/mp4">
+                    <video style="width: 100%;" poster="image/pa-export.png" muted autoplay loop playsinline disablePictureInPicture>
+                        <source src="image/pa-export.mp4" type="video/mp4">
                     </video>
                 </div>
 
@@ -808,55 +810,120 @@
 
 
 
-<div class="page-item two-column-content vertical layout center pixodesk">
+<div class="vertical layout stretch" style="background: #222;">
+    <svg style="width: 100%; height: calc(100vh / 4);" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path d="M0,100L100,0L100,100z" fill="#111"></path>
+    </svg>
+
+    <div class="page-item two-column-content vertical layout center pixodesk" style="background: #111; color: #fff; padding-bottom: 4rem;">
+        <div class="page-item-content vertical layout center">
+
+            <div class="horizontal-big-screen layout center-big-screen">
+                <div class="flex-big-screen">
+                    <video style="width: 100%; max-width: 45rem;" poster="image/section--auto-animate.png" muted autoplay loop playsinline disablePictureInPicture>
+                        <source src="image/section--auto-animate.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div style="width: 8rem;"></div>
+
+                <div style="position: relative; width: 40rem;">
+                    <svg shape-rendering="geometricPrecision" text-rendering="geometricPrecision" style="width: 40rem;"
+                        viewBox="0 0 700 810" preserveAspectRatio="xMidYMid meet">
+                        <g transform="matrix(1,0,0,1,600,400)">
+                            <rect rx="0" ry="0" transform="translate(-250, 5)" x="-350" y="-405" width="700"
+                                height="810" fill="rgb(17,17,17)">
+                            </rect>
+                        </g>
+                        <g transform="matrix(-2.3888,0,0,2.3888,1384.5411,-8335.2006)">
+                            <g transform="matrix(1,0,0,1,337.7479,3693.54)">
+                                <path
+                                    d="M0,0L231.07,0C230.685,37.613,218.131,88.331,173.701,108.502L58.581,108.502C24.455,88.145,-1.446,55.93,0,0z"
+                                    fill="rgb(255,255,255)">
+                                </path>
+                            </g>
+                            <g transform="matrix(1,0,0,1,335.7317,3805.4918)">
+                                <path
+                                    d="M0,0L235.844,0C236.657,10.275,214.223,19.947,204.179,21.349L36.442,21.349C26.254,18.91,3.152,17.717,0,0z"
+                                    fill="rgb(255,255,255)">
+                                </path>
+                            </g>
+                            <g transform="matrix(1,0,0,1,329.2599,3704.5256)">
+                                <path
+                                    d="M5.879,-0.556C5.879,-0.556,-46.897,6.48,-37.046,44.714C-27.195,82.948,20.616,79.132,31.296,71.059L19.727,54.435C11.092,63.662,-13.845,66.817,-22.774,45.629C-31.703,24.441,-7.028,14.044,7.838,17.623L5.879,-0.556z"
+                                    fill="rgb(255,255,255)">
+                                </path>
+                            </g>
+                            <g transform="matrix(1,0,0,1,437.7945,3541.6827)">
+                                <path
+                                    d="M0,0C-4.668,3.283,-14.817,12.911,-14.555,24.007C-14.293,35.103,-1.663,36.205,5.281,57.348C12.225,78.491,-0.156,92.62,-0.156,92.62C-0.156,92.62,20.156,89.471,24.589,72.613C29.022,55.755,7.171,34.965,0.442,21.659C-6.287,8.353,-0.329,5.178,0,0z"
+                                    fill="rgb(255,255,255)">
+                                </path>
+                            </g>
+                            <g transform="matrix(1,0,0,1,477.3656,3489.9841)">
+                                <path
+                                    d="M0,0C-4.668,3.283,-14.817,12.911,-14.555,24.007C-14.293,35.103,-1.663,36.205,5.281,57.348C12.225,78.491,-0.156,92.62,-0.156,92.62C-0.156,92.62,20.156,89.471,24.589,72.613C29.022,55.755,7.171,34.965,0.442,21.659C-6.287,8.353,-0.329,5.178,0,0z"
+                                    fill="rgb(255,255,255)">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-16rem,0); font-size: 4rem; text-wrap: nowrap;">
+                        Auto-animate
+                    </div>
+
+                    <div style="position: absolute; width: 60%; top: 63%; left: 50%; transform: translate(-12.5rem,0); font-size: 1.5rem; color: #000;">
+                        Automate the animation of objects on the page by freezing object states at one or more time points and making alterations at a different, non-frozen time point.
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <svg style="width: 100%; height: calc(100vh / 8);" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path d="M0,0L0,100L100,0z" fill="#111"></path>
+    </svg>
+</div>
+
+
+<div class="page-item two-column-content vertical layout center pixodesk" style="background: #222; color: #fff;">
     <div class="page-item-content vertical layout center">
 
         <div class="horizontal-big-screen layout center-big-screen">
-            <div class="flex-big-screen card123">
-                <div class="_header">Auto-animate</div>
-                <div class="_main">
-                    <ul>
-                        <li>
-                            Automate the animation of objects on the page by freezing object states at one or more time points and making alterations at a different, non-frozen time point.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
             <div class="flex-big-screen">
-                <video style="width: 100%;" poster="image/section--animation-auto.png" muted autoplay loop playsinline
+                <video style="width: 100%;" poster="image/section--animation-charts.png" muted autoplay loop playsinline
                     disablePictureInPicture>
-                    <source src="image/section--animation-auto.mp4" type="video/mp4">
-                </video>
-            </div>
-        </div>
-
-        <div style="height: 8rem;"></div>
-
-        <div class="horizontal-big-screen layout center-big-screen">
-            <div class="flex-big-screen">
-                <video style="width: 100%;" poster="image/section--animation-charts-3.png" muted autoplay loop
-                    playsinline disablePictureInPicture>
                     <source src="image/section--animation-charts.mp4" type="video/webm">
                 </video>
             </div>
 
-            <div class="flex-big-screen card123">
+            <div style="width: 8rem;"></div>
+
+            <div class="flex-big-screen card123" style="border: 2px solid #fff; border-radius: 2rem;">
                 <div class="_header">Easing</div>
                 <div class="_main">
                     <ul>
                         <li>
-                            Select a pre-defined easing function from a dropdown menu or customize the easing curve by editing it.
-                            Easing functions come with velocity and acceleration charts that enhance your comprehension of animation dynamics.
+                            Select a pre-defined easing function from a dropdown menu or customize the easing curve by
+                            editing it.
+                            Easing functions come with velocity and acceleration charts that enhance your comprehension
+                            of animation dynamics.
                         </li>
                         <li>
-                            Keyframe segments are visually represented as mini velocity charts, providing you with insights into the easing dynamics.
+                            Keyframe segments are visually represented as mini velocity charts, providing you with
+                            insights into the easing dynamics.
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
+
+    <svg style="margin-left: 50%; width: 50%; height: calc(100vh / 4);" viewBox="0 0 100 100"
+        preserveAspectRatio="none">
+        <path d="M0,100L100,0L100,100z" fill="#fff"></path>
+    </svg>
 </div>
 
 
@@ -941,7 +1008,7 @@
             </div>
         </div> -->
 <div style="height: 8rem;"></div>
-<div class="page-item two-column-content vertical layout center pixodesk" style="background: #f1f1f1; color: #222; padding: 8rem 0;">
+<div class="page-item two-column-content vertical layout center pixodesk" style="background: #fff; padding-bottom: 8rem;">
     <div class="page-item-content">        
         <div class="horizontal-big-screen layout center-big-screen">
             <div class="flex-big-screen">
@@ -954,7 +1021,9 @@
                 <!-- <img src="image/section--icons-watch.png" width="100%"></img>                 -->
             </div>
 
-            <div class="flex-big-screen card123">
+            <div style="width: 4rem;"></div>
+
+            <div class="flex-big-screen card123" style="background: #111; color: #fff; border-radius: 2rem; padding: 3rem;">
                 <div class="_header">Create animated icons</div>
                 <div class="_main">
                     <ul>
@@ -987,35 +1056,41 @@
 </ul> -->
 
 
-<div class="page-item two-column-content vertical layout center pixodesk" style="background: #222; color: #fff; padding: 8rem 0;">
-    <div class="page-item-content">
-        <div class="horizontal-big-screen layout center-big-screen">
-            <div class="flex-big-screen card123">
-                <div class="_header">Create animated splash-screens</div>
-                <div class="_main">
-                    <ul>
-                        <li>
-                            Create visually stunning splash-screen animations to engage with users, giving them a good first impression.
-                        </li>
-                    </ul>
+<div class="vertical layout stretch">
+    <svg style="width: 100%; height: calc(100vh / 4);" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path d="M0,100L100,0L100,100z" fill="#000"></path>
+    </svg>
+    <div class="page-item two-column-content vertical layout center pixodesk" style="background: #000; color: #fff; padding-bottom: 6rem;">
+
+        <div class="page-item-content">
+            <div class="horizontal-big-screen layout center-big-screen">
+                <div class="flex-big-screen card123" style="border: 2px solid #fff; border-radius: 2rem;">
+                    <div class="_header">Create animated splash-screens</div>
+                    <div class="_main">
+                        <ul>
+                            <li>
+                                Create visually stunning splash-screen animations to engage with users, giving them a
+                                good first impression.
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
 
-            <div class="flex-big-screen">
-                <!-- <img src="image/splash-screen-dark-theme.png" width="100%"></img> -->
+                <div style="width: 2rem;"></div>
 
-                <video style="width: 100%;"
-                    poster="image/splash-screen-dark-theme.png" 
-                    muted autoplay loop playsinline disablePictureInPicture
-                > 
-                    <source src="image/splash-screen-dark-theme.mp4" type="video/mp4">
-                </video>
-            </div>
+                <div class="flex-big-screen vertical layout center">
+                    <!-- <img src="image/section--splash-screen.png" width="100%"></img> -->
+
+                    <video style="width: 75%;" poster="image/section--splash-screen.png" muted autoplay loop
+                        playsinline disablePictureInPicture>
+                        <source src="image/section--splash-screen.mp4" type="video/mp4">
+                    </video>
+                </div>
 
 
-            
 
-            <!-- <div class="flex-big-screen" style="height: 500px; min-width: 400px">
+
+                <!-- <div class="flex-big-screen" style="height: 500px; min-width: 400px">
                 <div class="" style="position:relative;">
                     <div style="position:relative; margin: 0 auto;">
 
@@ -1043,8 +1118,14 @@
                     </div>
                 </div>
             </div> -->
+            </div>
         </div>
+
     </div>
+
+    <svg style="width: 100%; height: calc(100vh / 8);" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path d="M0,0L0,100L100,0z" fill="#000"></path>
+    </svg>
 </div>
 <!-- { % include_relative _parts/section4_loaders.html % } -->
 <div class="page-item two-column-content vertical layout center pixodesk" style="padding-bottom: 4rem;">
@@ -1061,8 +1142,9 @@
 
         <div class="section section-devices vertical layout">
             <div class="vertical layout center center-justified">
-                <video style="max-width: 80%;" src="image/devices.mp4" muted autoplay loop playsinline
-                    disablePictureInPicture></video>
+                <video style="width: 100%;" poster="image/devices.png" muted autoplay loop playsinline disablePictureInPicture>
+                    <source src="image/devices.mp4" type="video/mp4">
+                </video>
             </div>
         </div>
 

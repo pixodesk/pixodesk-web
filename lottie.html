@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Pixodesk Animator docs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+    <!-- <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="pragma" content="no-cache"> -->
+
+    <link rel='shortcut icon' type='image/x-icon' href='pixodesk-logo.svg'>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <script async src="https://analytics.umami.is/script.js" data-website-id="33c2779d-0e25-4964-90c1-11ce29d69fd6"></script>
+    <div style="position: absolute">
+    <svg xmlns="http://www.w3.org/2000/svg">
+
+    <symbol id="chevron-left" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />
+    </symbol>
+    <symbol id="chevron-right" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+    </symbol>
+    <symbol id="apple" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M18.71,19.5C17.88,20.74 17,21.95 15.66,21.97C14.32,22 13.89,21.18 12.37,21.18C10.84,21.18 10.37,21.95 9.1,22C7.79,22.05 6.8,20.68 5.96,19.47C4.25,17 2.94,12.45 4.7,9.39C5.57,7.87 7.13,6.91 8.82,6.88C10.1,6.86 11.32,7.75 12.11,7.75C12.89,7.75 14.37,6.68 15.92,6.84C16.57,6.87 18.39,7.1 19.56,8.82C19.47,8.88 17.39,10.1 17.41,12.63C17.44,15.65 20.06,16.66 20.09,16.67C20.06,16.74 19.67,18.11 18.71,19.5M13,3.5C13.73,2.67 14.94,2.04 15.94,2C16.07,3.17 15.6,4.35 14.9,5.19C14.21,6.04 13.07,6.7 11.95,6.61C11.8,5.46 12.36,4.26 13,3.5Z" />	
+    </symbol>
+    <symbol id="explore-app" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" />
+    </symbol>
+	<symbol id="windows" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M3,12V6.75L9,5.43V11.91L3,12M20,3V11.75L10,11.9V5.21L20,3M3,13L9,13.09V19.9L3,18.75V13M20,13.25V22L10,20.09V13.1L20,13.25Z" />
+	</symbol>
+    <symbol id="keyboard" viewBox="0 0 210 100">
+        <g>
+    <defs></defs>
+    <g>
+      <g opacity="1">
+        <g transform="matrix(1,0,0,1,69,13.187)">
+          <g>
+            <path d="M7,-12C9.761,-12,12,-9.761,12,-7L12,7C12,9.761,9.761,12,7,12L-7,12C-9.761,12,-12,9.761,-12,7L-12,-7C-12,-9.761,-9.761,-12,-7,-12L7,-12z" fill="rgb(255,255,255)" opacity="1"></path>
+          </g>
+        </g>
+      </g>
+      <g opacity="1">
+        <g transform="matrix(1,0,0,1,97.5,13.187)">
+          <g>
+            <path d="M7,-12C9.761,-12,12,-9.761,12,-7L12,7C12,9.761,9.761,12,7,12L-7,12C-9.761,12,-12,9.761,-12,7L-12,-7C-12,-9.761,-9.761,-12,-7,-12L7,-12z" fill="rgb(255,255,255)" opacity="1"></path>
+          </g>
+        </g>
+      </g>
+      <g opacity="1">
+        <g transform="matrix(1,0,0,1,40.5,13.187)">
+          <g>
+            <path d="M7,-12C9.761,-12,12,-9.761,12,-7L12,7C12,9.761,9.761,12,7,12L-7,12C-9.761,12,-12,9.761,-12,7L-12,-7C-12,-9.761,-9.761,-12,-7,-12L7,-12z" fill="rgb(255,255,255)" opacity="1"></path>
+          </g>
+        </g>
+      </g>
+      <g opacity="1">
+        <g transform="matrix(1,0,0,1,126,13.187)">
+          <g>
+            <path d="M7,-12C9.761,-12,12,-9.761,12,-7L12,7C12,9.761,9.761,12,7,12L-7,12C-9.761,12,-12,9.761,-12,7L-12,-7C-12,-9.761,-9.761,-12,-7,-12L7,-12z" fill="rgb(255,255,255)" opacity="1"></path>
+          </g>
+        </g>
+      </g>
+      <g opacity="1">
+        <g transform="matrix(1,0,0,1,154.5,13.187)">
+          <g>
+            <path d="M18.5,-12C21.261,-12,23.5,-9.761,23.5,-7L23.5,7C23.5,9.761,21.261,12,18.5,12L-7,12C-9.761,12,-12,9.761,-12,7L-12,-7C-12,-9.761,-9.761,-12,-7,-12L18.5,-12z" fill="rgb(255,255,255)" opacity="1"></path>
+          </g>
+        </g>
+      </g>
+      <g opacity="1">
+        <g transform="matrix(1,0,0,1,12,13.187)">
+          <g>
+            <path d="M7,-12C9.761,-12,12,-9.761,12,-7L12,7C12,9.761,9.761,12,7,12L-7,12C-9.761,12,-12,9.761,-12,7L-12,-7C-12,-9.761,-9.761,-12,-7,-12L7,-12z" fill="rgb(255,255,255)" opacity="1"></path>
+          </g>
+        </g>
+      </g>
+      <g opacity="1">
+        <g transform="matrix(1,0,0,1,81,46.187)">
+          <g>
+            <path d="M7,-12C9.761,-12,12,-9.761,12,-7L12,7C12,9.761,9.761,12,7,12L-7,12C-9.761,12,-12,9.761,-12,7L-12,-7C-12,-9.761,-9.761,-12,-7,-12L7,-12z" fill="rgb(255,255,255)" opacity="1"></path>
+          </g>
+        </g>
+      </g>
+      <g opacity="1">
+        <g transform="matrix(1,0,0,1,109.5,46.187)">
+          <g>
+            <path d="M7,-12C9.761,-12,12,-9.761,12,-7L12,7C12,9.761,9.761,12,7,12L-7,12C-9.761,12,-12,9.761,-12,7L-12,-7C-12,-9.761,-9.761,-12,-7,-12L7,-12z" fill="rgb(255,255,255)" opacity="1"></path>
+          </g>
+        </g>
+      </g>
+      <g opacity="1">
+        <g transform="matrix(1,0,0,1,52.5,46.187)">
+          <g>
+            <path d="M7,-12C9.761,-12,12,-9.761,12,-7L12,7C12,9.761,9.761,12,7,12L-7,12C-9.761,12,-12,9.761,-12,7L-12,-7C-12,-9.761,-9.761,-12,-7,-12L7,-12z" fill="rgb(255,255,255)" opacity="1"></path>
+          </g>
+        </g>
+      </g>
+      <g opacity="1">
+        <g transform="matrix(1,0,0,1,138,46.187)">
+          <g>
+            <path d="M7,-12C9.761,-12,12,-9.761,12,-7L12,7C12,9.761,9.761,12,7,12L-7,12C-9.761,12,-12,9.761,-12,7L-12,-7C-12,-9.761,-9.761,-12,-7,-12L7,-12z" fill="rgb(255,255,255)" opacity="1"></path>
+          </g>
+        </g>
+      </g>
+      <g opacity="1">
+        <g transform="matrix(1,0,0,1,166.5,46.187)">
+          <g>
+            <path d="M7,-12C9.761,-12,12,-9.761,12,-7L12,7C12,9.761,9.761,12,7,12L-7,12C-9.761,12,-12,9.761,-12,7L-12,-7C-12,-9.761,-9.761,-12,-7,-12L7,-12z" fill="rgb(255,255,255)" opacity="1"></path>
+          </g>
+        </g>
+      </g>
+      <g opacity="1">
+        <g transform="matrix(1,0,0,1,195,46.187)">
+          <g>
+            <path d="M7,-46C9.761,-46,12,-43.761,12,-41L12,7C12,9.761,9.761,12,7,12L-7,12C-9.761,12,-12,9.761,-12,7L-12,-41C-12,-43.761,-9.761,-46,-7,-46L7,-46z" fill="rgb(255,255,255)" opacity="1"></path>
+          </g>
+        </g>
+      </g>
+      <g opacity="1">
+        <g transform="matrix(1,0,0,1,12,46.187)">
+          <g>
+            <path d="M18,-12C20.761,-12,23,-9.761,23,-7L23,7C23,9.761,20.761,12,18,12L-7,12C-9.761,12,-12,9.761,-12,7L-12,-7C-12,-9.761,-9.761,-12,-7,-12L18,-12z" fill="rgb(255,255,255)" opacity="1"></path>
+          </g>
+        </g>
+      </g>
+      <g opacity="1">
+        <g transform="matrix(1,0,0,1,69,80.187)">
+          <g>
+            <path d="M76,-12C78.761,-12,81,-9.761,81,-7L81,7C81,9.761,78.761,12,76,12L-7,12C-9.761,12,-12,9.761,-12,7L-12,-7C-12,-9.761,-9.761,-12,-7,-12L76,-12z" fill="rgb(255,255,255)" opacity="1"></path>
+          </g>
+        </g>
+      </g>
+      <g opacity="1">
+        <g transform="matrix(1,0,0,1,40.5,80.187)">
+          <g>
+            <path d="M7,-12C9.761,-12,12,-9.761,12,-7L12,7C12,9.761,9.761,12,7,12L-7,12C-9.761,12,-12,9.761,-12,7L-12,-7C-12,-9.761,-9.761,-12,-7,-12L7,-12z" fill="rgb(255,255,255)" opacity="1"></path>
+          </g>
+        </g>
+      </g>
+      <g opacity="1">
+        <g transform="matrix(1,0,0,1,166,80.187)">
+          <g>
+            <path d="M7,-12C9.761,-12,12,-9.761,12,-7L12,7C12,9.761,9.761,12,7,12L-7,12C-9.761,12,-12,9.761,-12,7L-12,-7C-12,-9.761,-9.761,-12,-7,-12L7,-12z" fill="rgb(255,255,255)" opacity="1"></path>
+          </g>
+        </g>
+      </g>
+      <g opacity="1">
+        <g transform="matrix(1,0,0,1,195,80.187)">
+          <g>
+            <path d="M7,-12C9.761,-12,12,-9.761,12,-7L12,7C12,9.761,9.761,12,7,12L-7,12C-9.761,12,-12,9.761,-12,7L-12,-7C-12,-9.761,-9.761,-12,-7,-12L7,-12z" fill="rgb(255,255,255)" opacity="1"></path>
+          </g>
+        </g>
+      </g>
+      <g opacity="1">
+        <g transform="matrix(1,0,0,1,12,80.187)">
+          <g>
+            <path d="M7,-12C9.761,-12,12,-9.761,12,-7L12,7C12,9.761,9.761,12,7,12L-7,12C-9.761,12,-12,9.761,-12,7L-12,-7C-12,-9.761,-9.761,-12,-7,-12L7,-12z" fill="rgb(255,255,255)" opacity="1"></path>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+	</symbol>
+</svg>
+</div>
+
+<div class="site-header horizontal layout center">
+        <!-- <img src="image/logos/app-logo.svg" height="32" style="margin-right: 8px" /> -->
+        <svg height="32" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox='0 0 32 32' preserveAspectRatio="xMidYMid meet">
+            <g transform="translate(-1,-1) scale(1.4,1.4)">
+                <path fill="#fff" d="M21.192,14.121L14.121,21.192C12.95,22.363,11.049,22.363,9.878,21.192L2.807,14.121C2.48,13.794,2.243,13.409,2.099,13L6.282,13L11.292,18.01C11.682,18.4,12.317,18.4,12.707,18.01L17.717,13L21.9,12.999C21.756,13.408,21.519,13.794,21.192,14.121zM21.192,9.878C21.519,10.205,21.756,10.591,21.9,11L17.717,10.999L12.707,5.989C12.317,5.599,11.682,5.599,11.292,5.989L6.282,11L2.099,11C2.243,10.591,2.48,10.205,2.807,9.878L9.878,2.807C11.049,1.636,12.95,1.636,14.121,2.807L21.192,9.878z"></path>
+                <rect fill="#fff" transform="matrix(0.707,0.707,-0.707,0.707,12,12)" x="-2.75" y="-2.75" width="5.5" height="5.5" ></rect>
+            </g>
+        </svg>
+        <a href="/" class="product-title" style="margin-left: 16px;">Pixodesk Animator</a>
+        <div class="flex"></div>
+        <a href="/lottie.html" class="menu-item">LOTTIE ANIMATIONS</a>
+        <!-- <div style="width: 24px;"></div>
+        <a href="/examples.html" class="menu-item">EXAMPLES</a> -->
+        <div style="width: 24px;"></div>
+        <a href="/tutorials.html" class="menu-item">TUTORIALS</a>
+        <!-- <div style="width: 24px;"></div>
+        <a href="/docs.html" class="menu-item">DOCS</a> -->
+        <div style="width: 24px;"></div>
+        <a href="/features.html" class="menu-item">FEATURES</a>
+        <div style="width: 24px;"></div>
+        <a href="/release-notes.html" class="menu-item">RELEASES</a>
+        <div style="width: 24px;"></div>        
+        <a href="/pricing.html" class="menu-item">PRICING</a>
+        <!-- <div style="width: 24px;"></div>
+        <a href="/tools.html" class="menu-item">TOOLS</a> -->
+</div>
+
+<div style="height: 64px;"></div>
+
+<style>
+    body {
+        /* background: #fff8f3; */
+        background: #f5f5f7;
+    }
+</style>
+
+
+
+<div class="vertical layout center">
+    <div class="lottie-page vertical layout" style="min-height: 100vh;">
+
+        <div style="height: 3rem;"></div>
+
+        <h1 class="_title self-center">What is Lottie?</h1>
+
+        <div style="height: 3rem;"></div>
+
+
+        <div class="grid1">
+            <div class="_block2" style="grid-area: h1;">
+                <p>
+                    Lottie is an open-source animation file format and runtime library developed by Airbnb.
+                </p>
+                <p>
+                    The Lottie file format is a JSON-based animation file that describes motion graphics,
+                    which can include vector graphics, raster images, and text.
+                </p>
+                <p>
+                    Lottie animations are designed to be lightweight and scalable,
+                    making them ideal for use in mobile apps, websites, and other digital platforms.
+                </p>
+                <p>
+                    Lottie <a href="https://airbnb.io/lottie/">https://airbnb.io/lottie/</a>
+                </p>
+                <p>
+                    Wikipedia about Lottie <a
+                        href="https://en.wikipedia.org/wiki/Lottie_(file_format)">https://en.wikipedia.org/wiki/Lottie_(file_format)</a>
+                </p>
+            </div>
+
+            <div class="vertical layout center center-justified"
+                style="grid-area: img1; position: relative; padding-bottom: 2rem;">
+                <div class="stacked-paper" style="position: relative; width: 90%; padding: 0;">
+                    <img src="image/lottie-page/airbnb-lottie-screenshot.png" style="width: 100%;" />
+                </div>
+            </div>
+
+            <div class="lottie-feature-group vertical layout shadow-2dp" style="grid-area: card1;">
+    <div style="position: relative; width: 100%; height: 50px;">
+        <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" viewBox="0 0 100 100"
+            preserveAspectRatio="none">
+            <!-- <rect x="0" y="0" width="100" height="100" fill="rgba(255,255,255)"></rect> -->
+            <path d="M0,-1L80,-1L70,101L0,101z" fill="#388e3c" fill-opacity="0.2"></path>
+            <path d="M0,-1L75,-1L65,101L0,101z" fill="#388e3c" fill-opacity="0.3"></path>
+        </svg>
+        <div class="lottie-feature-title horizontal layout center">
+            <div>Vector-Based Graphics</div>
+        </div>
+        <div class="lottie-feature-icon" style="fill: #388e3c;">
+            <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-vector-curve" width="24" height="24" viewBox="0 0 24 24"><path d="M18.5,2A1.5,1.5 0 0,1 20,3.5A1.5,1.5 0 0,1 18.5,5C18.27,5 18.05,4.95 17.85,4.85L14.16,8.55L14.5,9C16.69,7.74 19.26,7 22,7L23,7.03V9.04L22,9C19.42,9 17,9.75 15,11.04A3.96,3.96 0 0,1 11.04,15C9.75,17 9,19.42 9,22L9.04,23H7.03L7,22C7,19.26 7.74,16.69 9,14.5L8.55,14.16L4.85,17.85C4.95,18.05 5,18.27 5,18.5A1.5,1.5 0 0,1 3.5,20A1.5,1.5 0 0,1 2,18.5A1.5,1.5 0 0,1 3.5,17C3.73,17 3.95,17.05 4.15,17.15L7.84,13.45C7.31,12.78 7,11.92 7,11A4,4 0 0,1 11,7C11.92,7 12.78,7.31 13.45,7.84L17.15,4.15C17.05,3.95 17,3.73 17,3.5A1.5,1.5 0 0,1 18.5,2M11,9A2,2 0 0,0 9,11A2,2 0 0,0 11,13A2,2 0 0,0 13,11A2,2 0 0,0 11,9Z" /></svg>
+        </div>
+    </div>
+    <div class="lottie-feature-content">
+        Lottie animations are based on vector graphics, which means they can
+            scale without losing quality. This makes them suitable for a variety of screen sizes and resolutions.
+    </div>
+</div>
+
+            <div class="lottie-feature-group vertical layout shadow-2dp" style="grid-area: card2;">
+    <div style="position: relative; width: 100%; height: 50px;">
+        <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" viewBox="0 0 100 100"
+            preserveAspectRatio="none">
+            <!-- <rect x="0" y="0" width="100" height="100" fill="rgba(255,255,255)"></rect> -->
+            <path d="M0,-1L80,-1L70,101L0,101z" fill="#d32f2f" fill-opacity="0.2"></path>
+            <path d="M0,-1L75,-1L65,101L0,101z" fill="#d32f2f" fill-opacity="0.3"></path>
+        </svg>
+        <div class="lottie-feature-title horizontal layout center">
+            <div>JSON Format</div>
+        </div>
+        <div class="lottie-feature-icon" style="fill: #d32f2f;">
+            <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-code-json" width="24" height="24" viewBox="0 0 24 24"><path d="M5,3H7V5H5V10A2,2 0 0,1 3,12A2,2 0 0,1 5,14V19H7V21H5C3.93,20.73 3,20.1 3,19V15A2,2 0 0,0 1,13H0V11H1A2,2 0 0,0 3,9V5A2,2 0 0,1 5,3M19,3A2,2 0 0,1 21,5V9A2,2 0 0,0 23,11H24V13H23A2,2 0 0,0 21,15V19A2,2 0 0,1 19,21H17V19H19V14A2,2 0 0,1 21,12A2,2 0 0,1 19,10V5H17V3H19M12,15A1,1 0 0,1 13,16A1,1 0 0,1 12,17A1,1 0 0,1 11,16A1,1 0 0,1 12,15M8,15A1,1 0 0,1 9,16A1,1 0 0,1 8,17A1,1 0 0,1 7,16A1,1 0 0,1 8,15M16,15A1,1 0 0,1 17,16A1,1 0 0,1 16,17A1,1 0 0,1 15,16A1,1 0 0,1 16,15Z" /></svg>
+        </div>
+    </div>
+    <div class="lottie-feature-content">
+        Lottie animations are defined in a JSON-based file format, making them lightweight
+            and easily readable. The JSON file contains information about the animation, including vector shapes,
+            keyframes, and other properties.
+    </div>
+</div>
+
+            <div class="lottie-feature-group vertical layout shadow-2dp" style="grid-area: card3;">
+    <div style="position: relative; width: 100%; height: 50px;">
+        <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" viewBox="0 0 100 100"
+            preserveAspectRatio="none">
+            <!-- <rect x="0" y="0" width="100" height="100" fill="rgba(255,255,255)"></rect> -->
+            <path d="M0,-1L80,-1L70,101L0,101z" fill="#1976d2" fill-opacity="0.2"></path>
+            <path d="M0,-1L75,-1L65,101L0,101z" fill="#1976d2" fill-opacity="0.3"></path>
+        </svg>
+        <div class="lottie-feature-title horizontal layout center">
+            <div>Interactivity</div>
+        </div>
+        <div class="lottie-feature-icon" style="fill: #1976d2;">
+            <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-gesture-double-tap" width="24" height="24" viewBox="0 0 24 24"><path d="M10,9A1,1 0 0,1 11,8A1,1 0 0,1 12,9V13.47L13.21,13.6L18.15,15.79C18.68,16.03 19,16.56 19,17.14V21.5C18.97,22.32 18.32,22.97 17.5,23H11C10.62,23 10.26,22.85 10,22.57L5.1,18.37L5.84,17.6C6.03,17.39 6.3,17.28 6.58,17.28H6.8L10,19V9M11,5A4,4 0 0,1 15,9C15,10.5 14.2,11.77 13,12.46V11.24C13.61,10.69 14,9.89 14,9A3,3 0 0,0 11,6A3,3 0 0,0 8,9C8,9.89 8.39,10.69 9,11.24V12.46C7.8,11.77 7,10.5 7,9A4,4 0 0,1 11,5M11,3A6,6 0 0,1 17,9C17,10.7 16.29,12.23 15.16,13.33L14.16,12.88C15.28,11.96 16,10.56 16,9A5,5 0 0,0 11,4A5,5 0 0,0 6,9C6,11.05 7.23,12.81 9,13.58V14.66C6.67,13.83 5,11.61 5,9A6,6 0 0,1 11,3Z" /></svg>
+        </div>
+    </div>
+    <div class="lottie-feature-content">
+        Lottie animations can be interactive, allowing developers to add user
+            interactions and gestures to enhance the user experience.
+    </div>
+</div>
+
+            <div class="lottie-feature-group vertical layout shadow-2dp" style="grid-area: card4;">
+    <div style="position: relative; width: 100%; height: 50px;">
+        <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" viewBox="0 0 100 100"
+            preserveAspectRatio="none">
+            <!-- <rect x="0" y="0" width="100" height="100" fill="rgba(255,255,255)"></rect> -->
+            <path d="M0,-1L80,-1L70,101L0,101z" fill="#f57c00" fill-opacity="0.2"></path>
+            <path d="M0,-1L75,-1L65,101L0,101z" fill="#f57c00" fill-opacity="0.3"></path>
+        </svg>
+        <div class="lottie-feature-title horizontal layout center">
+            <div>Small File Sizes</div>
+        </div>
+        <div class="lottie-feature-icon" style="fill: #f57c00;">
+            <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-arrow-collapse-vertical" width="24" height="24" viewBox="0 0 24 24"><path d="M4,12H20V14H4V12M4,9H20V11H4V9M16,4L12,8L8,4H11V1H13V4H16M8,19L12,15L16,19H13V22H11V19H8Z" /></svg>
+        </div>
+    </div>
+    <div class="lottie-feature-content">
+        Lottie animations are
+            typically smaller in file size compared to other animation formats, making them efficient for web and mobile
+            applications where bandwidth and storage considerations are important.
+    </div>
+</div>
+
+            <div class="lottie-feature-group vertical layout shadow-2dp" style="grid-area: card5;">
+    <div style="position: relative; width: 100%; height: 50px;">
+        <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" viewBox="0 0 100 100"
+            preserveAspectRatio="none">
+            <!-- <rect x="0" y="0" width="100" height="100" fill="rgba(255,255,255)"></rect> -->
+            <path d="M0,-1L80,-1L70,101L0,101z" fill="#388e3c" fill-opacity="0.2"></path>
+            <path d="M0,-1L75,-1L65,101L0,101z" fill="#388e3c" fill-opacity="0.3"></path>
+        </svg>
+        <div class="lottie-feature-title horizontal layout center">
+            <div>Cross-Platform Compatibility</div>
+        </div>
+        <div class="lottie-feature-icon" style="fill: #388e3c;">
+            <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-devices" width="24" height="24" viewBox="0 0 24 24"><path d="M3 6H21V4H3C1.9 4 1 4.9 1 6V18C1 19.1 1.9 20 3 20H7V18H3V6M13 12H9V13.78C8.39 14.33 8 15.11 8 16C8 16.89 8.39 17.67 9 18.22V20H13V18.22C13.61 17.67 14 16.88 14 16S13.61 14.33 13 13.78V12M11 17.5C10.17 17.5 9.5 16.83 9.5 16S10.17 14.5 11 14.5 12.5 15.17 12.5 16 11.83 17.5 11 17.5M22 8H16C15.5 8 15 8.5 15 9V19C15 19.5 15.5 20 16 20H22C22.5 20 23 19.5 23 19V9C23 8.5 22.5 8 22 8M21 18H17V10H21V18Z" /></svg>
+        </div>
+    </div>
+    <div class="lottie-feature-content">
+        With Lottie, developers can create animations that work
+            seamlessly across different platforms, reducing the need to create and maintain separate animations for each
+            platform.
+    </div>
+</div>
+
+            <div class="lottie-feature-group vertical layout shadow-2dp" style="grid-area: card6;">
+    <div style="position: relative; width: 100%; height: 50px;">
+        <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" viewBox="0 0 100 100"
+            preserveAspectRatio="none">
+            <!-- <rect x="0" y="0" width="100" height="100" fill="rgba(255,255,255)"></rect> -->
+            <path d="M0,-1L80,-1L70,101L0,101z" fill="#d32f2f" fill-opacity="0.2"></path>
+            <path d="M0,-1L75,-1L65,101L0,101z" fill="#d32f2f" fill-opacity="0.3"></path>
+        </svg>
+        <div class="lottie-feature-title horizontal layout center">
+            <div>Community Support</div>
+        </div>
+        <div class="lottie-feature-icon" style="fill: #d32f2f;">
+            <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-account-group" width="24" height="24" viewBox="0 0 24 24"><path d="M12,5.5A3.5,3.5 0 0,1 15.5,9A3.5,3.5 0 0,1 12,12.5A3.5,3.5 0 0,1 8.5,9A3.5,3.5 0 0,1 12,5.5M5,8C5.56,8 6.08,8.15 6.53,8.42C6.38,9.85 6.8,11.27 7.66,12.38C7.16,13.34 6.16,14 5,14A3,3 0 0,1 2,11A3,3 0 0,1 5,8M19,8A3,3 0 0,1 22,11A3,3 0 0,1 19,14C17.84,14 16.84,13.34 16.34,12.38C17.2,11.27 17.62,9.85 17.47,8.42C17.92,8.15 18.44,8 19,8M5.5,18.25C5.5,16.18 8.41,14.5 12,14.5C15.59,14.5 18.5,16.18 18.5,18.25V20H5.5V18.25M0,20V18.5C0,17.11 1.89,15.94 4.45,15.6C3.86,16.28 3.5,17.22 3.5,18.25V20H0M24,20H20.5V18.25C20.5,17.22 20.14,16.28 19.55,15.6C22.11,15.94 24,17.11 24,18.5V20Z" /></svg>
+        </div>
+    </div>
+    <div class="lottie-feature-content">
+        Lottie has gained popularity and has a vibrant community of designers and
+            developers who contribute animations and provide support. This has led to a rich collection of pre-built
+            animations that developers can use in their projects.
+    </div>
+</div>
+
+            <div class="lottie-feature-group vertical layout shadow-2dp" style="grid-area: card7;">
+    <div style="position: relative; width: 100%; height: 50px;">
+        <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" viewBox="0 0 100 100"
+            preserveAspectRatio="none">
+            <!-- <rect x="0" y="0" width="100" height="100" fill="rgba(255,255,255)"></rect> -->
+            <path d="M0,-1L80,-1L70,101L0,101z" fill="#1976d2" fill-opacity="0.2"></path>
+            <path d="M0,-1L75,-1L65,101L0,101z" fill="#1976d2" fill-opacity="0.3"></path>
+        </svg>
+        <div class="lottie-feature-title horizontal layout center">
+            <div>High-Quality Animations</div>
+        </div>
+        <div class="lottie-feature-icon" style="fill: #1976d2;">
+            <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-animation-play" width="24" height="24" viewBox="0 0 24 24"><path d="M4,2H14V4H4V14H2V4C2,2.89 2.89,2 4,2M8,6H18V8H8V18H6V8C6,6.89 6.89,6 8,6M12,10H20C21.11,10 22,10.89 22,12V20C22,21.11 21.11,22 20,22H12C10.89,22 10,21.11 10,20V12C10,10.89 10.89,10 12,10M14,12V20L20,16L14,12Z" /></svg>
+        </div>
+    </div>
+    <div class="lottie-feature-content">
+        Lottie supports high-quality animations with smooth transitions and
+            precise control over timing and easing functions.
+    </div>
+</div>
+
+            <div class="lottie-feature-group vertical layout shadow-2dp" style="grid-area: card8;">
+    <div style="position: relative; width: 100%; height: 50px;">
+        <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" viewBox="0 0 100 100"
+            preserveAspectRatio="none">
+            <!-- <rect x="0" y="0" width="100" height="100" fill="rgba(255,255,255)"></rect> -->
+            <path d="M0,-1L80,-1L70,101L0,101z" fill="#f57c00" fill-opacity="0.2"></path>
+            <path d="M0,-1L75,-1L65,101L0,101z" fill="#f57c00" fill-opacity="0.3"></path>
+        </svg>
+        <div class="lottie-feature-title horizontal layout center">
+            <div>Playback Control</div>
+        </div>
+        <div class="lottie-feature-icon" style="fill: #f57c00;">
+            <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-play-speed" width="24" height="24" viewBox="0 0 24 24"><path d="M13,2.05V4.05C17.39,4.59 20.5,8.58 19.96,12.97C19.5,16.61 16.64,19.5 13,19.93V21.93C18.5,21.38 22.5,16.5 21.95,11C21.5,6.25 17.73,2.5 13,2.03V2.05M5.67,19.74C7.18,21 9.04,21.79 11,22V20C9.58,19.82 8.23,19.25 7.1,18.37L5.67,19.74M7.1,5.74C8.22,4.84 9.57,4.26 11,4.06V2.06C9.05,2.25 7.19,3 5.67,4.26L7.1,5.74M5.69,7.1L4.26,5.67C3,7.19 2.25,9.04 2.05,11H4.05C4.24,9.58 4.8,8.23 5.69,7.1M4.06,13H2.06C2.26,14.96 3.03,16.81 4.27,18.33L5.69,16.9C4.81,15.77 4.24,14.42 4.06,13M10,16.5L16,12L10,7.5V16.5Z" /></svg>
+        </div>
+    </div>
+    <div class="lottie-feature-content">
+        Developers can control various aspects of animation playback, including
+            speed, loop behavior, and direction.
+    </div>
+</div>
+
+            <div class="lottie-feature-group vertical layout shadow-2dp" style="grid-area: card9;">
+    <div style="position: relative; width: 100%; height: 50px;">
+        <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" viewBox="0 0 100 100"
+            preserveAspectRatio="none">
+            <!-- <rect x="0" y="0" width="100" height="100" fill="rgba(255,255,255)"></rect> -->
+            <path d="M0,-1L80,-1L70,101L0,101z" fill="#d32f2f" fill-opacity="0.2"></path>
+            <path d="M0,-1L75,-1L65,101L0,101z" fill="#d32f2f" fill-opacity="0.3"></path>
+        </svg>
+        <div class="lottie-feature-title horizontal layout center">
+            <div>Text Layers</div>
+        </div>
+        <div class="lottie-feature-icon" style="fill: #d32f2f;">
+            <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-format-text-variant-outline" width="24" height="24" viewBox="0 0 24 24"><path d="M11 3C10.18 3 9.44 3.5 9.14 4.27L3.64 18.27C3.12 19.58 4.09 21 5.5 21H7.75C8.59 21 9.33 20.5 9.62 19.7L10.26 18H13.74L14.38 19.7C14.67 20.5 15.42 21 16.25 21H18.5C19.91 21 20.88 19.58 20.36 18.27L14.86 4.27C14.56 3.5 13.82 3 13 3M11 5H13L18.5 19H16.25L15.12 16H8.87L7.75 19H5.5M12 7.67L9.62 14H14.37Z" /></svg>
+        </div>
+    </div>
+    <div class="lottie-feature-content">
+        Lottie animations can
+            include text layers, providing the ability to animate and display dynamic text content within the
+            animations.
+    </div>
+</div>
+
+            <div class="lottie-feature-group vertical layout shadow-2dp" style="grid-area: card10;">
+    <div style="position: relative; width: 100%; height: 50px;">
+        <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" viewBox="0 0 100 100"
+            preserveAspectRatio="none">
+            <!-- <rect x="0" y="0" width="100" height="100" fill="rgba(255,255,255)"></rect> -->
+            <path d="M0,-1L80,-1L70,101L0,101z" fill="#1976d2" fill-opacity="0.2"></path>
+            <path d="M0,-1L75,-1L65,101L0,101z" fill="#1976d2" fill-opacity="0.3"></path>
+        </svg>
+        <div class="lottie-feature-title horizontal layout center">
+            <div>Masking</div>
+        </div>
+        <div class="lottie-feature-icon" style="fill: #1976d2;">
+            <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-drama-masks" width="24" height="24" viewBox="0 0 24 24"><path d="M8.11,19.45C5.94,18.65 4.22,16.78 3.71,14.35L2.05,6.54C1.81,5.46 2.5,4.4 3.58,4.17L13.35,2.1L13.38,2.09C14.45,1.88 15.5,2.57 15.72,3.63L16.07,5.3L20.42,6.23H20.45C21.5,6.47 22.18,7.53 21.96,8.59L20.3,16.41C19.5,20.18 15.78,22.6 12,21.79C10.42,21.46 9.08,20.61 8.11,19.45V19.45M20,8.18L10.23,6.1L8.57,13.92V13.95C8,16.63 9.73,19.27 12.42,19.84C15.11,20.41 17.77,18.69 18.34,16L20,8.18M16,16.5C15.37,17.57 14.11,18.16 12.83,17.89C11.56,17.62 10.65,16.57 10.5,15.34L16,16.5M8.47,5.17L4,6.13L5.66,13.94L5.67,13.97C5.82,14.68 6.12,15.32 6.53,15.87C6.43,15.1 6.45,14.3 6.62,13.5L7.05,11.5C6.6,11.42 6.21,11.17 6,10.81C6.06,10.2 6.56,9.66 7.25,9.5C7.33,9.5 7.4,9.5 7.5,9.5L8.28,5.69C8.32,5.5 8.38,5.33 8.47,5.17M15.03,12.23C15.35,11.7 16.03,11.42 16.72,11.57C17.41,11.71 17.91,12.24 18,12.86C17.67,13.38 17,13.66 16.3,13.5C15.61,13.37 15.11,12.84 15.03,12.23M10.15,11.19C10.47,10.66 11.14,10.38 11.83,10.53C12.5,10.67 13.03,11.21 13.11,11.82C12.78,12.34 12.11,12.63 11.42,12.5C10.73,12.33 10.23,11.8 10.15,11.19M11.97,4.43L13.93,4.85L13.77,4.05L11.97,4.43Z" /></svg>
+        </div>
+    </div>
+    <div class="lottie-feature-content">
+        Lottie supports masking techniques, allowing developers to create complex visual
+            effects by revealing or hiding parts of the animation.
+    </div>
+</div>
+
+            <div class="_block" style="grid-area: footer;">
+                <p>
+                    Overall, Lottie simplifies the process of adding high-quality animations to digital projects and has
+                    become
+                    a
+                    popular choice in the design and development community.
+                </p>
+                <p>
+                    It's important to note that the specific features and capabilities of Lottie animations can depend
+                    on
+                    the
+                    version of
+                    the Lottie library being used and the platform or framework in which it is implemented. Developers
+                    should
+                    refer to
+                    the documentation and resources specific to their chosen platform for detailed information on Lottie
+                    animation
+                    features.
+                </p>
+            </div>
+        </div>
+
+        <!-- { % include_relative _parts/lottie-card.html index="9" color="#388e3c"
+            icon="_icons/mdi/svg/svg/image-filter-vintage.svg" title="Blend Modes and Filters" text="Lottie supports
+            blend modes and filters, allowing for creative visual effects and compositing of different elements." % } -->
+
+
+        <!-- <div class="horizontal layout wrap">
+            
+        </div> -->
+
+
+        <div style="height: 6rem;"></div>
+        <h2 class="_title self-center">Lottie Players and Libraries</h2>
+
+        <div class="_block2 self-center" style="max-width: 50rem;">
+            The Lottie library includes runtime interpreters for various platforms,
+            such as iOS, Android, Web, Windows, and React Native.
+            <br />
+            These interpreters enable developers to easily integrate Lottie animations into their applications and
+            websites,
+            <br />
+            providing a smooth and consistent user experience across different devices and platforms.
+        </div>
+
+        <div class="grid2">
+            <div class="laptop-card _red" style="grid-area: it1;">
+                <div class="_content">
+                    <h3>For Web</h3>
+                    To use Lottie in a web project, you typically include the Lottie Web library in your HTML file and
+                    use
+                    JavaScript to load and control the animations. The library is actively maintained, and developers
+                    can
+                    refer
+                    to the official documentation and GitHub repository for the latest information and updates.
+                    <br/>
+                    <div>
+                        Lottie Web <a
+                            href="https://github.com/airbnb/lottie-web">https://github.com/airbnb/lottie-web</a>
+                        <div>
+                            React <a
+                                href="https://github.com/LottieFiles/lottie-react">https://github.com/LottieFiles/lottie-react</a>
+                        </div>
+
+                        <div>
+                            Vue <a
+                                href="https://github.com/chenqingspring/vue-lottie">https://github.com/chenqingspring/vue-lottie</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="laptop-card" style="grid-area: it2;">
+                <div class="_content">
+                    <h3>For Windows <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-microsoft-windows" width="24" height="24" viewBox="0 0 24 24"><path d="M3,12V6.75L9,5.43V11.91L3,12M20,3V11.75L10,11.9V5.21L20,3M3,13L9,13.09V19.9L3,18.75V13M20,13.25V22L10,20.09V13.1L20,13.25Z" /></svg></h3>
+                    <div>
+                        There is a Lottie animation player library for Windows. The Lottie-Windows library allows
+                        developers
+                        to
+                        integrate Lottie animations into applications built for the Windows platform. It supports
+                        various
+                        Windows
+                        app
+                        frameworks, including UWP (Universal Windows Platform), WPF (Windows Presentation Foundation),
+                        and
+                        WinUI.
+                    </div>
+                    <br/>
+                    <a
+                        href="https://learn.microsoft.com/en-us/windows/communitytoolkit/animations/lottie">https://learn.microsoft.com/en-us/windows/communitytoolkit/animations/lottie</a>
+                    <a
+                        href="https://github.com/CommunityToolkit/Lottie-Windows">https://github.com/CommunityToolkit/Lottie-Windows</a>
+                    <div>
+                        React Native <a
+                            href="https://github.com/lottie-react-native/lottie-react-native">https://github.com/lottie-react-native/lottie-react-native</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="laptop-card" style="grid-area: it3;">
+                <div class="_content">
+                    <h3>For iOS, MacOS <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-apple" width="24" height="24" viewBox="0 0 24 24"><path d="M18.71,19.5C17.88,20.74 17,21.95 15.66,21.97C14.32,22 13.89,21.18 12.37,21.18C10.84,21.18 10.37,21.95 9.1,22C7.79,22.05 6.8,20.68 5.96,19.47C4.25,17 2.94,12.45 4.7,9.39C5.57,7.87 7.13,6.91 8.82,6.88C10.1,6.86 11.32,7.75 12.11,7.75C12.89,7.75 14.37,6.68 15.92,6.84C16.57,6.87 18.39,7.1 19.56,8.82C19.47,8.88 17.39,10.1 17.41,12.63C17.44,15.65 20.06,16.66 20.09,16.67C20.06,16.74 19.67,18.11 18.71,19.5M13,3.5C13.73,2.67 14.94,2.04 15.94,2C16.07,3.17 15.6,4.35 14.9,5.19C14.21,6.04 13.07,6.7 11.95,6.61C11.8,5.46 12.36,4.26 13,3.5Z" /></svg></h3>
+
+                    For iOS development, there is an official Lottie library called "Lottie-iOS" that enables developers
+                    to
+                    integrate Lottie animations seamlessly into their iOS applications. Lottie-iOS is developed and
+                    maintained
+                    by
+                    Airbnb, the creators of the Lottie framework.
+                    <br/>
+                    <a href="https://github.com/airbnb/lottie-ios">https://github.com/airbnb/lottie-ios</a>
+                    <div>
+                        React Native <a
+                            href="https://github.com/lottie-react-native/lottie-react-native">https://github.com/lottie-react-native/lottie-react-native</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="laptop-card _green" style="grid-area: it4;">
+                <div class="_content">
+                    <h3>For Android <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-android" width="24" height="24" viewBox="0 0 24 24"><path d="M16.61 15.15C16.15 15.15 15.77 14.78 15.77 14.32S16.15 13.5 16.61 13.5H16.61C17.07 13.5 17.45 13.86 17.45 14.32C17.45 14.78 17.07 15.15 16.61 15.15M7.41 15.15C6.95 15.15 6.57 14.78 6.57 14.32C6.57 13.86 6.95 13.5 7.41 13.5H7.41C7.87 13.5 8.24 13.86 8.24 14.32C8.24 14.78 7.87 15.15 7.41 15.15M16.91 10.14L18.58 7.26C18.67 7.09 18.61 6.88 18.45 6.79C18.28 6.69 18.07 6.75 18 6.92L16.29 9.83C14.95 9.22 13.5 8.9 12 8.91C10.47 8.91 9 9.24 7.73 9.82L6.04 6.91C5.95 6.74 5.74 6.68 5.57 6.78C5.4 6.87 5.35 7.08 5.44 7.25L7.1 10.13C4.25 11.69 2.29 14.58 2 18H22C21.72 14.59 19.77 11.7 16.91 10.14H16.91Z" /></svg></h3>
+
+                    For Android development, there is an official Lottie library called "Lottie-Android" that allows
+                    developers
+                    to
+                    integrate Lottie animations into their Android applications. Lottie-Android is developed and
+                    maintained
+                    by
+                    Airbnb, the creators of the Lottie framework.
+                    <br/>
+                    <div>
+                        Android <a
+                            href="https://github.com/airbnb/lottie-android">https://github.com/airbnb/lottie-android</a>
+                    </div>
+                    <div>
+                        React Native <a
+                            href="https://github.com/lottie-react-native/lottie-react-native">https://github.com/lottie-react-native/lottie-react-native</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="height: 4rem;"></div>
+        <h2 class="_title self-center">Lottie community</h2>
+        <div style="height: 2rem;"></div>
+
+        <div class="_block self-center" style="max-width: 50rem;">
+            <div>
+                <b>LottieFiles</b> (<a href="https://lottiefiles.com/">https://lottiefiles.com</a>) - the best resource
+                that
+                gathers
+                lots of information about Lottie resources.
+
+                LottieFiles is an online platform where you can find, share, and even customize Lottie
+                animations.
+                <br />
+                It provides a large collection of free and premium animations that you can download and use in your
+                projects.
+            </div>
+
+            <br />
+
+            <div>
+                <b>IconScout</b> (<a href="https://iconscout.com/">https://iconscout.com</a>)
+                IconScout is a platform that provides a vast library of icons, illustrations, and design assets. It has
+                a
+                section dedicated specifically to Lottie animations.
+            </div>
+        </div>
+
+        <!-- <div class="_block">
+            <div>
+                <b>Platrofms that support Lottie</b>
+                <ul>
+                    <li>Adobe After Effects</li>
+                    <li>Canva</li>
+                    <li>Framer</li>
+                    <li>Figma</li>
+                    <li>WebFlow</li>
+                    <li>WordPress</li>
+                </ul>
+            </div>
+        </div> -->
+
+        <div class="self-center"
+            style="position: relative; width: 100vw; max-width: 1400px; height: 50vw; max-height: 700px;">
+
+            <div class="stacked-paper stacked-paper-red"
+                style="padding: 0; position: absolute; left: 50%; top: 20%; box-shadow: 1px 1px 16px rgba(0, 0, 0, 0.1); width: 50%; transform: rotate(2deg);">
+                <img src="image/lottie-page/iconscout-screenshot.png" style="width: 100%;" />
+            </div>
+
+            <div class="stacked-paper"
+                style="padding: 0; position: absolute; left: 0%; top: 20%; box-shadow: 1px 1px 16px rgba(0, 0, 0, 0.1); width: 50%; transform: rotate(-10deg);">
+                <img src="image/lottie-page/lottie-files-screenshot.png" style="width: 100%;" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="vertical layout center center-justified pxd-address" style="width: 100%; height: 100px; background: #eee;">
+
+    <div class="horizontal layout center" style="margin-bottom: 8px;">
+        <a href="https://www.youtube.com/@pixodesk" style="color: #444;">
+            <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-youtube" width="24" height="24" viewBox="0 0 24 24"><path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z" /></svg>
+        </a>
+        <a href="https://www.facebook.com/pixodesk" style="color: #444; margin-left: 16px;">
+            <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-facebook" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z" /></svg>
+        </a>        
+        <a href="https://twitter.com/pixodesk" style="color: #444; margin-left: 16px;">
+            <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-twitter" width="24" height="24" viewBox="0 0 24 24"><path d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" /></svg>
+        </a>
+        <a href="https://www.instagram.com/pixodesk_animator/" style="color: #444; margin-left: 16px;">
+            <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-instagram" width="24" height="24" viewBox="0 0 24 24"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" /></svg>
+        </a>
+        <a href="https://www.pinterest.co.uk/pixodesk/" style="color: #444; margin-left: 16px;">
+            <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-pinterest" width="24" height="24" viewBox="0 0 24 24"><path d="M9.04,21.54C10,21.83 10.97,22 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12C2,16.25 4.67,19.9 8.44,21.34C8.35,20.56 8.26,19.27 8.44,18.38L9.59,13.44C9.59,13.44 9.3,12.86 9.3,11.94C9.3,10.56 10.16,9.53 11.14,9.53C12,9.53 12.4,10.16 12.4,10.97C12.4,11.83 11.83,13.06 11.54,14.24C11.37,15.22 12.06,16.08 13.06,16.08C14.84,16.08 16.22,14.18 16.22,11.5C16.22,9.1 14.5,7.46 12.03,7.46C9.21,7.46 7.55,9.56 7.55,11.77C7.55,12.63 7.83,13.5 8.29,14.07C8.38,14.13 8.38,14.21 8.35,14.36L8.06,15.45C8.06,15.62 7.95,15.68 7.78,15.56C6.5,15 5.76,13.18 5.76,11.71C5.76,8.55 8,5.68 12.32,5.68C15.76,5.68 18.44,8.15 18.44,11.43C18.44,14.87 16.31,17.63 13.26,17.63C12.29,17.63 11.34,17.11 11,16.5L10.33,18.87C10.1,19.73 9.47,20.88 9.04,21.57V21.54Z" /></svg>
+        </a>        
+    </div>
+    
+
+    <div>&copy; Pixodesk LIMITED</div>
+    <div style="height: 0.35em;"></div>
+    <div>79 College Road, London, HA1 1BD, United Kingdom</div>
+    <div style="height: 0.35em;"></div>
+    <div>support@pixodesk.com</div>
+</div>
+
+<div class="site-footer horizontal layout center center-justified">
+    <a href="/app/animator/eula.html" style="color: #fff;">Terms of Use</a>
+    <div style="width: 1em;"></div>
+    <div>|</div>
+    <div style="width: 1em;"></div>
+    <a href="/app/animator/privacy-policy.html" style="color: #fff;">Privacy Policy</a>
+</div>
+</body>
+
+</html>

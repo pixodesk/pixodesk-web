@@ -2423,8 +2423,8 @@ window.PixodeskAnimator.loadAnimation({"fs":0,"fe":80,"fr":1,"a":[{"a":[{"transf
         <div style="position: relative; font-size: 1.75em; font-weight: 900; margin-top: 0.5rem;">
             straight in the browser
         </div>
-        <div style="position: relative; font-size: 1.5em; font-weight: 900; margin-top: 0.5rem;">
-            (in restricted demo mode)
+        <div style="position: relative; font-size: 1.5em; font-weight: 500; margin-top: 0.5rem;">
+            in restricted export demo mode (maximum 3 shapes, up to 30 frames, no images)
         </div>
     </div>
     <div class="vertical layout center" style="
@@ -2528,7 +2528,7 @@ window.PixodeskAnimator.loadAnimation({"fs":0,"fe":80,"fr":1,"a":[{"a":[{"transf
 
 <div class="page-item vertical layout center" style="background: #222; color: #fff;">
     <div class="page-item-content">
-        <div class="horizontal-big-screen layout">
+        <div class="horizontal-big-screen layout stretch">
             <div class="flex card123 vertical layout stretch">
                 <div class="_img self-center">
                     <!-- <img src="image/pa-3-columns-create.png" width="100%"> -->
@@ -2540,16 +2540,19 @@ window.PixodeskAnimator.loadAnimation({"fs":0,"fe":80,"fr":1,"a":[{"a":[{"transf
                 </div>
                 <div class="_header">Create</div>
                 <div class="_main">
-                    <ul class="card-text it1">
+                    <ul class="card-text it1 ul-cards">
                         <li>
-                            Create vector drawings, import vector or raster images, use custom ttf fonts.
+                            Create vector drawings, import vector or raster images, and use custom TTF fonts.
                         </li>
                         <li>
-                            Reuse and modify pre-existing animations from Lottie community, e.g. from here <a
-                                href="https://lottiefiles.com/" target="_blank">LottieFiles</a> .
+                            Don't feel like starting from scratch? No worries! 
+                            You can use and change animations made by others. 
+                            Check out cool animations from the Lottie community, such as those on 
+                            <a href="https://lottiefiles.com" target="_blank">LottieFiles</a> and 
+                            <a href="https://iconscout.com/l/lottie-animations" target="_blank">IconScout</a>.
                         </li>
                         <li>
-                            Compose complex animated scenes by using animation blocks.
+                            If you want to make something really cool and complicated, you can! Use animation blocks to put together detailed animated scenes. It's like building with easy-to-use blocks.
                         </li>
                     </ul>
                 </div>
@@ -2565,20 +2568,19 @@ window.PixodeskAnimator.loadAnimation({"fs":0,"fe":80,"fr":1,"a":[{"a":[{"transf
                 </div>
                 <div class="_header">Animate</div>
                 <div class="_main">
-                    <ul class="card-text it1">
+                    <ul class="card-text it1 ul-cards">
                         <li>
-                            Create keyframe based animation in a traditional way by using "watch" and "diamond" buttons.
-                            Create animation loops, blocks and time-remaps.
+                            Make keyframe-based animations the traditional way by using the <strong>Watch</strong> and <strong>Diamond</strong> buttons. Create animation loops, blocks, and time-remaps.
                         </li>
                         <li>
-                            Automate the animation of objects on the page by freezing object states at one or more time
-                            points and making alterations at a different, non-frozen time point.
+                            Animating properties is a breeze with <strong>auto-animate</strong> feature.
+                            Fix the object's state on the canvas at one or more time points by uzing the Pin button. 
+                            Then, move the time control to a different point, make changes, and keyframes will be created automatically.
                         </li>
                         <li>
-                            Select a pre-defined easing function from a dropdown menu or customize the easing curve by
-                            editing it.
-                            Easing functions come with velocity and acceleration charts that enhance your comprehension
-                            of animation dynamics.
+                            Making animations look natural is super easy with pre-defined easing functions. 
+                            You can choose them from a dropdown menu or customize the easing curve by editing it. 
+                            Easing functions also come with charts for velocity and acceleration, helping you understand how the change works in time.
                         </li>
                     </ul>
                 </div>
@@ -2595,26 +2597,42 @@ window.PixodeskAnimator.loadAnimation({"fs":0,"fe":80,"fr":1,"a":[{"a":[{"transf
 
                 <div class="_header">Export</div>
                 <div class="_main">
-                    <ul class="card-text it1">
+                    <ul class="card-text it1 ul-cards">
                         <li>
-                            Export a compact, animated SVG file for the web, using either JS or CSS animation types.
-                            You can then embed this SVG directly into your webpage, ensuring it looks good on screens
-                            with different resolution.
+                            Export into a small animated SVG file for the web using either JS or CSS animation types. 
+                            After that, you can easily put this SVG directly into your webpage, 
+                            which will look good on screens with different resolutions.
                         </li>
                         <li>
-                            Control how the animation starts and ends on your webpage: on click, scroll, mouse in/out.
+                            Control how the animation starts and ends on your webpage: whether it's triggered by a click, scroll, or mouse movements.
                         </li>
                         <li>
-                            Use your Lottie file with the Lottie rendering libraries to use in your native applications
-                            on Windows, iOS, Android, and ReactNative platforms.
+                            When building native apps for Windows, iOS, Android, or ReactNative, 
+                            you can use your Lottie JSON file in the app along with the matching Lottie player libraries. 
+                            Give your app a cool look with animated splash screens, loaders, and icons.
                         </li>
                         <li>
-                            Export to other media formats: webm, gif, png, svg.
+                            Export your animation as a video or gif, or save a snapshot at a specific time as a png, jpeg, webp, or svg image.
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
+
+        <div style="position: absolute; top: calc(100% + 2rem); right: calc(100% - 8rem); width: 8rem; z-index: 1;">
+            <div style="transform: scale(-1,1);">
+                <svg id="s256ol4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" width="100%" viewBox="0 0 140 370" preserveAspectRatio="xMidYMid meet">
+  <g transform="matrix(0.9998,0.0181,-0.0181,0.9998,9.9727,-19.2661)">
+    <path d="M53.15,19.133C53.15,19.133,125.112,83.708,98.585,142.698C72.058,201.688,0.446,204.461,6.92,161.955C13.394,119.449,98.894,130.258,109.22,197.257C119.546,264.256,94.359,289.53,72.66,316.813" fill="none" stroke-width="2" stroke-dasharray="10 20" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(255,255,255)">
+    </path>
+  </g>
+  <g transform="matrix(-0.6692,0.7431,0.7431,0.6692,33.6462,239.2113)">
+    <path d="M-6.371,75.285L-4.402,101.525L-28.542,103.269L-6.371,75.285zM8.764,72.286L111.606,59.19L12.648,136.324L8.764,72.286zM0,0L7.199,57.016L111.606,59.19L0,0z" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(255,255,255)">
+    </path>
+  </g>
+</svg>    
+            </div>
+        </div>    
     </div>
 </div>
 
@@ -2686,8 +2704,8 @@ window.PixodeskAnimator.loadAnimation({"fs":0,"fe":80,"fr":1,"a":[{"a":[{"transf
                         Auto-animate
                     </div>
 
-                    <div style="position: absolute; width: 60%; top: 63%; left: 50%; transform: translate(-12.5rem,0); font-size: 1.5rem; color: #000;">
-                        Automate the animation of objects on the page by freezing object states at one or more time points and making alterations at a different, non-frozen time point.
+                    <div style="position: absolute; width: 60%; top: 63%; left: 50%; transform: translate(-12.5rem,0); font-size: 1.25rem; color: #000;">
+                        Animating properties is a breeze with auto-animate feature. Fix the object's state on the canvas at one or more time points by uzing the Pin button. Then, move the time control to a different point, make changes, and keyframes will be created automatically.
                     </div>
 
                 </div>
@@ -2714,15 +2732,14 @@ window.PixodeskAnimator.loadAnimation({"fs":0,"fe":80,"fr":1,"a":[{"a":[{"transf
 
             <div style="width: 8rem;"></div>
 
-            <div class="flex-big-screen card123" style="border: 2px solid #fff; border-radius: 2rem;">
+            <div class="flex-big-screen card123" style="border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.2); border-radius: 2rem;">
                 <div class="_header">Easing</div>
                 <div class="_main">
-                    <ul>
+                    <ul class="ul-cards">
                         <li>
-                            Select a pre-defined easing function from a dropdown menu or customize the easing curve by
-                            editing it.
-                            Easing functions come with velocity and acceleration charts that enhance your comprehension
-                            of animation dynamics.
+                            Making animations look natural is super easy with pre-defined easing functions. 
+                            You can choose them from a dropdown menu or customize the easing curve by editing it. 
+                            Easing functions also come with charts for velocity and acceleration, helping you understand how the change works in time.
                         </li>
                         <li>
                             Keyframe segments are visually represented as mini velocity charts, providing you with
@@ -2732,6 +2749,19 @@ window.PixodeskAnimator.loadAnimation({"fs":0,"fe":80,"fr":1,"a":[{"a":[{"transf
                 </div>
             </div>
         </div>
+        
+        <div style="position: absolute; top: calc(100% - 12rem); left: calc(100% - 4rem); width: 6rem; z-index: 1;">
+            <svg id="s256ol4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" width="100%" viewBox="0 0 140 370" preserveAspectRatio="xMidYMid meet">
+  <g transform="matrix(0.9998,0.0181,-0.0181,0.9998,9.9727,-19.2661)">
+    <path d="M53.15,19.133C53.15,19.133,125.112,83.708,98.585,142.698C72.058,201.688,0.446,204.461,6.92,161.955C13.394,119.449,98.894,130.258,109.22,197.257C119.546,264.256,94.359,289.53,72.66,316.813" fill="none" stroke-width="2" stroke-dasharray="10 20" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(255,255,255)">
+    </path>
+  </g>
+  <g transform="matrix(-0.6692,0.7431,0.7431,0.6692,33.6462,239.2113)">
+    <path d="M-6.371,75.285L-4.402,101.525L-28.542,103.269L-6.371,75.285zM8.764,72.286L111.606,59.19L12.648,136.324L8.764,72.286zM0,0L7.199,57.016L111.606,59.19L0,0z" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(255,255,255)">
+    </path>
+  </g>
+</svg>
+        </div>    
     </div>
 
     <svg style="margin-left: 50%; width: 50%; height: calc(100vh / 4);" viewBox="0 0 100 100"
@@ -2837,18 +2867,21 @@ window.PixodeskAnimator.loadAnimation({"fs":0,"fe":80,"fr":1,"a":[{"a":[{"transf
 
             <div style="width: 4rem;"></div>
 
-            <div class="flex-big-screen card123" style="background: #111; color: #fff; border-radius: 2rem; padding: 3rem;">
+            <div class="flex-big-screen card123 shadow-12dp" style="background: #111; color: #fff; border-radius: 2rem; padding: 3rem;">
                 <div class="_header">Create animated icons</div>
                 <div class="_main">
-                    <ul>
+                    <ul class="ul-cards">
                         <li>
-                            Draw or import an existing icon, and effortlessly animate it using options like Trim Path, Dash Array, Rotation, Scale, Skew, and more. Achieve various effects such as fading, flipping, bouncing, stroke disappearing, and stroke moving along a path.
+                            Create or import an icon, then easily add animations like Trim Path, Dash Array, Rotation, Scale, Skew, and others. 
                         </li>
                         <li>
-                            Use grid and snap modes to achieve precise and accurate drawing.
+                            Get different effects like fading, flipping, bouncing, and making the stroke disappear or move along a path. 
                         </li>
                         <li>
-                            Use your animated icon on your website or mobile/desktop application.
+                            Use grid and snap modes for accurate drawing. 
+                        </li>
+                        <li>
+                            Finally, use your animated icon on your website or in your mobile/desktop app.
                         </li>
                     </ul>
                 </div>
@@ -2881,7 +2914,7 @@ window.PixodeskAnimator.loadAnimation({"fs":0,"fe":80,"fr":1,"a":[{"a":[{"transf
                 <div class="flex-big-screen card123" style="border: 2px solid #fff; border-radius: 2rem;">
                     <div class="_header">Create animated splash-screens</div>
                     <div class="_main">
-                        <ul>
+                        <ul class="ul-cards">
                             <li>
                                 Create visually stunning splash-screen animations to engage with users, giving them a
                                 good first impression.

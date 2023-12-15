@@ -213,6 +213,8 @@ html .page-item .page-item-content, body .page-item .page-item-content { positio
 
 .card123 ._main { font-size: 1.35rem; font-weight: 300; }
 
+ul.ul-cards li { background: rgba(255, 255, 255, 0.05); border-radius: 8px; padding: 1rem; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 1px 1px 16px black; }
+
 @media (max-width: 500px) { html, body { font-size: 3vw; } }
 
 .section-header { margin-top: 8rem; margin-bottom: 1rem; }
@@ -292,6 +294,8 @@ html .page-item .page-item-content, body .page-item .page-item-content { positio
 .card123 ._header { font-size: 1.5rem; font-weight: 900; margin-top: 0.5rem; margin-bottom: 0.5rem; }
 
 .card123 ._main { font-size: 1.35rem; font-weight: 300; }
+
+ul.ul-cards li { background: rgba(255, 255, 255, 0.05); border-radius: 8px; padding: 1rem; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 1px 1px 16px black; }
 
 @media (max-width: 500px) { html, body { font-size: 3vw; } }
 
@@ -513,6 +517,8 @@ html .page-item .page-item-content, body .page-item .page-item-content { positio
 .card123 ._header { font-size: 1.5rem; font-weight: 900; margin-top: 0.5rem; margin-bottom: 0.5rem; }
 
 .card123 ._main { font-size: 1.35rem; font-weight: 300; }
+
+ul.ul-cards li { background: rgba(255, 255, 255, 0.05); border-radius: 8px; padding: 1rem; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 1px 1px 16px black; }
 
 @media (max-width: 500px) { html, body { font-size: 3vw; } }
 

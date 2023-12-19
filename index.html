@@ -466,9 +466,9 @@
                 <div class="flex-big-screen"
                     style="background: #111; margin-top: calc(var(--small-screen-switch) * 4rem); padding: 0.8rem; border-radius: 1.5rem; box-shadow: 0 12px 16px 1px rgba(0, 0, 0, 0.4), 0 4px 22px 3px rgba(0, 0, 0, 0.4), 0 6px 7px -4px rgba(0, 0, 0, 1);">
 
-                    <video id="laptop-video" style="width: 100%; border-radius: 0.5rem;" muted autoplay loop playsinline
+                    <video id="laptop-video" poster="image/plane-and-banner-colour--ready.jpg" style="width: 100%; border-radius: 0.5rem;" muted autoplay loop playsinline
                         disablePictureInPicture>
-                        <source src="image/firework-win3.mp4" type="video/mp4">
+                        <source src="image/plane-and-banner-colour--small.mp4" type="video/mp4">
                     </video>
                 </div>
 
@@ -623,9 +623,6 @@
 
 
 <script>
-    let el = document.getElementById("laptop-video");
-    if (el) el.playbackRate = 0.25;
-
     window.addEventListener("load", function () {
         new window.Typewriter('#coolWord', {
             strings: ['cool', 'impressive', 'awesome', 'breathtaking', 'amazing', 'stunning', 'magnificent', 'wonderful', 'spectacular', 'mind-blowing'],

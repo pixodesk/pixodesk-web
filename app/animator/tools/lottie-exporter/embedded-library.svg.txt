@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  version="1.1"
+  width="1"
+  height="1"
+>
+  <defs>
+    <pattern id="pattern1" width="6" height="6" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(0)">
+      <rect x="0" y="0" width="6" height="6" fill="white" stroke="none" />
+      <line x1="0" y1="2" x2="6" y2="2" stroke="black" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern2" width="6" height="6" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(90)">
+      <rect x="0" y="0" width="6" height="6" fill="white" stroke="none" />
+      <line x1="0" y1="2" x2="6" y2="2" stroke="black" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern3" width="6" height="6" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(-45)">
+      <rect x="0" y="0" width="6" height="6" fill="white" stroke="none" />
+      <line x1="0" y1="2" x2="6" y2="2" stroke="black" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern4" width="6" height="6" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(45)">
+      <rect x="0" y="0" width="6" height="6" fill="white" stroke="none" />
+      <line x1="0" y1="2" x2="6" y2="2" stroke="black" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern5" width="6" height="6" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(-22.5)">
+      <rect x="0" y="0" width="6" height="6" fill="white" stroke="none" />
+      <line x1="0" y1="2" x2="6" y2="2" stroke="black" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern6" width="6" height="6" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(22.5)">
+      <rect x="0" y="0" width="6" height="6" fill="white" stroke="none" />
+      <line x1="0" y1="2" x2="6" y2="2" stroke="black" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern7" width="6" height="6" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(-67.5)">
+      <rect x="0" y="0" width="6" height="6" fill="white" stroke="none" />
+      <line x1="0" y1="2" x2="6" y2="2" stroke="black" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern8" width="6" height="6" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(67.5)">
+      <rect x="0" y="0" width="6" height="6" fill="white" stroke="none" />
+      <line x1="0" y1="2" x2="6" y2="2" stroke="black" stroke-width="2" />
+    </pattern>
+
+    <pattern id="pattern11" width="12" height="12" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(0)">
+      <rect x="0" y="0" width="12" height="12" fill="white" stroke="none" />
+      <line x1="0" y1="8" x2="12" y2="8" stroke="black" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern12" width="12" height="12" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(90)">
+      <rect x="0" y="0" width="12" height="12" fill="white" stroke="none" />
+      <line x1="0" y1="8" x2="12" y2="8" stroke="black" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern13" width="12" height="12" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(-45)">
+      <rect x="0" y="0" width="12" height="12" fill="white" stroke="none" />
+      <line x1="0" y1="8" x2="12" y2="8" stroke="black" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern14" width="12" height="12" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(45)">
+      <rect x="0" y="0" width="12" height="12" fill="white" stroke="none" />
+      <line x1="0" y1="8" x2="12" y2="8" stroke="black" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern15" width="12" height="12" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(-22.5)">
+      <rect x="0" y="0" width="12" height="12" fill="white" stroke="none" />
+      <line x1="0" y1="8" x2="12" y2="8" stroke="black" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern16" width="12" height="12" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(22.5)">
+      <rect x="0" y="0" width="12" height="12" fill="white" stroke="none" />
+      <line x1="0" y1="8" x2="12" y2="8" stroke="black" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern17" width="12" height="12" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(-67.5)">
+      <rect x="0" y="0" width="12" height="12" fill="white" stroke="none" />
+      <line x1="0" y1="8" x2="12" y2="8" stroke="black" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern18" width="12" height="12" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(67.5)">
+      <rect x="0" y="0" width="12" height="12" fill="white" stroke="none" />
+      <line x1="0" y1="8" x2="12" y2="8" stroke="black" stroke-width="2" />
+    </pattern>
+
+    <pattern id="pattern21" width="6" height="6" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(0)">
+      <rect x="0" y="0" width="6" height="6" fill="white" stroke="none" />
+      <line x1="0" y1="2" x2="6" y2="2" stroke="black" stroke-width="2" />
+      <line x1="4" y1="0" x2="4" y2="6" stroke="black" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern22" width="6" height="6" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(45)">
+      <rect x="0" y="0" width="6" height="6" fill="white" stroke="none" />
+      <line x1="0" y1="2" x2="6" y2="2" stroke="black" stroke-width="2" />
+      <line x1="4" y1="0" x2="4" y2="6" stroke="black" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern23" width="6" height="6" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(-22.5)">
+      <rect x="0" y="0" width="6" height="6" fill="white" stroke="none" />
+      <line x1="0" y1="2" x2="6" y2="2" stroke="black" stroke-width="2" />
+      <line x1="4" y1="0" x2="4" y2="6" stroke="black" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern24" width="6" height="6" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(-67.5)">
+      <rect x="0" y="0" width="6" height="6" fill="white" stroke="none" />
+      <line x1="0" y1="2" x2="6" y2="2" stroke="black" stroke-width="2" />
+      <line x1="4" y1="0" x2="4" y2="6" stroke="black" stroke-width="2" />
+    </pattern>
+
+    <pattern id="pattern31" width="12" height="12" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(0)">
+      <rect x="0" y="0" width="12" height="12" fill="white" stroke="none" />
+      <line x1="0" y1="2" x2="12" y2="2" stroke="black" stroke-width="2" />
+      <line x1="4" y1="0" x2="4" y2="12" stroke="black" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern32" width="12" height="12" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(45)">
+      <rect x="0" y="0" width="12" height="12" fill="white" stroke="none" />
+      <line x1="0" y1="2" x2="12" y2="2" stroke="black" stroke-width="2" />
+      <line x1="4" y1="0" x2="4" y2="12" stroke="black" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern33" width="12" height="12" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(-22.5)">
+      <rect x="0" y="0" width="12" height="12" fill="white" stroke="none" />
+      <line x1="0" y1="2" x2="12" y2="2" stroke="black" stroke-width="2" />
+      <line x1="4" y1="0" x2="4" y2="12" stroke="black" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern34" width="12" height="12" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(-67.5)">
+      <rect x="0" y="0" width="12" height="12" fill="white" stroke="none" />
+      <line x1="0" y1="2" x2="12" y2="2" stroke="black" stroke-width="2" />
+      <line x1="4" y1="0" x2="4" y2="12" stroke="black" stroke-width="2" />
+    </pattern>
+
+    <pattern id="pattern41" width="12" height="12" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="12" height="12" fill="white" stroke="none" />
+      <rect x="0" y="0" width="1" height="1" fill="black" stroke="none" />
+      <rect x="6" y="6" width="1" height="1" fill="black" stroke="none" />
+    </pattern>
+    <pattern id="pattern42" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="8" height="8" fill="white" stroke="none" />
+      <rect x="0" y="0" width="1" height="1" fill="black" stroke="none" />
+      <rect x="4" y="4" width="1" height="1" fill="black" stroke="none" />
+    </pattern>
+    <pattern id="pattern43" width="6" height="6" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="6" height="6" fill="white" stroke="none" />
+      <rect x="0" y="0" width="1" height="1" fill="black" stroke="none" />
+      <rect x="3" y="3" width="1" height="1" fill="black" stroke="none" />
+    </pattern>
+    <pattern id="pattern44" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="4" height="4" fill="white" stroke="none" />
+      <rect x="0" y="0" width="1" height="1" fill="black" stroke="none" />
+      <rect x="2" y="2" width="1" height="1" fill="black" stroke="none" />
+    </pattern>
+    <pattern id="pattern45" width="12" height="12" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="12" height="12" fill="white" stroke="none" />
+      <rect x="0" y="0" width="2" height="2" fill="black" stroke="none" />
+      <rect x="6" y="6" width="2" height="2" fill="black" stroke="none" />
+    </pattern>
+    <pattern id="pattern46" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="8" height="8" fill="white" stroke="none" />
+      <rect x="0" y="0" width="2" height="2" fill="black" stroke="none" />
+      <rect x="4" y="4" width="2" height="2" fill="black" stroke="none" />
+    </pattern>
+    <pattern id="pattern47" width="6" height="6" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="6" height="6" fill="white" stroke="none" />
+      <rect x="0" y="0" width="2" height="2" fill="black" stroke="none" />
+      <rect x="3" y="3" width="2" height="2" fill="black" stroke="none" />
+    </pattern>
+    <pattern id="pattern48" width="16" height="16" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="16" height="16" fill="white" stroke="none" />
+      <rect x="0" y="4" width="4" height="4" fill="black" stroke="none" />
+      <rect x="8" y="12" width="4" height="4" fill="black" stroke="none" />
+    </pattern>
+    <pattern id="pattern49" width="12" height="12" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="12" height="12" fill="white" stroke="none" />
+      <rect x="0" y="0" width="4" height="4" fill="black" stroke="none" />
+      <rect x="6" y="6" width="4" height="4" fill="black" stroke="none" />
+    </pattern>
+
+    <pattern id="pattern51" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="4" height="4" fill="white" stroke="none" />
+      <rect x="0" y="0" width="2" height="2" fill="black" stroke="none" />
+      <rect x="2" y="2" width="2" height="2" fill="black" stroke="none" />
+    </pattern>
+    <pattern id="pattern52" width="6" height="6" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="6" height="6" fill="white" stroke="none" />
+      <rect x="0" y="0" width="3" height="3" fill="black" stroke="none" />
+      <rect x="3" y="3" width="3" height="3" fill="black" stroke="none" />
+    </pattern>
+    <pattern id="pattern53" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="8" height="8" fill="white" stroke="none" />
+      <rect x="0" y="0" width="4" height="4" fill="black" stroke="none" />
+      <rect x="4" y="4" width="4" height="4" fill="black" stroke="none" />
+    </pattern>
+    <pattern id="pattern54" width="10" height="10" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="10" height="10" fill="white" stroke="none" />
+      <rect x="0" y="0" width="5" height="5" fill="black" stroke="none" />
+      <rect x="5" y="5" width="5" height="5" fill="black" stroke="none" />
+    </pattern>
+    <pattern id="pattern55" width="12" height="12" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="12" height="12" fill="white" stroke="none" />
+      <rect x="0" y="0" width="6" height="6" fill="black" stroke="none" />
+      <rect x="6" y="6" width="6" height="6" fill="black" stroke="none" />
+    </pattern>
+    <pattern id="pattern56" width="16" height="16" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="16" height="16" fill="white" stroke="none" />
+      <rect x="0" y="0" width="8" height="8" fill="black" stroke="none" />
+      <rect x="8" y="8" width="8" height="8" fill="black" stroke="none" />
+    </pattern>
+
+    <pattern id="pattern61" width="16" height="16" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="16" height="16" fill="white" stroke="none" />
+      <circle cx="4" cy="4" r="3" fill="black" stroke="none" />
+      <circle cx="12" cy="12" r="3" fill="black" stroke="none" />
+    </pattern>
+    <pattern id="pattern62" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="20" height="20" fill="white" stroke="none" />
+      <circle cx="5" cy="5" r="4" fill="black" stroke="none" />
+      <circle cx="15" cy="15" r="4" fill="black" stroke="none" />
+    </pattern>
+    <pattern id="pattern63" width="16" height="16" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="16" height="16" fill="white" stroke="none" />
+      <circle cx="4" cy="4" r="3" fill="none" stroke="black" stroke-width="1" />
+      <circle cx="12" cy="12" r="3" fill="none" stroke="black" stroke-width="1" />
+    </pattern>
+    <pattern id="pattern64" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="20" height="20" fill="white" stroke="none" />
+      <circle cx="5" cy="5" r="4" fill="none" stroke="black" stroke-width="1" />
+      <circle cx="15" cy="15" r="4" fill="none" stroke="black" stroke-width="1" />
+    </pattern>
+
+
+    <marker id="Stop" viewBox="-6 -6 12 12" markerWidth="12" markerHeight="12" orient="auto">
+      <path
+        style="fill:none;stroke:#000;stroke-width:1"
+        d="M 0,4 V -4"
+      />
+    </marker>
+    <marker id="X" viewBox="-6 -6 12 12" markerWidth="12" markerHeight="12" orient="auto">
+      <path
+        style="fill:none;stroke:#000;stroke-width:1"
+        d="M -3,3 3,-3 M 3,3 -3,-3"
+      />
+    </marker>
+    <marker id="Diamond" viewBox="-6 -6 12 12" markerWidth="12" markerHeight="12" orient="auto">
+      <path
+        transform="scale(0.45)"
+        style="fill:#000;fill-rule:evenodd;stroke:none"
+        d="M 0,-7.0710768 -7.0710894,0 0,7.0710589 7.0710462,0 Z"
+        id="path19" />
+    </marker>
+    <marker id="Square" viewBox="-6 -6 12 12"  markerWidth="12" markerHeight="12" orient="auto">
+      <path
+        transform="scale(0.5)"
+        style="fill:#000;fill-rule:evenodd;stroke:none"
+        d="M -5,-5 V 5 H 5 V -5 Z"
+      />
+    </marker>
+    <marker id="Dot" viewBox="-6 -6 12 12" markerWidth="12" markerHeight="12" orient="auto">
+      <path
+        transform="scale(0.5)"
+        style="fill:#000;fill-rule:evenodd;stroke:none"
+        d="M 5,0 C 5,2.76 2.76,5 0,5 -2.76,5 -5,2.76 -5,0 c 0,-2.76 2.3,-5 5,-5 2.76,0 5,2.24 5,5 z"
+      />
+    </marker>
+    <marker id="ConcaveTriangle" orient="auto-start-reverse"
+      viewBox="-6 -6 12 12" markerWidth="12" markerHeight="12" orient="auto">
+      <path
+        transform="scale(0.7)"
+        d="M -2,-4 9,0 -2,4 c 2,-2.33 2,-5.66 0,-8 z"
+        style="fill:#000;fill-rule:evenodd;stroke:none"
+      />
+    </marker>
+    <marker id="DartArrow" orient="auto-start-reverse" 
+      viewBox="-6 -6 12 12"  markerWidth="12" markerHeight="12" orient="auto">
+      <path
+        style="fill:#000;fill-rule:evenodd;stroke:none"
+        d="M 0,0 5,-5 -12.5,0 5,5 Z"
+        transform="scale(-0.5)"
+      />
+    </marker>
+    <marker id="Triangle" orient="auto-start-reverse" 
+      viewBox="-6 -6 12 12"  markerWidth="12" markerHeight="12" orient="auto">
+      <path
+        transform="scale(0.5)"
+        style="fill:#000;fill-rule:evenodd;stroke:#000;stroke-width:1pt"
+        d="M 5.77,0 -2.88,5 V -5 Z"
+      />
+    </marker>
+    <marker id="ArrowWide" orient="auto-start-reverse" 
+      viewBox="-6 -6 12 12" markerWidth="12" markerHeight="12" orient="auto">
+      <path
+        style="fill:none;stroke:#000;stroke-width:1;stroke-linecap:butt"
+        d="M 3,-3 0,0 3,3"
+        transform="rotate(180,0.125,0)"
+      />
+    </marker>
+  </defs>
+</svg>

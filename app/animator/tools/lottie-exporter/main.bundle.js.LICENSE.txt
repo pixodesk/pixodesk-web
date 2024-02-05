@@ -38,6 +38,8 @@ and limitations under the License.
 
 /*! http://mths.be/fromcodepoint v0.1.0 by @mathias */
 
+/*! https://mths.be/he v1.2.0 by @mathias | MIT license */
+
 /**
  * @license React
  * react-dom-server-legacy.browser.production.min.js

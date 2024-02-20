@@ -4,7 +4,7 @@ Protecting the privacy and data belonging to our clients and users of our softwa
 This Privacy Policy describes how we use and protect any information or data files you provide to us.
 
 
-The Pixodesk Animator application does not collect any personal data.
+The Pixodesk SVG application does not collect any personal data.
 The application does not track you or send data to remote servers.
 The application can access documents from your hard drive only if you explicitly give it a permission, for instance, by using a file dialog, by dragging documents to the application window or by opening documents in Finder.
 
@@ -24,7 +24,7 @@ With the users approval, crashes will be submitted to Apple App Center.
 With the users approval, errors will be submitted to Freshdesk.
 While submitting a crash or an error report, the user will be presented with a dialog where the user can review all the data which is going to be sent to Apple App Center or Freshdesk.
 
-Pixodesk Animator application collects logs and error reports which are never sent automatically to us.
+Pixodesk SVG application collects logs and error reports which are never sent automatically to us.
 As part of a software support ticket, we may ask you to send some of this diagnostic data to us, and this is entirely optional. 
 Anything you do send will be retained securely and confidentially and will never be shared with 3rd parties.
 

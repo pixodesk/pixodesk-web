@@ -1,0 +1,49 @@
+---
+import Wedge from "./Wedge.astro";
+import WedgeTopBotton from "./WedgeTopBotton.astro";
+import WrapperX from "./WrapperX.astro";
+import WrapperY from "./WrapperY.astro";
+
+interface Props {
+  className?: string;
+  width?: string;
+  maxWidth?: string;
+  bgColor?: string;
+  color?: string;
+  px?: string;
+  py?: string;
+}
+
+const {
+  className = "",
+  width,
+  maxWidth,
+  bgColor,
+  color,
+  px = "",
+  py = "",
+} = Astro.props;
+---
+
+<div
+  class={`
+    relative
+    w-full
+    ${className}
+    ${bgColor || ""}
+    `}
+>
+  <div
+    class={`
+    relative
+    ${width ? `${width}` : ""}
+    ${maxWidth && maxWidth !== "undefined" ? `${maxWidth}` : "max-w-custom-standard"}
+    mx-auto
+    ${color || ""}
+    ${px && px !== "undefined" ? `px-${px}` : ""}
+    ${py && py !== "undefined" ? `py-${py}` : ""}
+    `}
+  >
+    <slot />
+  </div>
+</div>

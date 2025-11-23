@@ -1,0 +1,41 @@
+---
+import Wedge from "./Wedge.astro";
+
+interface Props {
+  className?: string;
+  bgColor?: string;
+  color?: string;
+  width?: string;
+  
+  py?: string;
+  pt?: string;
+  pb?: string;
+}
+
+const { 
+  className = "", 
+  bgColor, 
+  color, 
+  width, 
+  py = '', 
+  pt = '', 
+  pb= '',
+  } = Astro.props;
+
+console.log('WrapperY props:', { py, pt, pb })
+---
+
+<div
+  class={`
+    relative 
+    w-full 
+    ${className || ''} 
+    ${color || ''} 
+    ${width ? `w-${width}` : ""}
+    ${py && py !== "undefined" ? `py-${py}` : ""}
+    ${pt && pt !== "undefined" ? `pt-${pt}` : ""}
+    ${pb && pb !== "undefined" ? `pb-${pb}` : ""}
+    `}
+>
+  <slot />
+</div>

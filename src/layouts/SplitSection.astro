@@ -1,0 +1,56 @@
+---
+import TextListCheck from "./TextListCheck.astro";
+import type { Item, SvgSource } from "../types/types";
+import { marked } from "marked";
+
+interface Props {
+  title?: string;
+  subTitle?: string;
+  items?: Item[];
+
+  imageClass: string;
+  textClass: string;
+  
+  
+  shadowColor?: string;
+  maxWidth?: string;
+  iconColor?: string;
+  svg?: SvgSource;
+}
+
+
+const {
+  title,
+  subTitle,
+  items,
+
+  imageClass,
+  textClass,
+
+  shadowColor,
+  maxWidth,
+  iconColor,
+
+} = Astro.props;
+
+---
+
+<div class={`${maxWidth ? `max-w-${maxWidth}` : ""} mx-auto`}>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+    
+    <div class={`${imageClass}`}>
+      <slot />  
+    </div>
+
+    <div class={`${textClass}`}>
+      <div class="mb-4" set:html={marked(title ?? " ")} />
+      <div class="mb-8" set:html={marked(subTitle ?? " ")} />
+      <TextListCheck
+        iconColor={iconColor}
+        items={items || []}
+        shadowColor={shadowColor}
+      />
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,203 @@
+$color-0:#e1464f;
+$color-1:#ff4c1f;
+$color-2:#ff4d1f;
+$color-3:#ee8a00;
+$color-4:#fdab1e;
+$color-5:#ffb100;
+$color-6:#e7050b;
+$color-7:#ffd200;
+$color-8:#0075ff;
+
+$color-10:#db3f48;
+
+
+$highlight-padding-mobile:0.2rem;
+
+// $highlight-padding:0.5rem;
+$highlight-padding:0.3rem;
+$highlight-border-radius:5px;
+
+.color1{
+    color:$color-1;
+}
+.color1-bg{
+    background-color: $color-1;
+}
+
+
+.color00-underline{
+    border-bottom: 1px solid #222;
+}
+
+.t-color0{
+    color: $color-0;
+}
+
+.t-color0-bg{
+    background-color: $color-0;
+    color:white;
+    padding:calc(#{$highlight-padding} + 1px);
+    border-radius: $highlight-border-radius;
+    // padding:$highlight-padding;
+}
+
+
+
+.t-color0-border{
+    border: 1px solid $color-0;
+    border-radius: $highlight-border-radius;
+    padding-left:$highlight-padding;
+    padding-right:$highlight-padding;
+}
+.t-color0-underline{
+    border-bottom: 1px solid $color-0;
+}
+
+.t-color1{
+    color: $color-1;
+}
+.t-color1-bg{
+    background-color: $color-1;
+    color:white;
+    padding:calc(#{$highlight-padding} + 1px);
+    border-radius: $highlight-border-radius;
+}
+.t-color1-border{
+    border: 1px solid $color-1;
+    border-radius: $highlight-border-radius;
+    padding-left:$highlight-padding;
+    padding-right:$highlight-padding;
+}
+.t-color1-underline{
+    border-bottom: 1px solid $color-1;
+}
+
+.t-color2{
+    color: $color-2;
+}
+.t-color2-bg{
+    background-color: $color-2;
+    color:white;
+    padding:calc(#{$highlight-padding} + 1px);
+    border-radius: $highlight-border-radius;
+}
+.t-color2-border{
+    border: 1px solid $color-2;
+    border-radius: $highlight-border-radius;
+    padding-left:$highlight-padding;
+    padding-right:$highlight-padding;
+}
+.t-color2-underline{
+    border-bottom: 1px solid $color-2;
+}
+
+.t-color3{
+    color: $color-3;
+}
+.t-color3-bg{
+    background-color: $color-3;
+    color:white;
+    padding:calc(#{$highlight-padding} + 1px);
+    border-radius: $highlight-border-radius;
+}
+.t-color3-border{
+    border: 1px solid $color-3;
+    border-radius: $highlight-border-radius;
+    padding-left:$highlight-padding;
+    padding-right:$highlight-padding;
+}
+.t-color3-underline{
+    border-bottom: 1px solid $color-3;
+}
+
+
+.t-color4{
+    color: $color-4;
+}
+.t-color4-bg{
+    background-color: $color-4;
+    color:white;
+    padding:calc(#{$highlight-padding} + 1px);
+    border-radius: $highlight-border-radius;
+}
+.t-color4-border{
+    border: 1px solid $color-4;
+    border-radius: $highlight-border-radius;
+    padding-left:$highlight-padding;
+    padding-right:$highlight-padding;
+}
+.t-color4-underline{
+    border-bottom: 1px solid $color-4;
+}
+
+.t-color5{
+    color: $color-5;
+}
+.t-color5-bg{
+    background-color: $color-5;
+    color:white;
+    padding:calc(#{$highlight-padding} + 1px);
+    border-radius: $highlight-border-radius;
+}
+.t-color5-border{
+    border: 1px solid $color-5;
+    border-radius: $highlight-border-radius;
+    padding-left:$highlight-padding;
+    padding-right:$highlight-padding;
+}
+.t-color5-underline{
+    border-bottom: 1px solid $color-5;
+}
+
+.t-color6{
+    color: $color-6;
+}
+.t-color6-bg{
+    background-color: $color-6;
+    color:white;
+    padding:calc(#{$highlight-padding} + 1px);
+    border-radius: $highlight-border-radius;
+}
+.t-color6-border{
+    border: 1px solid $color-6;
+    border-radius: $highlight-border-radius;
+    padding-left:$highlight-padding;
+    padding-right:$highlight-padding;
+}
+.t-color6-underline{
+    border-bottom: 1px solid $color-6;
+}
+
+.t-color7{
+    color: $color-7;
+}
+.t-color7-bg{
+    background-color: $color-7;
+    color:white;
+    padding:calc(#{$highlight-padding} + 1px);
+    border-radius: $highlight-border-radius;
+}
+.t-color7-border{
+    border: 1px solid $color-7;
+    border-radius: $highlight-border-radius;
+    padding-left:$highlight-padding;
+    padding-right:$highlight-padding;
+}
+.t-color7-underline{
+    border-bottom: 1px solid $color-7;
+}
+.t-color8{
+    color: $color-8;
+}
+.t-color0, .t-color0-bg,
+.t-color1, .t-color1-bg,
+.t-color2, .t-color2-bg,
+.t-color3, .t-color3-bg,
+.t-color4, .t-color4-bg,
+.t-color5, .t-color5-bg,
+.t-color6, .t-color6-bg,
+.t-color7, .t-color7-bg{
+    padding-top:0;
+    padding-bottom:0;
+}
+

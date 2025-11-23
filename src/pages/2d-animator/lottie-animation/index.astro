@@ -1,0 +1,208 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import content from "../lottie-pages-text-content";
+import LottieProCard from "../../../layouts/LottieProCard.astro";
+import type { SubSection } from "../../../types/types";
+import { marked } from "marked";
+import LottiePlayerCard from "../../../layouts/LottiePlayerCard.astro";
+
+import "./lottie-animation.scss";
+
+const pageContent = content.pages.page_04;
+const section_01 = pageContent.sections?.section_01;
+const section_02 = pageContent.sections?.section_02;
+const section_03 = pageContent.sections?.section_03;
+
+// const bgColors = ["#379E00", "#f00f40", "#3E70C4", "#FF823F"]; // prev
+const bgColors = ["#40a540", "#cb5353", "#444191", "#cbaf53"]; // from dark theme - just a bit lighter
+// const bgColors = ["#8299ff", "#ff8a8a", "#72ddf1", "#ffe48c"]; // from dark theme - even lighter
+// const bgColors = ["#8682ff", "#ff7f7f", "#6cd486", "#ffe181"]; // much lighter
+// const bgColors = ["#0ca8bc", "#8690ff", "#f876ae", "#ffc36f"]; // new colors
+
+import vectorCurveRaw from "../../../../public/assets/lottie/pages/vector-curve.svg?raw"; 
+import codeJson from "../../../../public/assets/lottie/pages/code-json.svg?raw";
+import gestureDoubleTap from "../../../../public/assets/lottie/pages/gesture-double-tap.svg?raw"; 
+import arrowCollapseVertical from "../../../../public/assets/lottie/pages/arrow-collapse-vertical.svg?raw"; 
+import devices from "../../../../public/assets/lottie/pages/devices.svg?raw"; 
+import accountGroup from "../../../../public/assets/lottie/pages/account-group.svg?raw"; 
+import animationPlay from "../../../../public/assets/lottie/pages/animation-play.svg?raw";
+import playSpeed from "../../../../public/assets/lottie/pages/play-speed.svg?raw"; 
+import formatTextVariantOutline from "../../../../public/assets/lottie/pages/format-text-variant-outline.svg?raw";
+import dramaMasks from "../../../../public/assets/lottie/pages/drama-masks.svg?raw"; 
+import WrapperX from "../../../layouts/WrapperX.astro";
+import Section from "../../../layouts/Section.astro";
+---
+
+<BaseLayout title="Lottie Animation">
+  <div class="bg-white pt-navDouble">
+    <Section
+      className="LottieFileFormat"
+      bgColor="bg-base-bright"
+      color="text-base-dark-blue"
+      page
+    >
+      <section class="Lottie-file-format mb-20">
+        <!-- Title -->
+        {
+          pageContent.title && (
+            <div
+              class="text-center mb-20"
+              set:html={marked(pageContent.title)}
+            />
+          )
+        }
+
+        {
+          section_01?.title && (
+            <h2
+              class=" font-bold mb-8 text-center"
+              set:html={section_01.title}
+            />
+          )
+        }
+        {
+          Array.isArray(section_01?.subSections) && (
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mx-auto">
+              <div class="col-span-1 md:col-span-2 row-span-1 ">
+                <LottieProCard
+                  bgSvgFill={bgColors[0]}
+                  lottieProCard={section_01.subSections[0]}
+                />
+              </div>
+
+              <div class="hidden md:grid md:col-span-1 md:row-span-2">
+                <LottieProCard lottieProCard={section_01.subSections[1]} />
+              </div>
+
+              <div class="col-span-1 row-span-1">
+                <LottieProCard
+                  iconProp={vectorCurveRaw}
+                  bgSvgFill={bgColors[0]}
+                  lottieProCard={section_01.subSections[2]}
+                />
+              </div>
+
+              <div class="col-span-1 row-span-1">
+                <LottieProCard
+                  iconProp={codeJson}
+                  bgSvgFill={bgColors[1]}
+                  lottieProCard={section_01.subSections[3]}
+                />
+              </div>
+
+              <div class="col-span-1 row-span-1">
+                <LottieProCard
+                  iconProp={gestureDoubleTap}
+                  bgSvgFill={bgColors[2]}
+                  lottieProCard={section_01.subSections[4]}
+                />
+              </div>
+
+              <div class="col-span-1 row-span-1">
+                <LottieProCard
+                  iconProp={arrowCollapseVertical}
+                  bgSvgFill={bgColors[3]}
+                  lottieProCard={section_01.subSections[5]}
+                />
+              </div>
+
+              <div class="col-span-1 row-span-1">
+                <LottieProCard
+                  iconProp={devices}
+                  bgSvgFill={bgColors[0]}
+                  lottieProCard={section_01.subSections[6]}
+                />
+              </div>
+
+              <div class="col-span-1 row-span-1">
+                <LottieProCard
+                  iconProp={accountGroup}
+                  bgSvgFill={bgColors[1]}
+                  lottieProCard={section_01.subSections[7]}
+                />
+              </div>
+
+              <div class="col-span-1 row-span-1">
+                <LottieProCard
+                  iconProp={animationPlay}
+                  bgSvgFill={bgColors[2]}
+                  lottieProCard={section_01.subSections[8]}
+                />
+              </div>
+
+              <div class="col-span-1 row-span-1">
+                <LottieProCard
+                  iconProp={playSpeed}
+                  bgSvgFill={bgColors[3]}
+                  lottieProCard={section_01.subSections[9]}
+                />
+              </div>
+
+              <div class="col-span-1 row-span-1">
+                <LottieProCard
+                  iconProp={formatTextVariantOutline}
+                  bgSvgFill={bgColors[0]}
+                  lottieProCard={section_01.subSections[10]}
+                />
+              </div>
+
+              <div class="col-span-1 row-span-1 order-1 md:order-2">
+                <LottieProCard
+                  iconProp={dramaMasks}
+                  bgSvgFill={bgColors[1]}
+                  lottieProCard={section_01.subSections[11]}
+                />
+              </div>
+
+              <div class="col-span-1 row-span-1 md:col-span-2 md:row-span-2 order-2 md:order-1">
+                <LottieProCard lottieProCard={section_01.subSections[12]} />
+              </div>
+            </div>
+          )
+        }
+      </section>
+
+      <section class="LottiePlayers w-full mx-auto mb-20 leading-6">
+        {
+          section_02?.title && (
+            <div
+              class=" font-bold mb-10 text-center"
+              set:html={marked(section_02.title)}
+            />
+          )
+        }
+        {
+          Array.isArray(section_02?.subSections) && (
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch mb-8">
+              {section_02.subSections.map((sub: SubSection, index: number) => (
+                <LottiePlayerCard
+                  bgSvgFill={bgColors[index % bgColors.length]}
+                  lottiePlayerCard={sub}
+                />
+              ))}
+            </div>
+          )
+        }
+      </section>
+
+      <section class="LottieCommunity w-full mx-auto mb-20 leading-6">
+        {
+          section_03?.title && (
+            <div
+              class=" font-bold mb-10 text-center"
+              set:html={marked(section_03.title)}
+            />
+          )
+        }
+
+        {
+          Array.isArray(section_03?.subSections) &&
+            section_03.subSections.map(
+              (sub: SubSection) =>
+                sub.text && <div class="mb-2" set:html={marked(sub.text)} />,
+            )
+        }
+      </section>
+    </Section>
+  </div>
+</BaseLayout>

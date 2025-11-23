@@ -1,0 +1,55 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Border from '../../../layouts/Border.astro';
+import DownloadComponent from "../../../layouts/DownloadComponent.astro";
+import Section from "../../../layouts/Section.astro";
+import StoreButtons from "../../../layouts/StoreButtons.astro";
+import content from "../lottie-pages-text-content";
+---
+
+<BaseLayout title="2D Animator Download">
+  <section class="2d-anim-download pt-navDouble flex flex-1">
+    <Section
+      bgColor="bg-custom-gradient-navy"
+      color="text-base-bright"
+      maxWidth="max-w-custom-standard"
+      page
+    >
+      <DownloadComponent page={content.pages.page_03}>
+        {
+          content.pages.page_03?.parts?.[0]?.paymentOptions && (
+            <div class="payment-options grid grid-cols-1 md:grid-cols-2 gap-4 ">
+              {content.pages.page_03?.parts?.[0]?.paymentOptions.map(
+                (paymentOption) => (
+                  <Border>
+                    <div class="
+                    payment-option 
+                    flex 
+                    flex-col 
+                    items-center 
+                    rounded-lg 
+                    
+                    
+                    shadow-md
+                    h-full
+                    w-full
+                    ">
+                      
+                      <div class="font-bold text-center mb-4">
+                        {paymentOption.title}
+                      </div>
+                      <StoreButtons
+                        storeButtons={paymentOption.storeButtons ?? ""}
+                      />
+                      
+                  </div>
+                  </Border>
+                ),
+              )}
+            </div>
+          )
+        }
+      </DownloadComponent>
+    </Section>
+  </section>
+</BaseLayout>

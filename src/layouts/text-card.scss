@@ -1,0 +1,25 @@
+.pixo-text-card {
+
+    &>._header {
+        background-color: #ff4c1f;
+        color: white;
+        padding: calc(0.3rem + 1px);
+        border-radius: 5px;
+    }
+
+    ul {
+        @apply list-disc pl-5 space-y-2; // Tailwind utilities applied via SCSS
+
+        li {
+            @apply text-sm text-gray-700;
+        }
+    }
+
+    strong {
+        color: green;
+    }
+
+    li {
+        margin-left: 5rem;
+    }
+}

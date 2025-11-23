@@ -1,0 +1,322 @@
+---
+interface Props {
+  initialHtml?: string;
+  initialCss?: string;
+  initialJs?: string;
+}
+
+const {
+  initialHtml = `<!DOCTYPE html>
+<html>
+<head>
+  <title>My Page</title>
+</head>
+<body>
+  <h1>Hello World!</h1>
+  <button id="myBtn">Click me</button>
+  <p id="output"></p>
+</body>
+</html>`,
+  initialCss = `body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-align: center;
+}
+
+button {
+  background: white;
+  color: #667eea;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px 0;
+}
+
+button:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s;
+}`,
+  initialJs = `document.addEventListener('DOMContentLoaded', function() {
+  const btn = document.getElementById('myBtn');
+  const output = document.getElementById('output');
+  let count = 0;
+  
+  btn.addEventListener('click', function() {
+    count++;
+    output.textContent = 'Button clicked ' + count + ' times!';
+  });
+});`
+} = Astro.props;
+---
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/monokai.min.css">
+
+<div class="code-playground">
+  <div class="header">
+    <h1>Code Playground</h1>
+    <button class="run-btn" id="runBtn">▶ Run</button>
+  </div>
+  
+  <div class="container">
+    <div class="editor-section">
+      <div class="tabs">
+        <button class="tab active" data-tab="html">HTML</button>
+        <button class="tab" data-tab="css">CSS</button>
+        <button class="tab" data-tab="js">JavaScript</button>
+      </div>
+      
+      <div class="editor-container">
+        <div id="htmlEditor" class="editor-wrapper active"></div>
+        <div id="cssEditor" class="editor-wrapper"></div>
+        <div id="jsEditor" class="editor-wrapper"></div>
+      </div>
+    </div>
+    
+    <div class="preview-section">
+      <div class="preview-header">Preview</div>
+      <iframe id="preview" class="preview-frame"></iframe>
+    </div>
+  </div>
+</div>
+
+<style>
+  .code-playground * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .code-playground {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #1e1e1e;
+    color: #fff;
+  }
+
+  .header {
+    background: #252526;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #3e3e42;
+  }
+
+  .header h1 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .run-btn {
+    background: #0e639c;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.2s;
+  }
+
+  .run-btn:hover {
+    background: #1177bb;
+  }
+
+  .container {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  .editor-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #3e3e42;
+  }
+
+  .tabs {
+    display: flex;
+    background: #252526;
+    border-bottom: 1px solid #3e3e42;
+  }
+
+  .tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    color: #969696;
+    font-size: 13px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+  }
+
+  .tab:hover {
+    color: #fff;
+  }
+
+  .tab.active {
+    color: #fff;
+    border-bottom-color: #0e639c;
+  }
+
+  .editor-container {
+    flex: 1;
+    overflow: auto;
+  }
+
+  .editor-wrapper {
+    height: 100%;
+    display: none;
+  }
+
+  .editor-wrapper.active {
+    display: block;
+  }
+
+  .editor-wrapper :global(.CodeMirror) {
+    height: 100%;
+    font-size: 14px;
+  }
+
+  .preview-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: white;
+  }
+
+  .preview-header {
+    background: #f3f3f3;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .preview-frame {
+    flex: 1;
+    border: none;
+    background: white;
+  }
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+
+<script define:vars={{ initialHtml, initialCss, initialJs }}>
+  // Wait for CodeMirror to load
+  function initPlayground() {
+    if (typeof CodeMirror === 'undefined') {
+      setTimeout(initPlayground, 100);
+      return;
+    }
+
+    // Initialize CodeMirror editors
+    const htmlEditor = CodeMirror(document.getElementById('htmlEditor'), {
+      mode: 'htmlmixed',
+      theme: 'monokai',
+      lineNumbers: true,
+      lineWrapping: true,
+      indentUnit: 2,
+      tabSize: 2,
+      value: initialHtml
+    });
+
+    const cssEditor = CodeMirror(document.getElementById('cssEditor'), {
+      mode: 'css',
+      theme: 'monokai',
+      lineNumbers: true,
+      lineWrapping: true,
+      indentUnit: 2,
+      tabSize: 2,
+      value: initialCss
+    });
+
+    const jsEditor = CodeMirror(document.getElementById('jsEditor'), {
+      mode: 'javascript',
+      theme: 'monokai',
+      lineNumbers: true,
+      lineWrapping: true,
+      indentUnit: 2,
+      tabSize: 2,
+      value: initialJs
+    });
+
+    // Store editors in an object for easy access
+    const editors = {
+      html: htmlEditor,
+      css: cssEditor,
+      js: jsEditor
+    };
+
+    // Tab switching
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', function() {
+        const tabName = this.getAttribute('data-tab');
+        
+        // Remove active class from all tabs and wrappers
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.editor-wrapper').forEach(w => w.classList.remove('active'));
+        
+        // Add active class to selected tab and wrapper
+        this.classList.add('active');
+        document.getElementById(tabName + 'Editor').classList.add('active');
+        
+        // Refresh the editor (CodeMirror needs this when becoming visible)
+        editors[tabName].refresh();
+      });
+    });
+
+    // Run code function
+    function runCode() {
+      const html = htmlEditor.getValue();
+      const css = cssEditor.getValue();
+      const js = jsEditor.getValue();
+      
+      const iframe = document.getElementById('preview');
+      const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+      
+      const fullCode = `<!DOCTYPE html>
+<html>
+<head>
+  <style>${css}</style>
+</head>
+<body>
+  ${html}
+  <script>${js}<\/script>
+</body>
+</html>`;
+      
+      iframeDoc.open();
+      iframeDoc.write(fullCode);
+      iframeDoc.close();
+    }
+
+    // Run button event
+    document.getElementById('runBtn').addEventListener('click', runCode);
+
+    // Run code on load
+    runCode();
+  }
+
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPlayground);
+  } else {
+    initPlayground();
+  }
+</script>

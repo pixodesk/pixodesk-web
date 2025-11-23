@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import DownloadComponent from "../../../layouts/DownloadComponent.astro";
+import Section from "../../../layouts/Section.astro";
+import StoreButtons from '../../../layouts/StoreButtons.astro';
+import content from "../svga-pages-text-content";
+---
+
+<BaseLayout title="SVG Animator Download">
+  <section class="svg-anim-download pt-navDouble flex flex-1">
+    <Section
+      bgColor="bg-custom-gradient-violet"
+      color="text-base-bright"
+      page
+    >
+    <h1 class="text-center">Coming Soon - Ultimate SVG Animation Application</h1>
+      <!-- <DownloadComponent page={content.pages.page_03}>
+        {content.pages.page_03?.parts?.[0]?.storeButtons ? (
+          <StoreButtons storeButtons={content.pages.page_03.parts[0].storeButtons ?? ""} />
+        ) : null}
+        </DownloadComponent> -->
+    </Section>
+  </section>
+</BaseLayout>

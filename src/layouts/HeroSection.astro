@@ -1,0 +1,41 @@
+---
+import "../styles/tailwind.css";
+import type { SectionHero } from "../types/types";
+
+interface Props {
+  content: SectionHero;
+  className?: string;
+  bgColor?: string;
+  color?: string;
+  svg?: string;
+}
+
+import { marked } from "marked";
+import "./text-image-card.scss";
+import StoreButtons from "./StoreButtons.astro";
+
+const { content, className, bgColor, color, svg = "" } = Astro.props;
+---
+
+<div
+  class={`${className ? className : ""} flex flex-col items-center pt-pyPage w-full relative`}
+>
+
+  <div class="relative text-center px-pxPage" set:html={marked(content.title ?? "")} />
+
+  {
+    content.items && (
+      <div class="relative mb-8 px-pxPage">
+        {content.items.map((item) => (
+          <div class="" set:html={marked(item.content ?? "")} />
+        ))}
+      </div>
+    )
+  }
+
+  {content.storeButtons && <StoreButtons storeButtons={content.storeButtons} />}
+
+  <div class="relative my-4 w-full mx-auto">
+    <slot />
+  </div>
+</div>

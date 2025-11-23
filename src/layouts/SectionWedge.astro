@@ -1,0 +1,49 @@
+---
+import Wedge from "./Wedge.astro";
+import WedgeTopBotton from "./WedgeTopBotton.astro";
+import WrapperX from "./WrapperX.astro";
+import WrapperY from "./WrapperY.astro";
+
+interface Props {
+  className?: string;
+  hasTopWedge?: boolean;
+  hasBottomWedge?: boolean;
+  bgColor?: string;
+  color?: string;
+  px?: string;
+  pl?: string;
+  pr?: string;
+
+  py?: string;
+  pt?: string;
+  pb?: string;
+}
+
+const { 
+  hasTopWedge, 
+  hasBottomWedge, 
+  bgColor, 
+  color, 
+  px, pl, pr, 
+  py, pt, pb, 
+  className } = Astro.props;
+---
+
+<WrapperX 
+  bgColor={bgColor} 
+  color={color} 
+  className={className}
+  px={px}
+  pl={pl}
+  pr={pr}
+  >
+  {hasTopWedge ? <WedgeTopBotton fill={bgColor} hasTopWedge /> : null}
+  <WrapperY 
+    py={py} 
+    pt={pt} 
+    pb={pb}
+  >
+    <slot />
+  </WrapperY>
+  {hasBottomWedge ? <WedgeTopBotton fill={bgColor} hasBottomWedge /> : null}
+</WrapperX>

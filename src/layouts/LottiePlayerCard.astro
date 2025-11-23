@@ -1,0 +1,57 @@
+---
+import { marked } from "marked";
+
+import type { Section, SubSection, Item } from "../types/types";
+
+interface Props {
+  lottiePlayerCard: SubSection;
+  bgSvgFill?: string;
+}
+
+const { lottiePlayerCard, bgSvgFill } = Astro.props;
+---
+
+<>
+
+  <div
+    class="
+      laptop-card
+      relative
+      bg-white
+      p-4
+      mb-12
+      rounded-xl
+      shadow-lg
+      "
+    style={`border: 1px solid ${bgSvgFill}; --before-color: ${bgSvgFill};`}
+  >
+  <style>
+    div::before {
+      background-color: var(--before-color);
+    }
+  </style>
+  
+    {
+      lottiePlayerCard.title && (
+        <div class="flex items-center justify-start">
+          <div
+            class="text-lg font-semibold"
+            set:html={marked(lottiePlayerCard.title)}
+          />
+          {lottiePlayerCard.icon && (
+            <img class="w-5 ml-2" src={lottiePlayerCard.icon} alt={lottiePlayerCard.title} />
+          )}
+        </div>
+      )
+    }
+
+    {
+      lottiePlayerCard.text && (
+        <div
+          class="mb-2 break-words"
+          set:html={marked(lottiePlayerCard.text)}
+        />
+      )
+    }
+  </div>
+</>

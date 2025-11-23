@@ -1,0 +1,46 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import sea from "../../public/assets/common/404/boat-404-sea.svg?raw";
+import boat from "../../public/assets/common/404/boat-404.svg?raw";
+---
+
+
+<BaseLayout title="SVGA Page">
+  <div
+    class="relative
+    flex
+    flex-col
+    flex-1
+    justify-center
+    items-center
+    w-full
+    h-full
+    bg-custom-gradient-violet
+    text-base-bright
+    pt-navDouble"
+  >
+    <div class="text-3xl mb-8">404</div>
+    <!-- Cool 404 text -->
+    <div class="text-3xl uppercase mb-8">Page not found</div>
+
+    <div class="text-2xl">
+      <a href="/" class="block"
+        >The page you are trying to access does not exist.</a
+      >
+    </div>
+
+    {
+      boat ? (
+        <div class="relative w-full">
+          <div class="relative max-w-custom-narrow mx-auto z-10" set:html={boat} />
+
+          {sea ? (
+            <div class="absolute inset-x-0 bottom-0 z-0 w-full">
+              <div class="" set:html={sea} />
+            </div>
+          ) : null}
+        </div>
+      ) : null
+    }
+  </div>
+</BaseLayout>

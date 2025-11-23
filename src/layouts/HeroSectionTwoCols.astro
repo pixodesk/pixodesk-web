@@ -1,0 +1,66 @@
+---
+import "../styles/tailwind.css";
+import type { SectionHero } from "../types/types";
+
+interface Props {
+  content: SectionHero;
+  bgColor?: string;
+  color?: string;
+}
+
+import { marked } from "marked";
+import "./text-image-card.scss";
+
+const { content, bgColor, color } = Astro.props;
+// const htmlContent = marked(content);
+// console.log(content.images.front);
+---
+
+<div class={`mt-20 ${bgColor} `}>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-start">
+    <div class="col1 px-8">
+      <div class="text-center md:text-left" set:html={marked(content.title)} />
+      {
+        content.items && (
+          <div class="mb-4">
+            {content.items.map((item) => (
+              <div class="" set:html={marked(item.content ?? "")} />
+            ))}
+          </div>
+        )
+      }
+      <!-- <TextListShadow items={content.items || []} /> -->
+    </div>
+
+    <div class="col2 px-8">
+      {
+        content.video ? (
+          <video
+            style="width: 100%; max-width: 30rem;"
+            poster={content.images.front}
+            muted
+            autoplay
+            loop
+            playsinline
+            disablePictureInPicture
+          >
+            <source src={content.video} type="video/mp4" />
+          </video>
+        ) : (
+          <div class="relative">
+            <img
+              src={content.images.background}
+              alt={content.title}
+              class="absolute left-0 top-0 bottom-0 right-0 z-0"
+            />
+            <img
+              src={content.images.front}
+              alt={content.title}
+              class="relative w-full h-auto object-cover rounded-sm z-10"
+            />
+          </div>
+        )
+      }
+    </div>
+  </div>
+</div>

@@ -1,0 +1,118 @@
+// Variables
+
+// --- SCSS variables (build-time only) ---
+$textSm: 0.875rem;
+$lineHt: 1.5;
+// $pySection: 4rem;
+// $pyPoints: 2rem;
+
+// Padding Section
+
+    // Page
+
+
+
+
+    // Section
+$pxStandardSection: 10rem;
+$pyStandardSection: 1rem;
+
+$ptStandardSection: 2rem;
+$pbStandardSection: 2rem;
+$plStandardSection: 2rem;
+$prStandardSection: 2rem;
+
+
+
+    // Wedge Section
+$pxWedgeSection: 20rem;
+$pyWedgeSection: 12rem;
+
+$ptWedgeSection: 16rem;
+$pbWedgeSection: 10rem;
+$plWedgeSection: 2rem;
+$prWedgeSection: 2rem;
+
+
+
+
+
+// Main Black / White Colors
+$c-000: #000000;
+$c-111: #111111;
+$c-222: #222222;
+$c-fff: #ffffff;
+$c-eee: #eeeeee;
+$c-ddd: #dddddd;
+$c-beige-1: #fff2e2;
+$c-blue-pattern: #0f1a31;
+
+
+
+$c-points-red-1: #db3f48;
+$c-points-red-2: #e1464f;
+
+
+$aaa: blue;
+
+
+$indigo-lightest: #c8c6ff;
+
+
+// --- CSS Custom Properties (runtime) ---
+:root {
+
+// Colors main 
+  --c-dark-0: #{$c-000};
+  --c-dark-1: #{$c-111};
+  --c-dark-2: #{$c-222};
+
+  --c-bright-0: #{$c-fff};
+  --c-bright-1: #{$c-eee};
+  --c-bright-2: #{$c-ddd};
+
+  --c-beige-1: #{$c-beige-1};
+  --c-blue-pattern: #{$c-blue-pattern};
+
+  --c-points-1: #{$c-points-red-1};
+  --c-points-2: #{$c-points-red-2};
+
+  --c-indigo-lighter: #{$indigo-lightest};
+
+// Font size
+  --textMain: #{$textSm};
+  // --textH1: #{$textSm};
+  // --textH2: #{$textSm};
+  // --textH3: #{$textSm};
+  // --textSm: --textMd: --textLg: --lineHt: #{$lineHt};
+
+
+// Padding 
+ 
+
+  // Padding Page
+
+
+  // Padding Section
+
+  --pxStandardSection: #{$pxStandardSection};
+  --pyStandardSection: #{$pyStandardSection};
+
+  --ptStandardSection: #{$ptStandardSection};
+  --pbStandardSection: #{$pbStandardSection};
+  --plStandardSection: #{$plStandardSection};
+  --prStandardSection: #{$prStandardSection};
+
+  // Split Section
+
+  --pxWedgeSection: #{$pxWedgeSection};
+  --pyWedgeSection: #{$pyWedgeSection};
+
+  --ptWedgeSection: #{$ptWedgeSection};
+  --pbWedgeSection: #{$pbWedgeSection};
+  --plWedgeSection: #{$plWedgeSection};
+  --prWedgeSection: #{$prWedgeSection};
+
+
+}
+

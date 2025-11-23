@@ -1,0 +1,68 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import content from "../pages/pricing/pricing-text-content";
+import { marked } from "marked";
+import type { Page } from "../types/types";
+import ListLayout from "../layouts/ListLayout.astro";
+import PricingCard from "../layouts/PricingCard.astro";
+import LogoSvg from "../layouts/LogoSvg.astro";
+import Logo2D from "../layouts/Logo2D.astro";
+import LogoSvga from "../layouts/LogoSvga.astro";
+import Border from "../layouts/Border.astro";
+
+// console.log("----->>>>>>>");
+// console.log(content.pages.page_00.title);
+const page = content.pages.page_00;
+---
+
+<BaseLayout title="Pricing Page">
+  <div class="bg-custom-gradient-violet text-base-bright pt-navSingle">
+    <section class="pricing px-8 pt-8 w-full max-w-5xl mx-auto">
+      <!-- Title -->
+      {
+        page.title && (
+          <div
+            class="font-bold text-center mb-0"
+            set:html={marked(page.title)}
+          />
+        )
+      }
+      {
+        page.descriptions && (
+          <ul class="text-center mb-4">
+            {page.descriptions.map((description) => (
+              <li class="text-center mb-2" set:html={marked(description)} />
+            ))}
+          </ul>
+        )
+      }
+      {
+        Array.isArray(page.priceForApps) && (
+          <div
+            class="
+            grid grid-cols-1 md:grid-cols-3
+            gap-2
+            w-full 
+            mx-auto 
+            py-8 
+            px-4 
+            "
+          >
+            {Array.isArray(page.priceForApps) &&
+              page.priceForApps.map((pricing) => (
+                <div class="max-w-[19rem] mx-auto mb-8">
+                  <Border bgColor="bg-[#00000006]">
+                    <PricingCard pricingCardInfo={pricing}>
+                      {pricing.icon === "svg" && <LogoSvg />}
+                      {pricing.icon === "2d" && <Logo2D />}
+                      {pricing.icon === "svga" && <LogoSvga />}
+                    </PricingCard>
+                  </Border>
+                </div>
+              ))}
+          </div>
+        )
+      }
+    </section>
+  </div>
+</BaseLayout>

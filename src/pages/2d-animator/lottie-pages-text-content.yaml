@@ -1,0 +1,341 @@
+pages:
+
+  page_00: 
+    menu_item: Tutorials
+    title: "# Pixodesk 2D Animator Tutorials"
+
+  page_01:
+    menu_item: Features
+    title: "# Pixodesk 2D Animator Features"
+    subTitle: "##### Supported Lottie Animation File Features"
+
+    sections:
+
+      section_01:
+        title: "###### Check the list below to find out which Lottie features are supported in Pixodesk Animator."
+        subSections:
+          items:
+            - content: "<strong>Object Types:</strong> Ellipse, Rectangle, Polygon, Star, Shape/Path (Bezier), Image, Text, Group, Animation Block (Precomposition)"
+            - content: "<strong>Fill & Stroke Color:</strong> Flat Color, Radial Gradient, Linear Gradient"
+            - content: "<strong>Fill:</strong> Fill Rule"
+            - content: "<strong>Stroke:</strong> Width, Line Cap, Line Join, Miter Limit, Dashes"
+            - content: "<strong>Transforms:</strong> Position, Position (separated X/Y), Scale, Anchor Point, Rotation, Auto Orient, Skew, Opacity"
+            - content: "<strong>Easing/Interpolation:</strong> Linear Interpolation, Bezier Interpolation"
+            - content: "<strong>Trim Path:</strong> Individually, Simultaneously"
+            - content: "<strong>Clipping:</strong> Add, Subtract, Intersect"
+            - content: "<strong>Masks (Mattes):</strong> Alpha Mask (Matte), Alpha Inverted Mask (Matte)"
+            - content: "<strong>Filters (Effects):</strong> Blur, Shadow, Alpha Mask (Matte)"
+            - content: "<strong>Text:</strong> Custom Fonts, Glyphs, Text Along Path"
+            - content: "<strong>Repeater:</strong> Position, Scale, Anchor Point, Rotation, Skew, Opacity"
+            - content: "<strong>Misc:</strong> Time Stretch, Time Remap, Markers, Parent Refs"
+      
+      section_02:
+        title: "## Vector Drawing Features"
+        
+        subSections:
+          - title: "#### Tools"
+            items:
+              - content: "<b>Drawing:</b> Ellipse tool, Rectangle tool, Polygon tool, Star tool, Pen tool, Node tool"
+              - content: "<b>Transform tool:</b> Change position, anchor point, rotate, scale, skew, opacity"
+              - content: "<b>Gradient tool:</b> Change gradient control points"
+              - content: "<b>Repeater tool:</b> Shows repeater control points; has basic create repeater actions"
+              - content: "<b>Hand tool:</b> Allows to move the page; doesn't show object selection"
+            
+          - title: "#### Path Operations"
+            items:
+              - content: "Change nodes and their control points"
+              - content: "Boolean operations: Unite, Subtract, Intersect and Exclude"
+              - content: "Combine and break apart paths"
+              - content: "Convert a stroke into a path"
+              - content: "Convert simple shapes such as ellipse, rectangle, polygon, star into paths"
+              - content: "Convert text into paths"
+              - content: "Make shape symmetric around two selected adjacent points"
+              - content: "Replace corner with arc of given radius"
+              - content: "Align and distribute points"
+              - content: "Groups"
+
+          - title: "#### Object Tree"
+            items:
+              - content: "Group and ungroup"
+              - content: "Rearrange shapes and groups by drag and drop"
+              - content: "Search groups and shapes by title"
+              - content: "Z-Order mode. You can change the global order of objects without breaking out of their parent group. (Better UI for parent refs in Lottie)"
+              - content: "Put objects into an animation block to reuse them multiple times or to reduce complexity."
+
+          - title: "#### Appearance"
+            items:
+              - content: "Flat colors, linear and radial gradients"
+              - content: "Opacity"
+              - content: "Dashed stroke"
+              - content: "Trim path"
+
+          - title: "#### Text"
+            items:
+              - content: "Custom fonts"
+              - content: "Text along path"
+              - content: "Convert text into paths"
+
+
+          - title: "#### Snapping"
+            items:
+              - content: "Snap to grid"
+              - content: "Snap to the edges and centers of other shapes."
+              - content: "Snap angles"
+
+
+          - title: "#### Images"
+            items:
+              - content: "png, jpeg, gif images"
+              - content: "base64 url images"
+
+      section_03:
+        title: "## Animation Features"
+        
+        subSections:
+          - title: "#### Animated Properties"
+            items:
+              - content: "Animated position, rotation, scale, skew and opacity properties"
+              - content: "Motion along path with or without auto-rotation"
+              - content: "Animated stroke color, opacity and width properties"
+              - content: "Animated fill color and opacity properties"
+              - content: "Animated dashes. Each dash and dash offset can be animated separately."
+              - content: "Animated basic shape dimensions"
+              - content: "Animated path shape that lets you create morph animations."
+
+          - title: "#### Timeline"
+            items:
+              - content: "Compact UI - one animated property per row."
+              - content: "Auto-animation allows you to freeze the scene state at specific time points.<br />When you change object properties at another time point, auto-animation will automatically create keyframes for you."
+              - content: "Linear and Bezier easing timing functions"
+              - content: "Loop individual animated properties"
+              - content: "Time markers"
+
+          - title: "#### Easing Presets"
+            items:
+              - content: "Built-in easing functions"
+              - content: "Easing charts that also show the first derivative (velocity) and second derivative (acceleration) of the easing function, allowing for a better understanding of its nature."
+               
+      
+      section_04:
+        title: "## Export Features"
+        
+        subSections:
+          - title: "#### SVG with JavaScript Animations"
+            items:
+              - content: "Start the animation when it is clicked or when the pointer enters it"
+              - content: "Start the animation when it is scrolled into view"
+              - content: "Select the mouse cursor for the document"
+              - content: "Add custom JavaScript"
+
+          - title: "#### SVG with CSS Animations"
+            items:
+              - content: "SVG with CSS Animations"
+
+
+          - title: "#### Other formats"
+            items:
+              - content: "Animated GIFs"
+              - content: "Video WebM, MP4"
+              - content: "Static PNG, JPEG, WebP"
+
+  page_02:
+    menu_item: Releases
+    title: "# Pixodesk Animator - Release Notes"
+
+    parts:
+      - title: "#### Version 1.6 <span class='_date'>- May 2024</span>"
+        items:
+          - content: "Added Shape Builder tool"
+          - content: "Bug fixes"
+
+      - title: "#### Version 1.4 <span class='_date'>- December 2023</span>"
+        items:
+          - content: "Added timeline zoom buttons: zoom in, zoom out and zoom to animation range"
+          - content: "Added Shift hotkey to lock star and polygon rotation to 45 degrees when adding them"
+          - content: "Added side to side object distribution"
+          - content: "Added bring object to front or send it to back"
+          - content: "Bug fixes"
+
+      - title: "#### Version 1.3 <span class='_date'>- November 2023</span>"
+        items:
+          - content: "Added align and distribute bezier points (Node tools)"
+            image: http://127.0.0.1:4000/image/release-notes/node-tool--align.png
+          
+          - content: "Make shape symmetric around two selected points (Node tools)"
+            images: ''
+
+          - content: "Replace corners with arcs (Node tools)"
+            image: http://127.0.0.1:4000/image/release-notes/node-tool--misc.png
+
+          - content: "Bug fixes"
+
+      - title: "#### Version 1.2 <span class='_date'>- October 2023</span>"
+        items:
+          - content: "Added export to SVG file with JavaScript animation"
+          - content: "Added export to SVG file with CSS animation"
+          - content: "Added a free mode which allows to explore the app in restricted mode with limited save/export when exceeding limitations"
+          - content: "Bug fixes"
+
+      - title: "#### Version 1.1 <span class='_date'>- July 2023</span>"
+        items:
+          - content: "Added export to Video, Gif and static images"
+          - content: "Bug fixes"
+      
+      - title: "#### Version 1.0 <span class='_date'>- June 2023</span>"
+        items:
+          - content: "Initial release"
+  
+  page_03:
+
+    menu_item: "Download"
+    title: "# Get the ultimate animation app for only $4.99 per month or $29.99 per year"
+    # title: "# Get the Ultimate 2D Vector Animation Application."
+    # subTitle: "#### for making an animation for native devices and web with just <span class='uppercase'>one-off payment</span> for only <span class=''>$49.99</span> <br/> or switch to a flexible subscription - only $4.99/month or $29.99/year."
+
+    parts:
+      - items:
+
+        - content: "#### <span class='block mb-0'>Get the app for free with restricted features</span>"
+        - content: <span class='block mb-8'>You can save and export animations containing a maximum of <strong>3 shapes</strong>, with <strong>no images</strong>, and a frame range of up to <strong>30 frames</strong>. If these limits are exceeded then the save and export features become disabled, but you will still be able to create and play the animation within the app session to discover what the app can do.</span>
+
+
+
+        - content: All prices here are in US dollars.
+        - content: <span class='block mb-8'>Visit the Microsoft Store or Apple App Store to see the exact price for your region.</span>
+        - content: Pixodesk Animator is available on Windows and Mac.
+        - content: Frequent improvements, feature additions, bug fixes.
+        - content: New releases delivered through Microsoft Store and Apple App Store.
+        
+        paymentOptions:
+        # - title: "One-off payment options"
+        #   storeButtons:
+        #     - title: Microsoft Store
+        #       link: ""
+              
+        #       svg: ../assets/common/logos/windows.svg
+        #     - title: Mac App Store
+        #       link: ""
+        #       svg: ../assets/common/logos/apple.svg
+
+      
+        - title: "Subscription options"
+          storeButtons:
+            - title: Microsoft Store
+              link: "https://apps.microsoft.com/detail/9ppd94xqfpc9"
+              svg: ../assets/common/logos/windows.svg
+            - title: Mac App Store
+              link: "https://apps.apple.com/gb/app/pixodesk-animator/id1632981604"
+              svg: ../assets/common/logos/apple.svg
+
+  page_04:
+    menu_item: Lottie Animation
+    title: "# Lottie File Format in Pixodesk Animator"
+    
+    sections:
+
+      section_01:
+        
+        
+        subSections:
+          - text: |
+              Lottie is an open-source animation file format and runtime library developed by Airbnb.
+              The Lottie file format is a JSON-based animation file that describes motion graphics, which can include vector graphics, raster images, and text.
+              Lottie animations are designed to be lightweight and scalable, making them ideal for use in mobile apps, websites, and other digital platforms.
+              Lottie: https://airbnb.io/lottie/
+              Wikipedia about Lottie: https://en.wikipedia.org/wiki/Lottie_(file_format)
+          
+          - image: http://127.0.0.1:4000/image/lottie-page/airbnb-lottie-screenshot.png
+
+          - title: Vector-Based Graphics
+            icon: ../assets/lottie/pages/vector-curve.svg
+            text: Lottie animations are based on vector graphics, which means they can scale without losing quality. This makes them suitable for a variety of screen sizes and resolutions. 
+
+          - title: JSON Format
+            icon: ../assets/lottie/pages/code-json.svg
+            text: Lottie animations are defined in a JSON-based file format, making them lightweight and easily readable. The JSON file contains information about the animation, including vector shapes, keyframes, and other properties.
+
+          - title: Interactivity
+            icon: ../assets/lottie/pages/gesture-double-tap.svg
+            text: Lottie animations can be interactive, allowing developers to add user interactions and gestures to enhance the user experience.
+
+          - title: Small File Sizes
+            icon: ../assets/lottie/pages/arrow-collapse-vertical.svg
+            text: Lottie animations are typically smaller in file size compared to other animation formats, making them efficient for web and mobile applications where bandwidth and storage considerations are important.
+
+          - title: Cross-Platform Compatibility
+            icon: ../assets/lottie/pages/devices.svg
+            text: With Lottie, developers can create animations that work seamlessly across different platforms, reducing the need to create and maintain separate animations for each platform.
+
+          - title: Community Support
+            icon: ../assets/lottie/pages/account-group.svg
+            text: Lottie has gained popularity and has a vibrant community of designers and developers who contribute animations and provide support. This has led to a rich collection of pre-built animations that developers can use in their projects.
+
+          - title: High-Quality Animations
+            icon: ../assets/lottie/pages/animation-play.svg
+            text: Lottie supports high-quality animations with smooth transitions and precise control over timing and easing functions.
+
+          - title: Playback Control
+            icon: ../assets/lottie/pages/play-speed.svg
+            text: Developers can control various aspects of animation playback, including speed, loop behavior, and direction.
+
+          - title: Text Layers
+            icon: ../assets/lottie/pages/format-text-variant-outline.svg
+            text: Lottie animations can include text layers, providing the ability to animate and display dynamic text content within the animations.
+          
+          - title: Masking
+            icon: ../assets/lottie/pages/drama-masks.svg
+            text: Lottie supports masking techniques, allowing developers to create complex visual effects by revealing or hiding parts of the animation.
+          
+          - text: Overall, Lottie simplifies the process of adding high-quality animations to digital projects and has become a popular choice in the design and development community. It's important to note that the specific features and capabilities of Lottie animations can depend on the version of the Lottie library being used and the platform or framework in which it is implemented. Developers should refer to the documentation and resources specific to their chosen platform for detailed information on Lottie animation features.
+
+
+
+
+      section_02:
+        title: "## Lottie Players and Libraries"
+        description: |
+          The Lottie library includes runtime interpreters for various platforms, such as iOS, Android, Web, Windows, and React Native.
+          These interpreters enable developers to easily integrate Lottie animations into their applications and websites,
+          providing a smooth and consistent user experience across different devices and platforms.
+
+        subSections:
+          - title: For Web
+            text: |
+                To use Lottie in a web project, you typically include the Lottie Web library in your HTML file and use JavaScript to load and control the animations. The library is actively maintained, and developers can refer to the official documentation and GitHub repository for the latest information and updates.
+                Lottie Web: https://github.com/airbnb/lottie-web
+                React: https://github.com/LottieFiles/lottie-react
+                Vue: https://github.com/chenqingspring/vue-lottie
+            
+          
+          - title: For Windows
+            icon: ../assets/common/logos/windows.svg
+            text: |
+                There is a Lottie animation player library for Windows. The Lottie-Windows library allows developers to integrate Lottie animations into applications built for the Windows platform. It supports various Windows app frameworks, including UWP (Universal Windows Platform), WPF (Windows Presentation Foundation), and WinUI.
+                https://learn.microsoft.com/en-us/windows/communitytoolkit/animations/lottie; https://github.com/CommunityToolkit/Lottie-Windows;
+                React Native: https://github.com/lottie-react-native/lottie-react-native
+            
+          - title: For iOS, macOS
+            icon: ../assets/common/logos/apple.svg
+            text: |
+                For iOS development, there is an official Lottie library called "Lottie-iOS" that enables developers to integrate Lottie animations seamlessly into their iOS applications. Lottie-iOS is developed and maintained by Airbnb, the creators of the Lottie framework.
+                https://github.com/airbnb/lottie-ios
+                React Native: https://github.com/lottie-react-native/lottie-react-native
+            
+          - title: For Android
+            icon: ../assets/common/logos/android.svg
+            text: |
+                For Android development, there is an official Lottie library called "Lottie-Android" that allows developers to integrate Lottie animations into their Android applications. Lottie-Android is developed and maintained by Airbnb, the creators of the Lottie framework.
+                Android https://github.com/airbnb/lottie-android
+                React Native https://github.com/lottie-react-native/lottie-react-native
+
+      section_03:
+        title: "## Lottie community"
+        subSections:
+          - text: | 
+              **LottieFiles** (https://lottiefiles.com) - the best resource that gathers lots of information about Lottie resources. LottieFiles is an online platform where you can find, share, and even customize Lottie animations.
+              It provides a large collection of free and premium animations that you can download and use in your projects.
+          - text: "**IconScout** (https://iconscout.com): IconScout is a platform that provides a vast library of icons, illustrations, and design assets. It has a section dedicated specifically to Lottie animations."
+          
+
+
+

@@ -1,0 +1,167 @@
+pages:
+  page_01:
+    menu_item: Features
+    title: "# Pixodesk SVG Animator Features"
+
+    sections:
+
+      section_01:
+        title: "##### Check the list below to find out which SVG features are supported in Pixodesk SVG Animator."
+
+        subSections:
+          items:
+            - content: "<strong>Object Types:</strong> Ellipse, Rectangle, Polygon, Star, Shape/Path (Bezier), Image, Text, Group"
+            - content: "<strong>Fill & Stroke Color:</strong> Flat Color, Radial Gradient, Linear Gradient"
+            - content: "<strong>Fill:</strong> Fill Rule"
+            - content: "<strong>Stroke:</strong> Width, Line Cap, Line Join, Miter Limit, Dashes"
+            - content: "<strong>Transforms:</strong> Position, Position (separated X/Y), Scale, Anchor Point, Rotation, Auto Orient, Skew, Opacity"
+            - content: "<strong>Easing/Interpolation:</strong> Linear Interpolation, Bezier Interpolation"
+            - content: "<strong>Trim Path</strong>"
+            - content: "<strong>Masks (Mattes):</strong> Alpha Mask (Matte)"
+            - content: "<strong>Filters (Effects):</strong> Blur, Shadow"
+            - content: "<strong>Text:</strong> Custom Fonts, Glyphs, Text Along Path"
+            - content: "<strong>Repeater:</strong> Position, Scale, Anchor Point, Rotation, Skew, Opacity"
+            - content: "<strong>Misc:</strong> Markers, Parent Refs"
+      
+      section_02:
+        title: "## Vector Drawing Features"
+        
+        subSections:
+          - title: "#### Tools"
+            items:
+              - content: "<b>Drawing:</b> Ellipse tool, Rectangle tool, Polygon tool, Star tool, Pen tool, Node tool"
+              - content: "<b>Transform tool:</b> Change position, anchor point, rotate, scale, skew, opacity"
+              - content: "<b>Gradient tool:</b> Change gradient control points"
+              - content: "<b>Repeater tool:</b> Shows repeater control points and basic create repeater actions"
+              - content: "<b>Hand tool:</b> Allows moving the page; does not show object selection"
+            
+          - title: "#### Path Operations"
+            items:
+              - content: "Change nodes and their control points"
+              - content: "Boolean operations: Unite, Subtract, Intersect and Exclude"
+              - content: "Combine and break apart paths"
+              - content: "Convert a stroke into a path"
+              - content: "Convert simple shapes such as ellipse, rectangle, polygon, star into paths"
+              - content: "Convert text into paths"
+              - content: "Make shape symmetric around two selected adjacent points"
+              - content: "Replace corner with arc of given radius"
+              - content: "Align and distribute points"
+              - content: "Groups"
+
+          - title: "#### Object Tree"
+            items:
+              - content: "Group and ungroup"
+              - content: "Rearrange shapes and groups by drag and drop"
+              - content: "Search groups and shapes by title"
+              - content: "Put objects into an animation block to reuse them multiple times or to reduce complexity."
+
+          - title: "#### Appearance"
+            items:
+              - content: "Flat colors, linear and radial gradients"
+              - content: "Opacity"
+              - content: "Dashed stroke"
+              - content: "Trim path"
+
+          - title: "#### Text"
+            items:
+              - content: "Custom fonts"
+              - content: "Text along path"
+              - content: "Convert text into paths"
+
+
+          - title: "#### Snapping"
+            items:
+              - content: "Snap to grid"
+              - content: "Snap to the edges and centers of other shapes."
+              - content: "Snap angles"
+
+
+          - title: "#### Images"
+            items:
+              - content: "png, jpeg, gif images"
+              - content: "base64 url images"
+      
+      section_03:
+        title: "## Animation Features"
+        
+        subSections:
+          - title: "#### Animated Properties"
+            items:
+              - content: "Animated position, rotation, scale, skew and opacity properties"
+              - content: "Motion along path with or without auto-rotation"
+              - content: "Animated stroke color, opacity and width properties"
+              - content: "Animated fill color and opacity properties"
+              - content: "Animated dashes. Each dash and dash offset can be animated separately."
+              - content: "Animated basic shape dimensions"
+              - content: "Animated path shape that lets you create morph animations."
+
+          - title: "#### Timeline"
+            items:
+              - content: "Compact UI - one animated property per row."
+              - content: "Auto-animation allows you to freeze the scene state at specific time points.<br />When you change object properties at another time point, auto-animation will automatically create keyframes for you."
+              - content: "Linear and Bezier easing timing functions"
+              - content: "Loop individual animated properties"
+
+
+          - title: "#### Easing Presets"
+            items:
+              - content: "Built-in easing functions"
+              - content: "Easing charts that also show the first derivative (velocity) and second derivative (acceleration) of the easing function, allowing for a better understanding of its nature."
+                
+      
+      section_04:
+        title: "## Export Features"
+        
+        subSections:
+          - title: "#### SVG with JavaScript Animations"
+            items:
+              - content: "Start the animation when it is clicked or when the pointer enters it"
+              - content: "Start the animation when it is scrolled into view"
+              - content: "Select the mouse cursor for the document"
+              - content: "Add custom JavaScript"
+
+          - title: "#### SVG with CSS Animations"
+            items:
+              - content: "SVG with CSS Animations"
+
+          - title: "#### Other formats"
+            items:
+              - content: "Animated GIFs"
+              - content: "Video WebM, MP4"
+              - content: "Static SVG, PNG, JPEG, WebP"
+
+      
+  page_02:
+    menu_item: "Releases"
+    title: "# Pixodesk SVG Animator - Release Notes" 
+
+    parts:
+      - title: "#### Coming Soon</span>"
+      # - title: "#### Version 1.9 <span class='_date'>- October 2024</span>"
+      #   items:
+      #     - content: "Initial release"
+  
+  
+  page_03:
+
+    menu_item: "Download"
+    # title: "# Get the Ultimate SVG Animation Application"
+    # subTitle: "#### for creating animations for web and web-based apps with a one-off payment of only <span class=''>$49.99</span>."
+    
+    # parts:
+    #   - items: 
+    #       - content: "All prices here are in US dollars."
+    #       - content: "<span class='block mb-8'>Visit the Microsoft Store or Apple App Store to see the exact price for your region.</span>"
+    #       - content: "Pixodesk SVG Animator is available on Windows and Mac."
+    #       - content: "Frequent improvements, feature additions, bug fixes."
+    #       - content: "New releases delivered through Microsoft Store and Apple App Store."
+
+        # storeButtons:
+        #   - title: Microsoft Store
+        #     # link: ""
+        #     svg: "../assets/common/logos/windows.svg"
+        #   - title: Mac App Store
+        #     # link: ""
+        #     svg: "../assets/common/logos/apple.svg"
+
+ 

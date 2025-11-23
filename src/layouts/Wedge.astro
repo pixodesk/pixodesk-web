@@ -1,0 +1,24 @@
+---
+// Wedge.astro
+interface Props {
+  fill?: string;
+  wedgeY?: 'top' | 'bottom';
+}
+
+const { fill = '#222', wedgeY = 'bottom' } = Astro.props;
+const isTop = wedgeY === 'top';
+
+
+---
+
+
+<svg
+  class={`absolute left-0 z-20 w-full h-[12.5vh] ${isTop ? 'bottom-full translate-y-px' : 'top-full -translate-y-px'} `}
+ 
+  viewBox="0 0 110 110"
+  preserveAspectRatio="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path d={`${isTop ? 'M0,100 L110,0 L110,110 L0,110 z' : 'M0,0 L0,110 L110,10 L110,0 z'}`} fill={fill}></path>
+  <!-- <path d="M0,100 L110,0 L110,110 L0,110 z" fill={fill}></path> -->
+</svg>

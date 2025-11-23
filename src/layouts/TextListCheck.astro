@@ -1,0 +1,48 @@
+---
+import { marked } from "marked";
+
+import type { Item } from "../types/types";
+import check from "../../public/assets/common/icons/check-circle.svg?raw";
+
+interface Props {
+  items: Item[];
+  shadowColor?: string;
+  icon?: string;
+  iconColor?: string;
+  checkIcon?: boolean;
+}
+
+const {
+  items,
+  shadowColor = "0,0,0,0.5",
+  icon,
+  checkIcon = true,
+  iconColor = "sky-blue-light",
+} = Astro.props;
+---
+
+<div class="list">
+  <ul class="text-xs">
+    {
+      items?.map((item) => (
+        <li class="mb-6 w-full flex flex-row items-center">
+          {checkIcon ? (
+            <div
+              class={` w-[24px h-[24px] text-${iconColor} mr-2 `}
+            >
+              <div set:html={check} />
+            </div>
+          ) : null}
+          
+          <div>
+            {item.title && (
+              <div class="list-header" set:html={marked(item.title)} />
+            )}
+            {item.content && <div set:html={marked(item.content)} />}
+          </div>
+          
+        </li>
+      ))
+    }
+  </ul>
+</div>

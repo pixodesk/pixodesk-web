@@ -1,0 +1,133 @@
+sections:
+  section_00:
+    title: "# Create, Customize, and Export <span class='text-violet-lightest'>SVG Graphics</span><br/>Free and Easy"
+    items:
+    - content: "##### Draw, edit, and export your SVG graphics."
+    - content: "##### Create icons, logos, illustrations, responsive web graphics, and more."
+      # - content: "###### Create logos, icons, vector illustrations, and backgrounds."
+      # - content: "###### Vector graphics for webpages, web-based apps, portfolios, social media, and more."
+    images:
+      
+      front: "../assets/svg/hero/bird-origami.svg"
+    storeButtons:
+      - title: Microsoft Store
+        link: "[Links](https://apps.microsoft.com/detail/)"
+        svg: "../assets/common/logos/windows.svg"
+      
+      - title: Mac App Store
+        link: "[Links](https://apps.apple.com/us/app/)"
+        svg: "../assets/common/logos/apple.svg"
+
+  section_001:
+    title: "## Try the app features now"
+    items: 
+      - content: "###### In the browser demo (restricted mode), to create and modify SVG."
+      - content: "###### Export is available in the desktop app."
+
+  section_01:
+    title: "## Pixodesk SVG Editor Makes Vector Design Easy"
+    item_01:
+      icon:
+      title: Works Everywhere
+      content: Work on your projects on Windows or macOS - same files, same features.
+      
+
+    item_02:
+      icon:
+      title: Ultra-Small File Size
+      content: SVG files are ultra-lightweight, helping your application run efficiently and smoothly.
+
+    item_03:
+      icon:
+      title: All Essential Tools
+      content: Includes Shape Builder, Repeater (Clone) Tool, Spray, Stars and Polygons, Bezier, and many other powerful features.
+    
+    item_04:
+      icon:
+      title: All in One App
+      content: Create, modify, add easing, and export - all in one app. 
+    
+    item_05:
+      icon:
+      title: SVG File Format
+      content: Your SVG files include only essential tags and styles, giving you full control over your graphics.
+
+    item_06:
+      icon:
+      title: Different Export Options
+      content: Save as SVG or export to GIF, PNG, or JPEG file formats.
+
+  section_02: 
+    title: "## Shape Builder Tool: Build, Merge, Create."
+    subTitle: Simplify complex design tasks and bring your ideas to life.
+    items:
+      - content: Shape, combine, and modify with ease.
+      - content: Ideal for icons, logos, and illustrations.
+      - content: Can be used in various design contexts.
+      - content: A handy tool for all your creative projects.
+      
+  section_03: 
+    title: "## Color Control Made Easy"
+    subTitle: Change one shared color and see it update everywhere - perfect for testing themes and creating quick variations.
+    items:
+      - title: Change colors in many elements at the same time.
+      - title: Keep your design consistent by updating shared colors.
+
+      - title: Try out new looks in seconds.
+      - title: Use a single color adjustment to create multiple design variations.
+
+  section_04: 
+    title: "## Gradient and Opacity Tool"
+    subTitle: Create depth, shading, and layered effects with adjustable color blending and precise opacity settings.
+    items:
+      - title: Give your shapes depth and dimension.
+      - title: Create natural light and shadow with smooth gradients.
+      - title: Use opacity to control subtle or strong visual effects.
+      - title: Ideal for creating layered and complex compositions.
+      
+
+  section_05: 
+    title: "## Vector Text"
+    subTitle: Import different fonts, style your text, turn it into shapes, or place it along any curve or shape.
+    items:
+      - title: "<strong>Custom Fonts</strong>: Add your own TTF fonts for full brand consistency."
+      - title: "<strong>Text Transformations</strong>: Rotate, flip, skew, or add other transform options."
+      - title: "<strong>Text on Path</strong>: Attach text to curves, lines, waves, or shapes."
+      - title: "<strong>Supports Any Shape</strong>: Works with open paths and closed geometric forms."
+        
+
+
+  section_06: 
+    title: "## Pattern, Markers & Spray: Add Detail to Your Designs"
+    subTitle: Quickly add repeating elements and decorative effects with patterns, markers, and spray tools.
+    items:
+    - title: Add depth to your design with Patterns.
+    - title: Create your own vector patterns or adjust the colors, sizes, and shapes of pre-defined ones.
+
+    - title: Transform any shape into a Marker.
+    - title: Add multiple copies with a single click to quickly fill your artwork with details.
+
+    - title: Create eye-catching effects with the Spray tool.
+    - title: Generate vector copies with adjustable options - perfect for bubbles, stars, snowflakes, and unique backgrounds.
+
+  section_07: 
+    title: "## Clone, Repeat, and Arrange: Perfect Symmetry Every Time"
+    subTitle: Quickly duplicate, arrange, and customize elements to create complex patterns and symmetrical designs using the Repeater / Clone tool.
+    items:
+      - title: Quickly duplicate and arrange elements in a pattern. 
+      - title: Create symmetrical and evenly spaced vector designs.
+      - title: Achieve in seconds what would be challenging to do manually.
+      - title: Customize the spacing, rotation, and arrangement of clones.
+
+  section_08: 
+    title: "## Only Your SVG Tags in Your SVG File"
+    subTitle: "### Neat, compact and efficient"
+    subSections:
+      - header: How your SVG looks </br>in the Pixodesk SVG Editor
+        image: http://127.0.0.1:4000/image/svgEditApp-text-0.png
+        footer: ""
+        
+      - header: How your SVG file's code looks </br>in code editor
+        image: http://127.0.0.1:4000/image/svgEditApp-text-0.png
+        footer: Small file size of the SVG.
+    

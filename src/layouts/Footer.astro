@@ -1,0 +1,116 @@
+---
+interface SocialLink {
+  href: string;
+  src: string;
+  alt: string;
+}
+
+import youtube from "../../public/assets/common/footer/youtube.svg?raw";
+import facebook from "../../public/assets/common/footer/facebook.svg?raw";
+import x from "../../public/assets/common/footer/x.svg?raw";
+import instagram from "../../public/assets/common/footer/instagram.svg?raw";
+import pinterest from "../../public/assets/common/footer/pinterest.svg?raw";
+
+
+
+const fMb = 4;
+const fFontSize = "text-xs";
+---
+
+<footer
+  class="relative pt-20 bg-black text-base-bright w-full text-center"
+>
+  <!-- <Wedge fill="#eee" wedgeY="top" /> -->
+  <div
+    class={` 
+  flex 
+  justify-center 
+  items-center 
+  space-x-4 
+  mb-${fMb}
+  text-gray-100
+  `}
+  >
+    <a
+      href="https://www.youtube.com/@pixodesk"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="transition-transform
+      transform
+      hover:scale-110
+      hover:brightness-125"
+    >
+      <div class="" set:html={youtube} />
+    </a>
+
+    <a
+      href="https://www.facebook.com/pixodesk"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="transition-transform
+      transform
+      hover:scale-110
+      hover:brightness-125"
+    >
+      <div class="" set:html={facebook} />
+    </a>
+
+    <a
+      href="https://x.com/pixodesk"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="transition-transform
+      transform
+      hover:scale-110
+      hover:brightness-125"
+    >
+      <div class="" set:html={x} />
+    </a>
+
+    <a
+      href="https://www.instagram.com/pixodesk_animator/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="transition-transform
+      transform
+      hover:scale-110
+      hover:brightness-125"
+    >
+      <div class="" set:html={instagram} />
+    </a>
+
+    <a
+      href="https://www.pinterest.co.uk/pixodesk/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="transition-transform
+      transform
+      hover:scale-110
+      hover:brightness-125"
+    >
+      <div class="" set:html={pinterest} />
+    </a>
+  </div>
+  
+  <div class="relative inline-block text-center px-16">
+    <div class={`relative mb-${fMb} ${fFontSize}`}>&copy; Pixodesk LIMITED</div>
+
+    <div class={`relative mb-${fMb} ${fFontSize}`}>
+      79 College Road, London, HA1 1BD, United Kingdom
+    </div>
+    <div class={`mb-${fMb} ${fFontSize}`}>support@pixodesk.com</div>
+  </div>
+
+  <div
+    class={`policy relative flex justify-center items-center py-2 bg-black text-white  ${fFontSize}`}
+  >
+    <div class={`${fFontSize}`}>
+      <a href="/eula">Terms of Use</a>
+    </div>
+    <div class="px-2">|</div>
+    <div class={`${fFontSize}`}>
+      <a href="/privacy-policy">Privacy Policy</a
+      >
+    </div>
+  </div>
+</footer>

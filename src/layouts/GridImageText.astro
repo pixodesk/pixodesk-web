@@ -1,0 +1,46 @@
+---
+
+import type { Item } from "../types/types";
+import { marked } from "marked";
+
+import TextListCheck from "./TextListCheck.astro";
+
+interface Props {
+  items?: Item[];
+
+  imageClass: string;
+  textClass: string;
+  
+  
+  shadowColor?: string;
+  iconColor?: string;
+  checkIcon: boolean;
+}
+
+const {
+  items,
+
+  imageClass,
+  textClass,
+
+  shadowColor,
+  iconColor,
+  checkIcon,
+} = Astro.props;
+---
+
+ <div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+    
+    <div class={`${imageClass}`}>
+      <slot />
+    </div>
+
+    <div class={`${textClass}`}>
+      <TextListCheck
+        iconColor={iconColor}
+        items={items || []}
+        checkIcon={checkIcon}
+        shadowColor={shadowColor}
+      />
+    </div>
+  </div>

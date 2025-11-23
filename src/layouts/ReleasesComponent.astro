@@ -1,0 +1,44 @@
+---
+import { marked } from "marked";
+
+import type { Page, Part, Item } from "../types/types";
+
+interface Props {
+  page: Page;
+}
+
+const { page }: { page: Page } = Astro.props;
+---
+
+<div class="releases">
+  <!-- Title -->
+  {page.title && <div class="text-center" set:html={marked(page.title)} />}
+
+  <!-- Page -->
+  {
+    page.parts &&
+      Object.values(page.parts).map((part: Part) => (
+        <div class="mb-12">
+          {part.title && <div class="" set:html={marked(part.title)} />}
+
+          {/* <!-- If section has direct subSections --> */}
+          {part.items && (
+            <ul class="list-disc list-inside">
+              {part.items.map((item: Item) => (
+                <li>
+                  <span class="align-top inline-block">
+                    <div set:html={item.content} class="inline" />
+                  </span>
+                  {item.image && (
+                    <div class="mt-2 ml-4">
+                      <img src={item.image} alt="" class=" h-auto" />
+                    </div>
+                  )}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      ))
+  }
+</div>

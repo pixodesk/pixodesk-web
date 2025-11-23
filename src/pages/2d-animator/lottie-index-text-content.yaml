@@ -1,0 +1,167 @@
+sections:
+  section_00:
+    title: "# Design, Animate, and Export <span class='text-violet-lightest'>Lottie Graphics</span><br/>for Every Device - Made Easy"
+    # title: "# Create, Customize, Export: <br/><span class='text-violet-lightest'>Lottie and SVG</span> Animation Made Simple!"
+    items:
+      - content: "##### Build smooth, lightweight Lottie (JSON) animations - including logos, icons, backgrounds, and more."
+      - content: "##### Export them in multiple formats for mobile devices, tablets, desktops, and other native platforms."
+
+      # - content: "###### Animate logos, vector illustrations, icons, and backgrounds."
+      # - content: "###### Animated vector graphics for webpages, web-based apps, portfolios, social media, and more."
+    # images:
+    #   background: "../assets/lottie/hero/background.svg"
+    #   front: "../assets/lottie/hero/front.svg"
+    svg: 
+      src: "../assets/lottie/hero/girl-on-bike.svg"
+      alt: "girl on bike svg"
+    storeButtons:
+      - title: Microsoft Store
+        link: "[Links](https://apps.microsoft.com/detail/9PPD94XQFPC9)"
+        svg: "../assets/common/logos/windows.svg"
+        
+      - title: Mac App Store
+        link: "[Links](https://apps.apple.com/us/app/pixodesk-animator/id1632981604)"
+        svg: "../assets/common/logos/apple.svg"
+  
+  
+  section_001:
+    title: "## Try the app features now"
+    items: 
+      - content: "###### In the browser demo (restricted mode), to create and modify SVGs."
+      - content: "###### Export is available in the desktop app."
+     
+  section_01:
+    title: "## Pixodesk 2D Animator Makes Animation for Native Devices Simple"
+    item_01:
+      icon:
+      title: Works Everywhere
+      content: Available for macOS and Windows - install and update from the official stores.
+
+    item_02:
+      icon:
+      title: Ultra-Small File Size
+      content: SVG and Lottie (JSON) animations have ultra-lightweight file sizes, helping your application run efficiently and smoothly.
+
+    item_03:
+      icon:
+      title: All Essential Tools
+      content: Includes Shape Builder, Repeater (Clone) Tool, Spray, Stars and Polygons, Bezier, and many other powerful features.
+    
+    item_04:
+      icon:
+      title: All in One App
+      content: Create, modify, animate, add easing, and export - all in one app. 
+    
+    item_05:
+      icon:
+      title: Lottie File Formats
+      content: Create and save lightweight Lottie (JSON) animations - compatible with web, iOS, and Android.
+    
+    item_06:
+      icon:
+      title: Different Export Options
+      content: Export to dynamic SVG, Lottie, JSON, GIF, MP4, WebM, or static SVG, PNG, JPEG at any chosen time point.
+
+  
+  section_02:
+    title: "## Explore <span class='no-wrap'>Pixodesk Animator</span> Features"
+    subTitle: Create artwork, add motion, and export in lightweight formats optimized for performance.<br/> Your all-in-one tool for drawing, animating, and exporting modern vector animations.
+
+    image: ../assets/lottie/sections/yoga.svg
+    video: ''
+    items: 
+      - content: Pixodesk Animator makes it easy to create animated content by putting together an excellent vector editor and animator. It also gives you lots of ways to export your work.
+      - content: The app is based on the popular <span class='text-violet-lightest'>Lottie</span> file format, which has excellent support when it comes to libraries and tools. These libraries make it easier for developers to integrate and play Lottie animations seamlessly in their applications.
+      - content: There is also a vast and active Lottie artwork community that you can tap into when crafting your own artwork.
+    
+  section_03:  
+    subSections:
+      - title: "### Create"
+        image: ../assets/lottie/sections/features-2d-create.svg
+        # video: 
+        items: 
+          - content: Create vector drawings, import vector or raster images, and use custom TTF fonts.
+          - content: |
+              Don't feel like starting from scratch? No worries! 
+              You can use and change animations made by others. 
+              Check out cool animations from the Lottie community, such as those on 
+              <a href='https://lottiefiles.com' target='_blank'>LottieFiles</a> and <a href='https://iconscout.com/l/lottie-animations' target='_blank'>IconScout</a>.
+          - content: If you want to make something really cool and complicated, you can! Use animation blocks to put together detailed animated scenes. It's like building with easy-to-use blocks.
+
+      - title: "### Animate"
+        image: ../assets/lottie/sections/features-2d-animate.svg
+        # video: 
+        items: 
+          - content: Make keyframe-based animations the traditional way by using the <strong>Watch</strong> and <strong>Diamond</strong> buttons. Create animation loops, blocks, and time-remaps.
+          - content: |
+              Animating properties is a breeze with the <strong>auto-animate</strong> feature.
+              Fix the object's state on the canvas at one or more time points by using the Pin button. 
+              Then, move the time control to a different point, make changes, and keyframes will be created automatically.
+          - content: | 
+              Making animations look natural is super easy with pre-defined easing functions. 
+              You can choose them from a dropdown menu or customize the easing curve by editing it. 
+              Easing functions also come with charts for velocity and acceleration, helping you understand how the change works over time.
+
+      - title: "### Export"
+        image: ../assets/lottie/sections/features-2d-export.svg
+        # video: 
+        items: 
+          - content: |
+              Export into a small animated SVG file for the web using either JS or CSS animation types. 
+              After that, you can easily put this SVG directly into your webpage, 
+              which will look good on screens of different resolutions.
+          - content: "Control how the animation starts and ends on your webpage: whether it's triggered by a click, scroll, or mouse movements."
+          - content: |
+              When building native apps for Windows, iOS, Android, or React Native, 
+              you can use your Lottie JSON file in the app along with the matching Lottie player libraries. 
+              Give your app a cool look with animated splash screens, loaders, and icons.
+          - content: Export your animation as a video or GIF, or save a snapshot at a specific time as a PNG, JPEG, WEBP, or SVG image.
+  
+  section_04: 
+    title: "## Auto-Animate: Set the States - We Animate the Rest"
+    subTitle: Create smooth animations automatically by simply changing your object’s state over time.
+    image: ./assets/lottie/sections/auto-animate.svg
+    # video: 
+    items: 
+      - content: Make animation easier with the auto-animate feature.
+      - content: Pin the object's state on the timeline.
+      - content: Move the time control and make adjustments.
+      - content: The app generates keyframes for you automatically.
+      
+
+  section_05: 
+    title: "## Easing: Control Speed, Flow, and Motion"
+    subTitle: Use predefined easing functions, customize curves, and visualize motion with built-in velocity and acceleration charts.
+    items: 
+      - content: Use predefined easing functions to make animations look natural.
+      - content: Select easing functions from a dropdown menu or customize the curve manually.
+      - content: Visualize motion with built-in velocity and acceleration charts.
+      - content: Keyframe segments are shown as mini velocity charts.
+      - content: Gain insights into easing dynamics and how changes occur over time.
+  
+  section_06: 
+    title: "## Create Animated Icons"
+    subTitle: "From static to dynamic: make your icons come alive."
+    items:
+      - content: Import an icon or create one from scratch.
+      - content: Add animations like Trim Path, Dash Array, Rotation, Scale, Skew, and more. 
+      - content: Apply effects such as fading, flipping, bouncing, or moving the stroke.
+      - content: Use grid and snap modes for precise drawing.
+      - content: Export and use your animated icon on websites, mobile, or desktop apps.
+
+  section_07: 
+    title: "## Create Animated <span class='no-wrap'>Splash Screens</span>"
+    subTitle: Engage users from the very first moment with dynamic splash screen animations.
+    items:
+      - content: Create animated logos or app titles for your app's launch screen.
+      - content: Make a strong first impression during app startup.
+      - content: Export your splash screen for the web, mobile, and desktop in Lottie (JSON) or video formats.
+      - content: Ensure your splash screen looks great on all screen sizes and resolutions.
+
+  section_08: 
+    title: "## Make It Once - Works Everywhere"
+    subTitle: Pixodesk Animator is your all-in-one animation tool.<br/> Perfect for React Native, iOS, Android, Windows, and the web.
+    image: http://127.0.0.1:4000/image/devices.png
+    video: http://127.0.0.1:4000/image/devices.mp4
+
+

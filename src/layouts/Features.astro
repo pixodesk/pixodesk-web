@@ -1,0 +1,52 @@
+---
+import TextListCheck from "./TextListCheck.astro";
+import TextList from "./TextList.astro";
+import type { Item } from "../types/types";
+
+interface Props {
+  title: string;
+  items?: Item[];
+  bgImage?: boolean;
+}
+
+import { marked } from "marked";
+import "./text-image-card.scss";
+import BgForImage from './BgForImage.astro';
+
+const { title, items, bgImage } = Astro.props;
+---
+
+<div>
+  <div class="mb-8">
+    {bgImage ? <BgForImage><slot /></BgForImage> : <slot />}
+    
+  </div>
+  {
+    title && (
+      <div class="_header text-left font-bold" set:html={marked(title)} />
+    )
+  }
+  
+  <!-- <div>
+          {subSection.video ? (
+            <video
+              style="width: 100%; max-width: 30rem;"
+              poster={subSection.image}
+              muted
+              autoplay
+              loop
+              playsinline
+              disablePictureInPicture
+            >
+              <source src={subSection.video} type="video/mp4" />
+            </video>
+          ) : (
+            <img
+              src={subSection.image}
+              alt={subSection.title}
+              class="w-full h-auto object-cover rounded-sm"
+            />
+          )}
+        </div> -->
+  <TextList items={items || []} />
+</div>

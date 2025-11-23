@@ -1,0 +1,74 @@
+---
+import Border from "./Border.astro";
+import SectionStandard from "./SectionStandard.astro";
+import SectionWedge from "./SectionWedge.astro";
+
+interface SectionProps {
+  className?: string;
+  pyWedgeSection?: boolean;
+  hasTopWedge?: boolean;
+  hasBottomWedge?: boolean;
+  maxWidth?: string;
+  minHeight?: string;
+  standard?: boolean;
+  color?: string;
+  page?: boolean;
+  bgColor?: string;
+  lastOfType?: boolean;
+  firstOfType?: boolean;
+  border?: boolean;
+}
+
+const {
+  className = "",
+  bgColor,
+  color,
+  maxWidth,
+  minHeight,
+  standard,
+  page,
+  lastOfType,
+  firstOfType,
+  border,
+} = Astro.props;
+---
+
+<>
+  <div
+    class={`
+      relative w-full ${className || ""} ${bgColor || ""}
+    `}
+  >
+    <div
+      class={`
+      relative
+      ${maxWidth && maxWidth !== "undefined" ? `${maxWidth}` : "max-w-custom-standard"}
+      ${minHeight && minHeight !== "undefined" ? `${minHeight}` : null}
+      mx-auto
+      ${color || ""}
+      ${
+        page 
+          ? `py-pyPage`
+          : lastOfType
+            ? 'pb-pySection pt-pyLongSectionTop'
+            : standard
+              ? `py-pySection`
+              : firstOfType 
+                ? `pt-pySection`
+                : `pt-pyLongSectionTop`
+      }
+      px-pxPage
+      `}
+    >
+      {
+        border ? (
+          <Border>
+            <slot />
+          </Border>
+        ) : (
+          <slot />
+        )
+      }
+    </div>
+  </div>
+</>

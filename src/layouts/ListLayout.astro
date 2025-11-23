@@ -1,0 +1,19 @@
+---
+
+import { marked } from "marked";
+
+
+interface Props {
+    title: string;
+    items: string[];
+}
+
+const { title, items } = Astro.props;
+---
+
+<div class="list">
+    <h1 set:html={marked(title)}/>
+    <ul class="list-disc pl-5 space-y-2">
+        {items.map((item) => <li><div set:html={marked(item)}></div></li>)}
+    </ul>
+</div>

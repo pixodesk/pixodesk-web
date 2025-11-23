@@ -1,0 +1,117 @@
+title: "Welcome to Pixodesk Website"
+
+sections:
+  section_00:
+    title: "# Create, Animate and Export:<br/><span class='text-violet-lightest'>SVG and Lottie Design</span> Made Simple!"
+    items:
+      - content: "##### Vector graphic design for websites, web apps, and native apps."
+      - content: "##### Create logos, icons, vector illustrations, portfolios, backgrounds, and more."
+    
+  section_01:
+    title: "## Bespoke High-Performance Applications for Your Project!"
+    items: 
+      - content: "###### Try out our applications online on their own webpages."
+
+  section_02:  
+    title: SVG Editor
+    icon: true
+    content: Create scalable vector graphics for the web, social media, and web-based apps.
+    button: 
+      title: Read More
+      link: "./svg-editor"
+
+  section_03:
+    title: 2D Animator
+    icon: true
+    content: Create Lottie animations for the web and native devices.
+    button: 
+      title: Read More
+      link:  "./2d-animator"
+ 
+  section_04:
+    title: SVG Animator
+    icon: true
+    content: Create, animate, and export SVG for the web, social media, and web-based apps.
+    button: 
+      title: Read More
+      link:  "./svg-animator"
+
+  section_041:
+    # title: "## Pixodesk's desktop applications for every platform"
+    title: "## One Toolbox. Every Platform."
+    subTitle: Professional creative desktop applications that work across platforms. <br/>Trusted distribution and continuous updates. <br/>Your designs export to any format, platform, or project.
+    items: 
+      # - title: Create anywhere
+      #   content: Available on Windows and macOS so your workflow stays smooth across devices.
+      - title: Official distribution
+        icon: license
+        content: Download applications securely from the Microsoft Store and the Apple App Store.
+      - title: Always up to date
+        icon: update
+        content: Receive the latest features and improvements through official store updates.
+      - title: All Major File Formats 
+        icon: language
+        content: Export vector and motion graphics in all major, globally supported file formats.
+
+  section_05:
+    title: "### Pixodesk Makes Vector Design and Animation Simple"
+    item_01:
+      icon:
+      title: Works on Windows and macOS
+      content: Desktop apps are available on macOS and Windows through official app stores, with secure installs and automatic updates.
+      
+      
+    item_02:
+      icon:
+      title: Ultra-Small File Sizes
+      content: SVG and Lottie animations have ultra-lightweight file sizes, helping your application run efficiently and smoothly.
+
+    item_03:
+      icon:
+      title: All Essential Tools in One App
+      content: Includes Shape Builder, Repeater (Clone) Tool, Spray, Stars and Polygons, Bezier, and many more.
+    
+    item_04:
+      icon:
+      title: Different Export Options
+      content: Save your work as SVG or JSON files, or export to GIF, PNG, JPEG, WebM, or MP4 formats.
+
+
+  section_06: 
+    title: "## Shape Builder Tool: Build Shapes. Build Ideas."
+    subTitle: Create sophisticated designs from simple shapes with the Shape Builder tool - essential for any vector project.
+    svg: 
+      src: "../assets/index/sections/px-shape-builder.svg"
+      alt: "Made with Shape Builder tool"
+    # image: http://127.0.0.1:4000/image/svgEditApp-shapeBuilder-bird-4.png
+    items:
+      - content: Combine, subtract, and manipulate shapes intuitively.
+      - content: Create complex designs from simple shapes.
+      - content: Easily achieve designs that would be difficult without the Shape Builder.
+      - content: Great for logos, illustrations, and more.
+      - content: An essential tool for every design project.
+   
+  section_07: 
+    # title: "## Global Color Control: One Click, Endless Possibilities"
+    title: "## Edit Colors: One Change, Whole Design Transformed"
+    subTitle: Apply changes to shared colors across all elements with one click, instantly test new themes, and explore multiple visual variations.
+    svg: 
+      src: "../assets/index/sections/px-edit-colors.svg"
+      # alt: ""
+    items:
+      - content: Change colors across multiple elements with just one click.
+      - content: Experiment with color themes across elements that share the same color for consistent design.
+      - content: Create different visual variations.
+      - content: Generate multiple design variations by adjusting a single shared color across shapes and layers.
+
+
+  section_08: 
+    title: "## Gradient and Opacity Tool"
+    subTitle: Use gradients and opacity to create smooth color transitions, realistic lighting, and layered visual effects.
+    items:
+      - title: Add depth and dimension to vector shapes.
+      - title: Blend colors smoothly to create the illusion of light and shadow.
+      - title: Add realism to your vector art.
+      - title: Control shape transparency to achieve subtle or dramatic effects.
+      - title: Perfect for clean, balanced, and complex designs.
+      

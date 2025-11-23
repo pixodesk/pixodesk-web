@@ -1,0 +1,78 @@
+---
+import TextListCheck from "./TextListCheck.astro";
+import GridImageText from "./GridImageText.astro";
+import type { Item, SvgSource } from "../types/types";
+import { marked } from "marked";
+import Border from "./Border.astro";
+import TextListCheckCenter from './TextListCheckCenter.astro';
+
+interface Props {
+  title?: string;
+  subTitle?: string;
+  items?: Item[];
+
+  imageClass: string;
+  textClass: string;
+
+  shadowColor?: string;
+  maxWidth?: string;
+  iconColor?: string;
+  svg?: SvgSource;
+
+  checkIcon?: boolean;
+  border?: boolean;
+}
+
+const {
+  title,
+  subTitle,
+  items,
+
+  imageClass,
+  textClass,
+
+  shadowColor,
+  maxWidth,
+  iconColor,
+
+  checkIcon,
+  border,
+} = Astro.props;
+---
+
+<div class={`${maxWidth ? `max-w-${maxWidth}` : ""} mx-auto `}>
+  <div class="title-field max-w-custom-standard mx-auto mb-titleField">
+    <div class="_title text-center" set:html={marked(title ?? "")} />
+    <div class="_subTitle text-center" set:html={marked(subTitle ?? "")} />
+  </div>
+
+  {
+    border ? (
+      <Border>
+        <div class="grid grid-cols-1 md:grid-cols-1 gap-20 items-center">
+          <div class={`${imageClass}`}>
+            <slot />
+          </div>
+
+          <div class={`${textClass}`}>
+            <TextListCheckCenter
+              items={items || []}
+            />
+          </div>
+        </div>
+      </Border>
+    ) : (
+      <div class="grid grid-cols-1 md:grid-cols-1 gap-20 items-center">
+        <div class={`${imageClass}`}>
+          <slot />
+        </div>
+
+        <div class={`${textClass}`}>
+          <TextListCheckCenter
+            items={items || []}
+          />
+        </div>
+      </div>
+    )
+  }
+</div>

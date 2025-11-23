@@ -1,0 +1,50 @@
+---
+import { marked } from "marked";
+
+import type { Item } from "../types/types";
+import check from "../../public/assets/common/icons/check-circle.svg?raw";
+import LicenseIcon from "../components/svg/LicenseIcon.astro";
+import UpdateIcon from "../components/svg/UpdateIcon.astro";
+import LanguageIcon from "../components/svg/LanguageIcon.astro";
+
+interface Props {
+  items: Item[];
+  shadowColor?: string;
+  icon?: string;
+  iconColor?: string;
+  checkIcon?: boolean;
+}
+
+const { items } = Astro.props;
+---
+
+<div class="list">
+  <div class="text-xs grid grid-cols-1 md:grid-cols-3 gap-6">
+    {
+      items?.map((item) => (
+        <div class="mb-6 w-full flex flex-col items-center justify-start h-full ">
+          <div class="flex flex-col items-center justify-center">
+            <div class="mb-6">
+              {item.icon === "license" && <LicenseIcon />}
+              {item.icon === "update" && <UpdateIcon />}
+              {item.icon === "language" && <LanguageIcon />}
+            </div>
+
+            {item.title && (
+              <div
+                class="list-title text-2xl mb-6 text-center"
+                set:html={marked.parseInline(item.title ?? "")}
+              />
+            )}
+          </div>
+          {item.content && (
+            <div
+                class="text-center mb-10"
+                set:html={marked.parseInline(item.content ?? "")}
+              />
+          )}
+        </div>
+      ))
+    }
+  </div>
+</div>

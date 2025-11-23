@@ -1,0 +1,73 @@
+---
+import { marked } from "marked";
+
+import type { Page, Section, SubSection, Item } from "../types/types";
+
+interface Props {
+  page: Page;
+  color?: string;
+}
+
+const { page, color } = Astro.props;
+---
+
+<div class="mx-auto features ">
+  <!-- Title -->
+  {page.title && <div class="text-center" set:html={marked(page.title)} />}
+
+  <!-- Subtitle -->
+  {
+    page.subTitle && (
+      <div class="" set:html={marked(page.subTitle)} />
+    )
+  }
+
+  <!-- Description -->
+  {
+    page.description && (
+      <div class="mb-12">
+        {marked(page.description)}
+      </div>
+    )
+  }
+
+  <!-- Sections -->
+  {
+    page.sections &&
+      Object.values(page.sections).map((section: Section) => (
+        <div class="mb-12">
+          {section.title && (
+            <div class="mb-4" set:html={marked(section.title)} />
+          )}
+
+          {Array.isArray(section.subSections)
+            ? section.subSections.map((sub: SubSection) => (
+                <div class="mb-8">
+                  {sub.title && <div class="" set:html={marked(sub.title)} />}
+
+                  <ul class="list-disc list-inside ">
+                    {sub.items?.map((item: Item) => (
+                      <li set:html={item.content} />
+                    ))}
+                  </ul>
+                </div>
+              ))
+            : section.subSections && (
+                <div class="mb-8">
+                  {section.subSections.title && (
+                    <div
+                      class=""
+                      set:html={marked(section.subSections.title)}
+                    />
+                  )}
+                  <ul class="list-disc list-inside">
+                    {section.subSections.items?.map((item: Item) => (
+                      <li set:html={item.content} />
+                    ))}
+                  </ul>
+                </div>
+              )}
+        </div>
+      ))
+  }
+</div>

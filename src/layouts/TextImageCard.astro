@@ -1,0 +1,40 @@
+---
+export interface Props {
+    title: string;
+    image: string;
+    content: string; // can be Markdown or plain text
+}
+
+import { marked } from "marked";
+import "./text-image-card.scss";
+
+const { title, image, content } = Astro.props;
+const htmlContent = marked(content);
+---
+
+<div
+    class="pixo-text-image-card bg-white shadow-md rounded-lg border border-gray-200 overflow-hidden"
+>
+
+    <!-- Image + Content -->
+    <div class="flex flex-col md:flex-row gap-4 p-4">
+        <!-- Image on the left -->
+        <div class="flex-shrink-0 md:w-1/3">
+            <img
+                src={image}
+                alt={title}
+                class="w-full h-auto object-cover rounded-md"
+            />
+        </div>
+
+        <!-- Content on the right -->
+        <div class="md:w-2/3 text-gray-700 prose prose-sm">
+            <!-- Title -->
+            <div
+                class="_header font-bold py-4"
+                set:html={marked(title)}
+            />
+            <div set:html={htmlContent} />
+        </div>
+    </div>
+</div>

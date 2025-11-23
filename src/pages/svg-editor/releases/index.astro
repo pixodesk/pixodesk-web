@@ -1,0 +1,19 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import ReleasesComponent from "../../../layouts/ReleasesComponent.astro";
+import Section from "../../../layouts/Section.astro";
+import content from "../svg-pages-text-content";
+---
+
+<BaseLayout title="SVG Releases">
+  <div class="bg-white pt-navDouble">
+    <Section
+      className="svg-releases"
+      bgColor="bg-base-bright"
+      color="text-base-dark-blue"
+      page
+    >
+      <ReleasesComponent page={content.pages.page_02} />
+    </Section>
+  </div>
+</BaseLayout>

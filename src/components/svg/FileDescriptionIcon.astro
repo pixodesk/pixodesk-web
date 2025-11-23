@@ -1,0 +1,23 @@
+---
+interface Props {
+  strokeWidth?: string;
+}
+const { strokeWidth = "20" } = Astro.props;
+---
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 -960 960 960"
+  text-rendering="geometricPrecision"
+  shape-rendering="geometricPrecision"
+  data-px-attrs="animation:{duration:1000;inThreshold:0.5}"
+  height="90px"
+  width="90px"
+>
+  <path
+    fill="#00000000"
+    stroke="currentColor"
+    stroke-width={strokeWidth}
+    d="M320,-240L640,-240L640,-320L320,-320L320,-240zM320,-400L640,-400L640,-480L320,-480L320,-400zM240,-80C218,-80,199.1667,-87.8333,183.5,-103.5C167.8333,-119.1667,160,-138,160,-160L160,-800C160,-822,167.8333,-840.8333,183.5,-856.5C199.1667,-872.1667,218,-880,240,-880L560,-880L800,-640L800,-160C800,-138,792.1667,-119.1667,776.5,-103.5C760.8333,-87.8333,742,-80,720,-80L240,-80zM520,-600L520,-800L240,-800L240,-160L720,-160L720,-600L520,-600zM240,-800L240,-600L240,-800L240,-160L240,-800z"
+  ></path>
+</svg>

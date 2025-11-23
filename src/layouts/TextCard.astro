@@ -1,0 +1,18 @@
+---
+
+import { marked } from "marked";
+import "./text-card.scss";
+
+export interface Props {
+  title: string;
+  content: string; // can be plain text or Markdown rendered as HTML
+}
+
+const { title, content } = Astro.props;
+
+---
+
+<div class="pixo-text-card bg-white shadow-md rounded-lg p-6 border border-gray-200 max-w-md mx-auto my-4">
+  <div class="_header font-semibold mb-3" set:html={marked(title)}/>
+  <div class="text-gray-700" set:html={marked(content)}/>
+</div>

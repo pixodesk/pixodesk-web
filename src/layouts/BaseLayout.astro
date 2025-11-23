@@ -1,0 +1,39 @@
+---
+import Footer from "./Footer.astro";
+import Menu from "./Menu.astro";
+
+import "../styles/tailwind.css";
+import "../styles/global.scss";
+
+interface Props {
+  title?: string;
+  color?: string;
+  bgColor?: string;
+  hoverText?: string;
+}
+
+const {title, color, bgColor, hoverText} = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <title>{title}</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body class="font-sans min-h-screen flex flex-col">
+  <!-- <body class="font-sans"> -->
+    
+    <Menu 
+      color={color} 
+      bgColor="bg-[#00010e]"
+      bgSubColor="bg-[#00010e]" 
+      hoverText={hoverText} />
+    <main class="flex flex-col flex-1">
+    <!-- <main class="relative"> -->
+      <slot />
+    </main>
+    <Footer />
+    
+  </body>
+</html>

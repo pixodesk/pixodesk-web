@@ -1,0 +1,46 @@
+---
+import Wedge from "./Wedge.astro";
+
+interface Props {
+  className?: string;
+  bgColor?: string;
+  color?: string;
+  width?: string;
+  maxWidth?: string;
+  px?: string;
+  pl?: string;
+  pr?: string;
+}
+
+const {
+  className = '',
+  width,
+  maxWidth,
+  bgColor,
+  color,
+  px = '',
+  pl = '',
+  pr= '',
+} = Astro.props;
+
+
+
+---
+
+<div
+  class={`
+    relative 
+    ${className}
+    ${width ? `${width}` : ""}
+    ${maxWidth && maxWidth !== "undefined" ? `${maxWidth}` : 'max-w-custom-standard'}
+    mx-auto
+    ${bgColor || ''}
+    ${color || ''}
+    ${px && px !== "undefined" ? `px-${px}` : ""}
+    ${pl && pl !== "undefined" ? `pl-${pl}` : ""}
+    ${pr && pr !== "undefined" ? `pr-${pr}` : ""}
+    `}
+  
+>
+  <slot />
+</div>

@@ -1,0 +1,49 @@
+---
+
+import { marked } from "marked";
+
+
+import type { Page, Part, Item } from "../types/types";
+import StoreButtons from './StoreButtons.astro';
+
+interface Props {
+  page: Page;
+}
+
+const { page }: { page: Page } = Astro.props;
+---
+
+<div class="download">
+  <!-- Title -->
+  {page.title && (
+    <div class="text-left" set:html={marked(page.title)} />
+  )}
+  {page.subTitle && (
+    <div class="" set:html={marked(page.subTitle)} />
+  )}
+
+  <!-- Page -->
+  {page.parts &&
+    Object.values(page.parts).map((part: Part) => (
+      <div class="mb-12">
+        {part.title && (
+            <div class="mb-6" set:html={marked(part.title)}/>
+        )}
+
+        
+        {part.items && (
+          <ul class="list-none mb-12">
+            {part.items.map((item: Item) => (
+              <li>
+                {item.content && <span set:html={marked(item.content)} />}
+                {item.image && <img src={item.image} alt="" class="inline ml-2" />}
+              </li>
+            ))}
+          </ul>
+        )}
+
+        <slot />
+        
+      </div>
+))}
+</div>

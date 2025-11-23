@@ -1,0 +1,32 @@
+---
+import { marked } from "marked";
+
+import type { Item } from "../types/types";
+
+interface Props {
+  items: Item[];
+  shadowColor?: string;
+}
+
+const { items, shadowColor = "0,0,0,0.5" } = Astro.props;
+---
+
+<div class="list">
+  <ul class="text-xs">
+    {
+      items?.map((item) => (
+        <li 
+          class="rounded-lg mb-4 p-4 border border-white/10 w-full"
+          style={`box-shadow: 1px 1px 16px rgba(${shadowColor});`}
+        >
+          {item.title && (
+            <div class="list-header" set:html={marked(item.title)} />
+          )}
+          {item.content && (
+            <div set:html={marked(item.content)} />
+          )}
+        </li>
+      ))
+    }
+  </ul>
+</div>

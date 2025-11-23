@@ -1,0 +1,20 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import content from "../svga-pages-text-content";
+
+import FeaturesComponent from "../../../layouts/FeaturesComponent.astro";
+import Section from "../../../layouts/Section.astro";
+---
+
+<BaseLayout title="SVG Animator Features">
+  <div class="bg-white pt-navDouble">
+    <Section
+      className="svg-anim-features"
+      bgColor="bg-base-bright"
+      color="text-base-dark-blue"
+      page
+    >
+      <FeaturesComponent page={content.pages.page_01} />
+    </Section>
+  </div>
+</BaseLayout>

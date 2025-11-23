@@ -1,0 +1,36 @@
+---
+import { marked } from "marked";
+import type { Item } from "../types/types";
+
+interface Props {
+  title: string;
+  items?: Item[];
+}
+
+const { title, items } = Astro.props;
+---
+
+<div class="max-w-5xl m-auto">
+  {title && <div class="mb-10" set:html={marked(title)} />}
+  {
+    items && (
+      <ul class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        {items.map((item) => (
+          <li>
+            <div class="flex w-[100%]">
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                viewBox="0 0 24 24" 
+                class="w-5 mr-4">
+                <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z" fill="#fff">
+                </path>
+              </svg>
+              {item.content && <div set:html={marked(item.content)} />}
+            </div>
+            
+          </li>
+        ))}
+      </ul>
+    )
+  }
+</div>

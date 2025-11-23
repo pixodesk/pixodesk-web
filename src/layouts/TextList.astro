@@ -1,0 +1,34 @@
+---
+import { marked } from "marked";
+
+import type { Item } from "../types/types";
+
+interface Props {
+  items: Item[];
+  shadowColor?: string;
+  icon?: string;
+  iconColor?: string;
+}
+
+const {
+  items,
+  shadowColor = "0,0,0,0.5",
+  icon,
+  iconColor = "sky-blue-light",
+} = Astro.props;
+---
+
+<div class="list">
+  <ul class="text-xs">
+    {
+      items?.map((item) => (
+        <li class="mb-6 w-full flex flex-col items-start">
+          {item.title && (
+              <div class="mb-2 text-violet-lightest" set:html={marked(item.title)} />
+          )}
+          {item.content && <div class="mb-4" set:html={marked(item.content)} />}
+        </li>
+      ))
+    }
+  </ul>
+</div>

@@ -1,0 +1,153 @@
+pages:
+  page_01:
+    menu_item: "Features"
+    title: "# Pixodesk SVG Editor Features"
+
+    sections:
+
+      section_01:
+        title: "##### Check the list below to find out which drawing features are supported in Pixodesk SVG Editor."
+        
+        subSections:
+          items:
+            - content: "<strong>Object Types:</strong> Ellipse, Rectangle, Polygon, Star, Shape/Path (Bezier), Image, Text, Group"
+            - content: "<strong>Fill & Stroke Color:</strong> Flat Color, Radial Gradient, Linear Gradient"
+            - content: "<strong>Fill:</strong> Fill Rule"
+            - content: "<strong>Stroke:</strong> Width, Line Cap, Line Join, Miter Limit, Dashes"
+            - content: "<strong>Transforms:</strong> Position, Position (separated X/Y), Scale, Anchor Point, Rotation, Auto Orient, Skew, Opacity"
+            - content: "<strong>Easing/Interpolation:</strong> Linear Interpolation, Bezier Interpolation"
+            - content: "<strong>Trim Path</strong>"
+            - content: "<strong>Masks (Mattes):</strong> Alpha Mask (Matte)"
+            - content: "<strong>Filters (Effects):</strong> Blur, Shadow"
+            - content: "<strong>Text:</strong> Custom Fonts, Glyphs, Text Along Path"
+            - content: "<strong>Repeater:</strong> Position, Scale, Anchor Point, Rotation, Skew, Opacity"
+            - content: "<strong>Misc:</strong> Markers, Parent Refs"
+      
+      section_02:
+        title: "## Vector Drawing Features"
+        
+        subSections:
+          - title: "#### Tools"
+            items:
+              - content: "<b>Drawing:</b> Ellipse tool, Rectangle tool, Polygon tool, Star tool, Pen tool, Node tool"
+              - content: "<b>Transform tool:</b> Change position, anchor point, rotate, scale, skew, opacity"
+              - content: "<b>Gradient tool:</b> Change gradient control points"
+              - content: "<b>Repeater tool:</b> Shows repeater control points; provides basic repeater creation actions"
+              - content: "<b>Hand tool:</b> Allows to move the page; doesn't show object selection"
+            
+          - title: "#### Path Operations"
+            items:
+              - content: "Change nodes and their control points"
+              - content: "Boolean operations: Unite, Subtract, Intersect and Exclude"
+              - content: "Combine and break apart paths"
+              - content: "Convert a stroke into a path"
+              - content: "Convert simple shapes such as ellipse, rectangle, polygon, star into paths"
+              - content: "Convert text into paths"
+              - content: "Make shape symmetric around two selected adjacent points"
+              - content: "Replace corner with arc of given radius"
+              - content: "Align and distribute points"
+              - content: "Groups"
+
+          - title: "#### Object Tree"
+            items:
+              - content: "Group and ungroup"
+              - content: "Rearrange shapes and groups by drag and drop"
+              - content: "Search groups and shapes by title"
+              - content: "Put objects into an animation block to reuse them multiple times or to reduce complexity."
+
+          - title: "#### Appearance"
+            items:
+              - content: "Flat colors, linear and radial gradients"
+              - content: "Opacity"
+              - content: "Dashed stroke"
+              - content: "Trim path"
+
+          - title: "#### Text"
+            items:
+              - content: "Custom fonts"
+              - content: "Text along path"
+              - content: "Convert text into paths"
+
+
+          - title: "#### Snapping"
+            items:
+              - content: "Snap to grid"
+              - content: "Snap to the edges and centers of other shapes."
+              - content: "Snap angles"
+
+
+          - title: "#### Images"
+            items:
+              - content: "png, jpeg, gif images"
+              - content: "base64 url images"
+
+      section_03:
+        title: "## Export Formats"
+        
+        subSections:
+            items:
+              - content: "svg, png, jpeg, webp, gif"
+
+         
+  page_02:
+    menu_item: "Releases"
+    title: "# Pixodesk SVG Editor - Release Notes" 
+    
+    parts:
+      - title: "#### Version 1.8 <span class='_date'>- August 2024</span>"
+        items:
+          - content: "Added Round Corner tool"
+          - content: "Added Spray tool"
+          - content: "Bug fixes"
+
+      - title: "#### Version 1.7 <span class='_date'>- June 2024</span>"
+        items:
+          - content: "Added a new type of color picker"
+          - content: "Added more snapping modes"
+          - content: "Bug fixes"
+
+      - title: "#### Version 1.6 <span class='_date'>- April 2024</span>"
+        items:
+          - content: "Added Shape Builder tool"
+          - content: "Added Star and Polygon tool"
+          - content: "Added Shift hotkey to lock star and polygon rotation to 45 degrees when adding them"
+          - content: "Added Clone / Repeater tool for SVG element"
+          - content: "Added option to align the Anchor Point in the shape: to the center, to the corners, or to the middle of its sides"
+          - content: "Added the element lock feature to prevent elements from being interactable on the canvas"
+          - content: "Bug fixes"
+
+      - title: "#### Version 1.5 <span class='_date'>- March 2024</span>"
+        items:
+          - content: "Added text along path"
+          - content: "Improved attribute UI"
+          - content: "Added SVG filters"
+          - content: "Improved bezier control points"
+          - content: "Bug fixes"
+      
+      - title: "#### Version 1.4 <span class='_date'>- February 2024</span>"
+        items:
+          - content: "Initial release"
+  
+  
+  page_03:
+
+    menu_item: "Download"
+    title: "# Get the Ultimate Scalable Vector Graphics Application"
+    subTitle:  "#### for creating SVGs for websites and web-based apps for <span class='accent-warning uppercase'>Free.</span>"
+
+    parts:
+      - items: 
+          - content: "<span class='block mb-8'>Visit the Microsoft Store or Apple App Store to download the application.</span>"
+          - content: "Pixodesk SVG Editor is available on Windows and Mac."
+          - content: "Frequent improvements, feature additions, bug fixes."
+          - content: "New releases delivered through Microsoft Store and Apple App Store."
+
+        storeButtons:
+          - title: Microsoft Store
+            link: "https://apps.microsoft.com/detail/9pczdhjv026p"
+            svg: "../assets/common/logos/windows.svg"
+          - title: Mac App Store
+            link: "https://apps.apple.com/gb/app/pixodesk-svg/id6476456257"
+            svg: "../assets/common/logos/apple.svg"
+
+ 

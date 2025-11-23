@@ -1,0 +1,317 @@
+---
+
+import "../styles/tailwind.css";
+import "../styles/global.scss";
+
+const { pathname } = Astro.url;
+
+interface SubMenuItem {
+  label: string;
+  href: string;
+}
+
+interface MenuItem {
+  label: string;
+  href: string;
+  icon?: string;
+  subMenu?: SubMenuItem[];
+  image?: string;
+}
+
+// Props interface — defines what you can pass in <Menu />
+interface Props {
+  menus?: MenuItem[];
+  pathname?: string;
+  bgColor?: string; // background color (Tailwind class or hex)
+  bgSubColor?: string;
+  color?: string; // text color (Tailwind class or hex)
+  hoverText?: string;
+  textSize?: string; // text color (Tailwind class or hex)
+  
+}
+
+// Destructure Astro.props and apply defaults
+const {
+  menus: passedMenus,
+  bgColor = "bg-[#000000]", // default dark background
+  bgSubColor = "bg-[#222222]",
+  color = "text-gray-400", // default text color
+  hoverText = "hover:text-white",
+  textSize = "text-xs", // default text size
+} = Astro.props as Props;
+
+// Define default menus (used if not passed as prop)
+const menus: MenuItem[] = passedMenus ?? [
+  // {
+  //   label: "Main",
+  //   href: "/",
+  //   subMenu: [],
+  //   image: "../../public/assets/common/logos/logo-pixodesk.svg",
+  // },
+  {
+    label: "2D Animator (Lottie)",
+    href: "/2d-animator",
+    subMenu: [
+      { label: "Lottie Animation", href: "/2d-animator/lottie-animation" },
+      { label: "Tutorials", href: "/2d-animator/tutorials" },
+      { label: "Features", href: "/2d-animator/features" },
+      { label: "Releases", href: "/2d-animator/releases" },
+      { label: "Download", href: "/2d-animator/download" },
+    ],
+  },
+  {
+    label: "SVG Editor",
+    href: "/svg-editor",
+    subMenu: [
+      { label: "Features", href: "/svg-editor/features" },
+      { label: "Releases", href: "/svg-editor/releases" },
+      { label: "Download", href: "/svg-editor/download" },
+    ],
+  },
+  {
+    label: "SVG Animator",
+    href: "/svg-animator",
+    subMenu: [
+      { label: "Features", href: "/svg-animator/features" },
+      // { label: "Releases", href: "/svg-animator/releases" },
+      { label: "Download", href: "/svg-animator/download" },
+    ],
+  },
+  {
+    label: "Pricing",
+    href: "/pricing",
+    subMenu: [],
+  },
+];
+
+// Helper: check active main link
+function isActiveParent(menu: MenuItem) {
+  return pathname === menu.href || pathname.startsWith(menu.href + "/");
+}
+
+// Find active menu for subnav
+const activeMenu = menus.find((menu) => isActiveParent(menu));
+---
+
+<!-- ========== MAIN NAV ========== -->
+<div class="fixed top-0 right-0 left-0 z-50 font-montserrat">
+  <nav
+    class={`
+      ${bgColor} 
+      ${color} 
+      ${textSize} 
+      tracking-wider
+      fixed 
+      top-0 left-0 right-0 z-30 
+      h-10 
+      flex 
+      items-center
+      font-montserrat
+      `}
+  >
+    <div class={`flex justify-between items-center w-full px-4 md:px-8 relative ${textSize}`}>
+      <a 
+        href="/" 
+        class=`uppercase ${hoverText} font-montserrat`> Pixodesk </a>
+
+      <ul class="hidden md:flex items-center space-x-4 h-full">
+        {
+          menus.map((menu) => (
+            <li class="flex items-center h-full">
+              <a 
+                href={menu.href}
+                class={`uppercase px-3 py-2 font-montserrat ${
+                  isActiveParent(menu)
+                    ? "text-white"
+                    : `${color} ${hoverText}`
+                }`}
+              >
+                {menu.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+
+      <button
+        type="button"
+        class=`md:hidden ${color} hover:text-white flex items-center`
+        onclick="document.getElementById('mobile-mainmenu').classList.toggle('hidden')"
+      >
+        <div class=`uppercase font-montserrat ${textSize}`>Menu</div>
+        <svg
+          height="24"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          preserveAspectRatio="xMidYMid meet"
+          style="margin-left: 8px;"
+        >
+          <path
+            fill="#fff"
+            d="M3,6L21,6L21,8L3,8L3,6M3,11L21,11L21,13L3,13L3,11M3,16L21,16L21,18L3,18L3,16z"
+          >
+          </path>
+        </svg>
+      </button>
+
+      <!-- ==========  MAIN MENU MOBILE DROPDOWN ========== -->
+      <div
+        id="mobile-mainmenu"
+        class=`hidden md:hidden top-10 fixed left-0 right-0 bottom-0 ${bgColor} ${textSize}`
+      >
+
+        <ul class="flex flex-col divide-y divide-gray-700">
+          {
+            menus.map((menu, idx) => (
+              <li>
+                <a 
+                  href={menu.href}
+                  class={`block px-4 py-3 uppercase ${hoverText} font-montserrat ${
+                    isActiveParent(menu) ? "text-white" : ""
+                  }`}
+                >
+                  {menu.label}
+                </a>
+
+                {/* {menu.subMenu && menu.subMenu.length > 0 && (
+                  <ul id={`submenu-mobile-${idx}`} class="hidden bg-[#111]">
+                    {menu.subMenu.map((sub) => (
+                      <li>
+                        <a
+                          href={sub.href}
+                          class={`block px-10 py-2 hover:bg-[#222] hover:text-white ${
+                            pathname === sub.href ? "text-white " : ""
+                          }`}
+                        >
+                          {sub.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                )} */}
+              </li>
+            ))
+          }
+        </ul>
+      </div> <!-- id="mobile-mainmenu" -->
+
+    </div>
+  </nav>
+<!-- ========== SUBMENU ========== -->
+
+  <nav
+    class={`
+      ${bgSubColor}
+      ${color} 
+      ${textSize} 
+      tracking-wider
+      fixed 
+      top-10 left-0 right-0 
+      
+      h-10 
+      flex 
+      items-center 
+      duration-300 
+      font-montserrat
+      ${
+        activeMenu?.subMenu?.length
+          ? "opacity-100 visible"
+          : "opacity-0 invisible"
+      }`}
+  >
+
+    <div class={`flex justify-between md:justify-end items-center w-full px-4 md:px-8 ${textSize}`}>
+      <!-- ========== SUBMENU DESKTOP ========== -->
+      {
+        activeMenu?.subMenu?.length && (
+            
+   
+            <div class={`flex items-center space-x-2 md:hidden ${textSize}`}>
+              {activeMenu.icon && (
+                <img src={activeMenu.icon} alt={activeMenu.label} class="w-5 h-5" />
+              )}
+              <a href={activeMenu.href} class={`uppercase text-white font-montserrat`}>
+                {activeMenu.label} 
+              </a>
+            </div>
+
+            <ul class={`hidden md:flex items-center space-x-4 h-full ${textSize}`}>
+              {activeMenu.subMenu.map((sub) => (
+                <li class="flex items-center h-full">
+                  <a 
+                    href={sub.href}
+                    class={`uppercase px-3 py-2 font-montserrat ${
+                      pathname === sub.href
+                        ? `text-white`
+                        : `${color} ${hoverText}`
+                    }`}
+                  >
+                    {sub.label} 
+                  </a>
+                </li>
+              ))}
+            </ul>
+
+        ) 
+      }
+
+      <!-- ========== SUBMENU MOBILE TOGGLE ========== -->
+      <div class="md:hidden">
+        <button
+          type="button"
+          class={`${color} hover:text-white`}
+          onclick="document.getElementById('sub-mobile').classList.toggle('hidden')"
+        >
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M5.84,9.59L11.5,15.25L17.16,9.59"></path>
+          </svg>
+        </button>
+        
+        <!-- ========== SUBMENU MOBILE DROPDOWN ========== -->
+ 
+        <div
+          id="sub-mobile"
+          class={`hidden top-20 -translate-y-px fixed left-0 right-0 bottom-0 border-t border-gray-900 bg-[#252525] ${textSize}`}
+        >
+        <ul class="flex flex-col divide-y divide-gray-900">
+          {
+            activeMenu?.subMenu?.map((sub) => (
+              <li class="w-full">
+                <a 
+                  href={sub.href}
+                  class={`block px-4 py-3 uppercase ${hoverText} font-montserrat ${
+                    pathname === sub.href ? `text-white ` : `${color} `
+                  }`}
+                >
+                  {sub.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+        </div>
+
+
+
+      </div>
+
+    </div>
+
+
+
+  </nav>
+
+
+</div>
+<!-- Add padding to prevent overlap -->
+<!-- <div class="pt-[5rem]"></div> -->

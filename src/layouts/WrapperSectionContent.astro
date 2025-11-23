@@ -1,0 +1,24 @@
+---
+import Wedge from './Wedge.astro';
+
+interface Props {
+    bgColor?: string;
+    color?: string;
+    hasWedge?: boolean;
+}
+
+const { bgColor, color, hasWedge = true } = Astro.props;
+---
+
+<div 
+    class="relative pb-40 pt-60 " 
+    style={{
+        backgroundColor: bgColor,
+        color: color,
+    }}
+>
+    <div class="px-8">
+        <slot />
+    </div>
+     {hasWedge && <Wedge fill={bgColor} /> }
+</div>

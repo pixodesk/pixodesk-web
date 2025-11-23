@@ -1,0 +1,200 @@
+sections:
+  section_00:
+    title: "# From Static to Motion: <br/>Advanced <span class='text-violet-lightest'>SVG Animation</span> Application"
+    
+    items:
+      - content: "##### Turn your vector designs into dynamic SVG animations."
+      - content: "##### Export them for websites, landing pages, social content, web-based apps, and more."
+    
+    images:
+      background: ""
+      front: http://127.0.0.1:4000/image/svgAnimApp-astronaut-3-test.png
+  # video: http://127.0.0.1:4000/image/svgAnimApp-astronaut-pageLook-6.mp4
+    
+    svg: 
+      src: "../assets/svga/hero/astronaut.svg"
+      alt: "astronaut svg animation"
+    
+    storeButtons:
+      - title: Microsoft Store
+        link: "[Links](https://apps.microsoft.com/detail/)"
+        svg: "../assets/common/logos/windows.svg"
+        
+      - title: Mac App Store
+        link: "[Links](https://apps.apple.com/us/app/)"
+        svg: "../assets/common/logos/apple.svg"
+  
+  section_001:
+    title: "## Try the app features now"
+    items: 
+      - content: "###### In the browser demo (restricted mode) to create, modify, and animate SVG."
+      - content: "###### Export is available in the desktop app."
+
+
+  section_01:
+    title: "## Pixodesk SVG Animator Makes Vector Web Design and Animation Easy"
+    item_01:
+      icon:
+      title: Works Everywhere
+      content: Desktop apps for macOS and Windows - install and run locally on your machine.
+
+    item_02:
+      icon:
+      title: Ultra-Small File Size
+      content: SVG animations have ultra-lightweight file sizes, helping your application run efficiently and smoothly.
+
+    item_03:
+      icon:
+      title: All Essential Tools
+      content: Includes Shape Builder, Repeater (Clone) Tool, Spray, Stars and Polygons, Bezier, and many other powerful features.
+    
+    item_04:
+      icon:
+      title: All in One App
+      content: Create, modify, animate, add easing, and export - all in one app. 
+    
+    item_05:
+      icon:
+      title: SVG File Format
+      content: Only SVG tags, CSS animation, or JS animation in your file for complete control over your vector graphics. 
+
+    item_06:
+      icon:
+      title: Different Export Options
+      content: Save as dynamic SVG, or export as dynamic GIF, MP4, WebM, or as static SVG, PNG, or JPEG at any chosen time point.
+
+  section_02: 
+    title: "## Explore Pixodesk SVG Animator Features"
+    subTitle: Powerful SVG animator that combines vector tools, intuitive animation features, and flexible export options. <br/> Create vector graphics, add motion, and save them in lightweight formats optimized for production.
+    items:
+      - title: Create vector designs, apply animations, easing, effects, and export ready-to-use animations - all in one app.
+      - title: Uses a globally supported SVG file format.
+      - title: Animations will play in all browsers and web applications.
+      - title: Supports multiple options for exporting your projects.
+
+  section_03:  
+    subSections:
+      - title: "### Create"
+        image: http://127.0.0.1:4000/image/svgAnimApp-bird-1.png
+        video: http://127.0.0.1:4000/image/svgAnimApp-bird-twitting-1.mp4
+        items: 
+          - title: Create or import vector drawings.
+            content: Create your own SVG or import existing vector drawings.
+
+          - title: Add images and custom TTF font.
+            content: Import raster or vector images and use your own custom TTF fonts.
+
+          - title: Make animation blocks.
+            content: Use animation blocks to create detailed animated scenes.
+
+      - title: "### Animate"
+        image: http://127.0.0.1:4000/image/svgAnimApp-jar-2.png
+        video: http://127.0.0.1:4000/image/svgAnimApp-jar-with-hearts-1-bg-222.mp4
+        items: 
+          - title: Classic and auto-animation options.
+            content: Use the Pin button to set the object's state on the canvas at one or more time points.
+
+          - title: Pre-defined easing functions.
+            content: Select them from a dropdown menu or adjust the easing curve by editing it.
+
+          - title: Charts for speed and acceleration.
+            content: These charts help you see how the changes happen over time.
+
+      - title: "### Export"
+        image: http://127.0.0.1:4000/image/svgAnimApp-bird.png
+        video: http://127.0.0.1:4000/image/svgAnimApp-envelope-open-1-bg222.mp4
+        items: 
+          - title: Save as SVG file.
+            content: Export your vector file and add it to a portfolio, webpage, or social media platforms.
+
+          - title: Export to different formats.
+            content: You can export your animation as a video or GIF, or save static PNG, JPEG, WEBP, or SVG images at a certain time point.
+
+          - title: Control how the animation begins and ends.
+            content: In your application, you can decide whether the animation starts with a click, scroll, mouse movement, or other events.
+
+
+  section_030: 
+    title: "## Shape Builder Tool: From Simple to Sophisticated."
+    subTitle: Merge, subtract, and manipulate shapes to create anything from icons to intricate illustrations.
+    image: http://127.0.0.1:4000/image/svgEditApp-shapeBuilder-bird-4.png
+    items:
+      - content: Turn simple shapes into complex designs.
+      - content: Build, merge, and adjust with ease.
+      - content: Perfect for logos, illustrations, and more.
+      - content: A must-have for every designer.
+   
+  section_031: 
+    title: "## Animate Patterns, Markers & Spray: Add Depth to Your Designs"
+    subTitle: Create and animate custom patterns, markers, and spray to give your vector artwork extra dimension.
+    
+    items:
+      - title: Animate custom Patterns.
+      - title: Adjust colors, scale, or shape variations to create moving, dynamic pattern effects.
+
+      - title: Animate your Marker designs.
+      - title: Duplicate shapes along lines or paths and add motion for expressive animated details.
+
+      - title: Create animated Spray effects.
+      - title: Add motion to scattered shapes - great for particles, stars, snow, or creative textures.
+
+  section_04: 
+    title: "## Auto-Animate: Automatically Animate Between States"
+    subTitle: A smart animation system that builds motion paths and property animations automatically.
+    items: 
+      - content: The auto-animate feature takes care of keyframe creation.
+      - content: Start by pinning the object's initial state.
+      - content: Move to another time point and modify the object.
+      - content: Your changes are instantly turned into keyframes.
+      
+
+  section_05: 
+    title:  "## Easing: Tools for Smoother Motion"
+    subTitle: Control pace and transitions using predefined easings, editable curves, and visual motion charts.
+    items:
+    - content: Add a realistic look to animations with predefined easing functions.
+    - content: Easily change the easing curve to adjust the animation's feel.
+    - content: See how changes affect speed and acceleration with built-in charts.
+    - content: Mini velocity charts show how changes happen over time.
+    - content: Easing charts show how the animation's speed and flow behave.
+
+  section_06: 
+    title: "## Create Animated Icons"
+    subTitle: Add personality and motion to your icons for web and apps.
+    items:
+      - content: Start with your icon - create one or import it from your library.
+      - content: Animate it with rotation, scale, skew, Dash Array, or Trim Path.
+      - content: Make it bounce, flip, fade, or move along a path.
+      - content: Use snapping and grid options for precise placement.
+
+  section_060: 
+    title: "## Animated Vector Text"
+    subTitle: Easily animate text, apply effects over time, and move it along lines, waves, or geometric shapes.
+    items:
+      - title: Animate custom fonts that match your brand perfectly.
+      - title: Animate text transforms using rotation, flip, scale, and other options.
+      - title: Move text along any path or shape, animating start and offset positions.
+      - title: Animate motion along closed shapes like circles and open shapes like lines or waves.
+
+  section_07: 
+    title: "## Animated Repeater: Animate Multiple Elements at Once"
+    subTitle: Make complex patterns move with ease by animating all duplicates in one go.
+    image: "../assets/svg/sections/clock-face-repeater.svg"
+    items:
+      - title: Animate all properties of an entire set of elements at once.
+      - title: Animate position, scale, rotation, and reference point (origin) for all duplicates from one place.
+      - title: Tweak the source shape, and all duplicates update automatically.
+      - title: Ensure symmetry and smooth motion while animating complex designs.
+
+  section_08: 
+    title: "## Only your SVG and CSS animation in your file"
+    subTitle: "### Neat, compact and efficient"
+    subSections:
+      - header: How your SVG looks </br>in the Pixodesk SVG Editor
+        image: http://127.0.0.1:4000/image/svgEditApp-text-0.png
+        footer: ""
+        
+      - header: How your SVG file's code looks </br>in code editor
+        image: http://127.0.0.1:4000/image/svgEditApp-text-0.png
+        footer: Small size of the SVG file
+      

@@ -16,11 +16,11 @@ sections:
       alt: "girl on bike svg"
     storeButtons:
       - title: Microsoft Store
-        link: "[Links](https://apps.microsoft.com/detail/9PPD94XQFPC9)"
+        link: "https://apps.microsoft.com/detail/9ppd94xqfpc9"
         svg: "../assets/common/logos/windows.svg"
         
       - title: Mac App Store
-        link: "[Links](https://apps.apple.com/us/app/pixodesk-animator/id1632981604)"
+        link: "https://apps.apple.com/gb/app/pixodesk-animator/id1632981604"
         svg: "../assets/common/logos/apple.svg"
   
   

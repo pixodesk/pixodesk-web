@@ -11,11 +11,11 @@ sections:
       front: "../assets/svg/hero/bird-origami.svg"
     storeButtons:
       - title: Microsoft Store
-        link: "[Links](https://apps.microsoft.com/detail/)"
+        link: "https://apps.microsoft.com/detail/9pczdhjv026p"
         svg: "../assets/common/logos/windows.svg"
       
       - title: Mac App Store
-        link: "[Links](https://apps.apple.com/us/app/)"
+        link: "https://apps.apple.com/gb/app/pixodesk-svg/id6476456257"
         svg: "../assets/common/logos/apple.svg"
 
   section_001:

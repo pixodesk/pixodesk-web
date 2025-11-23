@@ -15,14 +15,14 @@ sections:
       src: "../assets/svga/hero/astronaut.svg"
       alt: "astronaut svg animation"
     
-    storeButtons:
-      - title: Microsoft Store
-        link: "[Links](https://apps.microsoft.com/detail/)"
-        svg: "../assets/common/logos/windows.svg"
+    # storeButtons:
+    #   - title: Microsoft Store
+    #     link: ""
+    #     svg: "../assets/common/logos/windows.svg"
         
-      - title: Mac App Store
-        link: "[Links](https://apps.apple.com/us/app/)"
-        svg: "../assets/common/logos/apple.svg"
+    #   - title: Mac App Store
+    #     link: ""
+    #     svg: "../assets/common/logos/apple.svg"
   
   section_001:
     title: "## Try the app features now"

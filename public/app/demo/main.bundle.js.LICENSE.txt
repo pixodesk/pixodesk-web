@@ -1,11 +1,4 @@
 /*!
- * Determine if an object is a Buffer
- *
- * @author   Feross Aboukhadijeh <https://feross.org>
- * @license  MIT
- */
-
-/*!
  * Paper.js v0.12.18 - The Swiss Army Knife of Vector Graphics Scripting.
  * http://paperjs.org/
  *
@@ -111,7 +104,7 @@ and limitations under the License.
 
 /**
  * @license React
- * react-is.production.min.js
+ * react-jsx-runtime.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
  *

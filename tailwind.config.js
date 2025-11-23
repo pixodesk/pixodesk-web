@@ -26,10 +26,14 @@ module.exports = {
         'custom-gradient-indigo': 'linear-gradient(180deg, #000000, #03031c, #000000)',
         'custom-gradient-violet': 'linear-gradient(180deg, #000000, #1d0737, #000000)',
         'custom-gradient-navy': 'linear-gradient(180deg, #000000, #051f34, #000000)',
-        // 'custom-gradient-navy': "radial-gradient(ellipse at center, #051f34 0%, #051f34 20%, rgba(0,0,0,0) 50% )",
         
-        'custom-radial-gradient-navy': "radial-gradient(ellipse at center, #051f34 0%, #051f34 20%, rgba(0,0,0,0) 50% )",
+        'custom-gradient-diagonal-indigo': 'linear-gradient(135deg, #1d1b53, #03031c)',
+        'custom-gradient-diagonal-violet': 'linear-gradient(135deg, #321651, #1d0737)',
+        'custom-gradient-diagonal-navy': 'linear-gradient(135deg, #15324d, #051f34)',
+        
+        'custom-radial-gradient-indigo': "radial-gradient(ellipse at center, #0c0b38 0%, #0c0b38 40%, rgba(0,0,0,0) 70% )",
         'custom-radial-gradient-violet': "radial-gradient(ellipse at center, #1d0737 0%, #1d0737 40%, rgba(0,0,0,0) 70% )",
+        'custom-radial-gradient-navy': "radial-gradient(ellipse at center, #051f34 0%, #051f34 40%, rgba(0,0,0,0) 70% )",
       },
       colors: {
         // Base colors
@@ -45,6 +49,7 @@ module.exports = {
         'base-yellow': '#cbaf53',
         'base-yellow-darker': '#b09435',
         
+        'accent-coral': '#ef776e',
         
         // Sky-blue
         "sky-blue-light":"#5cb0ff",

@@ -56,6 +56,7 @@ const cntnt = content.sections;
     </HeroSection>
 
     <div class="app-desc-section px-pxPage" style="z-index: 1;">
+      <div class="font-bold uppercase text-center text-xs mb-4">Our Applications</div>
       <div
         class="text-center"
         set:html={marked(cntnt.section_01.title ?? "")}
@@ -63,14 +64,14 @@ const cntnt = content.sections;
       {
         content.sections.section_01.items &&
           content.sections.section_01.items.map((item) => (
-            <div class="text-center" set:html={marked(item.content ?? "")} />
+            <div class="text-center mb-8" set:html={marked(item.content ?? "")} />
           ))
       }
 
       <div class="app-desc flex flex-col items-center justify-center mb-10">
-        <div class="grid grid-cols-1 md:grid-cols-3 max-w-custom-standard">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-custom-standard">
           <ListAppsComponent
-            bgClass="bg-navy-base"
+            bgClass="hover:bg-custom-gradient-diagonal-navy"
             iconFill="text-white"
             section={cntnt.section_02}
           >
@@ -78,14 +79,14 @@ const cntnt = content.sections;
           </ListAppsComponent>
 
           <ListAppsComponent
-            bgClass="bg-indigo-base"
+            bgClass="hover:bg-custom-gradient-diagonal-indigo"
             iconFill="text-white"
             section={cntnt.section_03}
           >
             <Logo2D />
           </ListAppsComponent>
           <ListAppsComponent
-            bgClass="bg-violet-base"
+            bgClass="hover:bg-custom-gradient-diagonal-violet"
             iconFill="text-white"
             section={cntnt.section_04}
           >

@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  version="1.1"
+  width="1"
+  height="1"
+>
+  <defs>
+    <pattern id="pattern1" viewBox="0 0 6 6" width="6" height="6" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(0)" stroke="#000">
+      <line x1="0" y1="2" x2="6" y2="2" fill="none" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern2" viewBox="0 0 6 6" width="6" height="6" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(90)" stroke="#000">
+      <line x1="0" y1="2" x2="6" y2="2" fill="none" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern3" viewBox="0 0 6 6" width="6" height="6" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(-45)" stroke="#000">
+      <line x1="0" y1="2" x2="6" y2="2" fill="none" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern4" viewBox="0 0 6 6" width="6" height="6" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(45)"  stroke="#000">
+      <line x1="0" y1="2" x2="6" y2="2" fill="none" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern5" viewBox="0 0 6 6" width="6" height="6" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(-22.5)" stroke="#000">
+      <line x1="0" y1="2" x2="6" y2="2" fill="none" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern6" viewBox="0 0 6 6" width="6" height="6" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(22.5)" stroke="#000">
+      <line x1="0" y1="2" x2="6" y2="2" fill="none" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern7" viewBox="0 0 6 6" width="6" height="6" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(-67.5)" stroke="#000">
+      <line x1="0" y1="2" x2="6" y2="2" fill="none" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern8" viewBox="0 0 6 6" width="6" height="6" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(67.5)" stroke="#000">
+      <line x1="0" y1="2" x2="6" y2="2" fill="none" stroke-width="2" />
+    </pattern>
+
+    <pattern id="pattern11" viewBox="0 0 12 12" width="12" height="12" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(0)" stroke="#000">
+      <line x1="0" y1="8" x2="12" y2="8" fill="none" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern12" viewBox="0 0 12 12" width="12" height="12" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(90)" stroke="#000">
+      <line x1="0" y1="8" x2="12" y2="8" fill="none" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern13" viewBox="0 0 12 12" width="12" height="12" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(-45)" stroke="#000">
+      <line x1="0" y1="8" x2="12" y2="8" fill="none" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern14" viewBox="0 0 12 12" width="12" height="12" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(45)" stroke="#000">
+      <line x1="0" y1="8" x2="12" y2="8" fill="none" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern15" viewBox="0 0 12 12" width="12" height="12" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(-22.5)" stroke="#000">
+      <line x1="0" y1="8" x2="12" y2="8" fill="none" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern16" viewBox="0 0 12 12" width="12" height="12" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(22.5)" stroke="#000">
+      <line x1="0" y1="8" x2="12" y2="8" fill="none" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern17" viewBox="0 0 12 12" width="12" height="12" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(-67.5)" stroke="#000">
+      <line x1="0" y1="8" x2="12" y2="8" fill="none" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern18" viewBox="0 0 12 12" width="12" height="12" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(67.5)" stroke="#000">
+      <line x1="0" y1="8" x2="12" y2="8" fill="none" stroke-width="2" />
+    </pattern>
+
+    <pattern id="pattern21" viewBox="0 0 6 6" width="6" height="6" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(0)" stroke="#000">
+      <line x1="0" y1="2" x2="6" y2="2" fill="none" stroke-width="2" />
+      <line x1="4" y1="0" x2="4" y2="6" fill="none" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern22" viewBox="0 0 6 6" width="6" height="6" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(45)" stroke="#000">
+      <line x1="0" y1="2" x2="6" y2="2" fill="none" stroke-width="2" />
+      <line x1="4" y1="0" x2="4" y2="6" fill="none" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern23" viewBox="0 0 6 6" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(-22.5)"
+      stroke="#000"
+    >
+      <line x1="0" y1="2" x2="6" y2="2" fill="none" stroke-width="2" />
+      <line x1="4" y1="0" x2="4" y2="6" fill="none" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern24" viewBox="0 0 6 6" width="6" height="6" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(-67.5)" stroke="#000">
+      <line x1="0" y1="2" x2="6" y2="2" fill="none" stroke-width="2" />
+      <line x1="4" y1="0" x2="4" y2="6" fill="none" stroke-width="2" />
+    </pattern>
+
+    <pattern id="pattern31" viewBox="0 0 12 12" width="12" height="12" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(0)" stroke="#000">
+      <line x1="0" y1="2" x2="12" y2="2" fill="none" stroke-width="2" />
+      <line x1="4" y1="0" x2="4" y2="12" fill="none" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern32" viewBox="0 0 12 12" width="12" height="12" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(45)" stroke="#000">
+      <line x1="0" y1="2" x2="12" y2="2" fill="none" stroke-width="2" />
+      <line x1="4" y1="0" x2="4" y2="12" fill="none" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern33" viewBox="0 0 12 12" width="12" height="12" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(-22.5)" stroke="#000">
+      <line x1="0" y1="2" x2="12" y2="2" fill="none" stroke-width="2" />
+      <line x1="4" y1="0" x2="4" y2="12" fill="none" stroke-width="2" />
+    </pattern>
+    <pattern id="pattern34" viewBox="0 0 12 12" width="12" height="12" patternUnits="userSpaceOnUse"
+      patternTransform="rotate(-67.5)" stroke="#000">
+      <line x1="0" y1="2" x2="12" y2="2" fill="none" stroke-width="2" />
+      <line x1="4" y1="0" x2="4" y2="12" fill="none" stroke-width="2" />
+    </pattern>
+
+    <pattern id="pattern41" viewBox="0 0 12 12" width="12" height="12" patternUnits="userSpaceOnUse"
+     fill="#000"
+    >
+      <rect x="0" y="0" width="1" height="1" stroke="none" />
+      <rect x="6" y="6" width="1" height="1" stroke="none" />
+    </pattern>
+    <pattern id="pattern42" viewBox="0 0 8 8" width="8" height="8" patternUnits="userSpaceOnUse"
+    fill="#000"
+    >
+      <rect x="0" y="0" width="1" height="1" stroke="none" />
+      <rect x="4" y="4" width="1" height="1" stroke="none" />
+    </pattern>
+    <pattern id="pattern43" viewBox="0 0 6 6" width="6" height="6" patternUnits="userSpaceOnUse"
+      fill="#000">
+      <rect x="0" y="0" width="1" height="1" stroke="none" />
+      <rect x="3" y="3" width="1" height="1" stroke="none" />
+    </pattern>
+    <pattern id="pattern44" viewBox="0 0 4 4" width="4" height="4" patternUnits="userSpaceOnUse"
+      fill="#000">
+      <rect x="0" y="0" width="1" height="1" stroke="none" />
+      <rect x="2" y="2" width="1" height="1" stroke="none" />
+    </pattern>
+    <pattern id="pattern45" viewBox="0 0 12 12" width="12" height="12" patternUnits="userSpaceOnUse"
+    fill="#000">
+      <rect x="0" y="0" width="2" height="2" stroke="none" />
+      <rect x="6" y="6" width="2" height="2" stroke="none" />
+    </pattern>
+    <pattern id="pattern46" viewBox="0 0 8 8" width="8" height="8" patternUnits="userSpaceOnUse"
+    fill="#000">
+      <rect x="0" y="0" width="2" height="2" stroke="none" />
+      <rect x="4" y="4" width="2" height="2" stroke="none" />
+    </pattern>
+    <pattern id="pattern47" viewBox="0 0 6 6" width="6" height="6" patternUnits="userSpaceOnUse"
+    fill="#000">
+      <rect x="0" y="0" width="2" height="2" stroke="none" />
+      <rect x="3" y="3" width="2" height="2" stroke="none" />
+    </pattern>
+    <pattern id="pattern48" viewBox="0 0 16 16" width="16" height="16" patternUnits="userSpaceOnUse"
+    fill="#000">
+      <rect x="0" y="4" width="4" height="4" stroke="none" />
+      <rect x="8" y="12" width="4" height="4" stroke="none" />
+    </pattern>
+    <pattern id="pattern49" viewBox="0 0 12 12" width="12" height="12" patternUnits="userSpaceOnUse"
+    fill="#000">
+      <rect x="0" y="0" width="4" height="4" stroke="none" />
+      <rect x="6" y="6" width="4" height="4" stroke="none" />
+    </pattern>
+
+    <pattern id="pattern51" viewBox="0 0 4 4" width="4" height="4" patternUnits="userSpaceOnUse"
+    fill="#000">
+      <rect x="0" y="0" width="2" height="2" stroke="none" />
+      <rect x="2" y="2" width="2" height="2" stroke="none" />
+    </pattern>
+    <pattern id="pattern52" viewBox="0 0 6 6" width="6" height="6" patternUnits="userSpaceOnUse"
+    fill="#000">
+      <rect x="0" y="0" width="3" height="3" stroke="none" />
+      <rect x="3" y="3" width="3" height="3" stroke="none" />
+    </pattern>
+    <pattern id="pattern53" viewBox="0 0 8 8" width="8" height="8" patternUnits="userSpaceOnUse"
+    fill="#000">
+      <rect x="0" y="0" width="4" height="4" stroke="none" />
+      <rect x="4" y="4" width="4" height="4" stroke="none" />
+    </pattern>
+    <pattern id="pattern54" viewBox="0 0 10 10" width="10" height="10" patternUnits="userSpaceOnUse"
+    fill="#000">
+      <rect x="0" y="0" width="5" height="5" stroke="none" />
+      <rect x="5" y="5" width="5" height="5" stroke="none" />
+    </pattern>
+    <pattern id="pattern55" viewBox="0 0 12 12" width="12" height="12" patternUnits="userSpaceOnUse"
+    fill="#000">
+      <rect x="0" y="0" width="6" height="6" stroke="none" />
+      <rect x="6" y="6" width="6" height="6" stroke="none" />
+    </pattern>
+    <pattern id="pattern56" viewBox="0 0 16 16" width="16" height="16" patternUnits="userSpaceOnUse"
+    fill="#000">
+      <rect x="0" y="0" width="8" height="8" stroke="none" />
+      <rect x="8" y="8" width="8" height="8" stroke="none" />
+    </pattern>
+
+    <pattern id="pattern61" viewBox="0 0 16 16" width="16" height="16" patternUnits="userSpaceOnUse"
+    fill="#000">
+      <circle cx="4" cy="4" r="3" stroke="none" />
+      <circle cx="12" cy="12" r="3" stroke="none" />
+    </pattern>
+    <pattern id="pattern62" viewBox="0 0 20 20" width="20" height="20" patternUnits="userSpaceOnUse"
+    fill="#000">
+      <circle cx="5" cy="5" r="4" stroke="none" />
+      <circle cx="15" cy="15" r="4" stroke="none" />
+    </pattern>
+    <pattern id="pattern63" viewBox="0 0 16 16" width="16" height="16" patternUnits="userSpaceOnUse"
+    stroke="#000">
+      <circle cx="4" cy="4" r="3" fill="none" stroke-width="1" />
+      <circle cx="12" cy="12" r="3" fill="none" stroke-width="1" />
+    </pattern>
+    <pattern id="pattern64" viewBox="0 0 20 20" width="20" height="20" patternUnits="userSpaceOnUse"
+    stroke="#000">
+      <circle cx="5" cy="5" r="4" fill="none" stroke-width="1" />
+      <circle cx="15" cy="15" r="4" fill="none" stroke-width="1" />
+    </pattern>
+
+
+    <marker id="Stop" viewBox="-6 -6 12 12" markerWidth="12" markerHeight="12" orient="auto"
+      stroke="#000"
+    >
+      <path
+        fill="none" stroke-width="1"        
+        d="M 0,4 V -4"
+      />
+    </marker>
+    <marker id="X" viewBox="-6 -6 12 12" markerWidth="12" markerHeight="12" orient="auto"
+      stroke="#000"
+    >
+      <path
+        fill="none" stroke-width="1"
+        d="M -3,3 3,-3 M 3,3 -3,-3"
+      />
+    </marker>
+    <marker id="Diamond" viewBox="-6 -6 12 12" markerWidth="12" markerHeight="12" orient="auto"
+      fill="#000"
+    >
+      <path
+        transform="scale(0.45)"
+         stroke="none" fill-rule="evenodd"
+        d="M 0,-7.0710768 -7.0710894,0 0,7.0710589 7.0710462,0 Z"
+        id="path19" />
+    </marker>
+    <marker id="Square" viewBox="-6 -6 12 12"  markerWidth="12" markerHeight="12" orient="auto"
+      fill="#000"
+    >
+      <path
+        transform="scale(0.5)"
+         stroke="none" fill-rule="evenodd"
+        d="M -5,-5 V 5 H 5 V -5 Z"
+      />
+    </marker>
+    <marker id="Dot" viewBox="-6 -6 12 12" markerWidth="12" markerHeight="12" orient="auto"
+      fill="#000"
+    >
+      <path
+        transform="scale(0.5)"
+        stroke="none" fill-rule="evenodd"
+        d="M 5,0 C 5,2.76 2.76,5 0,5 -2.76,5 -5,2.76 -5,0 c 0,-2.76 2.3,-5 5,-5 2.76,0 5,2.24 5,5 z"
+      />
+    </marker>
+    <marker id="ConcaveTriangle" orient="auto-start-reverse"
+      viewBox="-6 -6 12 12" markerWidth="12" markerHeight="12" orient="auto"
+      fill="#000"
+    >
+      <path
+        transform="scale(0.7)"
+        d="M -2,-4 9,0 -2,4 c 2,-2.33 2,-5.66 0,-8 z"
+        stroke="none" fill-rule="evenodd"
+      />
+    </marker>
+    <marker id="DartArrow" orient="auto-start-reverse" 
+      viewBox="-6 -6 12 12"  markerWidth="12" markerHeight="12" orient="auto"
+      fill="#000"
+    >
+      <path
+        stroke="none" fill-rule="evenodd"
+        d="M 0,0 5,-5 -12.5,0 5,5 Z"
+        transform="scale(-0.5)"
+      />
+    </marker>
+    <marker id="Triangle" orient="auto-start-reverse" 
+      viewBox="-6 -6 12 12"  markerWidth="12" markerHeight="12" orient="auto"
+      fill="#000" stroke="#000"
+    >
+      <path
+        transform="scale(0.5)"
+        stroke-width="1" fill-rule="evenodd"
+        d="M 5.77,0 -2.88,5 V -5 Z"
+      />
+    </marker>
+    <marker id="ArrowWide" orient="auto-start-reverse" 
+      viewBox="-6 -6 12 12" markerWidth="12" markerHeight="12" orient="auto"
+      stroke="#000"
+    >
+      <path
+        fill="none" stroke-width="1" stroke-linecap="butt"
+        d="M 3,-3 0,0 3,3"
+        transform="rotate(180,0.125,0)"
+      />
+    </marker>
+
+
+    <filter pixodesk:label="Drop Shadow" id="drop-shadow-filter-0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="2" data-px-attr-title--stddeviation="Shadow Radius"></feGaussianBlur>
+        <feOffset dx="2" dy="2" data-px-attr-title--offset="Offset"></feOffset>
+        <feComponentTransfer result="offsetblur">
+            <feFuncA id="spread-ctrl" type="linear" slope="1"></feFuncA>
+        </feComponentTransfer>
+        <feFlood flood-color="rgb(0,0,0)" data-px-attr-title--floodcolor="Shadow Color"></feFlood>
+        <feComposite in2="offsetblur" operator="in"></feComposite>
+        <feMerge>
+            <feMergeNode></feMergeNode>
+            <feMergeNode in="SourceGraphic"></feMergeNode>
+        </feMerge>
+    </filter>
+
+    <filter pixodesk:label="Inner Shadow" id="inner-shadow-filter-0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+        <feOffset dx="0" dy="0" data-px-attr-title--offset="Offset"></feOffset>
+        <feGaussianBlur stdDeviation="2" data-px-attr-title--stddeviation="Shadow Radius"></feGaussianBlur>
+        <feComposite operator="out" in="SourceGraphic"></feComposite>
+        <feComponentTransfer result="choke"><feFuncA type="linear" slope="1"></feFuncA></feComponentTransfer>
+        <feFlood flood-color="rgb(0,0,0)" result="color" data-px-attr-title--floodcolor="Shadow Color"></feFlood>
+        <feComposite operator="in" in="color" in2="choke" result="shadow"></feComposite>
+        <feComposite operator="over" in="shadow" in2="SourceGraphic"></feComposite>
+    </filter>
+
+    <!-- <filter pixodesk:label="Point Light" id="point-light-filter-0" primitiveUnits="objectBoundingBox" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+        <feSpecularLighting result="specular-lighting" lighting-color="#ffffff" specularConstant="1" specularExponent="66">
+            <fePointLight x="0.5" y="0.5" z="0.5"></fePointLight>
+        </feSpecularLighting>
+        <feDiffuseLighting result="diffuse-lighting" lighting-color="#ffffff" diffuseConstant="0.2">
+            <fePointLight x="0.5" y="0.5" z="0.5"></fePointLight>
+        </feDiffuseLighting>
+        <feMerge result="lighting">
+            <feMergeNode in="diffuse-lighting"></feMergeNode>
+            <feMergeNode in="specular-lighting"></feMergeNode>
+        </feMerge>
+        <feComposite in="SourceGraphic" in2="lighting" operator="arithmetic" k1="1" k2="0" k3="0" k4="0"></feComposite>
+    </filter> -->
+
+    <!-- <filter pixodesk:label="Spot Light" id="spot-light-filter-0" primitiveUnits="objectBoundingBox" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+        <feSpecularLighting result="specular-lighting" lighting-color="#ffffff" specularConstant="2" specularExponent="30">
+            <feSpotLight x="0.5" y="0.5" z="1" limitingConeAngle="20" pointsAtX="0.5" pointsAtY="0.5" pointsAtZ="0"></feSpotLight>
+        </feSpecularLighting>
+        <feDiffuseLighting result="diffuse-lighting" lighting-color="#ffffff" diffuseConstant="0.1">
+            <feSpotLight x="0.5" y="0.5" z="1" limitingConeAngle="20" pointsAtX="0.5"
+                pointsAtY="0.5" pointsAtZ="0"></feSpotLight>
+        </feDiffuseLighting>
+        <feMerge result="lighting">
+            <feMergeNode in="diffuse-lighting"></feMergeNode>
+            <feMergeNode in="specular-lighting"></feMergeNode>
+        </feMerge>
+        <feComposite in="SourceGraphic" in2="lighting" operator="arithmetic" k1="1" k2="0" k3="0" k4="0"></feComposite>
+    </filter> -->
+
+    <filter pixodesk:label="Outline" id="outline-filter-0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+        <feMorphology in="SourceAlpha" result="dilated" operator="dilate" radius="4" data-px-attr-title--radius="Width"></feMorphology>
+        <feFlood flood-color="#bada55" result="flood" data-px-attr-title--floodcolor="Color"></feFlood>
+        <feComposite in="flood" in2="dilated" operator="in" result="outline"></feComposite>
+        <feMerge>
+            <feMergeNode in="outline"></feMergeNode>
+            <feMergeNode in="SourceGraphic"></feMergeNode>
+        </feMerge>
+    </filter>
+
+    <filter pixodesk:label="Gaussian Blur" id="gaussian-blur-filter-0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="2 2" edgeMode="none" data-px-attr-title--stddeviation="Blur Radius"></feGaussianBlur>
+    </filter>
+
+    <filter pixodesk:label="Motion Blur" id="motion-blur-filter-0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="2 4" edgeMode="none" data-px-attr-title--stddeviation="Blur Radius"></feGaussianBlur>
+    </filter>
+
+    <!-- <filter pixodesk:label="Sharpen" id="sharpen-filter-0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+        <feConvolveMatrix order="3" kernelMatrix="-4,-4,-4,-4,33,-4,-4,-4,-4"></feConvolveMatrix>
+    </filter> -->
+
+    <filter pixodesk:label="Pixelete" id="pixelete-filter-0" color-interpolation-filters="sRGB" x="0" y="0" width="100%" height="100%">
+        <feFlood height="2" width="2"></feFlood>
+        <feComposite width="10" height="10"></feComposite>
+        <feTile result="a"></feTile>
+        <feComposite in="SourceGraphic" in2="a" operator="in"></feComposite>
+        <feMorphology operator="dilate" radius="5" data-px-attr-title--radius="Pixel Radius"></feMorphology>
+    </filter>
+
+    <filter pixodesk:label="Warp" id="warp-filter-0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+        <feComponentTransfer>
+            <feFuncR type="table" tableValues="1 0.5"></feFuncR>
+        </feComponentTransfer>
+        <feMerge result="a">
+            <feMergeNode></feMergeNode>
+            <feMergeNode in="SourceGraphic"></feMergeNode>
+        </feMerge>
+        <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="1" result="warp" data-px-attr-title--baseFrequency="Frequency"></feTurbulence>
+        <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="50" in="a" in2="warp" data-px-attr-title--scale="Amount"></feDisplacementMap>
+    </filter>
+
+    <filter pixodesk:label="Morphology" id="morphology-filter-0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+        <feMorphology operator="dilate" radius="4" data-px-attr-title--radius="Radius"></feMorphology>
+    </filter>
+
+    <!-- <filter pixodesk:label="Black and White" id="black-and-white-filter-0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+        <feColorMatrix type="saturate" values="0"></feColorMatrix>
+        <feComponentTransfer>
+            <feFuncR type="discrete"
+                tableValues="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 "></feFuncR>
+            <feFuncG type="discrete"
+                tableValues="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 "></feFuncG>
+            <feFuncB type="discrete"
+                tableValues="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 "></feFuncB>
+        </feComponentTransfer>
+    </filter> -->
+
+    <!-- <filter pixodesk:label="Grayscale" id="grayscale-filter-0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+        <feColorMatrix type="matrix"
+            values="0.213 0.715 0.072 0 0 0.213 0.715 0.072 0 0 0.213 0.715 0.072 0 0 0 0 0 1 0"></feColorMatrix>
+    </filter> -->
+
+    <!-- <filter pixodesk:label="Sepia" id="sepia-filter-0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+        <feColorMatrix type="matrix"
+            values="0.393 0.769 0.189 0 0 0.349 0.686 0.168 0 0 0.272 0.534 0.131 0 0 0 0 0 1 0"></feColorMatrix>
+    </filter> -->
+
+    <filter pixodesk:label="Saturate" id="saturate-filter-0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+        <feColorMatrix type="saturate" values="0.5" data-px-attr-title--values="Amount"></feColorMatrix>
+    </filter>
+
+    <filter pixodesk:label="Hue Rotate" id="hue-rotate-filter-0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+        <feColorMatrix type="hueRotate" values="90" data-px-attr-title--values="Angle"></feColorMatrix>
+    </filter>
+
+    <filter pixodesk:label="Invert" id="invert-filter-0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+        <feComponentTransfer>
+            <feFuncR type="table" tableValues="1 0"></feFuncR>
+            <feFuncG type="table" tableValues="1 0"></feFuncG>
+            <feFuncB type="table" tableValues="1 0"></feFuncB>
+        </feComponentTransfer>
+    </filter>
+
+    <filter pixodesk:label="Brightness" id="brightness-filter-0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+        <feComponentTransfer>
+            <feFuncR type="linear" slope="1.5"></feFuncR>
+            <feFuncG type="linear" slope="1.5"></feFuncG>
+            <feFuncB type="linear" slope="1.5"></feFuncB>
+        </feComponentTransfer>
+    </filter>
+
+    <filter pixodesk:label="Contrast" id="contrast-filter-0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+        <feComponentTransfer>
+            <feFuncR type="linear" slope="2" intercept="-0.5"></feFuncR>
+            <feFuncG type="linear" slope="2" intercept="-0.5"></feFuncG>
+            <feFuncB type="linear" slope="2" intercept="-0.5"></feFuncB>
+        </feComponentTransfer>
+    </filter>
+
+    <filter pixodesk:label="Opacity" id="opacity-filter-0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+        <feComponentTransfer>
+            <feFuncA type="table" tableValues="0 0.5"></feFuncA>
+        </feComponentTransfer>
+    </filter>
+
+    <filter pixodesk:label="Posterize" id="posterize-filter-0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+        <feColorMatrix type="saturate" values="0.9"></feColorMatrix>
+        <feComponentTransfer>
+            <feFuncR type="discrete" tableValues="0 0.333 0.667 1"></feFuncR>
+            <feFuncG type="discrete" tableValues=""></feFuncG>
+            <feFuncB type="discrete" tableValues=""></feFuncB>
+        </feComponentTransfer>
+    </filter>
+
+      <!-- <filter pixodesk:label="Duotone" id="duotone-filter-0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+        <feColorMatrix type="matrix" result="grayscale" values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 0">
+        </feColorMatrix>
+        <feComponentTransfer color-interpolation-filters="sRGB">
+            <feFuncR type="gamma" exponent="1.5" amplitude="1" offset="0"></feFuncR>
+            <feFuncG type="gamma" exponent="1.5" amplitude="1" offset="0"></feFuncG>
+            <feFuncB type="gamma" exponent="1.5" amplitude="1" offset="0"></feFuncB>
+        </feComponentTransfer>
+        <feComponentTransfer color-interpolation-filters="sRGB" result="duotone">
+            <feFuncR type="table" tableValues="0.741 0.988"></feFuncR>
+            <feFuncG type="table" tableValues="0.043 0.733"></feFuncG>
+            <feFuncB type="table" tableValues="0.569 0.051"></feFuncB>
+            <feFuncA type="table" tableValues="0 1"></feFuncA>
+        </feComponentTransfer>
+    </filter> -->
+
+      <!-- <filter pixodesk:label="X-ray" id="x-ray-filter-0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+        <feColorMatrix type="matrix" values="-1 0 0 0 0 0 -1 0 0 0 0 0 -1 0 0 1 1 1 0 0"></feColorMatrix>
+    </filter> -->
+  </defs>
+</svg>

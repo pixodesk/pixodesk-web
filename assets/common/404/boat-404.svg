@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Pixodesk SVG (https://pixodesk.com) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" id="2kjrlj4l" data-px-attrs="animation:{duration:5000;loop:true;inThreshold:0.5;startOn:scrollIntoView}">
+  <style>@keyframes _px_2kkgqd2d {0% {transform:rotate(6deg);animation-timing-function:cubic-bezier(0.445,0.05,0.55,0.95);}
+50.6% {transform:rotate(-6deg);animation-timing-function:cubic-bezier(0.455,0.03,0.515,0.955);}
+100% {transform:rotate(6deg)}}
+._px_animate ._px_2kkgqd2e { animation: 5000ms _px_2kkgqd2d infinite both; }
+._px_animate._px_paused ._px-animated {animation-play-state: paused;}
+._px_animate._px_running ._px-animated {animation-play-state: running !important;}
+._px_animate._px_init_paused ._px-animated {animation-play-state: paused;}
+._px_animate._px_init_paused._px_running ._px-animated {animation-play-state: running !important;}</style>
+  <g transform="translate(600,300)translate(-1255.2712,-947.6417)">
+    <g transform="translate(1249.9999,1078.4873)" data-px-attrs="elementEffect:{baseId:_px_2kkfp72r;transform:{origin:[903.2507,1210.013];translate:[346.7492,-131.5257];rotate:{kfs:[{t:0;v:6;e:[0.445,0.05,0.55,0.95]},{t:2530;v:-6;e:[0.455,0.03,0.515,0.955]},{t:5000;v:6}]};scale:[50.4347,50.4347]}}">
+      <g class="_px-animated _px_2kkgqd2e" transform="rotate(6)">
+        <g id="_px_2kkfp72r" data-px-label="ship on one place shade" fill="#ffffff21" stroke="none" transform="scale(0.5043,0.5043),translate(-903.2507,-1210.013)">
+          <path stroke-linejoin="round" transform="translate(862.5007,1078)" d="M-16.5,0L-220,0C-92.27,-102.84,-44.579,-239.2012,-9.5921,-388.6772C-17.87,-280.4302,-63.851,-111.7,-16.5,0z"/>
+          <path stroke-linecap="round" stroke-linejoin="round" transform="translate(871.5007,1070)" d="M8.667,8C97.799,-14.491,196.983,-25.722,292.5,7C242.9781,-129.998,124.0049,-286.0327,8.0299,-382.3486C8.0299,-382.3486,83.878,-41.1569,8.667,8z"/>
+          <path transform="translate(612.3621,1119.5881)" d="M24.0465,0L76.7339,90.4248L454.0801,90.4248L557.7307,-19.1273L24.0465,0z"/>
+          <path transform="translate(-910.9433,-315.5689)rotate(1.4434)scale(1.4816,1.4816)" d="M1229.1458,931.5245L1217.2936,932.234L1216.5309,910.3898L1210.2056,644.7429C1210.1252,641.5492,1212.84,638.2895,1215.7726,638.2157C1218.7052,638.1419,1221.9892,641.3517,1222.0744,644.7334L1228.3505,908.3135L1229.1458,931.5245z"/>
+          <path fill="#89255085" stroke="none" transform="translate(858.2733,682.6868)" d="M-1.2806,-2.5553L-1.3741,44.342C-34.915,24.34,-137.843,62.369,-182.666,36C-94.283,37.3089,-52.7506,-13.1363,-1.2806,-2.5553z"/>
+        </g>
+      </g>
+    </g>
+  </g>
+<script data-px-script="true"><![CDATA[
+(function startOnScrollIntoView(id, threshold) {
+    const el = document.getElementById(id);
+    if (el) new IntersectionObserver((e) => {e.forEach(i => {
+                    if (i.isIntersecting) el.classList.add("_px_animate", "_px_running");
+            if (i.isIntersecting) el.classList.remove("_px_paused");
+            if (!i.isIntersecting) el.classList.add("_px_paused");
+            if (!i.isIntersecting) el.classList.remove("_px_running");
+    });}, { threshold }).observe(el);
+})("2kjrlj4l", 0.5);
+
+]]></script>
+</svg>

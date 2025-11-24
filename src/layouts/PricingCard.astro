@@ -6,17 +6,24 @@ interface Props {
   pricingCardInfo: PriceForApp;
 }
 const { pricingCardInfo } = Astro.props;
+import download from "../../public/assets/common/icons/download-24x24.svg?raw";
 ---
 
 
-<div class="flex flex-col items-center justify-between h-full text-left mb-6 ">
+<div class="
+  flex flex-col items-center justify-between 
+  h-full 
+  text-left 
+  mb-6
+  
+">
    
   <div class="flex flex-col items-start justify-start mb-4 text-base-bright">
     
     
     <div class="flex items-center mb-8">
       
-      <div class="w-10 h-10 mr-2 slot">
+      <div class="w-16 h-16 mr-2 slot bg-[#ffffff11] border border-[#ffffff11] p-2 rounded-md">
         <slot />
       </div>
         
@@ -24,8 +31,8 @@ const { pricingCardInfo } = Astro.props;
       {
         pricingCardInfo.title ? (
           <div
-            class=""
-            set:html={marked(pricingCardInfo.title)}
+            class="font-bold"
+            set:html={marked.parseInline(pricingCardInfo.title)}
           />
         ) : null
       }
@@ -35,17 +42,17 @@ const { pricingCardInfo } = Astro.props;
     {
       pricingCardInfo.platform ? (
         <div
-          class="mb-6"
-          set:html={marked(pricingCardInfo.platform)}
+          class="mb-6 text-gray-400 text-xs"
+          set:html={marked.parseInline(pricingCardInfo.platform)}
         />
       ) : null
     }
-    
+    <div class="divider w-full mb-6 h-[1px] bg-white/10" />
     {
       pricingCardInfo.price ? (
         <h3
-          class={`mb-0 price font-bold text-3xl `}
-          set:html={marked(pricingCardInfo.price)}
+          class={`mb-0 price font-bold text-2xl `}
+          set:html={marked.parseInline(pricingCardInfo.price)}
         />
       ) : null
     }
@@ -53,67 +60,68 @@ const { pricingCardInfo } = Astro.props;
     {
       pricingCardInfo.paymentMethod ? (
         <div
-          class="uppercase mb-6 text-sm text-violet-lightest"
-          set:html={marked(pricingCardInfo.paymentMethod)}
+          class="uppercase mb-6 text-xs font-bold text-gray-200"
+          set:html={marked.parseInline(pricingCardInfo.paymentMethod)}
         />
       ) : null
     }
-    
-    {
-      pricingCardInfo.otherPaymentMethod ? (
-        <div
-          class="mb-6 text-sm text-violet-lightest"
-          set:html={marked(pricingCardInfo.otherPaymentMethod)}
-        />
-    ) : null
-    }
-    
-
     
 
     {
       pricingCardInfo.appDescription ? (
         <div
-          class="mb-8"
-          set:html={marked(pricingCardInfo.appDescription)}
+          class="mb-6 text-sm text-gray-400"
+          set:html={marked.parseInline(pricingCardInfo.appDescription)}
         />
       ) : null
+    }
+
+
+    {
+      pricingCardInfo.otherPaymentMethod ? (
+          <div class="divider w-full mb-6 h-[1px] bg-white/10" />
+          <div
+            class="mb-6 text-sm text-gray-400"
+            set:html={marked.parseInline(pricingCardInfo.otherPaymentMethod)}
+          />
+        
+    ) : null
     }
   </div>
 
 
 
-  <div>
   <!-- Buttons -->
     {pricingCardInfo.button && (
         <div class="flex justify-center items-center w-full">
           
-          <div class="w-40 button">
-            <a
-              href={pricingCardInfo.button.link}
-              class=`
-                flex 
-                justify-center 
-                items-center
-                ${pricingCardInfo.icon === "svg" ? "bg-violet-light" : "" }
-                ${pricingCardInfo.icon === "svg" ? "hover:bg-violet-base": "" }
-                ${pricingCardInfo.icon === "2d" ? "bg-violet-light" : ""}
-                ${pricingCardInfo.icon === "2d" ? "hover:bg-violet-base" : "" }
-                ${pricingCardInfo.icon === "svga" ? "bg-violet-light" : ""}
-                ${pricingCardInfo.icon === "svga" ? "hover:bg-violet-base" : "" }
-                text-white 
-                px-4 py-2 
-                rounded-md 
-                shadow-md 
-                transition-all 
-                duration-200
-                w-full
-                `
-              set:html={marked(pricingCardInfo.button.title)}
+          <a class=`
+            button
+            w-full 
+            flex 
+            justify-center 
+            items-center
+            ${pricingCardInfo.icon === "svg" ? "bg-[#5c4be6]" : "" }
+            ${pricingCardInfo.icon === "svg" ? "hover:bg-[#4e3fc1]" : "" }
+            ${pricingCardInfo.icon === "2d" ? "bg-[#5c4be6]" : ""}
+            ${pricingCardInfo.icon === "2d" ? "hover:bg-[#4e3fc1]" : "" }
+            ${pricingCardInfo.icon === "svga" ? "bg-gray-800" : ""}
+            ${pricingCardInfo.icon === "svga" ? "hover:bg-gray-800" : "" }
+            px-4 py-2
+            rounded-md 
+            shadow-md 
+            w-full
+            transition-all duration-300 
+            hover:shadow-sm
+            `
+            href={pricingCardInfo.button.link}
+            >
+            <div class=` text-white text-sm`
+                set:html={marked.parseInline(pricingCardInfo.button.title)}
             />
-          </div>
+            <div class="" set:html={download} />
+          </a>
         
         </div>
       )}
-  </div>
 </div>

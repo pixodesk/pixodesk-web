@@ -10,17 +10,17 @@ pages:
       # - <strong>2D Animator</strong> for creating vector animations for any native device using the Lottie format.
     
     priceForApps: 
-      - title: <div class='uppercase'>Pixodesk</div> SVG Editor
+      - title: <div class='uppercase text-xs text-gray-400'>Pixodesk</div> SVG Editor
         icon: svg
         platform: For macOS and Windows
-        price: <span class='text-red-600 uppercase'>Free</span>
+        price: <span class='uppercase'>Free</span>
         paymentMethod: Enjoy this app at no cost
         appDescription: Create SVGs for the web and web-based apps
         button: 
           title: Download 
           link: "/svg-editor/download"
 
-      - title: <div class='uppercase'>Pixodesk</div> 2D Animator
+      - title: <div class='uppercase text-xs text-gray-400'>Pixodesk</div> 2D Animator
         icon: 2d
         platform: For macOS and Windows
         price: $49.99 
@@ -31,7 +31,7 @@ pages:
           title: Download 
           link: "/2d-animator/download"
 
-      - title: <div class='uppercase'>Pixodesk</div> SVG Animator
+      - title: <div class='uppercase text-xs text-gray-400'>Pixodesk</div> SVG Animator
         icon: svga
         platform: For macOS and Windows
         price: Coming Soon
@@ -39,5 +39,5 @@ pages:
         paymentMethod: One-off payment <span> | </span> incl. tax
         appDescription: Create SVGs and SVG animations for websites and web-based apps
         button: 
-          title: Download 
+          title: Coming Soon 
           link: "/svg-animator/download"

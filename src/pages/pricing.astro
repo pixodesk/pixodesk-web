@@ -16,7 +16,7 @@ const page = content.pages.page_00;
 ---
 
 <BaseLayout title="Pricing Page">
-  <div class="bg-custom-gradient-violet text-base-bright pt-navSingle">
+  <div class="bg-custom-gradient-navy text-base-bright pt-navSingle">
     <section class="pricing px-8 pt-8 w-full max-w-5xl mx-auto">
       <!-- Title -->
       {
@@ -41,7 +41,7 @@ const page = content.pages.page_00;
           <div
             class="
             grid grid-cols-1 md:grid-cols-3
-            gap-2
+            gap-4
             w-full 
             mx-auto 
             py-8 
@@ -50,7 +50,13 @@ const page = content.pages.page_00;
           >
             {Array.isArray(page.priceForApps) &&
               page.priceForApps.map((pricing) => (
-                <div class="max-w-[19rem] mx-auto mb-8">
+                <div
+                  class="
+                  max-w-[19rem] mx-auto mb-8
+                  transition-all duration-300 
+                  hover:-translate-y-2 hover:scale-104
+                  "
+                >
                   <Border bgColor="bg-[#00000006]">
                     <PricingCard pricingCardInfo={pricing}>
                       {pricing.icon === "svg" && <LogoSvg />}

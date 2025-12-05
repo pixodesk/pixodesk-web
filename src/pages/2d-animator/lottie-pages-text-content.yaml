@@ -244,7 +244,7 @@ pages:
               Lottie: https://airbnb.io/lottie/
               Wikipedia about Lottie: https://en.wikipedia.org/wiki/Lottie_(file_format)
           
-          - image: http://127.0.0.1:4000/image/lottie-page/airbnb-lottie-screenshot.png
+          - image: ../assets/lottie/pages/airbnb-lottie-screenshot.png
 
           - title: Vector-Based Graphics
             icon: ../assets/lottie/pages/vector-curve.svg
@@ -308,21 +308,21 @@ pages:
             
           
           - title: For Windows
-            icon: ../assets/common/logos/windows.svg
+            icon: ../../../public/assets/common/logos/apple.svg
             text: |
                 There is a Lottie animation player library for Windows. The Lottie-Windows library allows developers to integrate Lottie animations into applications built for the Windows platform. It supports various Windows app frameworks, including UWP (Universal Windows Platform), WPF (Windows Presentation Foundation), and WinUI.
                 https://learn.microsoft.com/en-us/windows/communitytoolkit/animations/lottie; https://github.com/CommunityToolkit/Lottie-Windows;
                 React Native: https://github.com/lottie-react-native/lottie-react-native
             
           - title: For iOS, macOS
-            icon: ../assets/common/logos/apple.svg
+            icon: ../../../public/assets/common/logos/apple.svg
             text: |
                 For iOS development, there is an official Lottie library called "Lottie-iOS" that enables developers to integrate Lottie animations seamlessly into their iOS applications. Lottie-iOS is developed and maintained by Airbnb, the creators of the Lottie framework.
                 https://github.com/airbnb/lottie-ios
                 React Native: https://github.com/lottie-react-native/lottie-react-native
             
           - title: For Android
-            icon: ../assets/common/logos/android.svg
+            icon: ../../../public/assets/common/logos/apple.svg
             text: |
                 For Android development, there is an official Lottie library called "Lottie-Android" that allows developers to integrate Lottie animations into their Android applications. Lottie-Android is developed and maintained by Airbnb, the creators of the Lottie framework.
                 Android https://github.com/airbnb/lottie-android

@@ -244,7 +244,7 @@ pages:
               Lottie: https://airbnb.io/lottie/
               Wikipedia about Lottie: https://en.wikipedia.org/wiki/Lottie_(file_format)
           
-          - image: ../assets/lottie/pages/airbnb-lottie-screenshot.png
+          - image: ../../assets/lottie/pages/airbnb-lottie-screenshot.png
 
           - title: Vector-Based Graphics
             icon: ../assets/lottie/pages/vector-curve.svg

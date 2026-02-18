@@ -1,10 +1,11 @@
 ---
-title: "Introduction"
+title: "Intro"
 description: "Understanding Pixodesk SVG animation formats and modes"
 category: "SVG Animations"
 sidebar:
   order: 10
 slug: "docs/svg-animation-intro"
+draft: true
 ---
 
 # Understanding Pixodesk SVG Animations
@@ -31,7 +32,7 @@ Pixodesk Animator is a powerful tool for creating advanced SVG animations. Unlik
 - Situations where you need a single self-contained file
 
 **Example:**
-```svg
+```astro
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <style>
     @keyframes fadeIn {
@@ -67,8 +68,6 @@ Pixodesk Animator is a powerful tool for creating advanced SVG animations. Unlik
   </svg>
 </div>
 
-<!-- ❌ DON'T use img tag - animations won't work -->
-<!-- <img src="animation.svg" /> -->
 ```
 
 **Pros:**
@@ -100,21 +99,21 @@ Pixodesk Animator is a powerful tool for creating advanced SVG animations. Unlik
 - Single file deployment preferred
 
 **Example:**
-```svg
+```astro
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <circle id="myCircle" cx="50" cy="50" r="40" fill="blue"/>
-  <script>
-    const circle = document.getElementById('myCircle');
-    let opacity = 0;
+    <circle id="myCircle" cx="50" cy="50" r="40" fill="blue"/>
+    <script>
+        const circle = document.getElementById('myCircle');
+        let opacity = 0;
     
-    function animate() {
-      opacity += 0.01;
-      if (opacity > 1) opacity = 0;
-      circle.setAttribute('opacity', opacity);
-      requestAnimationFrame(animate);
-    }
-    animate();
-  </script>
+        function animate() {
+            opacity += 0.01;
+            if (opacity > 1) opacity = 0;
+            circle.setAttribute('opacity', opacity);
+            requestAnimationFrame(animate);
+        }
+        animate();
+    </script>
 </svg>
 ```
 
@@ -161,32 +160,32 @@ Pixodesk Animator is a powerful tool for creating advanced SVG animations. Unlik
 **File Structure:**
 ```json
 {
-  "type": "svg",
-  "viewBox": "0 0 500 500",
-  "animator": {
-    "duration": 2000,
-    "mode": "auto",
-    "trigger": {
-      "startOn": "click"
-    }
-  },
-  "children": [
-    {
-      "type": "circle",
-      "cx": 250,
-      "cy": 250,
-      "r": 100,
-      "fill": "blue",
-      "animate": {
-        "opacity": {
-          "keyframes": [
-            { "time": 0, "value": 0 },
-            { "time": 1000, "value": 1 }
-          ]
+    "type": "svg",
+    "viewBox": "0 0 500 500",
+    "animator": {
+        "duration": 2000,
+        "mode": "auto",
+        "trigger": {
+            "startOn": "click"
         }
-      }
-    }
-  ]
+    },
+    "children": [
+        {
+            "type": "circle",
+            "cx": 250,
+            "cy": 250,
+            "r": 100,
+            "fill": "blue",
+            "animate": {
+                "opacity": {
+                    "keyframes": [
+                        { "time": 0, "value": 0 },
+                        { "time": 1000, "value": 1 }
+                    ]
+                }
+            }
+        }
+    ]
 }
 ```
 
@@ -418,7 +417,7 @@ animator.play();
 ## Getting Started
 
 1. **Create your animation** in [Pixodesk Animator](https://pixodesk.com)
-2. **Choose export format** based on your needs:
+2. **Choose saving format** based on your needs:
    - **Animated SVG (CSS)** → For no-JS environments
    - **Animated SVG (JavaScript)** → For self-contained interactive SVG
    - **Extract JSON from JS SVG** → For use with `@pixodesk/svg-animator-web`
@@ -426,12 +425,3 @@ animator.play();
 
 ---
 
-## Next Steps
-
-- [Getting Started with SVG Animator Web](/docs/svg-animator-web) - Full API documentation
-- [Download Pixodesk Animator](https://pixodesk.com) - Create your animations
-- [Examples & Demos](#) - See it in action
-
----
-
-Your SVG animations are ready to bring your web projects to life! 🎨✨

@@ -70,10 +70,10 @@ export default defineConfig({
                     label: 'Add Lottie Animation',
                     autogenerate: { directory: 'docs/add-lottie-animation' },
                 },
-                {
-                    label: 'Add SVG Animation',
-                    autogenerate: { directory: 'docs/add-svg-animation' },
-                },
+                // {
+                //     label: 'Add SVG Animation',
+                //     autogenerate: { directory: 'docs/add-svg-animation' },
+                // },
                 // {
                 //     label: 'Lottie for Mobile',
                 //     autogenerate: { directory: 'docs/mobile' },

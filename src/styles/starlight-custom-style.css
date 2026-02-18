@@ -30,7 +30,25 @@
 
 :root {
     --sl-nav-height: 2.5rem;
+    
+    /* --sl-custom-menu-height: 2.5rem;  */
 }
+
+/* .page > .header {
+    top: var(--sl-custom-menu-height);
+}
+
+.sidebar-pane {
+    inset-block-start: calc(var(--sl-custom-menu-height) + var(--sl-nav-height)) !important;
+}
+
+.main-frame {
+    padding-top: calc(var(--sl-custom-menu-height) + var(--sl-nav-height) + var(--sl-mobile-toc-height)) !important;
+}
+
+.right-sidebar {
+    padding-top: calc(var(--sl-custom-menu-height) + var(--sl-nav-height)) !important;
+} */
 
 
 /* Light theme */

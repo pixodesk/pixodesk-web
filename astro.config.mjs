@@ -55,7 +55,10 @@ export default defineConfig({
             },
             customCss: ['./src/styles/starlight-custom-style.css'], 
             tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 3 },
-            components: {},
+            components: {
+                // Header: './src/components/starlight/Header.astro',
+                // Footer: './src/components/starlight/Footer.astro',
+            },
             sidebar: [
                 {
                     label: 'Getting Started',
@@ -66,6 +69,10 @@ export default defineConfig({
                 {
                     label: 'Add Lottie Animation',
                     autogenerate: { directory: 'docs/add-lottie-animation' },
+                },
+                {
+                    label: 'Add SVG Animation',
+                    autogenerate: { directory: 'docs/add-svg-animation' },
                 },
                 // {
                 //     label: 'Lottie for Mobile',

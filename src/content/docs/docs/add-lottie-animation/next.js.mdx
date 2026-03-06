@@ -5,17 +5,15 @@ slug: "docs/nextjs-lottie"
 sidebar:
   order: 20
 ---
-import SpacerBottom from '../../../../layouts/SpacerBottom.astro';
+import SpacerB from '../../../../layouts/SpacerB.astro';
 import { Badge } from '@astrojs/starlight/components';
 
 # Add Lottie Animation to Next.js Project
-<SpacerBottom />
 
-You can add Lottie animations to a Next.js app using the `lottie-react` or `dotLottie-react` packages.
-<SpacerBottom size='1rem'/> 
+
+You can add Lottie animations to a Next.js app using the `lottie-react` or `@lottiefiles/dotlottie-react` packages.
  
 To add a Lottie animation to a Next.js project:
-<SpacerBottom size='1rem'/> 
 
 - Create a Next.js project 
 - Install a Lottie player for React
@@ -26,11 +24,11 @@ To add a Lottie animation to a Next.js project:
 - Edit the animation in the project folder (transform, colors, shapes, etc.)
 - Done! The animation is ready
 
-<SpacerBottom />
+
 ---
 
 ## Create Next.js Project
-<SpacerBottom />
+
 
 Open your terminal and navigate to your projects folder:
 
@@ -57,25 +55,25 @@ Then install dependencies:
 npm install
 ```
 
-<SpacerBottom size='1rem' />
+
 
 ---
 
 ## Install Lottie for Next.js
-<SpacerBottom />
 
-Install the `lottie-react` or `dotlottie-react` Lottie player.
-<SpacerBottom size='1rem' />
+
+Install the `lottie-react` or `@lottiefiles/dotlottie-react` Lottie player.
+
 
 **Option 1**: If you want to use `lottie-react`, in your Next.js project folder, run:
 
 ```bash
 npm install lottie-react
 ```
-<SpacerBottom size='1rem' />
 
 
-**Option 2**: If you want to use `dotlottie-react`, in your Next.js project folder, run:
+
+**Option 2**: If you want to use `@lottiefiles/dotlottie-react`, in your Next.js project folder, run:
 
 ```bash
 npm install @lottiefiles/dotlottie-react
@@ -83,14 +81,14 @@ npm install @lottiefiles/dotlottie-react
 ---
 
 ## Add Your Lottie Animation
-<SpacerBottom size='1rem' />
+
 
 To add a Lottie animation to your project, you can:
-<SpacerBottom size='1rem' />
+
 
 - Create an animation from scratch in <span style="color: var(--sl-color-accent-high);">[`Pixodesk 2D Animator`](https://pixodesk.com/2d-animator)</span>, or 
 - Download an animation from <span style="color: var(--sl-color-accent-high);">[`LottieFiles`](https://lottiefiles.com)</span> and edit it in <span style="color: var(--sl-color-accent-high);">[`2D Animator`](https://pixodesk.com/2d-animator)</span>.
-<SpacerBottom size='1rem' />
+
 
 Create an `animations` folder and add your animation:
 
@@ -101,15 +99,13 @@ app/animations/animation.json
 ---
 
 ## Create Lottie Component
-<SpacerBottom />
 
-Create a client component, since Lottie needs browser APIs.
 
-How you use Lottie in Next.js depends on which player you are using to play the animation.
-<SpacerBottom size='1rem' />
+How you use Lottie in Next.js depends on which player you are using, but all components require `use client` since Lottie needs browser APIs.
+
 
 **Option 1**: If you are using `lottie-react`, **app/components/LottieAnimation.tsx** should look like this:
-<SpacerBottom size='1rem' />
+
 
 
 ```tsx
@@ -133,11 +129,11 @@ export default function LottieAnimation() {
 }
 
 ```
-<SpacerBottom />
 
 
-**Option 2**: If you are using `dotlottie-react`, **app/components/LottieAnimation.tsx** should look like this:
-<SpacerBottom size='1rem' />
+
+**Option 2**: If you are using `@lottiefiles/dotlottie-react`, **app/components/LottieAnimation.tsx** should look like this:
+
 
 ```tsx
 "use client";
@@ -159,17 +155,13 @@ export default function LottieAnimation() {
 }
 
 ```
-<SpacerBottom />
 
 
-**Note:** Add **"use client"** at the top of components using Lottie, as it requires browser APIs.
-
-<SpacerBottom />
 
 ---
 
 ## Use in Your Page
-<SpacerBottom size='1rem' />
+
 **app/page.tsx**
 
 ```tsx
@@ -188,7 +180,7 @@ export default function Home() {
 ---
 
 ## Run Your App
-<SpacerBottom />
+
 
 Start the development server:
 
@@ -197,32 +189,32 @@ npm run dev
 ```
 
 
-You should see `Local: http://localhost:3000` in your terminal window. 
-<SpacerBottom size='1rem' />
+You should see `Local: http://localhost:3000` in your terminal. 
+
 
 **Open the link in your browser.**
-<SpacerBottom size='1rem' />
 
-**Note:** The localhost port may be different if `3000` is already being used by another application.
-<SpacerBottom size='1rem' />
+
+**Note:** The localhost port can be different if `3000` has been taken by another application.
+
 
 Your Lottie animation should now work in your Next.js project.
-<SpacerBottom />
+
 
 
 
 ---
 
 ## Edit Animation in the Project Folder
-<SpacerBottom />
+
 - Open your animation in **`2D Animator`** directly from your `app/animations` folder.
 - **Modify** your file and **save** it. 
 
-<SpacerBottom />
+
 ---
 
 ## Done! Animation is Ready 🎉 
-<SpacerBottom />
+
 Hot reloading will pick up changes and reflect them in the browser immediately. Refresh the page if necessary.
 
-<SpacerBottom size='4rem'/>
+<SpacerB size='4rem'/>

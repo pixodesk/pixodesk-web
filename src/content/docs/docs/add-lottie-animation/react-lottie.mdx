@@ -5,22 +5,22 @@ slug: "docs/react-lottie"
 sidebar:
   order: 10
 ---
-import SpacerBottom from '../../../../layouts/SpacerBottom.astro';
+import SpacerB from '../../../../layouts/SpacerB.astro';
 import { Badge } from '@astrojs/starlight/components';
 
 
 # Add Lottie Animation to React Project
 
-<SpacerBottom /> 
+ 
 
-You can add Lottie animations to a React app using the `lottie-react` or `dotLottie-react` packages.
-<SpacerBottom size='1rem'/> 
+You can add Lottie animations to a React app using the `lottie-react` or `@lottiefiles/dotlottie-react` packages.
+ 
 
 These are **React-specific Lottie players** that adapt animations to React components, allow control via props, and integrate smoothly with the React lifecycle.
-<SpacerBottom size='1rem'/> 
+ 
 
 To add a Lottie animation to a React project:
-<SpacerBottom size='1rem'/> 
+ 
 - Create a React project 
 - Install a Lottie player for React
 - Add your Lottie animation to the project 
@@ -29,27 +29,25 @@ To add a Lottie animation to a React project:
 - Edit the animation in the project folder (transform, colors, shapes, etc.)
 - Done! The animation is ready
 
-<SpacerBottom />
+
 
 
 
 ---
 
 ## Create React Project
-<SpacerBottom />
+
 
 Open your terminal and navigate to your projects folder:
 ```bash
 cd path/to/your/projects
 ```
-Then:
+
+Create a new React + TypeScript project called `my-animation-app`:
 
 ```bash
 npm create vite@latest my-animation-app -- --template react-ts
 ```
-
-This creates a React + TypeScript project called `my-animation-app`.
-<SpacerBottom size='1rem' />
 
 Go into your project folder:
 ```bash
@@ -61,19 +59,19 @@ Then install dependencies:
 npm install
 ```
 
-<SpacerBottom size='1rem' />
+
 ---
 
 ## Install Lottie for React
-<SpacerBottom />
+
 **Option 1**: If you are using `lottie-react`, in your React project folder, run:
 
 ```bash
 npm install lottie-react
 ```
-<SpacerBottom size='1rem' />
 
-**Option 2**: If you are using `dotlottie-react`, in your React project folder, run:
+
+**Option 2**: If you are using `@lottiefiles/dotlottie-react`, in your React project folder, run:
 
 ```bash
 npm install @lottiefiles/dotlottie-react
@@ -81,37 +79,37 @@ npm install @lottiefiles/dotlottie-react
 ---
 
 ## Add Your Lottie Animation
-<SpacerBottom size='1rem' />
+
 
 To add a Lottie animation to your project, you can:
-<SpacerBottom size='1rem' />
+
 
 - Create an animation from scratch in <span style="color: var(--sl-color-accent-high);">[`Pixodesk 2D Animator`](https://pixodesk.com/2d-animator)</span>, or 
 - Download an animation from <span style="color: var(--sl-color-accent-high);">[`LottieFiles`](https://lottiefiles.com)</span> and edit it in <span style="color: var(--sl-color-accent-high);">[`2D Animator`](https://pixodesk.com/2d-animator)</span>.
-<SpacerBottom size='1rem' />
+
 
 {/* In 2D Animator, you can modify all animation properties: color, stroke, shapes, animation position, scale, opacity, easing, etc.
-<SpacerBottom size='1rem' />
+
 
 You can combine several animations into one to achieve the desired effect.
-<SpacerBottom size='1rem' /> */}
+ */}
 
 Create an `animations` folder in `src/assets/` and add your animation:
 
 ```bash
 src/assets/animations/animation.json
 ```
-<SpacerBottom size='1rem' />
+
 ---
 
 ## Use Lottie in React Component
-<SpacerBottom />
+
 
 How you use Lottie in React depends on which player you are using to play the animation.
-<SpacerBottom size='1rem' />
+
 
 **Option 1**: If you are using `lottie-react`, **src/App.tsx** should look like this:
-<SpacerBottom size='1rem' />
+
 
 ```tsx
 import Lottie from "lottie-react";
@@ -135,12 +133,12 @@ function App() {
 export default App;
 
 ```
-<SpacerBottom />
 
 
 
-**Option 2**: If you are using `dotlottie-react`, **src/App.tsx** should look like this:
-<SpacerBottom size='1rem' />
+
+**Option 2**: If you are using `@lottiefiles/dotlottie-react`, **src/App.tsx** should look like this:
+
 
 ```tsx
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
@@ -163,7 +161,7 @@ export default App;
 
 ```
 
-<SpacerBottom />
+
 
 
 
@@ -173,7 +171,7 @@ export default App;
 
 ## Run Your App
 
-<SpacerBottom />
+
 
 Start the development server:
 
@@ -181,33 +179,34 @@ Start the development server:
 npm run dev
 ```
 
-You should see `Local: http://localhost:5173` in your terminal window. 
-<SpacerBottom size='1rem' />
+You should see `Local: http://localhost:5173` in your terminal. 
+
 
 **Open the link in your browser.**
-<SpacerBottom size='1rem' />
 
-**Note:** The localhost port may be different if `5173` is already being used by another application.
-<SpacerBottom size='1rem' />
+
+**Note:** The localhost port can be different if `5173` has been taken by another application.
+
+
 
 Your Lottie animation should now work in your React project.
-<SpacerBottom />
+
 
 
 ---
 
 ## Edit Animation in the Project Folder
-<SpacerBottom />
+
 
 - Open your animation in **`2D Animator`** directly from your `src/assets/animations` folder.
 - **Modify** your file and **save** it. 
-<SpacerBottom />
+
 
 ---
 
 ## Done! Animation is Ready 🎉 
-<SpacerBottom />
+
 
 Hot reloading will pick up changes and reflect them in the browser immediately. Refresh the page if necessary.
 
-<SpacerBottom size='4rem'/>
+<SpacerB size='4rem'/>

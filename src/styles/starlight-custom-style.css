@@ -11,11 +11,26 @@
     /* --sl-color-accent-low: #f0aa8a;
     --sl-color-accent: #aed2fc;
     --sl-color-accent-high: #0761d1; */
+    --sl-color-accent-high: #0072f5;
 }
 
 :root {
   /* Change the background of the highlight */
   --sl-color-text-selection-bg: #b3d7ff; /* A classic light blue */
+
+  p, ul {
+    margin-bottom: 1rem;
+  }
+
+  li > p { display: inline; }
+
+  .sl-heading-wrapper:has(h1),  .sl-heading-wrapper:has(h2),  .sl-heading-wrapper:has(h3){
+    margin-bottom: 2rem;
+  }
+
+  hr {
+    margin: 2rem 0;
+  }
 }
 
 ::selection {

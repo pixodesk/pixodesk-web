@@ -6,17 +6,17 @@ sidebar:
   order: 40
 ---
 
-import SpacerBottom from '../../../../layouts/SpacerBottom.astro';
+import SpacerB from '../../../../layouts/SpacerB.astro';
 import { Badge } from '@astrojs/starlight/components';
 
 # Add Lottie Animation to Vue Project
-<SpacerBottom />
+
 
 You can add Lottie animations to a Vue app using the `@lottiefiles/dotlottie-vue` package.
-<SpacerBottom size='1rem'/> 
+ 
 
 To add a Lottie animation to a Vue project:
-<SpacerBottom size='1rem'/> 
+ 
 
 - Create a Vue project 
 - Install the Lottie player for Vue
@@ -26,13 +26,13 @@ To add a Lottie animation to a Vue project:
 - Run your app 
 - Edit the animation in the project folder (transform, colors, shapes, etc.)
 - Done! The animation is ready
-<SpacerBottom />
+
 
 ---
 
 
 ## Create Vue Project
-<SpacerBottom />
+
 
 Open your terminal and navigate to your projects folder:
 
@@ -68,15 +68,15 @@ npm install @lottiefiles/dotlottie-vue
 ---
 
 ## Add Your Lottie Animation
-<SpacerBottom size='1rem' />
+
 
 
 To add a Lottie animation to your project, you can:
-<SpacerBottom size='1rem' />
+
 
 - Create an animation from scratch in <span style="color: var(--sl-color-accent-high);">[`Pixodesk 2D Animator`](https://pixodesk.com/2d-animator)</span>, or 
 - Download an animation from <span style="color: var(--sl-color-accent-high);">[`LottieFiles`](https://lottiefiles.com)</span> and edit it in <span style="color: var(--sl-color-accent-high);">[`2D Animator`](https://pixodesk.com/2d-animator)</span>.
-<SpacerBottom size='1rem' />
+
 
 
 Create an `animations` folder in `public` and add your animation:
@@ -88,7 +88,7 @@ public/animations/animation.json
 ---
 
 ## Create Lottie Component
-<SpacerBottom size='1rem' />
+
 
 **src/components/LottieAnimation.vue**
 
@@ -119,7 +119,7 @@ import { DotLottieVue } from '@lottiefiles/dotlottie-vue';
 ---
 
 ## Use Lottie in Vue Component
-<SpacerBottom size='1rem' />
+
 
 **src/App.vue**
 
@@ -156,7 +156,7 @@ import LottieAnimation from './components/LottieAnimation.vue';
 ---
 
 ## Run Your App
-<SpacerBottom />
+
 
 Start the development server:
 
@@ -166,17 +166,17 @@ npm run dev
 
 
 
-You should see `Local: http://localhost:5173` in your terminal window. 
-<SpacerBottom size='1rem' />
+You should see `Local: http://localhost:5173` in your terminal. 
+
 
 **Open the link in your browser.**
-<SpacerBottom size='1rem' />
+
 
 **Note:** The localhost port can be different if `5173` has been taken by another application.
-<SpacerBottom size='1rem' />
+
 
 Your Lottie animation should now work in your Vue project.
-<SpacerBottom />
+
 
 
 
@@ -185,17 +185,17 @@ Your Lottie animation should now work in your Vue project.
 ---
 
 ## Edit Animation in the Project Folder
-<SpacerBottom />
+
 
 - Open your animation in **`2D Animator`** directly from your `public/animations` folder.
 - **Modify** your file and **save** it. 
-<SpacerBottom />
+
 
 ---
 
 ## Done! Animation is Ready 🎉 
-<SpacerBottom />
+
 
 Hot reloading will pick up changes and reflect them in the browser immediately. Refresh the page if necessary.
 
-<SpacerBottom size='4rem'/>
+<SpacerB size='4rem'/>

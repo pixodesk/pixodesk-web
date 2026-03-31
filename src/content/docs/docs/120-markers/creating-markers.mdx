@@ -1,0 +1,65 @@
+---
+title: "Creating Markers"
+description: "Creating Markers"
+slug: "docs/creating-markers"
+sidebar:
+  order: 10
+draft: false
+---
+
+
+Markers
+Shapes, text, paths, and groups can be converted into Markers and reused across your design. Markers are defined once and then referenced multiple times along a path, meaning they do not increase file size when reused.
+Markers are applied to paths at specific positions:
+Start of the path (marker-start)
+
+
+Along the path at each node (marker-mid)
+
+
+End of the path (marker-end)
+
+
+Because markers are reused as references, the same marker can appear multiple times along a path without duplicating geometry. This makes them especially useful for:
+Arrows and line endings
+
+
+Dashed or decorative paths
+
+
+Diagrams, charts, and technical illustrations
+
+
+Motion graphics where repeated elements follow a path
+
+
+
+
+Notes
+Markers are reusable and linked — editing one updates all instances
+
+
+They are ideal for repeated elements along paths and help optimize file size
+
+
+Only unused markers can be deleted
+
+
+In SVG, markers are defined once (inside `<defs>`) and referenced in `<path>` elements using properties like marker-start, marker-mid, and marker-end
+
+
+
+
+Creating a Marker
+To create a marker, select one or more objects, then use:
+Object > Make Marker
+
+
+Click the Make Marker button in the Top Panel (available when the Selection or Transform tool is active)
+
+
+After creation:
+The object is converted into a marker definition
+
+
+The marker appears in the Markers section in the Objects Panel 

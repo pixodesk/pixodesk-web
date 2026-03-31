@@ -3,7 +3,7 @@ import defaultTheme from 'tailwindcss/defaultTheme';
 
 module.exports = {
   content: [
-    "./src/**/*.{astro,js,ts,jsx,tsx}", // scan Astro + React + JS/TS files
+    "./src/**/*.{astro,js,ts,jsx,tsx,mdx}", // scan Astro + React + JS/TS + MDX files
   ],
 
   theme: {

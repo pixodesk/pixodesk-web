@@ -1,0 +1,50 @@
+---
+title: "Markers"
+description: "Markers"
+slug: "docs/markers"
+sidebar:
+  order: 0
+draft: false
+---
+
+
+Markers
+Shapes, text, paths, and groups can be converted into Markers and reused across your design. Markers are defined once and then referenced multiple times along a path, meaning they do not increase file size when reused.
+Markers are applied to paths at specific positions:
+Start of the path (marker-start)
+
+
+Along the path at each node (marker-mid)
+
+
+End of the path (marker-end)
+
+
+Because markers are reused as references, the same marker can appear multiple times along a path without duplicating geometry. This makes them especially useful for:
+Arrows and line endings
+
+
+Dashed or decorative paths
+
+
+Diagrams, charts, and technical illustrations
+
+
+Motion graphics where repeated elements follow a path
+
+
+
+
+Notes
+Markers are reusable and linked — editing one updates all instances
+
+
+They are ideal for repeated elements along paths and help optimize file size
+
+
+Only unused markers can be deleted
+
+
+In SVG, markers are defined once (inside `<defs>`) and referenced in `<path>` elements using properties like marker-start, marker-mid, and marker-end
+
+

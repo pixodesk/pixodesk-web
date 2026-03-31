@@ -1,0 +1,149 @@
+---
+title: "Manage Document Properties"
+description: "Manage Document Properties"
+slug: "docs/manage-document-properties"
+sidebar:
+  order: 30
+draft: false
+---
+#  Manage Document Properties
+
+Document properties define the **global settings** for your animation, including canvas dimensions, playback behavior, export format, and rendering options.
+
+You can view and edit document properties in the **Properties Panel** after creating a new document or opening an existing one.
+
+Document properties are also available when selecting the **root `<svg />`** element **at the top of the Tools Panel**. 
+
+Selecting this element exposes all document-level settings in the **Properties Panel**.
+
+
+## View Box
+
+The **View Box** defines the coordinate system and visible area of the SVG canvas. It controls how the animation content is positioned and scaled within the document.
+
+**Start (x, y)**<br/>
+Defines the starting coordinates of the view box within the SVG coordinate system.
+
+**Size (x, y)**<br/>
+Specifies the width and height of the view box.
+
+**Size Lock**<br/>
+When the lock is enabled, width and height scale proportionally. When unlocked, they can be edited independently.
+
+## Aspect Ratio
+
+The Aspect Ratio setting controls how the SVG content scales when the document is resized or embedded in different layouts.
+
+The alignment defines where the animation content is positioned inside the available viewport.
+
+## Horizontal alignment
+
+**xMin**<br/>
+aligns the content to the left side of the viewport
+
+**xMid**<br/>
+centers the content horizontally
+**xMax**<br/>
+aligns the content to the right side of the viewport
+
+
+## Vertical alignment
+
+**yMin**<br/>
+aligns the content to the top of the viewport
+
+
+**yMid**<br/>
+centers the content vertically
+
+
+**yMax**<br/>
+aligns the content to the bottom of the viewport
+
+
+
+## Scale Behavior
+
+Determines how the animation scales when the viewport size differs from the original document dimensions.
+
+**Meet**<br/>
+Scales the animation so that the entire content fits inside the viewport while preserving the aspect ratio. Empty space may appear on two sides.
+
+**Slice**<br/>
+Scales the animation so the viewport is completely filled. Parts of the animation may be clipped.
+
+**None**<br/>
+Disables aspect-ratio-preserving scaling and stretches the animation to match the viewport size.
+
+
+
+## Animation Settings
+These properties control how the animation timeline behaves.
+
+**Duration (ms)**<br/>
+Defines the total length of the animation in milliseconds.
+
+**Delay (ms)**<br/>
+Adds a delay before the animation begins playing.
+
+**Frame Rate (fps)**<br/>
+Specifies the number of frames per second used during animation playback.
+
+**Loop**<br/>
+When enabled, the animation restarts automatically after reaching the end.
+
+#### Timeline Mode 
+
+Defines how the animation timeline progresses.
+
+**Time**<br/>
+The animation plays based on elapsed time.
+
+**Scroll**<br/>
+The animation progress is controlled by the page scroll position.
+
+#### Playback Triggers
+
+Triggers determine when the animation starts.
+
+**On Load**<br/>
+Animation starts automatically when the document loads.
+
+**On Mouse Over**<br/>
+Animation starts when the pointer moves over the animation.
+
+**On Click**<br/>
+Animation starts after a click interaction.
+
+**On Scroll Into View**<br/>
+Animation starts when the element enters the viewport.
+
+**Programmatic**<br/>
+Animation playback is controlled through JavaScript APIs.
+
+
+**Reset on Finish**<br/>
+When enabled, the animation resets to its starting state after reaching the end of the timeline.
+
+## File Type
+
+The File Type property defines the output format used when saving the animation.
+
+Available formats include:
+- JSON file format for Lottie animation
+- JSON file format for SVG animation
+- SVG file format with CSS keyframes
+- SVG file format with JavaScript triggers
+- SVG file format with JavaScript animation
+
+
+These file formats described in <span style="color: var(--sl-color-accent-high);">[Supported file formats](/docs/supported-file-formats)</span> section.
+
+Because Pixodesk Animator Studio formats are interchangeable, you can change the file format at any time.
+
+
+## DOM Settings
+
+**ID**<br/>
+Adds custom ID to your animation.
+

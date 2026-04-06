@@ -31,7 +31,7 @@ sections:
       - content: "###### Export is available in the desktop app."
      
   section_01:
-    title: "## Pixodesk 2D Animator Makes Animation for Native Devices Simple"
+    title: "## Pixodesk Animator Makes Animation for Native Devices Simple"
     item_01:
       icon:
       title: Works Everywhere
@@ -40,7 +40,7 @@ sections:
     item_02:
       icon:
       title: Ultra-Small File Size
-      content: SVG and Lottie (JSON) animations have ultra-lightweight file sizes, helping your application run efficiently and smoothly.
+      content: Lottie (JSON) animations have ultra-lightweight file sizes, helping your application run efficiently and smoothly.
 
     item_03:
       icon:
@@ -60,7 +60,7 @@ sections:
     item_06:
       icon:
       title: Different Export Options
-      content: Export to dynamic SVG, Lottie, JSON, GIF, MP4, WebM, or static SVG, PNG, JPEG at any chosen time point.
+      content: Export to dynamic SVG, Lottie JSON, GIF, MP4, WebM, or static SVG, PNG, JPEG at any chosen time point.
 
   
   section_02:

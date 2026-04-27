@@ -6,6 +6,21 @@ async function expectNotFound(page: Page, href: string) {
 }
 
 // ──────────────────────────────────────────────────────────
+// STORE URLS  —  single source of truth
+// Update here if a store listing URL ever changes.
+// ──────────────────────────────────────────────────────────
+const storeUrls = {
+  animator: {
+    microsoft: 'https://apps.microsoft.com/detail/9ppd94xqfpc9',
+    apple: 'https://apps.apple.com/gb/app/pixodesk-animator/id1632981604',
+  },
+  svgEditor: {
+    microsoft: 'https://apps.microsoft.com/detail/9pczdhjv026p',
+    apple: 'https://apps.apple.com/gb/app/pixodesk-svg/id6476456257',
+  },
+};
+
+// ──────────────────────────────────────────────────────────
 // NAV MENU  (logo + 4 main items)
 // ──────────────────────────────────────────────────────────
 test.describe('nav menu', () => {
@@ -120,20 +135,34 @@ test.describe('pricing page - download buttons', () => {
 });
 
 // ──────────────────────────────────────────────────────────
+// MAIN APP PAGES  →  hero section store links (href check only)
+// ──────────────────────────────────────────────────────────
+test.describe('app pages - hero store button hrefs', () => {
+  const pages = [
+    { path: '/animator', ...storeUrls.animator },
+    { path: '/svg-editor', ...storeUrls.svgEditor },
+  ];
+
+  for (const { path, microsoft, apple } of pages) {
+    test(`${path} - Microsoft Store href`, async ({ page }) => {
+      await page.goto(path);
+      await expect(page.locator(`a[href="${microsoft}"]`).first()).toHaveAttribute('href', microsoft);
+    });
+
+    test(`${path} - Apple Store href`, async ({ page }) => {
+      await page.goto(path);
+      await expect(page.locator(`a[href="${apple}"]`).first()).toHaveAttribute('href', apple);
+    });
+  }
+});
+
+// ──────────────────────────────────────────────────────────
 // DOWNLOAD PAGES  →  store links (href check only, no navigation)
 // ──────────────────────────────────────────────────────────
 test.describe('download pages - store button hrefs', () => {
   const pages = [
-    {
-      path: '/animator/download',
-      microsoft: 'https://apps.microsoft.com/detail/9ppd94xqfpc9',
-      apple: 'https://apps.apple.com/gb/app/pixodesk-animator/id1632981604',
-    },
-    {
-      path: '/svg-editor/download',
-      microsoft: 'https://apps.microsoft.com/detail/9pczdhjv026p',
-      apple: 'https://apps.apple.com/gb/app/pixodesk-svg/id6476456257',
-    },
+    { path: '/animator/download', ...storeUrls.animator },
+    { path: '/svg-editor/download', ...storeUrls.svgEditor },
   ];
 
   for (const { path, microsoft, apple } of pages) {

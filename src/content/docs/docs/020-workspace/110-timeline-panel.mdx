@@ -1,0 +1,41 @@
+---
+title: "Timeline Panel"
+description: "Timeline Panel"
+slug: "docs/timeline-panel"
+sidebar:
+  order: 120
+draft: false
+---
+
+# Timeline Panel
+
+The Timeline Panel occupies the bottom portion of the workspace. It is used to create, edit, and control animations using keyframes. The panel is divided into three areas:
+
+- **Layer List** (left) — shows document layers and their animated properties. See [Timeline Layers](./timeline-layers).
+- **Keyframe Editor** (center) — the visual timeline where keyframes are placed and edited. See [Keyframe Timeline](./keyframe-timeline).
+- **Chart Panel** (right) — displays animation curves for fine-tuning easing and timing. See [Easing Charts](./easing-charts).
+
+## Playback Toolbar
+
+The toolbar runs along the top of the Timeline Panel and contains playback and keyframe controls:
+
+- **More (⋮)** — opens additional options:
+  - Show Velocity Mini Charts
+  - Select All Keyframes
+  - Deselect Keyframes
+  - Add Inner Loop to Selected Keyframes
+  - Remove Inner Loop from Selected Keyframes
+  - Flip Selected Keyframes
+- **Go to Animation Start** — jumps the playhead to frame 0
+- **Go to Previous Frame** — moves one frame backward
+- **Play / Pause** `Space` — starts or stops playback
+- **Frame** — displays the current frame position; type a value to jump to a specific frame, or drag the slider to scrub through the animation
+- **Go to Next Frame** — moves one frame forward
+- **Go to Animation End** — jumps the playhead to the last frame
+- **Loop Animation** — toggles continuous looped playback
+- **Pin Animation State at Frame** `Alt+A` — pins the current object state at the playhead position for auto-animation; see [Auto Animation](../../docs/auto-animation)
+- **Unpin All** `Alt+Shift+A` — removes all pins
+
+## Animation Range
+
+The timeline ruler shows the total animation duration set in the document properties. The highlighted region on the ruler represents the active animation range. Duration is configured in the [Properties Panel](./properties-panel) when the SVG root is selected.

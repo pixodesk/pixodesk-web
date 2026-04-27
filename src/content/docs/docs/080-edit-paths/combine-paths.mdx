@@ -8,8 +8,19 @@ draft: false
 ---
 
 
-# Combine
+# Combine Paths
+
+`Alt+K`
 
 Joins multiple selected paths into a single compound path while preserving their individual shapes.
 
-This allows several paths to behave as one object while still maintaining their internal structure.
+This allows several paths to behave as one object while still maintaining their internal structure. Unlike **Unite**, the original shapes are not merged — they remain as separate sub-paths within the compound path.
+
+## How to Use
+
+1. Select two or more paths.
+2. Choose **Path → Combine** or press `Alt+K`.
+
+The paths are joined into a single compound path. Overlapping areas between the sub-paths appear as transparent cutouts (using the even-odd fill rule).
+
+To reverse this operation, use [Break Apart](/docs/break-apart).

@@ -1,0 +1,119 @@
+---
+title: "Tools Panel"
+description: "Tools Panel"
+slug: "docs/tools-panel"
+sidebar:
+  order: 30
+draft: false
+---
+
+
+# Tools panel
+
+The Tools panel is the vertical strip of tool buttons on the left side of the workspace. Selecting a tool changes the active editing mode, which in turn determines:
+
+- What the **Top Panel** shows (context-sensitive action buttons and options)
+- What the **Properties Panel** shows on the right
+- How mouse interactions work on the canvas
+
+## Tools
+
+### Selection Tool `S`
+
+Select, move, and resize objects. Click to select individual objects or groups. Double-click a group to select an object inside it. Hold `Ctrl/Cmd` to add objects to a multi-selection.
+
+**Top Panel shows:** Group/Ungroup, Make Symbol, Make Marker, Make Pattern, Arrange, Align, Distribute, Flip, Move Along Path, Mask, Path operations, Undo/Redo, Snap.
+
+### Node Tool `N`
+
+Edit the nodes and path segments of a selected vector path. Select nodes by clicking individually or dragging a selection rectangle. Drag nodes to reshape the path. Double-click a path to add a node.
+
+**Top Panel shows:** Node editing commands (Add Node, Remove Node, Break at Points, Path Start, Reverse Path, node type buttons), Path, Align/Distribute nodes, Undo/Redo, Snap.
+
+### Round Corner `C`
+
+Round, bevel, or invert the corners of shapes. Click a corner node and drag to adjust the radius.
+
+**Top Panel shows:** Corner radius input, Corner type (Round / Bevel / Inverted Round), Convert to Curves, Undo/Redo, Snap.
+
+### Shape Builder `B`
+
+Combine or subtract overlapping shapes interactively by clicking or dragging across them.
+
+**Top Panel shows:** Mode buttons — Add, Remove, All, Subtract, Intersect, Exclude, Deselect, Undo/Redo, Snap.
+
+### Transform Tool `T`
+
+Move, rotate, and scale objects using transform handles. Hold `Shift` to constrain movement to horizontal/vertical, constrain rotation to 45° increments, or maintain the aspect ratio when scaling.
+
+**Top Panel shows:** Same as Selection Tool — Group/Ungroup, Make Symbol, Make Marker, Make Pattern, Arrange, Align, Distribute, Flip, Move Along Path, Mask, Path, Undo/Redo, Snap.
+
+### Repeater Tool `Y`
+
+Create circular or linear repeating patterns from a selected object.
+
+**Top Panel shows:** Count input, Add Circular repeat, Add Linear repeat, Add/Remove one clone, Cancel Repeat, Undo/Redo, Snap.
+
+### Spray
+
+Spray copies of a selected object across the canvas with randomized size, rotation, and opacity.
+
+**Top Panel shows:** Spray Radius, Amount, Rotation, Min/Max Scale, Min/Max Opacity inputs.
+
+### Gradient Tool `G`
+
+Adjust gradient control points for objects with a linear or radial gradient fill or stroke.
+
+**Top Panel shows:** Focal Point toggle (on/off), Undo/Redo, Snap.
+
+### Hand Tool `H`
+
+Pan around the canvas without affecting content. Click and drag to scroll the view.
+
+**Top Panel shows:** Standard object actions (same as Selection Tool).
+
+### Pen Tool `P`
+
+Draw precise vector paths by clicking to place nodes. Click for straight segments; click and drag for curves. Double-click or press `Escape` to finish. Close the path by clicking the start node.
+
+**Top Panel shows:** Fill/Stroke color pickers, Stroke Width, Path operations, Undo/Redo, Snap.
+
+### Freehand Tool `F`
+
+Draw freehand paths by clicking and dragging. The path follows your cursor movement.
+
+**Top Panel shows:** Fill/Stroke color pickers, Stroke Width, Undo/Redo, Snap.
+
+### Ellipse Tool `E`
+
+Draw ellipses and circles. Hold `Alt/Option` to draw from the center. Hold `Shift` to constrain to a circle.
+
+**Top Panel shows:** Fill/Stroke color pickers, Stroke Width, Undo/Redo, Snap.
+
+### Rectangle Tool `R`
+
+Draw rectangles and squares. Hold `Alt/Option` to draw from the center. Hold `Shift` to constrain to a square.
+
+**Top Panel shows:** Fill/Stroke color pickers, Stroke Width, Undo/Redo, Snap.
+
+### Shape Tool `W`
+
+Draw stars, polygons, and spirals.
+
+**Top Panel shows:** Fill/Stroke color pickers, Stroke Width, Shape type (Star / Polygon / Spiral), Undo/Redo, Snap.
+
+### Text Tool `X`
+
+Add and edit text. Click on the canvas to place a text object.
+
+**Top Panel shows:** Fill color, Font type, Font Family, Font Style, Font Size, Put Text on Path, Text to Bezier Shape, Undo/Redo, Snap.
+
+### Page Tool
+
+Select and reposition the page (canvas boundary) within the viewport.
+
+**Top Toolbar Panel shows:** Undo/Redo, Snap, Zoom, Layout controls.
+
+## Top Panel
+
+The **Top Toolbar Panel** (horizontal bar above the canvas) is context-sensitive — its content changes based on the active tool. It always includes **Undo** `Ctrl/Cmd+Z`, **Redo** `Shift+Ctrl/Cmd+Z`, **Snap** controls, and (for most tools) **Zoom** and **Layout** buttons. Tools that work with selections (Selection, Transform, Hand) also show object operation shortcuts like Group, Align, Make Symbol, and Mask.

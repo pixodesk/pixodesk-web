@@ -7,29 +7,36 @@ sidebar:
 draft: false
 ---
 
-Using Symbols
-You can place multiple instances of the same symbol on the canvas in two ways:
-Drag and Drop
-Open the Symbols section in the Objects Panel
+# Using Symbols
 
+You can place multiple instances of the same symbol on the canvas. All instances remain linked to the original symbol definition.
 
-Select a symbol using its preview
+## Drag and Drop from the Symbols Panel
 
+1. Open the **Symbols** section in the Objects Panel.
+2. Find the symbol you want to use by its preview.
+3. Drag it onto the canvas to place a new instance.
 
-Drag and drop it onto the canvas
+## Duplicate an Existing Instance
 
+1. Select an existing symbol instance in the Layer Tree or on the canvas.
+2. Duplicate it using:
+   - **Edit → Duplicate** or `Cmd/Ctrl + D`
+   - Standard copy (`Cmd/Ctrl + C`) and paste (`Cmd/Ctrl + V`)
 
-Duplicate Existing Instance
-Select a symbol instance in the Object Tree
+The duplicate is a new linked instance — changes to the symbol definition will update it along with all other instances.
 
+## Symbol Instance Properties
 
-Duplicate it using:
+When a symbol instance (`<use/>`) is selected, the Properties Panel shows additional sections specific to instances:
 
+### Display
 
-Edit > Duplicate or Cmd/Ctrl + D
+- **Offset** — offsets the symbol content within the instance bounding box (X and Y)
+- **Custom Size** — when enabled, lets you override the symbol's natural size with a custom width and height
 
+### Animation
 
-Standard copy and paste commands
-
-
-All instances remain linked to the original symbol.
+- **Start** — delays the start of the symbol's internal animation by the specified number of milliseconds
+- **Stretch** — scales the playback speed of the symbol's animation (100% = normal speed)
+- **Crop Time** — when enabled, clips the symbol's animation to the instance's time range

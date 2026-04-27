@@ -7,35 +7,25 @@ sidebar:
 draft: false
 ---
 
+# Filter Properties
 
-Filter Properties
-In the Properties panel, you can modify parameters of the selected filter.
-Position (X, Y)
- Defines the position of the filter region relative to the object. This controls where the filter effect is rendered and can be used to shift the visible area of the effect.
+When a filter is applied to an object, it appears as an entry in the **Filter** section of the Properties Panel. Expand the entry to access its properties.
 
+## Filter Region
 
-Size (Width, Height)
- Sets the dimensions of the filter region. Increasing the size ensures that effects like shadows or blurs are not clipped at the edges.
+- **Position** (X, Y) — defines the position of the filter region relative to the object. Controls where the filter effect is rendered; can be used to shift the visible area
+- **Size** (X, Y) — sets the dimensions of the filter region. Increase these values to prevent effects like shadows or blurs from being clipped at the edges
 
+Both Position and Size accept a unit (% or px).
 
-Primitive Units
- Determines the coordinate system used for the filter primitives. Typically set to pixels, it defines how values like position, size, and offsets are interpreted.
+## Primitive Units
 
+Determines the coordinate system used for the filter primitives — typically `px`, defining how values like position, size, and offsets are interpreted.
 
-Shadow Radius
- Controls the blur intensity of the shadow. Higher values create a softer, more diffused shadow, while lower values result in a sharper edge.
+## Shadow-Specific Properties
 
+These appear for shadow-based presets (Drop Shadow, Inner Shadow):
 
-Offset (X, Y)
- Adjusts the horizontal and vertical displacement of the shadow relative to the original object, allowing you to control the direction and distance of the shadow.
-
-
-Shadow Color
- Defines the color of the shadow. You can customize it to match your design.
-
-
-You can:
-Add multiple filters to the same layer or group
-
-
-Stack and combine them for more complex effects
+- **Shadow Radius** — controls the blur intensity of the shadow. Higher values produce a softer shadow; lower values produce a sharper edge
+- **Offset** (X, Y) — adjusts the horizontal and vertical displacement of the shadow relative to the object
+- **Shadow Color** — the color of the shadow

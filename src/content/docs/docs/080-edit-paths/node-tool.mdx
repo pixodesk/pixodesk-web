@@ -13,6 +13,32 @@ draft: false
 
 The Node Tool allows you to edit and refine vector paths by modifying nodes (points) and path segments. With this tool you can reshape paths, adjust curves, add or remove nodes, and control the direction of path segments.
 
-Select the Node Tool from the Toolbar Panel, then click a path on the canvas to reveal its nodes and control handles.
+## How to Use the Node Tool
 
-When nodes are selected, additional editing options become available through the context menu and the Top Panel.
+1. Select the Node Tool from the Toolbar Panel.
+
+2. Click a path on the canvas to reveal its nodes and control handles.
+
+3. Click a node to select it. Drag a selected node to reposition it.
+
+4. Click and drag an empty area to draw a selection box and select multiple nodes at once.
+
+When nodes are selected, additional editing options become available in the Top Panel and through the **Path** menu.
+
+## Selecting Nodes
+
+- **Click** a node to select it.
+- **Shift + Click** to add or remove individual nodes from the selection.
+- **Click and drag** on the canvas to rubber-band select multiple nodes.
+- **Ctrl/Cmd + A** to select all nodes on the path.
+
+## Node Handles
+
+Curve nodes display control handles — small lines extending from the node that define the direction and shape of the curve.
+
+- Drag a handle to adjust the curve on that side of the node.
+- Double-click a control handle to remove it, converting the node into a sharp corner.
+
+## Animating Path Shapes
+
+The Node Tool works in animation mode too. To animate a path so its shape changes over time, use Pin Animation State to mark a frame, then move nodes — keyframes are created automatically. See [Path Animation](/docs/path-animation) for the full workflow.

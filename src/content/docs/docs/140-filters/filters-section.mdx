@@ -7,20 +7,20 @@ sidebar:
 draft: false
 ---
 
+# Filters Section
 
-Filter Section in Objects Panel
-All filters used in your SVG are listed in the Filter Panel (left-side panels area, next to the Toolbox).
-The panel structure includes:
-Header: Displays the name “Filter” and the total number of filters in the document
+The **Filters** section in the Objects Panel lists all filter definitions used in your document.
 
+## Panel Structure
 
-Filter entry:
+Each filter entry shows:
+- The filter name (e.g., "Drop Shadow")
+- The number of elements using it
 
+Expand a filter entry to see its SVG filter primitives (e.g., `<feGaussianBlur/>`, `<feOffset/>`, `<feFlood/>`).
 
-Filter name
+## Shared Filters
 
+Filters are defined once and can be shared across multiple objects. When you apply the same filter to several layers, they all reference the same definition — editing it updates all of them.
 
-Number of elements using it
-
-
-Dropdown menu with additional options
+Only filters with no objects referencing them can be deleted.

@@ -4,5 +4,37 @@ description: "Move Along Path"
 slug: "docs/move-along-path"
 sidebar:
   order: 60
-draft: true
+draft: false
 ---
+
+# Move Along Path
+
+The Move Along Path feature lets you animate an object so it follows the shape of a path over time.
+
+## How to Set Up
+
+This action requires two shapes:
+
+1. **The motion path** — a path that defines the route the object will follow. It must be placed **below** the moving object in the Layer Tree.
+
+2. **The moving object** — the shape that will travel along the path. It must be placed **above** the motion path in the Layer Tree.
+
+To link them:
+
+1. Select both shapes.
+2. In the **Path** section of the Properties Panel, click **Move element along path**.
+
+The object is now associated with the path and will follow it during animation.
+
+## Editing the Motion Path
+
+To adjust the shape of the motion path after it has been assigned:
+
+1. Select the object that moves along the path.
+2. Select one or more points on the motion path using the Node Tool.
+3. The **Edit motion path** button in the Path section of the Properties Panel becomes active.
+4. Click it to enter motion path editing mode, where you can reposition nodes to reshape the route.
+
+## Animation
+
+Once the object is linked to a path, you can set keyframes on the object's **Position** property to animate how far along the path it travels at each point in time. See the animation docs for details on adding keyframes.

@@ -11,78 +11,46 @@ draft: false
 
 # Path Operations
 
-Path Start
-
-Sets the selected node as the starting point of the path.
-
-This can be useful for animations or when defining path directions.
-
-
-
-Reverse Path
-
-Reverses the direction of the path.
-
-This may affect animations, strokes, or path-based effects that depend on path direction.
-
-
-
-
-
-Path Operations
-
 Path operations allow you to combine or modify multiple shapes to create more complex vector objects.
 
-To use these operations, select at least two objects, then choose the desired command from the Object menu.
+To use these operations, select at least two objects, then choose the desired command from the **Path** menu.
 
 The selected shapes are processed relative to the backmost object in the selection order.
 
+## Unite
 
+`Alt+U`
 
-Unite
+Combines all selected objects into a single shape. All overlapping and adjacent areas are merged together to form one continuous path.
 
-Combines all selected objects into a single shape.
+## Subtract
 
-All overlapping and adjacent areas are merged together to form one continuous path.
+`Alt+S`
 
+Removes the areas where the front objects overlap the backmost object. This operation cuts the overlapping shapes out of the back object.
 
+## Intersect
 
-Subtract
+`Alt+I`
 
-Removes the areas where the front objects overlap the backmost object.
+Creates a new shape that contains only the areas where the selected objects overlap. All non-overlapping parts are removed.
 
-This operation cuts the overlapping shapes out of the back object.
+## Exclude
 
+`Alt+E`
 
+Combines the selected shapes and removes the areas where two or more objects overlap. This produces a compound shape with transparent overlapping regions.
 
-Intersect
+## Stroke to Path
 
-Creates a new shape that contains only the areas where the selected objects overlap.
-
-All non-overlapping parts are removed.
-
-
-
-Exclude
-
-Combines the selected shapes and removes the areas where two or more objects overlap.
-
-This produces a compound shape with transparent overlapping regions.
-
-
-
-
-
-
-
-
-
-
-
-Stroke to Path
+`Alt+P`
 
 Converts the stroke of a shape into a filled path.
 
-This operation transforms the visual stroke into an actual vector shape that can be edited, reshaped, or used in path operations.
+This operation transforms the visual stroke into an actual vector shape that can be edited, reshaped, or used in further path operations.
 
+## Convert to Bezier Path
 
+Converts a shape (such as a rectangle, ellipse, or text element) into an editable Bézier path.
+
+Once converted, all anchor points become editable with the Node Tool, giving you full control over the shape's geometry. This is necessary before you can use node-level editing on primitive shapes.

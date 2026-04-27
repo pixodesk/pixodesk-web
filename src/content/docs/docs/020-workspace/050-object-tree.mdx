@@ -1,0 +1,47 @@
+---
+title: "Object Tree"
+description: "Object Tree"
+slug: "docs/object-tree"
+sidebar:
+  order: 50
+draft: false
+---
+
+# Object Tree
+
+The Object Tree is the top section of the [Objects Panel](./objects-panel). It shows the full hierarchy of every SVG element in your document — shapes, groups, text, symbol instances, and more — as a nested list of named layers.
+
+## Layer Thumbnails
+
+Each row in the Object Tree displays a small **visual thumbnail** of the layer's content in front of its name. This gives an at-a-glance preview of the shape or group without needing to select it. If a layer has no fill color set (unset color), its thumbnail is shown with a **black fill**.
+
+## Structure
+
+The tree always starts with the **`<svg/>`** root element at the top. Every other object in your document is a child of this root. Clicking the `<svg/>` row selects the document root and shows the document-level properties in the [Properties Panel](./properties-panel) — including canvas size, animation duration, aspect ratio, and export settings.
+
+Objects are listed from top to bottom in the same stacking order as they appear on the canvas. Objects higher in the list appear in front of objects lower in the list.
+
+## Selecting Objects
+
+- **Click** a row to select that object on the canvas.
+- **Click** the `<svg/>` row to select the document root and view document properties.
+- Hold **`Ctrl/Cmd`** and click to add objects to a multi-selection.
+
+## Reordering Layers
+
+Drag a row up or down to change the stacking order of objects. Moving an object higher in the list brings it visually in front of other objects.
+
+## Visibility and Lock
+
+Each row has controls on the right side to:
+
+- **Toggle visibility** — show or hide the object on the canvas without deleting it.
+- **Lock** — prevent the object from being selected or edited on the canvas.
+
+## Groups
+
+Objects can be nested inside groups. Click the expand arrow next to a group to reveal its children. Double-clicking a group on the canvas enters the group, letting you select individual objects inside it.
+
+## Renaming
+
+Double-click a layer name in the tree to rename it. Alternatively, select a layer (click its row to make it active) and press **`Enter`** to start renaming. Layer names are stored as the SVG element's `id` attribute.

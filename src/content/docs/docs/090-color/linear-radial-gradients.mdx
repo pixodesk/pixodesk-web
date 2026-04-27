@@ -1,6 +1,6 @@
 ---
-title: "Lirear and Radial Gradients"
-description: "Lirear and Radial Gradients"
+title: "Linear and Radial Gradients"
+description: "Linear and Radial Gradients"
 slug: "docs/linear-radial-gradients"
 sidebar:
   order: 70
@@ -11,92 +11,66 @@ draft: false
 
 # Gradients
 
-Gradients allow smooth transitions between multiple colors. You can add multiple gradient points with different colors and opacity.
+Gradients allow smooth transitions between multiple colors. You can add multiple gradient stops with different colors and opacity values.
 
-To choose a gradient color for each gradient point for a shape, you can:
+## Choosing a Gradient Color
 
-select a color from the color picker 
+To set the color for each gradient stop:
 
-enter a HEX color value in the input field 
+- Select a color from the color picker
+- Enter a HEX color value in the input field
+- Adjust individual RGBA color values
+- Adjust individual HSLA color values
 
-adjust individual RGBA color values
+## Editing Gradient Stops
 
-adjust individual HSLA color values
+Select the Gradient Tool from the Toolbar to reveal gradient control points on the canvas. Drag the endpoint handles to change the gradient direction and length.
 
-To adjust length between gradient stop colors choose Gradient tool from Toolbox Panel and change the position of gradient points. You can change the gradient direction by pulling gradient end line points on the canvas. 
+To navigate between stops, use the angle bracket buttons (`<` `>`) next to the color strip to select the previous or next stop. Delete the selected stop using the bin icon.
 
+## Linear Gradient Options
 
+### Start / End
 
-To jump between gradient points using angle brackets next to the color line ( < > select previous, select next ) or delete selected color by pressing the bin icon next to select square brackets.
+Defines the gradient direction by setting the start and end points.
 
-You can edit gradient parameters directly in the Edit Gradient section.
-
-
-
-
-
-
-
-Linear Gradient Options
-
-Start / End
-
-Defines the gradient direction.
-
-Position
+### Position
 
 Moves the gradient within the object.
 
-Rotation
+### Rotation
 
 Rotates the gradient axis.
 
-Scale
+### Scale
 
 Controls gradient stretching.
 
+## Radial Gradient Options
 
-
-
-
-Radial Gradient Options
-
-Center
+### Center
 
 Defines the origin point of the gradient.
 
-Radius
+### Radius
 
 Controls the size of the gradient circle.
 
-Focal Point
+### Focal Point
 
 Moves the brightest point inside the gradient.
 
-
-
-Gradient Units
+## Gradient Units
 
 Defines how gradient coordinates are calculated.
 
-objectBoundingBox
+- **objectBoundingBox** — the gradient is calculated relative to the shape's bounding box
+- **userSpaceOnUse** — the gradient uses the document coordinate system
 
-The gradient is calculated relative to the shape's bounding box.
+## Spread Method
 
-userSpaceOnUse
+Defines how the gradient behaves outside its defined range.
 
-The gradient uses the document coordinate system.
-
-
-
-
-
-Spread Method
-
-Defines how gradients behave outside their defined range.
-
-pad - extends the outermost color
-
-reflect - mirrors the gradient pattern
-
-repeat - repeats the gradient
+- **pad** — extends the outermost color
+- **reflect** — mirrors the gradient pattern
+- **repeat** — repeats the gradient

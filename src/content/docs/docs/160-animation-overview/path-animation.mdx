@@ -1,0 +1,32 @@
+---
+title: "Path Animation"
+description: "Animate path shapes by keyframing node positions and control handles over time"
+slug: "docs/path-animation"
+sidebar:
+  order: 40
+draft: false
+---
+
+# Path Animation
+
+Path animation lets you animate the shape of a path over time by keyframing individual node positions and their control handles. This is how morphing effects are made — a logo changing shape, an icon transitioning between states, or any organic shape transformation.
+
+## How to Animate a Path
+
+1. Select the path and activate the **Node Tool** (N).
+2. Move the playhead to the frame where you want the animation to begin and the shape to hold its current state.
+3. Click **Pin Animation State at Frame** `Alt+A` in the timeline toolbar. This locks the current shape at that frame. Pixodesk automatically moves the playhead forward — by default 1 second — so you are positioned at the next key moment. You can drag the playhead to a different position if you need a shorter or longer interval.
+4. Move nodes or adjust their control handles. Keyframes are created automatically on the path shape.
+5. Repeat steps 3–4 to add more shape states across the timeline.
+
+## Tips
+
+- The number of nodes must stay the same between keyframes — Pixodesk interpolates each node individually. Adding or removing nodes after you start animating will break the interpolation.
+- Use **Unpin All** `Alt+Shift+A` when you are done to return to normal keyframe mode.
+- To fine-tune the timing between shape states, select keyframes in the timeline and adjust their easing curves in the Easing Function panel.
+
+## Related
+
+- [Auto Animation](/docs/auto-animation) — general overview of the Pin Animation State workflow
+- [Node Tool](/docs/node-tool) — editing node positions and control handles
+- [Keyframes Overview](/docs/keyframes-overview) — managing keyframes manually

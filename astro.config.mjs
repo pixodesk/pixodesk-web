@@ -25,7 +25,6 @@ export default defineConfig({
     integrations: [
         react(),
         tailwind({
-            config: { applyBaseStyles: true },
         }),
         starlight({
             title: "Pixodesk",
@@ -78,7 +77,7 @@ export default defineConfig({
                     autogenerate: { directory: 'docs/040-canvas' },
                 },
                 {
-                    label: 'Navigation',
+                    label: 'Navigate the Canvas',
                     autogenerate: { directory: 'docs/050-canvas-navigation' },
                 },
                 {
@@ -118,8 +117,8 @@ export default defineConfig({
                     autogenerate: { directory: 'docs/140-filters' },
                 },
                 {
-                    label: 'Masks and Clipping Paths',
-                    autogenerate: { directory: 'docs/150-masks-and-clipping-paths' },
+                    label: 'Masks',
+                    autogenerate: { directory: 'docs/150-masks' },
                 },
                 {
                     label: 'Animation Overview',

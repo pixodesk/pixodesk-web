@@ -4,5 +4,53 @@ description: "Transform"
 slug: "docs/transform"
 sidebar:
   order: 50
-draft: true
+draft: false
 ---
+
+# Transform
+
+The Transform section in the Properties Panel lets you precisely position, rotate, scale, and flip objects numerically.
+
+It is accessible when the Selection Tool or Transform Tool is active and an object is selected.
+
+## Origin
+
+The origin is the anchor point used as the reference for all transformations — rotations happen around it, scaling grows or shrinks relative to it.
+
+- Enter X and Y coordinates to set the origin position directly.
+- Click the **Align Origin** button (nine-dot grid icon) to snap the origin to one of nine predefined positions: corners, edge midpoints, or center of the object's bounding box.
+
+## Position
+
+Sets the X and Y coordinates of the object on the canvas, measured from the document origin.
+
+Click the clock icon next to Position to animate the position property over time.
+
+## Rotation
+
+Sets the rotation angle in degrees. Positive values rotate clockwise.
+
+Click the clock icon next to Rotation to animate rotation over time.
+
+## Scale
+
+Sets the horizontal and vertical scale as a percentage of the original size.
+
+- Click the **lock icon** to constrain proportions — both axes scale together.
+- Click the clock icon next to Scale to animate scale over time.
+
+## Flip
+
+Flip operations mirror the object along an axis:
+
+- **Flip Horizontal** — mirrors left to right
+- **Flip Vertical** — mirrors top to bottom
+
+Available via **Object → Transform** menu or the icons in the Top Panel.
+
+## Apply and Reset Transform
+
+- **Apply Transform** — bakes the current transformation into the object's path data, resetting the transform values to their defaults.
+- **Reset Transform** — clears the transform without baking it, returning the object to its untransformed state.
+
+Both are available via buttons in the Transform section of the Properties Panel.

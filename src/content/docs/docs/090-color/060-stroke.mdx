@@ -1,0 +1,72 @@
+---
+title: "Stroke"
+description: "Stroke"
+slug: "docs/stroke"
+sidebar:
+  order: 60
+draft: false
+---
+
+
+# Stroke
+
+Stroke controls the outline of a shape. To choose a stroke color, you can:
+
+- Select a color from the color picker
+- Enter a HEX color value in the input field
+- Adjust individual RGBA color values
+- Adjust individual HSLA color values
+
+## Stroke Width
+
+Defines the thickness of the outline.
+
+## Line Cap
+
+Controls how the ends of open paths appear.
+
+- **Butt** — flat end cut exactly at the endpoint
+- **Round** — semicircular end extending slightly beyond the endpoint
+- **Square** — flat end extending slightly beyond the endpoint
+
+## Line Join
+
+Controls how corners between path segments are rendered.
+
+- **Miter** — pointed corner
+- **Round** — rounded corner
+- **Bevel** — flat cut across the corner
+
+## Dash Array
+
+Creates dashed or dotted stroke patterns. Multiple dash–gap values can be added to create complex dash patterns.
+
+## Dash Offset
+
+Adjusts the starting position of the dash pattern along the path.
+
+## Trim Stroke Effect
+
+Trims the visible portion of a stroke, making it appear to draw on or erase from the path. Enable it by checking **Trim Stroke Effect** in the Stroke section of the Properties Panel.
+
+When enabled, four controls become available:
+
+### Start / End
+
+Defines the visible portion of the stroke as a percentage of the total path length.
+
+- **Start** — where the visible stroke begins (0% = path start, 100% = path end)
+- **End** — where the visible stroke ends (0% = path start, 100% = path end)
+
+Setting Start to 0% and End to 100% shows the full stroke. Narrowing the range hides parts of it. Both values are animatable — keyframe them to create a draw-on or erase effect.
+
+### Offset
+
+Shifts the entire trimmed segment along the path without changing its length. Animating Offset moves the visible stroke continuously around the path, useful for looping progress indicators or traveling dash effects.
+
+### Trim All as One
+
+Controls how Trim Stroke Effect behaves when the path has a Dash Array applied.
+
+- **Off** — each dash segment is trimmed independently. Start and End apply to each individual dash.
+- **On** — the dashes are treated as a single continuous stroke. Start and End apply to the total combined length of all dashes together.

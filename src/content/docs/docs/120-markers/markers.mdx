@@ -7,44 +7,30 @@ sidebar:
 draft: false
 ---
 
+# Markers
 
-Markers
-Shapes, text, paths, and groups can be converted into Markers and reused across your design. Markers are defined once and then referenced multiple times along a path, meaning they do not increase file size when reused.
-Markers are applied to paths at specific positions:
-Start of the path (marker-start)
+Markers are reusable graphic elements that can be attached to the start, middle, and end of a path. They are defined once and referenced multiple times, so adding the same marker to many paths does not increase file size.
 
+## Where Markers Appear
 
-Along the path at each node (marker-mid)
+Markers are applied to paths at three positions:
 
+- **Start Marker** (`marker-start`) — appears at the beginning of the path
+- **Mid Marker** (`marker-mid`) — appears at each intermediate node along the path
+- **End Marker** (`marker-end`) — appears at the end of the path
 
-End of the path (marker-end)
+Each position can use a different marker, or all three can use the same one.
 
+## Common Uses
 
-Because markers are reused as references, the same marker can appear multiple times along a path without duplicating geometry. This makes them especially useful for:
-Arrows and line endings
+- Arrows and line endings
+- Dashed or decorative paths
+- Diagrams, charts, and technical illustrations
+- Motion graphics where repeated elements follow a path
 
+## Notes
 
-Dashed or decorative paths
-
-
-Diagrams, charts, and technical illustrations
-
-
-Motion graphics where repeated elements follow a path
-
-
-
-
-Notes
-Markers are reusable and linked — editing one updates all instances
-
-
-They are ideal for repeated elements along paths and help optimize file size
-
-
-Only unused markers can be deleted
-
-
-In SVG, markers are defined once (inside `<defs>`) and referenced in `<path>` elements using properties like marker-start, marker-mid, and marker-end
-
-
+- Markers are linked — editing a marker definition updates all paths that reference it
+- Adding more nodes to a path automatically adds more Mid Marker instances
+- Only unused markers (those not applied to any path) can be deleted
+- In SVG, markers are stored inside `<defs>` and referenced via `marker-start`, `marker-mid`, and `marker-end` attributes

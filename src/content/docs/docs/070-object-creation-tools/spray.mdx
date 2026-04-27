@@ -11,46 +11,47 @@ draft: false
 
 # Spray
 
+The Spray Tool allows you to add multiple instances of an object across your canvas with organic, randomized distribution.
 
+## Technical Efficiency
 
-The Spray Tool allows you to add multiple instances of an object across your canvas with organic, randomized distribution. 
+The Spray Tool is highly optimized for performance. It creates SVG `<use>` elements, which are essentially clones that reference a single original shape. This keeps your file size small and rendering speed fast, even with hundreds of copies on the canvas.
 
-Technical Efficiency: The <use/> Tag
+## How to Create the Spray Effect
 
-Technically, the Spray Tool is highly optimized for performance. It creates SVG <use/> elements, which are essentially "clones" that reference a single original shape. This keeps your file size small and the rendering speed fast, even if you have hundreds of copies on the canvas.
+1. Select the shape you wish to spray.
 
+2. Group the shape using `Ctrl/Cmd + G`.
 
+3. Select the Spray Tool from the Toolbar.
 
-How to Create the Spray Effect
+4. Click or drag on the canvas to distribute copies.
 
-To begin spraying elements, follow these steps:
+### Why the Group Workflow is Better
 
-Select the shape you wish to use as your basic shape.
+- **Global Updates** — modify the original shape inside the group and every sprayed instance updates instantly.
+- **Multi-Shape Sprays** — add multiple shapes into the group. The Spray Tool treats them as a single unit, letting you spray complex clusters at once.
 
-Group the shape (Ctrl/Cmd + G) to ensure maximum flexibility.
-
-Select the Spray Tool from the Toolbox Panel.
-
-Click or drag on the canvas to distribute copies.
-
-Why the "Group Workflow" is Better:
-
-Global Updates: Modify the original shape inside the group, and every sprayed instance will reflect those changes instantly.
-
-Multi-Shape Sprays: Add multiple different shapes into the group. The Spray tool will treat them as a single unit, allowing you to spray complex clusters of objects at once.
-
-
-
-Spray Options & Properties
+## Spray Properties
 
 You can customize the behavior and randomness of the Spray Tool through the following settings:
 
-Spray Radius: Controls the width of the spray area. A larger radius spreads the shapes over a wider surface.
+### Spray Radius
 
-Spray Amount: Determines the density or "flow" of the spray - how many copies are generated per click or second.
+Controls the width of the spray area. A larger radius spreads shapes over a wider surface.
 
-Spray Rotation: Adds a degree of rotation to each copy. This is perfect for making the distribution look more natural.
+### Spray Amount
 
-Spray Minimum / Maximum Scale: Sets a range for the size of the copies. The tool will randomly choose a size between these two values to create depth.
+Determines the density of the spray — how many copies are generated per click or drag.
 
-Spray Minimum / Maximum Opacity: Sets a range for the transparency of the copies. This is excellent for creating fading effects or atmosphere (like clouds or dust).
+### Spray Rotation
+
+Adds a random rotation to each copy, making the distribution look more natural.
+
+### Spray Minimum / Maximum Scale
+
+Sets a size range for the copies. The tool randomly picks a size between these two values to create depth.
+
+### Spray Minimum / Maximum Opacity
+
+Sets a transparency range for the copies. Useful for creating fading effects or atmospheric elements like clouds or dust.

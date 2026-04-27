@@ -1,0 +1,39 @@
+---
+title: "Add Keyframes"
+description: "Add Keyframes"
+slug: "docs/add-keyframes"
+sidebar:
+  order: 20
+draft: false
+---
+
+# Add Keyframes
+
+There are two ways to create keyframes in Pixodesk Animator Studio: recording individual property values manually, or pinning the full state of an object at a frame.
+
+## Enable Animation for a Property
+
+Before a property can have keyframes, animation must be turned on for it. In the [Properties Panel](../../docs/properties-panel), each animatable property has a **Toggle animation** button to its left. Click it to enable keyframe recording for that property. The button remains highlighted while animation is active.
+
+Once enabled, any value change you make to that property while the playhead is at a given frame creates a keyframe at that position.
+
+## Method 1 — Set a Value at a Frame
+
+1. Move the playhead to the frame where you want to place a keyframe. Drag the playhead in the [Keyframe Timeline](../../docs/keyframe-timeline), type a frame number in the **Frame** input in the timeline toolbar, or press the previous/next frame buttons.
+2. Select the object on the canvas or in the [Object Tree](../../docs/object-tree).
+3. In the [Properties Panel](../../docs/properties-panel), change the value of the property you want to animate.
+
+A keyframe is added automatically at the current frame for that property. Repeat this at a different frame position to create the second keyframe, and the animation between them is established.
+
+## Method 2 — Pin Animation State at Frame
+
+**Pin Animation State at Frame** (`Alt+A`) records a keyframe for every currently animated property on the selected object at the current playhead position — without needing to change any values manually.
+
+This is useful when you want to lock the current appearance of an object at a specific frame before making changes elsewhere in the timeline.
+
+- Click the **Pin** button in the [Timeline Panel](../../docs/timeline-panel) toolbar, or press `Alt+A`.
+- To remove all pins at once, click **Unpin All** or press `Alt+Shift+A`.
+
+## Navigating to Keyframes
+
+Once keyframes exist on a property, use the **previous keyframe** and **next keyframe** arrow buttons on each property row in the [Timeline Layer List](../../docs/timeline-layers) to jump the playhead directly between them.

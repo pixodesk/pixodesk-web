@@ -9,16 +9,29 @@ draft: false
 
 # Supported File Formats
 
-Pixodesk Animator Studio supports **three** animation file formats: **SVG, JSON for SVG** animation, and **JSON for Lottie** animation.
+Pixodesk Animator Studio supports **three** animation file formats: **JSON for Lottie** animation, **JSON for SVG** animation and SVG.
 
 These formats are **interchangeable**. The editor can convert between them at any time, allowing you to switch formats depending on your target platform.
 
 
-## SVG File Formats
+## Lottie File Format
 
-Pixodesk Animator Studio supports three SVG formats.
 
-### JSON File Format for SVG Animation
+A **Lottie JSON** animation file designed for cross-platform playback.
+
+The file contains:
+- Vector shapes
+- Animation timelines
+- Transform and keyframe data
+
+Lottie files are typically used with the Lottie runtime players on web, mobile, and application platforms.
+
+Pixodesk Animation Studio can save animations in Lottie JSON format for integration with standard Lottie playback environments.
+
+---
+
+
+## JSON File Format for SVG Animation
 
 This is the most flexible and recommended format for SVG animation workflows.
 
@@ -42,7 +55,7 @@ It can be used:
 
 ---
 
-### SVG File Format
+## SVG File Format
 
 A pre-rendered SVG file with animation embedded directly into the document.
 
@@ -50,7 +63,7 @@ This format produces a self-contained file that can run independently in modern 
 
 Pixodesk Animation supports several SVG animation modes.
 
-#### SVG with CSS Keyframes
+### SVG with CSS Keyframes
 
 Animation is defined using CSS inside a `<style>` block within the SVG.
 
@@ -63,7 +76,8 @@ Animation is defined using CSS inside a `<style>` block within the SVG.
 
 ---
 
-#### SVG with JavaScript Triggers
+### SVG with JavaScript Triggers
+
 Adds a minimal JavaScript fragment to the SVG to enable event-driven animations.
 
 Supported **triggers** include:
@@ -79,7 +93,8 @@ This mode allows animations to react to user interaction while keeping the file 
 
 ----
 
-#### SVG with JavaScript Animation
+### SVG with JavaScript Animation
+
 This mode embeds the Pixodesk runtime `@pixodesk/svg-animator-web` directly inside a `<script>` tag.
 
 Animation playback can use:
@@ -95,18 +110,3 @@ This mode provides maximum compatibility and runtime flexibility within a single
 ---
 
 
-## Lottie File Format
-
-
-A **Lottie JSON** animation file designed for cross-platform playback.
-
-The file contains:
-- Vector shapes
-- Animation timelines
-- Transform and keyframe data
-
-Lottie files are typically used with the Lottie runtime players on web, mobile, and application platforms.
-
-Pixodesk Animation Studio can save animations in Lottie JSON format for integration with standard Lottie playback environments.
-
----

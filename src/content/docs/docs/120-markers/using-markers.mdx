@@ -7,49 +7,34 @@ sidebar:
 draft: false
 ---
 
+# Using Markers
 
-Using Markers
+## Marker Positions
+
 Markers can be applied to a path in three positions:
-Start Marker – appears at the beginning of the path
 
+- **Start Marker** — appears at the beginning of the path
+- **Mid Marker** — appears at each node along the path
+- **End Marker** — appears at the end of the path
 
-Mid Marker – appears at each node along the path
+You can assign different markers to each position, or use the same one for all three. Adding more nodes to a path automatically adds more Mid Marker instances.
 
+## Adding a Marker to a Path
 
-End Marker – appears at the end of the path
+1. Select a path in the Layer Tree or on the canvas.
+2. In the Properties Panel, locate the **Start Marker**, **Mid Marker**, and **End Marker** dropdowns.
+3. Click a dropdown and choose a marker — either a user-created marker or one from the built-in library (**Add from Library**).
 
+To ensure marker controls are visible in the Properties Panel, enable **Show Stroke Marker options** in the Properties Sections Bar.
 
-If a Mid Marker is applied, adding more nodes to the path will automatically add more marker instances.
-You can assign different markers for each position.
-Adding a Marker to a Path
-Select a path layer in the Objects Panel
+> **Note:** Markers can only be applied to paths. To apply markers to a shape or group, first convert it to a path using **Path → Object to Path**.
 
+## Duplicating a Marker
 
-In the Properties Panel, locate Start Marker, Mid Marker, and End Marker options
+To create a variation of an existing marker:
 
+1. Open the **Markers** section in the Objects Panel.
+2. Select a marker.
+3. Duplicate it using standard copy (`Cmd/Ctrl + C`) and paste (`Cmd/Ctrl + V`).
 
-Choose a marker from the dropdown (custom or preset)
-
-
-To ensure marker controls are visible:
-Enable “Show Stroke Marker options for selected shapes or group object” in the Properties Sections Bar
-
-
-Note:
- Markers can only be applied to paths. To use markers on shapes or groups, first convert them to paths using:
-Path > Stroke to Path
-
-
-
-Duplicating Markers
-You can duplicate a marker if you want to create a variation:
-Open the Markers section in the Objects Panel
-
-
-Select a marker
-
-
-Duplicate it using standard copy and paste commands
-
-
-A new (unused) marker will appear, which you can modify and apply independently.
+A new unused marker appears, which you can edit and apply independently.

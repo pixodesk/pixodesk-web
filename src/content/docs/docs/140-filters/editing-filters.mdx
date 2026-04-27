@@ -7,96 +7,34 @@ sidebar:
 draft: false
 ---
 
+# Editing Filters
 
-Editing Filters
+## Editing Filter Parameters
 
-Click the triangle icon next to a filter name to expand it.
-In the expanded view (middle-right image):
-You can see the filter composition graph
+Each applied filter appears in the Properties Panel with its name, a preview thumbnail, and an **Edit** button. Click **Edit** to open the filter editor, where you can:
 
+- View the composition graph showing the sequence of SVG filter primitives and how they are connected
+- Select individual primitives and modify their parameters in the Properties Panel
+- Drag and reorder primitives to change the visual result
 
-It shows:
+## Adding Filter Primitives
 
+In the filter editor, click the **+** (add) button to insert a new primitive. Available primitives are grouped by category:
 
-The sequence of applied SVG filter primitives
+**Sources**
+- Flood, Turbulence, Image
 
+**Modifiers**
+- Blur, Drop Shadow, Color Matrix, Component Transfer, Morphology, Convolve Matrix, Offset, Tile
 
-How they are connected
+**Combiners**
+- Blend, Composite, Merge, Displacement Map
 
-
-You can:
-
-
-Modify individual primitives in the Properties panel
-
-
-Drag and reorder primitives to change the visual result
-
-
-
-Adding Filter Primitives
-Click the plus icon with dropdown to add new filter primitives.
-From the rightmost panel in the image, available SVG filter primitives include:
-Flood
-
-
-Turbulence
-
-
-Image
-
-
-Blur
-
-
-Drop Shadow
-
-
-Color Matrix
-
-
-Component Transfer
-
-
-Morphology
-
-
-Convolve Matrix
-
-
-Offset
-
-
-Tile
-
-
-Combiners:
-Blend
-
-
-Composite
-
-
-Merge
-
-
-Advanced effects:
-Displacement Map
-
-
-Specular Lighting
-
-
-Diffuse Lighting
-
-
-Point Light
-
-
-Spot Light
-
-
-Distant Light
-
+**Lighting**
+- Specular Lighting, Diffuse Lighting, Point Light, Spot Light, Distant Light
 
 These primitives can be combined and reordered to create custom filter effects.
+
+## Editing a Shared Filter
+
+If a filter is shared by multiple objects, editing it will update all objects that reference it.

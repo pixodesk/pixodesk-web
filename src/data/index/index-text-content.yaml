@@ -35,7 +35,7 @@ sections:
     export: "animated .svg, .gif, .webm, .mp4 <br/> static .png, .jpeg, .webp, .gif"
     button: 
       title: Read More
-      link: "./2d-animator"
+      link: "./animator"
   
   section_04:
     icon: true

@@ -1,0 +1,36 @@
+---
+title: "Loop Animation Overview"
+description: "Loop Animation Overview"
+slug: "docs/loop-animation-overview"
+sidebar:
+  order: 10
+draft: false
+---
+
+# Loop Animation Overview
+
+Pixodesk Animator Studio has three distinct loop controls, each serving a different purpose. Understanding which one to use saves time when building and previewing animations.
+
+## Playback Loop
+
+The **Loop Animation** toggle in the [Timeline Panel](../../docs/timeline-panel) toolbar controls whether the animation repeats during preview playback inside the editor. It has no effect on the exported file.
+
+Use this when you want the animation to replay continuously while you are working on it, without having to press play repeatedly.
+
+See [Loop Animation Playback](./loop-animation-playback).
+
+## Inner Loop
+
+An **Inner Loop** is applied to a specific layer in the timeline. It makes a selected range of keyframes repeat independently — either before or after those keyframes — while the rest of the animation continues normally. The inner loop is part of the document and is included in the exported output.
+
+Use this to create repeating motion on a single object (a spinning icon, a bouncing element) without duplicating keyframes manually.
+
+See [Inner Loop](./inner-loop).
+
+## Export Loop
+
+The **Loop** setting in [Document Properties](../../docs/manage-document-properties) controls whether the entire exported animation plays once or loops continuously in the browser. This is a document-level setting that affects the final output.
+
+Use this when you want the whole animation to run in a continuous loop on the page.
+
+See [Loop Animation on Export](./loop-animation-on-export).

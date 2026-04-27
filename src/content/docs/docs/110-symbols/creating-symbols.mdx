@@ -8,28 +8,19 @@ draft: false
 ---
 
 
-Symbols
-Shapes, text, paths, and groups can be converted into Symbols and reused across your design. Symbols are represented as <use /> elements, meaning multiple instances reference a single original definition.
-Using symbols helps:
-Reduce file size and optimize animation output 
-Maintain consistency across repeated elements
-Apply updates globally - editing one symbol updates all its instances
+# Creating Symbols
 
-Notes
-Symbols are reusable and linked - editing one updates all instances
-They are especially useful for repeated elements and animation optimization
-Only unused symbols can be deleted from the Symbols section
-Symbol instances appear as <use /> layers in the Object Tree
+## How to Create a Symbol
 
+1. Select one or more objects on the canvas.
+2. Convert them to a symbol using one of:
+   - **Object → Make Symbol** from the menu (`Ctrl/Cmd + P`)
+   - The **Make Symbol** button in the Top Panel (available when the Selection or Transform Tool is active)
 
-Creating a Symbol
-To create a symbol, select one or more objects, then use:
-Object > Make Symbol
+## What Happens After Creation
 
+- The selected object is replaced by a symbol instance (`<use>` layer) in the Layer Tree
+- The original definition is stored in the **Symbols** section of the Objects Panel
+- The instance on the canvas looks and behaves the same as the original object
 
-Click the Make Symbol button in the Top Panel (available when the Selection or Transform tool is active)
-
-
-After creation:
-The object is converted into a <use /> layer in the Object Tree
-The original definition is added to the Symbols section in the Objects Panel
+From this point, you can drag additional instances of the symbol from the Symbols panel onto the canvas, and all instances will stay in sync with the definition.

@@ -1,0 +1,47 @@
+---
+title: "Inner Loop"
+description: "Inner Loop"
+slug: "docs/inner-loop"
+sidebar:
+  order: 30
+draft: false
+---
+
+# Inner Loop
+
+An Inner Loop makes a selected range of keyframes on a layer repeat independently within the animation. The looping region plays as many times as it fits within the animation duration, while other layers continue unaffected.
+
+This is the right tool when you need one object to repeat a motion — a rotating gear, a blinking cursor, a bouncing dot — without copying keyframes by hand or affecting the rest of the composition.
+
+## Adding an Inner Loop
+
+### From a Layer Row
+
+1. In the [Timeline Layer List](../../docs/timeline-layers), find the layer you want to loop.
+2. Click the **Loop** button at the end of the layer row. The Inner Loop panel opens.
+
+### From Selected Keyframes
+
+1. Select the keyframes you want to loop in the [Keyframe Timeline](../../docs/keyframe-timeline).
+2. Use **Add inner loop to selected keyframes** — the button above the keyframe area or in the **More (⋮)** menu in the timeline toolbar.
+
+## Inner Loop Panel
+
+When the Inner Loop panel is open, you can configure how the loop behaves:
+
+- **Before** — the selected keyframe range repeats before those keyframes in the timeline
+- **After** — the selected keyframe range repeats after those keyframes (the more common setting)
+- **Alternate Direction** — each successive repetition plays in the opposite direction, creating a back-and-forth motion instead of always restarting from the beginning
+
+## Converting to Keyframes
+
+Click **To Keyframes** to expand the inner loop into explicit keyframes. This replaces the loop with the actual repeated keyframe data, which can then be edited individually. Use this when you need to fine-tune specific repetitions after the loop has been set up.
+
+## Removing an Inner Loop
+
+- Click **Cancel Loop** in the Inner Loop panel to remove the loop from that layer.
+- Alternatively, select the keyframes and choose **Remove Inner Loop from Selected Keyframes** in the **More (⋮)** menu.
+
+## Closing the Panel
+
+Click **Close and Keep** to close the Inner Loop panel while keeping the loop applied. The loop remains active on the layer.

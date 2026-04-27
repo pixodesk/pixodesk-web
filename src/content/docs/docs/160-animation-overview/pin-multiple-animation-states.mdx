@@ -7,7 +7,19 @@ sidebar:
 draft: false
 ---
 
+# Pin Multiple Animation States
 
-Pin Multiple Animation States
-You can place multiple pins to define key states at different time points.
-This workflow is useful for quickly building animations without manually adding keyframes.
+You can place multiple pins at different time points to define key states across the animation. Each pin records the object's state at that frame, and keyframes are automatically generated between them as you modify the object.
+
+## Workflow
+
+1. Enable **Pin Animation State at Frame** `Alt+A`.
+2. Move the playhead to the first key position and modify the object — a keyframe is created.
+3. Move the playhead to the next key position and modify the object again — another keyframe is created.
+4. Repeat across as many time points as needed.
+
+This approach lets you build animations quickly by focusing on the key states rather than manually placing and adjusting keyframes.
+
+## Removing Pins
+
+Use **Unpin All** `Alt+Shift+A` to clear all pins when you are done.

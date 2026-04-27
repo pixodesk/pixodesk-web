@@ -1,39 +1,26 @@
 ---
-title: "Creating Patterns"
-description: "Creating Patterns"
-slug: "docs/creating-patterns"
+title: "Patterns"
+description: "Patterns"
+slug: "docs/patterns"
 sidebar:
   order: 0
 draft: false
 ---
 
-Patterns
-Shapes, text, paths, and groups can be converted into Patterns and reused as Fill or Stroke across different objects in your design. Patterns are defined once and then referenced multiple times, helping keep file size small and efficient.
-Because patterns are reused as references, the same pattern can be applied to multiple objects without duplicating geometry. This makes them especially useful for:
-Background textures and decorative fills
+# Patterns
 
+Patterns are reusable graphic elements that can be applied as the **Fill** or **Stroke** of any object or group. They are defined once and referenced multiple times, so using the same pattern across many objects does not increase file size.
 
-Repeating graphic elements (e.g., stripes, dots, grids)
+## Common Uses
 
+- Background textures and decorative fills
+- Repeating graphic elements (stripes, dots, grids)
+- Complex fills reused across multiple objects
+- Consistent styling in illustrations and UI elements
+- Animated fills where the same pattern is reused
 
-Complex color fills reused across multiple objects
+## Notes
 
-
-Consistent styling in illustrations and UI elements
-
-
-Animated fills where the same pattern is reused
-
-
-Notes
-Patterns are reusable and linked — editing one updates all instances
-
-
-They are ideal for shared fills and strokes across multiple objects
-
-
-Only unused patterns can be deleted
-
-
-In SVG, patterns are defined once (inside `<defs>`) and referenced in fill and stroke attributes
-
+- Patterns are linked — editing a pattern definition updates all objects that reference it
+- Only unused patterns (not applied to any object) can be deleted
+- In SVG, patterns are stored inside `<defs>` and referenced via `fill` and `stroke` attributes

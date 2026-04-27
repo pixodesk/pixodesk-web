@@ -1,0 +1,34 @@
+---
+title: "Timeline Layers"
+description: "Timeline Layers"
+slug: "docs/timeline-layers"
+sidebar:
+  order: 130
+draft: false
+---
+
+# Timeline Layers
+
+The Layer List is the left section of the [Timeline Panel](./timeline-panel). It displays the document layers and their animated properties, mirroring the structure of the [Object Tree](./object-tree).
+
+## Layer Rows
+
+Each layer in the document appears as a row. Layers that have animated properties can be expanded to reveal the individual animated property tracks beneath them.
+
+## Animated Property Rows
+
+When a layer is expanded, each animated property (such as Position, Scale, Rotation, Opacity, Fill Color) appears as its own row. Each property row contains:
+
+- **Keyframe indicator dot** — shows whether a keyframe exists at the current playhead position for this property
+- **Previous keyframe arrow** — jumps the playhead to the previous keyframe for this property
+- **Next keyframe arrow** — jumps the playhead to the next keyframe for this property
+- **Value input** — displays and allows direct editing of the property value at the current frame
+- **Loop button** — opens the Inner Loop dialog for this specific property
+
+## Expand and Collapse
+
+Each layer row has an **expand** arrow to show or hide its animated property tracks. An **Expand All** button at the top of the layer list expands all layers at once.
+
+## Zoom
+
+A **Zoom** control in the top-right corner of the Timeline Panel adjusts the horizontal scale of the time axis, allowing you to zoom in for precise frame-level editing or zoom out for an overview of the full animation.

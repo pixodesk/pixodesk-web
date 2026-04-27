@@ -9,40 +9,15 @@ draft: false
 
 
 # Object Operations
-Object operations allow you to combine, modify, and convert shapes into new forms. These operations are available when two or more compatible objects are selected.
-You can access object operations from the Object menu, context menu, or related controls in the interface.
-Boolean Operations
-These operations combine multiple shapes into a single result:
-Unite
- Merges selected objects into one shape, combining all areas into a single path.
 
+Boolean operations such as **Unite**, **Subtract**, **Intersect**, and **Exclude**, as well as **Combine**, **Break Apart**, **Stroke to Path**, and **Convert to Bezier Path**, are **path operations** in Pixodesk.
 
-Subtract
- Removes the top object(s) from the bottom object, cutting out overlapping areas.
+They are accessed via the **Path** menu or the **Path** section of the Properties Panel — not the Object menu.
 
+This is consistent with how professional vector tools (Inkscape, Affinity Designer, Adobe Illustrator) categorise these operations: they act on the geometric path data of shapes, not on object-level properties.
 
-Intersect
- Keeps only the overlapping area between selected objects and removes everything else.
+Full documentation for these operations is in the [Path Operations](/docs/path-operations) section:
 
-
-Exclude
- Removes overlapping areas and keeps only the non-overlapping parts of the shapes.
-
-
-Combine
- Joins multiple paths into a single compound path while preserving individual subpaths.
-
-
-
-Path Operations
-These operations modify the structure of paths:
-Break Apart
- Splits a compound shape or combined paths into separate individual shapes or paths.
-
-
-Stroke to Path
- Converts the stroke of an object into a filled path, allowing further editing as a shape.
-
-
-
-
+- [Path Operations](/docs/path-operations) — Unite, Subtract, Intersect, Exclude, Stroke to Path, Convert to Bezier Path
+- [Combine Paths](/docs/combine-paths) — join multiple paths into a compound path
+- [Break Apart](/docs/break-apart) — split a compound path into individual paths

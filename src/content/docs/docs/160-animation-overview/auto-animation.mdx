@@ -7,15 +7,22 @@ sidebar:
 draft: false
 ---
 
+# Auto Animation
 
-Pin Animation (Auto-Animation)
-The Pin Animation feature allows you to create animations automatically.
-Use the Pin button to fix the state of an object at a specific time.
-Then:
-Move the timeline playhead to a new position
+The **Pin Animation State** feature lets you create animations automatically, without manually adding keyframes.
 
+## How It Works
 
-Modify the object (position, scale, etc.)
+1. Move the playhead to the time position where you want to fix the object's state.
+2. Click **Pin Animation State at Frame** `Alt+A` in the timeline toolbar (or enable it as a toggle to keep it active).
+3. Move the playhead to a different time position.
+4. Modify the object — change its position, scale, color, or any animatable property.
+5. A keyframe is created automatically at the new position.
 
+Repeat steps 3–4 to build up the animation across multiple time points.
 
-A new keyframe is created automatically
+## Removing Pins
+
+Click **Unpin All** `Alt+Shift+A` to remove all pins and return to manual keyframe mode.
+
+See also: [Pin Multiple Animation States](./pin-multiple-animation-states)

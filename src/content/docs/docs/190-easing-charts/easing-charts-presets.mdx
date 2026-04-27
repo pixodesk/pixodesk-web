@@ -1,8 +1,54 @@
 ---
-title: "Easing Charts Presets"
-description: "Easing Charts Presets"
+title: "Easing Presets"
+description: "Built-in easing presets in the Pixodesk Animator Studio Easing Function panel"
 slug: "docs/easing-charts-presets"
 sidebar:
   order: 20
 draft: false
 ---
+
+# Easing Presets
+
+The Easing Function panel contains a table of built-in presets — ready-made bezier curves that cover the most common motion feels. Each preset is shown with a mini curve preview so you can judge the shape at a glance.
+
+To open the Easing Function panel, click any segment between two keyframes in the [Keyframe Timeline](../020-workspace/keyframe-timeline).
+
+## Preset Table Structure
+
+The presets are arranged in a grid:
+
+- **Rows** — easing curve types (linear, gravity, ease, sine, ease², ease³, ease⁴, ease⁵, circle, expo)
+- **Columns** — variants: **in**, **out**, **in-out**
+
+Click any cell to apply that preset to the selected segment. The [Chart Panel](../020-workspace/easing-charts) updates immediately.
+
+### Sort Tabs
+
+Three tabs at the top of the preset table reorder the rows:
+
+- **By Easing** — sorted by the shape of the value curve
+- **By Velocity** — sorted by how the rate of change progresses
+- **By Acceleration** — sorted by the sharpness of the curve's acceleration
+
+Switching tabs doesn't change the presets — only the order they appear in.
+
+## Available Presets
+
+| Preset | Character |
+|--------|-----------|
+| **linear** | Constant speed; no acceleration or deceleration |
+| **gravity** | Mimics gravitational acceleration; sharp increase toward the end |
+| **ease** | Gentle ease-in and ease-out; smooth and natural |
+| **sine** | Smooth sinusoidal acceleration; subtle and fluid |
+| **ease²** | Quadratic easing; moderate acceleration |
+| **ease³** | Cubic easing; stronger acceleration than ease² |
+| **ease⁴** | Quartic easing; noticeably sharp entry or exit |
+| **ease⁵** | Quintic easing; very pronounced snap at the start or end |
+| **circle** | Based on a circular arc; fast then sudden stop (or reverse) |
+| **expo** | Exponential curve; dramatic sharp acceleration or deceleration |
+
+Each preset is available in **in** (accelerates at the start), **out** (decelerates at the end), and **in-out** (both ends) variants.
+
+## Custom Easing
+
+After applying a preset, you can fine-tune the curve by dragging the bezier control point handles in the left section of the Easing Function panel. See [Editing Curves](./easing-charts-editor) for details.

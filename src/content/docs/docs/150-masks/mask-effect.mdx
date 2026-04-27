@@ -1,0 +1,29 @@
+---
+title: "Mask Effect"
+description: "Mask Effect"
+slug: "docs/mask-effect"
+sidebar:
+  order: 20
+draft: false
+---
+
+# Mask Effect
+
+A Mask Effect applies masking as a non-destructive effect. Unlike a regular Mask, it uses the **lower** layer to control the visibility of the layer above it — both layers remain independent and fully editable.
+
+## How to Create a Mask Effect
+
+1. Select the objects you want to apply the effect to (the lower layer acts as the mask shape).
+2. Apply using one of:
+   - **Object → Add Mask Effect** from the menu
+   - The **Mask** button in the Top Panel → **Add Mask Effect** (available when the Selection or Transform Tool is active)
+
+## How It Works
+
+- The **lower** object defines the visible region
+- The **upper** object is visible only within the boundaries of the lower object
+- Both layers remain editable and can be transformed or adjusted at any time
+
+## Removing a Mask Effect
+
+See [Remove Mask and Mask Effect](../remove-mask-mask-effect-or-clipping-path).

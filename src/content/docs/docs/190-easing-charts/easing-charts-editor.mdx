@@ -1,8 +1,63 @@
 ---
-title: "Easing Charts Editor"
-description: "Easing Charts Editor"
+title: "Editing Curves"
+description: "Editing easing curves in the Chart Panel and Easing Function panel in Pixodesk Animator Studio"
 slug: "docs/easing-charts-editor"
 sidebar:
   order: 30
 draft: false
 ---
+
+# Editing Curves
+
+The Chart Panel and Easing Function panel work together for editing easing. The Chart Panel shows the full curve for analysis; the Easing Function panel provides a focused editor for a single segment.
+
+## Selecting a Segment
+
+Click a segment (the space between two keyframe markers) in the [Keyframe Timeline](../020-workspace/keyframe-timeline). This:
+
+- Highlights the segment
+- Updates the Chart Panel to show that segment's curve
+- Opens the Easing Function panel for that segment
+
+To edit a different segment, click it directly in the Keyframe Timeline.
+
+## Editing in the Easing Function Panel
+
+The left side of the Easing Function panel shows the bezier curve for the selected segment. Two draggable control points shape the curve:
+
+- **Out control point** — the handle on the start-keyframe side; controls how the motion leaves the first keyframe
+- **In control point** — the handle on the end-keyframe side; controls how the motion arrives at the second keyframe
+
+Drag either handle to reshape the curve. The [Chart Panel](../020-workspace/easing-charts) updates live as you drag.
+
+For precise adjustments, use the numeric inputs below the curve: **outX**, **outY** (start-side handle), **inX**, **inY** (end-side handle).
+
+To start from a known shape, [apply a preset](./easing-charts-presets) first and then adjust from there.
+
+## Preview Modes
+
+The Easing Function panel has three preview modes, selectable from its header:
+
+- **Easing function** — shows the value curve (the traditional bezier shape)
+- **ƒ′(t) - velocity** — shows the rate of change; useful for judging how snappy or smooth the motion feels
+- **ƒ′′(t) - acceleration** — shows the second derivative; useful for spotting abrupt starts or stops
+
+Switching modes updates both the panel preview and the active chart in the Chart Panel.
+
+## Editing Handles in the Chart Panel
+
+You can also drag the bezier handles directly in the Chart Panel. This is useful when you want to compare the edited segment against other visible property curves at the same time.
+
+## Viewing Multiple Properties
+
+When more than one animated property is selected, all of their curves are drawn in the same Chart Panel. This lets you compare timing across properties — for example, checking that an opacity fade starts where a scale change ends.
+
+### Multiple Scales
+
+When selected properties have very different value ranges (such as position in pixels alongside opacity as a percentage), their curves may be hard to read on a single axis. Enable **Show values on multiple scales** from the Chart Panel's More (⋮) menu to scale each curve independently.
+
+## Flip Selected Keyframes
+
+**Flip Selected Keyframes** reverses the easing direction of selected keyframes — the in-easing becomes the out-easing and vice versa. Access it from the More (⋮) menu in the Timeline Panel toolbar.
+
+This is useful when you want a reversed motion to feel symmetrical without manually mirroring the handles.

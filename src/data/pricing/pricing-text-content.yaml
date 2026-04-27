@@ -40,7 +40,7 @@ pages:
               appDescription: Create Lottie vector animations for native apps on any device
               button:
                   title: Download
-                  link: "/2d-animator/download"
+                  link: "/animator/download"
 
             - title: <div class='uppercase text-xs text-gray-400'>Pixodesk</div> SVG Animator
               icon: svga

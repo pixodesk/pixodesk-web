@@ -1,0 +1,265 @@
+---
+title: "Web"
+description: "Add Lottie Animation to Web Project"
+slug: "docs/web-lottie"
+sidebar:
+  order: 5
+
+---
+import SpacerB from '../../../../layouts/SpacerB.astro';
+import { Badge } from '@astrojs/starlight/components';
+
+# Add Lottie Animation to Web Project
+
+
+You can add Lottie animations to a plain web project (HTML, CSS, JavaScript) using the `lottie-web` or `@lottiefiles/dotlottie-web` packages.
+ 
+
+To add a Lottie animation to a web project:
+ 
+
+- Create a web project 
+- Install a Lottie player for the web
+- Add your Lottie animation to the project 
+- Create a Lottie script
+- Use it in an HTML page
+- Run your app 
+- Edit the animation in the project folder (transform, colors, shapes, etc.)
+- Done! The animation is ready
+
+
+---
+
+## Create Web Project
+
+
+Open your terminal and navigate to your projects folder:
+
+```bash
+cd path/to/your/projects
+```
+
+Create a new vanilla web project called `my-animation-app`:
+
+```bash
+npm create vite@latest my-animation-app -- --template vanilla
+```
+
+Go into your project folder:
+
+```bash
+cd my-animation-app
+```
+
+Then install dependencies:
+
+```bash
+npm install
+```
+
+
+---
+
+## Install Lottie for Web
+
+Install the `lottie-web` or `@lottiefiles/dotlottie-web` Lottie player.
+
+
+
+
+**Option 1**: If you want to use `lottie-web`, in your web project folder, run:
+
+```bash
+npm install lottie-web
+```
+
+
+
+**Option 2**: If you want to use `dotlottie-web`, in your web project folder, run:
+
+```bash
+npm install @lottiefiles/dotlottie-web
+```
+
+
+---
+
+## Add Your Lottie Animation
+
+
+To add a Lottie animation to your project, you can:
+
+
+- Create an animation from scratch in <span style="color: var(--sl-color-accent-high);">[`Pixodesk Animator`](https://pixodesk.com/animator)</span>, or 
+- Download an animation from <span style="color: var(--sl-color-accent-high);">[`LottieFiles`](https://lottiefiles.com)</span> and edit it in <span style="color: var(--sl-color-accent-high);">[`Animator`](https://pixodesk.com/animator)</span>.
+
+
+
+Create an `animations` folder in `src/assets` and add your animation:
+
+```bash
+src/assets/animations/animation.json
+```
+
+---
+
+## Create Lottie Script
+
+
+How you set up Lottie in a web project depends on which player you are using to play the animation.
+
+
+**Option 1**: If you are using `lottie-web`, **src/main.js** should look like this:
+
+
+```js
+import lottie from "lottie-web";
+import animationData from "./assets/animations/animation.json";
+
+const container = document.getElementById('lottie-animation');
+
+if (container) {
+  lottie.loadAnimation({
+    container: container,
+    renderer: 'svg',  // 'svg', 'canvas', or 'html'
+    loop: true,
+    autoplay: true,
+    animationData: animationData
+  });
+}
+```
+
+
+**Option 2**: If you are using `dotlottie-web`, **src/main.js** should look like this:
+
+
+```js
+import { DotLottie } from '@lottiefiles/dotlottie-web';
+import animationData from "./assets/animations/animation.json";
+
+const canvas = document.getElementById('dotlottie-canvas');
+
+if (canvas) {
+  new DotLottie({
+    autoplay: true,
+    loop: true,
+    canvas,
+    data: animationData
+  });
+}
+```
+---
+
+## Use in HTML Page
+
+
+How your HTML markup looks depends on which player you are using.
+
+
+**Option 1**: If you are using `lottie-web`, **index.html** should look like this:
+
+
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lottie Animation in Web</title>
+    <style>
+      #lottie-animation {
+        width: 300px;
+        height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>My Lottie Animation</h1>
+      <div id="lottie-animation"></div>
+      <!-- ... the rest of your code -->
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
+```
+
+
+**Option 2**: If you are using `dotlottie-web`, **index.html** should look like this:
+
+
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lottie Animation in Web</title>
+    <style>
+      .animation-container {
+        width: 300px;
+        height: 300px;
+      }
+
+      canvas {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>My Lottie Animation</h1>
+      <div class="animation-container">
+        <canvas id="dotlottie-canvas"></canvas>
+      </div>
+      <!-- ... the rest of your code -->
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
+```
+
+---
+
+## Run Your App
+
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+
+
+You should see `Local: http://localhost:5173` in your terminal. 
+
+
+**Open the link in your browser.**
+
+
+**Note:** The localhost port can be different if `5173` has been taken by another application.
+
+
+Your Lottie animation should now work in your web project.
+
+
+
+---
+
+## Edit Animation in the Project Folder
+
+
+- Open your animation in **`Animator`** directly from your `src/assets/animations` folder.
+- **Modify** your file and **save** it. 
+
+
+---
+
+## Done! Animation is Ready 🎉 
+
+
+Hot reloading will pick up changes and reflect them in the browser immediately. Refresh the page if necessary.
+
+<SpacerB size='4rem'/>

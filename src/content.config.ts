@@ -14,7 +14,7 @@ export const collections = {
   svgaDocs: defineCollection({
     loader: glob({
       pattern: '*.md',
-      base: './public/app/svga/docs',
+      base: './src/content/docs2',
       generateId: ({ entry }) => entry.replace(/\.md$/, ''),
     }),
   }),

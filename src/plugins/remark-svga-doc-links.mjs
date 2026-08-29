@@ -16,7 +16,7 @@
  *
  * Scoped by file path: markdown anywhere else in the site is left untouched.
  */
-const DOCS_DIR = 'public/app/svga/docs';
+const DOCS_DIR = 'src/content/docs2';
 const BASE = '/app/svga/docs';
 const REPO_README = 'https://github.com/pixodesk/pixodesk-svg-animator#readme';
 

@@ -16,7 +16,7 @@ export async function getStaticPaths() {
     const entries = await getCollection("svgaDocs");
     if (entries.length === 0) {
         throw new Error(
-            "No SVG Animator docs found in public/app/svga/docs. " +
+            "No SVG Animator docs found in src/content/docs2. " +
                 "Run `yarn sync:svga-docs` and commit the result.",
         );
     }

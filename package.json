@@ -3,6 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
+    "sync:svga-docs": "rm -rf .tmp-svga-docs && mkdir -p .tmp-svga-docs && curl -fsSL https://github.com/pixodesk/pixodesk-svg-animator/archive/refs/heads/main.tar.gz | tar -xz -C .tmp-svga-docs --strip-components=2 pixodesk-svg-animator-main/docs && rm -rf public/app/svga/docs && mkdir -p public/app/svga && mv .tmp-svga-docs public/app/svga/docs && echo \"svga docs synced -> public/app/svga/docs\"",
     "dev": "astro dev --host 127.0.0.1",
     "build": "astro build",
     "preview": "astro preview",
@@ -19,6 +20,7 @@
     "@tailwindcss/typography": "^0.5.19",
     "astro": "^5.13.5",
     "js-yaml": "^4.1.0",
+    "mermaid": "^11.17.2",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-router-dom": "^7.8.2"

@@ -4,9 +4,11 @@ import { defineConfig } from "astro/config";
 import yaml from "@modyfi/vite-plugin-yaml";
 import mdx from '@astrojs/mdx';
 import starlight from "@astrojs/starlight";
+import { remarkSvgaDocLinks } from "./src/plugins/remark-svga-doc-links.mjs";
 
 export default defineConfig({
     markdown: {
+        remarkPlugins: [remarkSvgaDocLinks],
         shikiConfig: {
             themes: {
                 light: "github-light",

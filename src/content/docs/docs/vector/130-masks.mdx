@@ -1,6 +1,6 @@
 ---
 title: "Masks"
-description: "Masks and mask effects — hiding parts of an object with another object."
+description: "Hiding parts of an object with another object: masks, mask effects and clip paths — how they differ, how to make and remove them."
 slug: "docs/masks"
 sidebar:
   order: 130
@@ -9,66 +9,63 @@ draft: false
 
 # Masks
 
-Masks and mask effects — hiding parts of an object with another object.
+A mask hides part of an object using the shape of another object — a photo inside a circle, a
+line drawing revealed by a sweeping rectangle, text that shows a gradient through its letters.
+The editor offers three variants; all keep both objects editable and animatable.
 
-## Masks and Clipping
+<div class="shot">Screenshot: an image masked by a circle, the mask shape selected, the Object Tree showing the mask relationship</div>
 
-Pixodesk provides two ways to control the visibility of objects using other shapes:
+| Variant | Which object hides | Menu | Best for |
+| :-- | :-- | :-- | :-- |
+| **Mask** | the **top** selected object becomes the mask of the one below | Object › Make Mask | classic SVG masking, including soft edges via opacity |
+| **Mask Effect** | the **lower** object controls the visibility of the one above — a live reference, both stay on the canvas | Object › Add Mask Effect | masking with an object that also stays visible or animates on its own |
+| **Clip Path** | the **top** object's outline clips the one below (hard edge, the clip shape leaves the canvas) | Object › Make Clip Path | crisp cut-outs, windows, reveals |
 
-- **Mask** — uses an SVG `<mask>` element. The masking shape defines the visible area of the objects below it.
-- **Mask Effect** — applies masking as a non-destructive effect. The lower layer controls the visibility of the layer above it.
-
-Both approaches keep all layers editable after creation. See the individual pages for details on how to create and remove each type.
+All three are also in the **Mask** dropdown of the toolbar (Selection or Transform tool). Each
+needs **exactly two** objects selected; a group counts as one object, so group first when several
+shapes should be masked together.
 
 ## Mask
 
-A Mask uses one object to control the visible area of objects below it. Only the parts of the underlying objects that fall within the masking shape remain visible.
+1. Place the mask shape **above** the content in the Object Tree and select both.
+2. **Object › Make Mask**.
 
-### How to Create a Mask
-
-1. Select the objects you want to mask together with the masking shape.
-2. Apply the mask using one of:
-   - **Object → Make Mask** from the menu
-   - The **Mask** button in the Top Panel → **Make Mask** (available when the Selection or Transform Tool is active)
-
-### How It Works
-
-- The **topmost** selected object acts as the masking shape
-- Objects outside the mask shape are hidden
-- The mask remains editable — you can transform or adjust it at any time
-
-### Removing a Mask
-
-See [Remove Mask and Mask Effect](/docs/masks#remove-mask-and-mask-effect).
+Only the content inside the mask shape stays visible. The mask keeps its own fill and opacity —
+a semi-transparent or gradient-filled mask fades the content — and it can be moved, reshaped or
+animated at any time.
 
 ## Mask Effect
 
-A Mask Effect applies masking as a non-destructive effect. Unlike a regular Mask, it uses the **lower** layer to control the visibility of the layer above it — both layers remain independent and fully editable.
+1. Place the masking shape **below** the content and select both.
+2. **Object › Add Mask Effect**.
 
-### How to Create a Mask Effect
+The lower object now defines where the upper one is visible, while remaining an ordinary,
+independent object — animate it, restyle it, reuse it. Because the link is a reference, removing
+the effect leaves both objects exactly as they were.
 
-1. Select the objects you want to apply the effect to (the lower layer acts as the mask shape).
-2. Apply using one of:
-   - **Object → Add Mask Effect** from the menu
-   - The **Mask** button in the Top Panel → **Add Mask Effect** (available when the Selection or Transform Tool is active)
+## Clip Path
 
-### How It Works
+1. Place the clipping shape **above** the content and select both.
+2. **Object › Make Clip Path**.
 
-- The **lower** object defines the visible region
-- The **upper** object is visible only within the boundaries of the lower object
-- Both layers remain editable and can be transformed or adjusted at any time
+The top shape's geometry becomes a clip path (it disappears as a drawable object) and the content
+below is cut to it — hard-edged, no transparency. A clip made from a single animated path keeps
+its shape animation; more complex animated clips are frozen at the current frame (a warning tells
+you).
 
-### Removing a Mask Effect
+<div class="shot small">Screenshot: text clipped by a star shape, before and after Make Clip Path</div>
 
-See [Remove Mask and Mask Effect](/docs/masks#remove-mask-and-mask-effect).
+## Animating a Mask
 
-## Remove Mask and Mask Effect
+Masks are a favourite animation device: keyframe the mask shape's position, scale or path and the
+content is revealed, wiped or spot-lit. A mask that slides across a line drawing, a circle that
+grows to reveal a photo, a trim-stroke path used as a mask for a "drawing on" effect — all work in
+every saved format; see [SVG ↔ Lottie support](/docs/introduction#svg--lottie-support) for the
+Lottie limits.
 
-### How to Remove
+## Remove a Mask, Mask Effect or Clip Path
 
-1. Select the masked object or group on the canvas or in the Layer Tree.
-2. Use one of:
-   - **Object → Remove Mask** from the menu
-   - The **Mask** button in the Top Panel → **Remove Mask** (available when the Selection or Transform Tool is active)
-
-Removing a mask or mask effect restores the original visibility of all objects.
+Select the masked object (or the group) and choose **Object › Remove Mask** or
+**Object › Remove Clip Path** — also in the toolbar's **Mask** dropdown. For a Mask, the mask
+shape returns to the canvas as a normal object; for a Mask Effect, the reference is dropped and
+both objects are unchanged.

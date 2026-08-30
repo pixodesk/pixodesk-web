@@ -5,7 +5,7 @@ import yaml from "@modyfi/vite-plugin-yaml";
 import mdx from '@astrojs/mdx';
 import starlight from "@astrojs/starlight";
 import { remarkSvgaDocLinks } from "./src/plugins/remark-svga-doc-links.mjs";
-import { docsSidebar } from "./src/plugins/docs-sidebar.mjs";
+import { docsSidebar, docsSidebarIntegration } from "./src/plugins/docs-sidebar.mjs";
 
 export default defineConfig({
     markdown: {
@@ -64,6 +64,7 @@ export default defineConfig({
             },
             sidebar: docsSidebar(),
         }),
-        mdx()
+        mdx(),
+        docsSidebarIntegration(),   // keeps the generated docs sidebar fresh during `astro dev`
     ]
 });

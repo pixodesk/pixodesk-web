@@ -159,7 +159,7 @@ The **Layout** dropdown controls panel and timeline visibility:
 - **Show Keyframes** — toggle the keyframe editor within the Timeline panel
 - **Show Charts** — toggle the chart panel within the Timeline panel
 
-See [Workspace panels](/docs/get-started#show-hide-and-resize-panels).
+See [Workspace panels](/docs/introduction#show-hide-and-resize-panels).
 
 ##### Dark / Light theme
 
@@ -173,7 +173,7 @@ your animation live without saving.
 ##### Export
 
 Open the export dialog to save or download the animation in the configured file format. See
-[Export options](/docs/export-options).
+[Export options](/docs/export).
 
 ### Tool by tool
 
@@ -218,7 +218,7 @@ See [Shape builder](/docs/object-creation-tools#shape-builder).
 Move, rotate, and scale objects using transform handles. Hold `Shift` to constrain movement to
 horizontal / vertical, constrain rotation to 45° increments, or keep the aspect ratio when scaling.
 
-**Toolbar shows:** the same object actions as the Selection tool. See [Transform](/docs/edit-objects#transform).
+**Toolbar shows:** the same object actions as the Selection tool. See [Transform](/docs/edit-objects#move-and-transform).
 
 #### Repeater Tool `Y`
 
@@ -287,14 +287,14 @@ the Toolbar:
 - **Spiral** — a spiral with a configurable number of turns
 
 **Toolbar shows:** Fill / Stroke colour pickers, Stroke Width, Shape type (Star / Polygon / Spiral).
-See [Stars](/docs/draw-on-canvas#stars), [Polygons](/docs/draw-on-canvas#polygons), [Spiral](/docs/draw-on-canvas#spirals).
+See [Stars](/docs/draw-on-canvas#shape-presets-stars-polygons-spirals), [Polygons](/docs/draw-on-canvas#shape-presets-stars-polygons-spirals), [Spiral](/docs/draw-on-canvas#shape-presets-stars-polygons-spirals).
 
 #### Text Tool `Shift + T`
 
 Add and edit text. Click on the canvas to place a text object.
 
 **Toolbar shows:** Fill colour, Font Type, Font Family, Font Style, Font Size, Put Text on Path,
-Text to Bezier Shape. See [Text](/docs/text#text).
+Text to Bezier Shape. See [Text](/docs/text#text-objects).
 
 #### Page Tool
 
@@ -309,122 +309,70 @@ them together. See [Groups](/docs/draw-on-canvas#groups).
 
 ## Rulers, Grid and Background
 
-The Canvas is the central area of the workspace where you create, edit, and preview your artwork
-and animations. Everything you draw or animate exists within the canvas boundaries. It displays
-your SVG document at the current zoom level; objects placed outside the canvas boundary are still
-part of the document but can be hidden with **Clip Canvas Content**.
+The canvas is the white page in the middle of the workspace: your document, at the current zoom.
+Objects can sit outside its edge — they stay in the document but are cut off in the output. What
+is drawn *around* the page is up to you; the **Canvas** dropdown on the toolbar (and the **View**
+menu) holds the switches:
 
-Canvas display options control what is shown on and around the canvas. Access them from the
-**Canvas** dropdown in the top [Toolbar](/docs/canvas#canvas). Canvas size and aspect ratio are
-document properties — see [Change canvas size](/docs/canvas#change-canvas-size) — and the view is moved
-with [Pan](/docs/canvas#pan) and [Zoom](/docs/canvas#zoom).
+<div class="shot small">Screenshot: the Canvas dropdown open — Show Ruler, Show Grid (dot / line), Canvas Outline, Clip Canvas Content, Background colour</div>
 
-### Ruler
+| Option | What it does | Shortcut |
+| :-- | :-- | :-- |
+| **Show Ruler** | rulers along the top and left, in document units | `⌘ / Ctrl + ;` |
+| **Show Grid** | an alignment grid over the page — **Dot Grid** or **Line Grid** (switch in the dropdown); never exported | `⌘ / Ctrl + '` |
+| **Show Canvas Outline** | a border on the page edge | — |
+| **Clip Canvas Content** | hide whatever lies outside the page, as the output will | `⇧ ⌘ / Ctrl + Shift + /` |
+| **Show Canvas Background** / **Canvas Background** | a solid colour behind the page and its picker — a viewing aid only, not part of the file | `⌘ / Ctrl + /` |
 
-**Show Ruler** displays rulers along the top and left edges of the canvas. Rulers show measurements in the current document unit and help with precise object placement.
-
-### Grid
-
-**Show Grid** overlays a grid on the canvas as a visual alignment aid. The grid does not affect the final output.
-
-Two grid styles are available:
-
-- **Dot Grid** — displays the grid as evenly spaced dots
-- **Line Grid** — displays the grid as continuous horizontal and vertical lines
-
-Switch between styles in the Canvas dropdown.
-
-### Canvas Outline
-
-**Show Canvas Outline** draws a border around the canvas boundary, making it easy to see where the document edges are.
-
-### Clip Canvas Content
-
-**Clip Canvas Content** hides any objects that extend beyond the canvas boundary. When disabled, objects outside the canvas remain visible in the editor but are cropped in the exported output.
-
-### Canvas Background
-
-**Show Canvas Background** toggles the display of a solid background color behind the canvas.
-
-**Canvas Background** opens a color picker to set the background color. This background is only a display aid — it is not part of the SVG document and does not appear in exports unless explicitly added as a shape.
+> The grid is for your eyes; to make objects *snap* to it, see [Snapping](#snapping-to-objects-and-grid).
 
 ## Change Canvas Size
 
-You can change the canvas size using two methods.
+The canvas size is the document's **view box**. Two ways to change it:
 
-### Method 1 — Properties Panel
+- **Numbers** — select nothing (or the `<svg/>` root) and, in the **View Box** section of the
+  Properties panel, set **Content Size**. The **lock** keeps width and height proportional.
+- **On the canvas** — pick the **Page** tool (bottom of the Tools panel) and drag a corner of the
+  page.
 
-Select the **`<svg/>`** root element at the top of the [Object Tree](/docs/edit-objects#object-tree), or deselect all objects so that document properties are shown in the [Properties Panel](/docs/edit-objects#properties-panel).
+Resizing the page does not scale the artwork; move or scale the objects afterwards if needed. How
+the page scales when it is placed on a web page — **Aspect Ratio** (meet / slice, alignment) and
+**Display** size — is set in the same place: [Document properties](/docs/quick-start#document-properties).
 
-Locate the **Content Size** controls under the **View Box** section and enter the desired width and height values. Enable the **lock** icon to scale width and height proportionally, or disable it to edit them independently.
-
-### Method 2 — Page Tool
-
-Select the **Page Tool** from the [Tools Panel](/docs/canvas#tools-and-toolbar).
-
-Drag any corner of the canvas boundary directly on the canvas to resize it interactively.
+<div class="shot small">Screenshot: the Page tool dragging the canvas corner, the View Box fields updating</div>
 
 ## Snapping to Objects and Grid
 
-The Snap system helps align objects, nodes, and control points precisely when moving or editing elements.
+Snapping pulls what you drag — objects, nodes, control points — onto nearby geometry so things
+line up without zooming in. Two toggles on the toolbar switch it on and off (**Snap to Other**,
+**Snap to Step**); the **Snap settings** dropdown next to them, and the **View** menu, hold the
+details.
 
-When snapping is enabled, objects automatically align to nearby geometry, grid points, or other reference elements.
-
-You can add next snap options:
+<div class="shot small">Screenshot: dragging a rectangle — a snap guide line appearing at another shape's edge</div>
 
 ### Snap / Align to Other
 
-Enables snapping behavior between objects and reference points.
+Snaps to other objects and to the page.
 
-#### What Snapped / Aligned
-
-Defines which elements of your object can participate in snapping:
-
-**Bounding Box Corners and Midpoint**<br/>
-**Shape Path Nodes**<br/>
-**Control Points**<br/>
-
-
-
-#### Snap to Other
-
-Defines which elements of other objects your objects can snap to:
-
-**Bounding Box Corners and Midpoint**<br/>
-**Shape Path Nodes**<br/>
-**Page Borders and Midpoint**<br/>
-
-
-
-#### Align with Other
-
-Controls alignment behavior relative to nearby elements.
-
-**Bounding Box Corners and Midpoint**<br/>
-**Shape Path Nodes**<br/>
-**Page Borders and Midpoint**<br/>
-
-**Snap to Closest Point on Path** <br/>
-Snaps objects or nodes to the nearest location along a path.
-
-**Snap Screen Threshold** <br/>
-Defines the distance (in screen pixels) within which snapping becomes active.
+| Setting | Choices |
+| :-- | :-- |
+| **What is snapped** (points on the object you drag) | Bounding Box Corners and Midpoint · Shape Path Nodes · Control Points |
+| **Snap to** (points on other objects) | Bounding Box Corners and Midpoint · Shape Path Nodes · Page Borders and Midpoint |
+| **Align with** (guide lines that appear when edges or centres line up) | Bounding Box Corners and Midpoint · Shape Path Nodes · Page Borders and Midpoint |
+| **Snap to Closest Point on Path** | snap onto the nearest point of any path, not only its nodes |
+| **Snap Screen Threshold** | how close (in screen pixels) before snapping kicks in |
 
 ### Snap to Step
 
-Snaps movement or transformation to defined increments.
+Snaps movement and rotation to fixed increments.
 
-**Snap to Grid** <br/>
-Aligns objects to the visible grid.
+| Setting | Meaning |
+| :-- | :-- |
+| **Snap to Grid** + **Grid Step** | move in steps of the grid spacing |
+| **Snap Rotation to Angle Step** + **Angle Step** | rotate in fixed angle steps (e.g. 15°) |
 
-**Grid Step** <br/>
-Defines the spacing between grid snap points.
-
-**Snap Rotation to Angle Step** <br/>
-Constrains rotation to specific angle increments.
-
-**Angle Step** <br/>
-Defines the rotation step value.
+> Hold **Shift** while drawing or transforming for the classic constraints (square / circle,
+> 45° rotation) even with snapping off.
 
 ## Pan and Zoom
 
@@ -463,4 +411,4 @@ Zoom controls adjust the magnification of the canvas view. They do not affect th
 
 #### Timeline Zoom
 
-To adjust the horizontal zoom of the timeline view (how many frames are visible), use the **Zoom** control in the [Timeline Panel](/docs/animation#zoom). The **Zoom Timeline to Frame Range** option in the Zoom dropdown also fits the timeline view to the full animation duration.
+To adjust the horizontal zoom of the timeline view (how many frames are visible), use the **Zoom** control in the [Timeline Panel](/docs/animation#keyframe-editor). The **Zoom Timeline to Frame Range** option in the Zoom dropdown also fits the timeline view to the full animation duration.

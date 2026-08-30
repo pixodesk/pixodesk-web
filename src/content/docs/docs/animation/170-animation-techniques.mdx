@@ -1,0 +1,119 @@
+---
+title: "Animation Techniques"
+description: "Recipes for the less obvious animations: motion along a path, path morphing, draw-on strokes, text on a path, colour and gradients, mask reveals, filters, and instances with their own timing."
+slug: "docs/animation-techniques"
+sidebar:
+  order: 170
+draft: false
+---
+
+# Animation Techniques
+
+Position, scale and opacity get you far, but the memorable animations use the special ones. Each
+recipe below says what to select, which property to keyframe, and what to watch out for. They all
+build on [Keyframes](/docs/keyframes) and [Easing](/docs/easing-charts).
+
+## Motion Along a Path
+
+An object that follows a route — a car on a road, a plane on a dotted arc, a dot travelling along
+a chart line.
+
+<div class="shot">Screenshot: a small plane on a curved dashed path, the Position keyframes in the timeline</div>
+
+1. Draw the route with the Pen tool and put it **below** the moving object in the Object Tree.
+2. Select both and click **Move Element Along Path** (toolbar, or the **Path** section).
+3. The object's **Position** now means *distance along the path*: keyframe it from the start to
+   the end, and add easing.
+
+Tips: hide the route by giving it no stroke (it still works as a guide); reshape it later with
+**Edit motion path**; **Reverse Path** flips the direction of travel. Setup details:
+[Move along path](/docs/edit-objects#move-along-path).
+
+## Path Morphing
+
+Shapes can change shape over time: a logo that morphs into another, an icon that transitions
+between states, a blob that breathes. The path's nodes are animated individually.
+
+<div class="shot">Screenshot: the same path at two keyframes — a circle-ish blob and a squarish one — with the Node tool active</div>
+
+1. Select the path and press `N` (Node tool). Convert primitive shapes first
+   (**Path › Object to Path**).
+2. Pin the current shape (`Alt + A`) at the starting time.
+3. Move the playhead, then drag nodes and handles into the new shape. A keyframe is created
+   on the path shape.
+4. Repeat for further states; tune the segments' easing in the Easing Function panel.
+
+> **Keep the node count the same** between keyframes — each node is interpolated with its
+> partner. Adding or removing nodes after you started animating breaks the morph. Path morphing
+> is not available in the CSS-only SVG flavour (use JSON or SVG + JS).
+
+## Trim Stroke (Draw-on)
+
+A line that draws itself — signatures, handwriting, diagrams, loaders.
+
+<div class="shot">Screenshot: a signature path half drawn, the Trim Stroke Effect fields with End at 50 %</div>
+
+1. Select the path; make sure it has a **stroke** and no fill (for handwriting, use round caps).
+2. In the **Stroke** section tick **Trim Stroke Effect**.
+3. Keyframe **End** from `0 %` to `100 %`. The stroke appears along the path.
+
+Variations: keyframe **Start** from 0 % to 100 % *after* the draw-on to erase it again; animate
+**Offset** with Start / End at, say, 0 / 20 % for a dash that travels around a ring (a loading
+spinner); with a **Dash Array**, use **Trim All as One** to trim the dashes as one stroke.
+Field reference: [Stroke › Trim stroke](/docs/color#stroke).
+
+## Text Along a Path
+
+Text that flows around a circle, along a wave, or slides along a curve.
+
+1. Put the text on the path ([Text along path](/docs/text#text-along-path)).
+2. Keyframe **Offset** in the **Text Path** section to move the text along the curve; for a
+   full circle, 0 → 100 % makes it orbit once.
+3. Animate the path's nodes as well (Node tool + auto-pin) and the text follows the moving curve.
+
+Use **Use Glyphs** or outlines if the font must not depend on the viewer's machine.
+
+## Color and Gradient Animation
+
+Any colour with a clock icon animates: fill, stroke, opacity — and gradient **stops** and
+gradient geometry.
+
+- **Colour change** — switch on the clock next to the fill (Colors section), set a colour at
+  each keyframe. The editor interpolates through the colour space, so red → blue passes through
+  purple; add an in-between keyframe if you want a different route.
+- **Gradient sweep** — animate a linear gradient's **Position** or **Rotation** for a shimmer, or a
+  stop's colour for a pulsing glow. Keep the *number* of stops constant between keyframes.
+- **Fade** — prefer the object's **Opacity** (Appearance section) over the colour's alpha when the
+  whole object should fade; use fill / stroke opacity to fade only one of them.
+
+## Mask Reveal
+
+Show content by moving a mask instead of the content itself — wipes, spotlights, growing circles.
+
+1. Make the mask ([Masks](/docs/masks)) — a rectangle for a wipe, a circle for a spotlight.
+2. Select the mask shape and keyframe its **Position**, **Scale** or shape.
+
+The content stays still; only the visible window moves. Combine with a trim-stroke path used as a
+mask for an "ink filling in" effect.
+
+## Filter Animation
+
+Numeric filter settings are animatable: a **blur** that sharpens as an object arrives, a **drop
+shadow** whose offset grows as the object lifts, a **saturation** that fades to grey. Switch the
+clock next to the setting in the filter's entry ([Filters](/docs/filters)). Filters are not
+available in the CSS-only SVG flavour and only partly in Lottie — check the export preview.
+
+## Instances and Clones with Their Own Timing
+
+A [symbol](/docs/symbols) instance or a [clone](/docs/edit-objects#clones) plays the source's
+animation, but can shift it: **Start** delays it, **Stretch** speeds it up or slows it down,
+**Crop Time** clips it to the instance's own range. Ten instances of one waving flag, each with a
+different Start, become a stadium wave with a single animated source.
+
+---
+
+**Next**
+
+- Repeat any of these forever: [Loop animation](/docs/loop-animation).
+- Make them react to the page: [Playback and triggers](/docs/animation#playback-and-triggers) ·
+  [Scroll-driven animation](/docs/animation#scroll-driven-animation).

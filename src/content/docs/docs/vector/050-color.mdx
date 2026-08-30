@@ -1,0 +1,146 @@
+---
+title: "Color"
+description: "Fill and stroke colours: the colour panel, colour types, gradients, patterns, stroke options and trim, opacity, the eyedropper and used colours."
+slug: "docs/color"
+sidebar:
+  order: 50
+draft: false
+---
+
+# Color
+
+Every shape has a **fill** (the inside) and a **stroke** (the outline). Each can be a flat colour,
+a gradient, a pattern, nothing at all — or *unset*, so it inherits from its group. Colours are
+set in the **Colors** section of the Properties panel and animate like any other property.
+
+## Color Panel
+
+Select an object; the **Colors** section at the top of the Properties panel shows a **Fill** tab
+and a **Stroke** tab. The same picker also appears in the toolbar while a drawing tool is active,
+and pressing `X` switches the active target between fill and stroke.
+
+<div class="shot">Screenshot: the Colors section with the Fill tab active — colour type icons, wheel, HEX and RGB/HSL fields, alpha slider, used-colour swatches</div>
+
+### Colour types
+
+The icon row at the top of the tab sets the **type** of colour:
+
+| Type | Meaning |
+| :-- | :-- |
+| **No Color** | no fill / no stroke |
+| **Flat Color** | one solid colour |
+| **Linear Gradient** | colours blending along a line |
+| **Circular Gradient** | colours radiating from a centre |
+| **Pattern** | a repeating tile ([Patterns](/docs/patterns)) |
+| **Unset Color** | no colour of its own — inherits from the parent group ([below](#unset-color)) |
+
+### Picking a colour
+
+- **Wheel** (hue ring + saturation/brightness triangle) or **rectangular** field — switch with
+  the button above the picker.
+- **HEX** field (e.g. `#d41a1a`), or the **RGB** / **HSL** channels — switch models with the
+  toggle above the numbers.
+- **A** (alpha) — the colour's transparency, 0–100 %.
+- **Swatches** — the colours already used in the document; click one to reuse it
+  ([Used colours](#used-colors)).
+- **Eyedropper** — pick a colour from anything on the canvas ([below](#eyedropper)).
+
+Colours follow SVG inheritance: a colour set on a group applies to every child that is *unset*.
+
+## Fill
+
+Set the fill type and colour on the **Fill** tab. Two more settings sit in the **Fill** section:
+
+- **Fill Opacity** — transparency of the fill alone (the object's own opacity is separate, see
+  [Opacity](#opacity)).
+- **Fill Rule** — how the inside of a self-intersecting or compound path is decided:
+  **Nonzero** (default, by winding direction) or **Even-Odd** (every second overlap is a hole).
+
+## Stroke
+
+The **Stroke** tab sets the outline colour; the **Stroke** section sets its shape:
+
+| Setting | Options |
+| :-- | :-- |
+| **Width** | thickness in document units |
+| **Line Cap** | **Butt** (flat at the end), **Round**, **Square** (flat, extended) |
+| **Line Join** | **Miter** (pointed), **Round**, **Bevel** (cut) |
+| **Dash Array** | dash / gap lengths — add pairs for complex patterns |
+| **Dash Offset** | where the dash pattern starts along the path |
+
+<div class="shot small">Screenshot: the Stroke section — width, caps, joins, dash array, Trim Stroke Effect enabled</div>
+
+### Trim Stroke (draw-on effect)
+
+Tick **Trim Stroke Effect** to show only part of the stroke — the basis of every "line drawing
+itself" animation:
+
+- **Start / End** — the visible portion, in % of the path length (0–100 % shows everything).
+  Keyframe **End** from 0 % to 100 % and the line draws on; keyframe **Start** and it erases.
+- **Offset** — slides the visible portion along the path without changing its length; animate it
+  for a travelling dash or a looping progress ring.
+- **Trim All as One** — with a Dash Array: **off** trims every dash individually, **on** treats
+  all dashes as one continuous stroke.
+
+## Linear and Radial Gradients
+
+Choose **Linear Gradient** or **Circular Gradient** on the Fill or Stroke tab. A gradient has
+**stops** — colours at positions along it — each with its own colour and alpha.
+
+<div class="shot">Screenshot: a rectangle with a linear gradient, the Gradient tool handles on the canvas, the stop strip in the panel</div>
+
+- **Stops** — click a stop in the colour strip to edit it; the `‹` `›` buttons step through
+  stops; the bin removes the selected stop.
+- **Gradient tool** (`G`) — drag the handles on the canvas to move, rotate or stretch the
+  gradient. For a radial gradient the toolbar's **Focal Point** toggle adds a handle for the
+  brightest point.
+- **Linear options** — **Start / End** (direction), **Position**, **Rotation**, **Scale**.
+- **Radial options** — **Center**, **Radius**, **Focal Point**.
+- **Gradient Units** — **objectBoundingBox** (relative to the shape, scales with it) or
+  **userSpaceOnUse** (document coordinates, shared across shapes).
+- **Spread Method** — what happens beyond the ends: **pad** (extend the last colour),
+  **reflect** (mirror), **repeat**.
+
+Gradient stops and geometry are animatable.
+
+## Pattern
+
+Choose **Pattern** on the Fill or Stroke tab and pick a pattern from the list — your own patterns
+first, then the built-in ones. The **Pattern** section then controls how the tile is placed:
+**Translation**, **Rotation**, **Scale**, and the tile grid (**Tile Start / Tile Size**).
+**Pattern Fill / Stroke** sets the colour of the tile's shapes.
+
+Creating and editing your own patterns: [Patterns](/docs/patterns).
+
+## Unset Color
+
+**Unset** means "no colour of my own". The shape takes its fill or stroke from the nearest group
+above it that has one. Put the colour on the group, keep the shapes unset, and recolouring the
+whole illustration is one click — great for icons with a theme colour.
+
+## Opacity
+
+There are three opacities, and they multiply:
+
+- **Colour alpha** (the **A** slider) — transparency of that one colour or gradient stop.
+- **Fill / Stroke Opacity** (Fill and Stroke sections) — the fill or the stroke as a whole.
+- **Object opacity** (**Appearance** section) — the whole object, including its children. Use
+  this one for pattern fills and for fading objects in and out.
+
+## Eyedropper
+
+1. Select the object to recolour and make **Fill** or **Stroke** the active tab.
+2. Pick the **Eyedropper** in the Tools panel.
+3. Click any object on the canvas — its colour is copied into the active tab.
+
+## Used Colors
+
+The **Used Colors** section at the bottom of the Objects panel lists every colour in the
+document — fills, strokes and gradient stops — and updates as you work.
+
+- **Reuse** — with an object selected, click a swatch to apply it to the active fill or stroke.
+- **Replace everywhere** — open the **Edit Color Panel** under the Object Tree, pick the colour
+  to change, and choose a new one from the wheel or the list. Every shape using it updates at
+  once — a one-click theme change.
+
+<div class="shot small">Screenshot: the Used Colors section with a few swatches and the Edit Color panel open</div>

@@ -1,6 +1,6 @@
 ---
 title: "Patterns"
-description: "Pattern fills: create, use, edit and delete them."
+description: "Pattern fills — a tile repeated across a shape: create, apply, transform, edit and delete them."
 slug: "docs/patterns"
 sidebar:
   order: 110
@@ -9,122 +9,57 @@ draft: false
 
 # Patterns
 
-Pattern fills: create, use, edit and delete them.
+A **pattern** is a tile that repeats across the fill or stroke of a shape — stripes, dots, grids,
+textures. Define it once, use it on any number of objects, and position, rotate or scale the tile
+separately on each of them.
 
-## Patterns
+<div class="shot">Screenshot: a rectangle filled with a dot pattern, the Pattern section with translation / rotation / scale, the Patterns section thumbnail</div>
 
-Patterns are reusable graphic elements that can be applied as the **Fill** or **Stroke** of any object or group. They are defined once and referenced multiple times, so using the same pattern across many objects does not increase file size.
+## Create a Pattern
 
-### Common Uses
+1. Draw the tile content and select it.
+2. Choose **Object › Make Pattern**, or click **Make Pattern** in the toolbar.
 
-- Background textures and decorative fills
-- Repeating graphic elements (stripes, dots, grids)
-- Complex fills reused across multiple objects
-- Consistent styling in illustrations and UI elements
-- Animated fills where the same pattern is reused
+The shapes leave the canvas and become a pattern in the **Patterns** section of the Objects
+panel, labelled **Unused** until something uses it.
 
-### Notes
+## Apply a Pattern
 
-- Patterns are linked — editing a pattern definition updates all objects that reference it
-- Only unused patterns (not applied to any object) can be deleted
-- In SVG, patterns are stored inside `<defs>` and referenced via `fill` and `stroke` attributes
+1. Select a shape, group or text.
+2. In the **Colors** section, pick the **Fill** or **Stroke** tab and click the **Pattern** type.
+3. Choose the pattern — yours are listed first, then the built-in library.
 
-### The Patterns section
+> **Groups:** to fill a group with a pattern, set the shapes inside to *Unset colour* so the
+> group's pattern shows through. See [Unset colour](/docs/color#unset-color).
 
-The **Patterns** section of the [Objects panel](/docs/edit-objects#object-tree) lists all pattern definitions
-stored in the current document.
+### Transform the tile
 
-A pattern is a reusable tile definition stored in the SVG `<defs>` section. When applied as a
-fill, the pattern artwork is repeated (tiled) across the filled area of any object. After creating
-a pattern, you can control its translation, rotation, and scale independently for each object it
-is applied to.
+With a pattern applied, the **Pattern** section controls the tile on *this* object only:
 
-Each pattern in the list displays a **thumbnail preview** and its name. Patterns that are not
-applied to any object are labeled **Unused**, and a red triangle appears next to the collapsed
-section header; click the **bin icon** to remove an unused pattern.
+| Setting | Meaning |
+| :-- | :-- |
+| **Translation** | shifts the tile grid (X, Y) |
+| **Rotation** | rotates the tiles |
+| **Scale** | resizes the tiles (X, Y, %) |
+| **Tile Start / Tile Size** | the grid itself — origin and size of one tile |
+| **Pattern Fill / Stroke** | the colour of the shapes inside the tile |
 
-Double-click a pattern's thumbnail — or click the **Edit Pattern** button in the
-[Properties panel](/docs/edit-objects#properties-panel) when a pattern fill is active — to enter **Pattern
-View**, an in-place editing mode showing only the contents of that pattern. Exit Pattern View by
-clicking the **`...`** row at the top of the Object Tree. See [Editing patterns](/docs/patterns#editing-patterns).
+## Edit a Pattern
 
-## Creating Patterns
+Double-click the pattern's thumbnail in the Patterns section — or click **Edit Pattern** in the
+Colors section of an object that uses it — to enter **Pattern View**. Edit the tile like normal
+artwork and click the **`…`** row at the top of the Object Tree to return. All objects using the
+pattern update.
 
-### How to Create a Pattern
+For a variation, select the pattern in the Patterns section and copy / paste it, or click
+**Duplicate Pattern** in the Colors section: a new, unused copy appears.
 
-1. Select one or more objects on the canvas.
-2. Convert them to a pattern using one of:
-   - **Object → Make Pattern** from the menu
-   - The **Make Pattern** button in the Top Panel (available when the Selection or Transform Tool is active)
+## Delete Unused Patterns
 
-### What Happens After Creation
+Click the **bin** icon next to an **Unused** pattern in the Patterns section. Patterns still
+applied to an object cannot be deleted until that object uses another colour type.
 
-- The selected object is removed from the canvas and stored as a pattern definition
-- The pattern appears in the **Patterns** section of the Objects Panel with a preview thumbnail, labeled **Unused**
+## Patterns and the Saved File
 
-From this point, you can apply the pattern as a Fill or Stroke from the Properties Panel.
-
-## Using Patterns
-
-### Applying a Pattern
-
-Patterns can be applied as the **Fill** or **Stroke** of any object or group:
-
-1. Select a shape, object, or group in the Layer Tree or on the canvas.
-2. In the Properties Panel, go to the **Color** section.
-3. Choose the **Fill** or **Stroke** tab.
-4. Click the **Pattern** color type button.
-5. Choose a pattern from the dropdown — custom patterns appear at the top.
-
-To ensure the Color section is visible, enable **Show Color options** in the Properties Sections Bar.
-
-> **Note:** If you apply a pattern to a group, make sure all inner layers have their color set to **Unset** so the pattern is visible through them.
-
-### Pattern Transform Options
-
-When a pattern is applied, the **Pattern** subsection appears in the Properties Panel with these controls:
-
-- **Translation** — offsets the pattern within the object (X and Y)
-- **Rotation** — rotates the pattern (in degrees)
-- **Scale** — scales the pattern (X and Y, in %)
-
-### Duplicating a Pattern
-
-To create a variation of an existing pattern:
-
-- Open the **Patterns** section in the Objects Panel, select a pattern, and duplicate it using standard copy (`Cmd/Ctrl + C`) and paste (`Cmd/Ctrl + V`).
-- Or, when a pattern-filled object is selected, click **Duplicate Pattern** in the Properties Panel Color section.
-
-A new unused pattern appears, which you can edit and apply independently.
-
-## Editing Patterns
-
-Editing a pattern definition updates all objects that use it.
-
-### How to Edit a Pattern
-
-You can enter Pattern View in two ways:
-
-- Open the **Patterns** section in the Objects Panel and **double-click** the pattern thumbnail
-- Select an object that uses the pattern, then click **Edit Pattern** in the Properties Panel Color section
-
-Once in Pattern View:
-- Select shapes directly on the canvas or in the Pattern's Layer Tree
-- Modify shapes, paths, colors, and other properties
-- Adjust properties in the Properties Panel
-
-To return to the main document, click the **three dots (...)** row at the top of the Pattern's Layer Tree.
-
-Any changes made in Pattern View are automatically applied to all objects using that pattern.
-
-## Deleting Unused Patterns
-
-Unused patterns — those not applied to any object — can be removed to keep your document clean.
-
-### How to Delete
-
-1. Open the **Patterns** section in the Objects Panel.
-2. Locate patterns labeled **Unused** (shown with a red label).
-3. Click the **bin icon** next to the pattern to delete it.
-
-Patterns that are still applied to one or more objects cannot be deleted until removed from all objects.
+Patterns are native SVG (`<pattern>` referenced from `fill` / `stroke`) and survive in SVG and
+JSON output. Lottie has no patterns — see [SVG ↔ Lottie support](/docs/introduction#svg--lottie-support).

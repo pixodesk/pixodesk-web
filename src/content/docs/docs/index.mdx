@@ -1,132 +1,52 @@
 ---
 title: Pixodesk Docs
-description: Pixodesk Docs - Create and Animate SVG and Lottie for Web and Native Apps.
+description: Pixodesk Docs — Create and animate SVG and Lottie for web and native apps.
 draft: false
 ---
-import SpacerB from '../../../layouts/SpacerB.astro';
 
 # Pixodesk Docs
 
-This documents are under development.
+**Pixodesk SVG Animator** is a vector drawing and animation editor. You draw on a canvas, animate
+with keyframes on a timeline, and save a file that plays on any web page — as a JSON animation
+for the Pixodesk player, as a self-contained SVG, or as Lottie. It is also the SVG half of
+**Pixodesk Animator Studio**, which adds the Lottie editor.
 
-Pixodesk Animator Studio is a vector animation editor for creating SVG and Lottie animations for web and native apps. Use these docs to learn the workspace, drawing tools, animation system, and integration options.
+## Where do you want to go?
 
----
+| I want to… | Start here |
+| :-- | :-- |
+| **Make an animation** in the editor | [Introduction](/docs/introduction) → [Quick Start](/docs/quick-start) → [Your first animation](/docs/quick-start#your-first-animation) |
+| **Put an animation on my page** (HTML, React, Vue, Next, Nuxt, Astro, React Native) | [Add SVG animation to your project](/docs/add-svg-animation-to-your-project) · [Player docs](/app/svga/docs) |
+| **Understand the file** the editor writes | [File formats](/docs/save#file-formats-which-one-to-save) · [Format docs](/app/svga/docs/13-format--format-principles) |
+| **Look something up** — a tool, a panel, a shortcut | [Keyboard shortcuts](/docs/useful-info#keyboard-shortcuts) · the sidebar (every topic is one entry) |
 
-## Get Started
+## The editor, section by section
 
-[Introduction](/docs/get-started#introduction) covers what Pixodesk Animator Studio is and what you can build with it. [Supported File Formats](/docs/get-started#file-formats-which-one-to-save) lists the SVG and Lottie formats the app can open and save.
+- **[Introduction](/docs/introduction)** — what it is, the workspace, which file to save,
+  SVG ↔ Lottie support.
+- **[Quick Start](/docs/quick-start)** — create a document, your first animation, import and
+  export, document properties.
+- **[Canvas](/docs/canvas)** — tools and toolbar, rulers and grid, canvas size, snapping, pan and zoom.
+- **Vector editing** — [Draw on Canvas](/docs/draw-on-canvas) · [Text](/docs/text) ·
+  [Object Creation Tools](/docs/object-creation-tools) · [Edit Paths](/docs/edit-paths) ·
+  [Color](/docs/color) · [Edit Objects](/docs/edit-objects) · [Symbols](/docs/symbols) ·
+  [Markers](/docs/markers) · [Patterns](/docs/patterns) · [Filters](/docs/filters) · [Masks](/docs/masks).
+- **Animation editing** — [Animation Overview](/docs/animation) · [Keyframes](/docs/keyframes) ·
+  [Loop Animation](/docs/loop-animation) · [Easing Charts](/docs/easing-charts).
+- **[Save, File Format](/docs/save)** — which file to save and why, save options, preview.
+- **[Export to Lottie, Video, Image](/docs/export)** — Lottie and dotLottie, video and GIF, static images.
+- **[Add SVG animation](/docs/add-svg-animation-to-your-project)** and
+  **[Add Lottie animation](/docs/add-lottie-animation-to-your-project)** to your project.
+- **[Useful Info](/docs/useful-info)** — keyboard shortcuts, preferences, troubleshooting, glossary.
 
----
+## Which file should I save?
 
-## Workspace
+| Save as | When | Needs on the page |
+| :-- | :-- | :-- |
+| **JSON (Pixodesk player)** | apps and frameworks; control from code | the small player library |
+| **SVG + CSS animation** | plain HTML, CMS, static sites — it just plays | nothing |
+| **SVG + CSS + JS triggers** | same, but start on click / hover / scroll | a few embedded lines |
+| **SVG + JS animation** | one self-contained file with every feature | embedded in the file |
+| **Lottie / .lottie** | existing Lottie pipelines, mobile apps | a Lottie player |
 
-The workspace is made up of several panels that work together. The [Workspace Overview](/docs/get-started#workspace-overview) describes the full layout. The [Tools Panel](/docs/canvas#tools-and-toolbar) is the vertical toolbar on the left for selecting and drawing. The [Objects Panel](/docs/edit-objects#object-tree) on the right shows the layer tree, symbols, markers, patterns, filters, and used colors. The [Properties Panel](/docs/edit-objects#properties-panel) and [Properties Sections Bar](/docs/edit-objects#sections-bar) control the appearance and attributes of the selected object. The [Timeline Panel](/docs/animation#timeline-panel) at the bottom handles playback and animation.
-
----
-
-## Create and Import Files
-
-[Create a new document](/docs/get-started#create-a-new-document) or [open an existing SVG or Lottie file](/docs/get-started#open-an-existing-file). [Document Properties](/docs/get-started#document-properties) let you set canvas size, frame rate, and animation duration. You can also [import SVG and Lottie files](/docs/get-started#svg-and-lottie-files) as objects into an open document, [import images](/docs/get-started#images), and [import custom fonts](/docs/get-started#fonts-ttf).
-
----
-
-## Canvas
-
-The [Canvas](/docs/canvas#rulers-grid-and-background) is the drawing area at the center of the workspace. Display options include rulers, grid, canvas outline, and background color. You can [change the canvas size](/docs/canvas#change-canvas-size) at any time, and configure [snap settings](/docs/canvas#snapping-to-objects-and-grid) to align objects precisely while drawing or moving.
-
----
-
-## Canvas Navigation
-
-[Zoom](/docs/canvas#zoom) in and out using the scroll wheel or the Zoom control in the top toolbar. [Pan](/docs/canvas#pan) the canvas by holding Space and dragging, or by using the Hand Tool (H).
-
----
-
-## Drawing
-
-Pixodesk provides tools for drawing vector shapes, text, and freeform paths. The [Drawing Overview](/docs/canvas#tools-and-toolbar) lists all tools and their keyboard shortcuts. Basic shapes include [Rectangles](/docs/draw-on-canvas#rectangles), [Ellipses](/docs/draw-on-canvas#ellipses), [Stars, Polygons, and Spirals](/docs/draw-on-canvas#stars) — all available via the Shape Tool (W). Draw freeform paths with the [Pen Tool](/docs/draw-on-canvas#bezier-paths) or the Freehand Tool (F). Add [Text](/docs/text#text) directly on the canvas or [along a path](/docs/text#text-along-path). [Round Corners](/docs/draw-on-canvas#round-corners) can be applied globally or selectively to individual corners. [Group objects](/docs/draw-on-canvas#groups) to move and transform them as a single unit.
-
----
-
-## Object Creation Tools
-
-The [Repeater](/docs/object-creation-tools#repeater) creates radial or linear arrays of an object. The [Shape Builder](/docs/object-creation-tools#shape-builder) merges, subtracts, and extracts overlapping areas of shapes. The [Spray](/docs/object-creation-tools#spray) distributes multiple instances of an object across the canvas.
-
----
-
-## Editing Paths
-
-Use the [Node Tool](/docs/edit-paths#node-tool) (N) to select and move individual bezier nodes on a path. You can [edit path segments](/docs/edit-paths#edit-path-segments), [align and distribute nodes](/docs/edit-paths#align-and-distribute-nodes), and apply [path operations](/docs/edit-paths#path-operations) such as union, intersect, and subtract. Additional commands include [combine paths](/docs/edit-paths#combine-paths), [break apart](/docs/edit-paths#break-apart), [reverse path](/docs/edit-paths#reverse-path), and [mirror path](/docs/edit-paths#mirror-path).
-
----
-
-## Color
-
-Objects can have a [fill](/docs/color#fill) and stroke independently. [Color types](/docs/color#color-types) include solid color, [linear gradient](/docs/linear-gradient), radial gradient, and pattern. The [Color Panel](/docs/color#color-panel) and [Color Picker](/docs/color#color-picker) support multiple [color models](/docs/color#color-models). Use the [Eyedropper](/docs/color#eyedropper) to sample any color on the canvas. [Opacity](/docs/color#opacity) can be set per object.
-
----
-
-## Editing Objects
-
-[Select objects](/docs/edit-objects#select-objects) on the canvas or in the Object Tree. [Move](/docs/edit-objects#move-objects), [duplicate](/docs/edit-objects#duplicate), and [arrange](/docs/edit-objects#arrange-objects) objects in the stacking order. [Align and distribute](/docs/edit-objects#align-and-distribute-objects) multiple objects relative to each other or the canvas. Apply [transformations](/docs/edit-objects#transform) including scale, rotate, and flip. [Hide and lock objects](/docs/edit-objects#hide-and-lock-objects) to protect them while working. Move objects [along a path](/docs/edit-objects#move-along-path) for path-driven layout or animation.
-
----
-
-## Symbols
-
-[Symbols](/docs/symbols#symbols) are reusable objects — define once, place multiple instances. Changes to the symbol propagate to all instances. You can [create symbols](/docs/symbols#creating-symbols), [edit them](/docs/symbols#editing-symbols), [use instances](/docs/symbols#using-symbols), [convert instances back to plain objects](/docs/symbols#converting-symbols-to-objects), and [delete unused symbols](/docs/symbols#deleting-unused-symbols).
-
----
-
-## Markers
-
-[Markers](/docs/markers#markers) are shapes attached to the start, mid, or end points of a path — arrowheads, dots, or any custom shape. [Create markers](/docs/markers#creating-markers), [edit their shape](/docs/markers#editing-markers), [apply them to paths](/docs/markers#using-markers), and [remove unused ones](/docs/markers#deleting-unused-markers).
-
----
-
-## Patterns
-
-[Patterns](/docs/patterns#patterns) tile a shape or image across a fill area. [Create a pattern](/docs/patterns#creating-patterns) from any object, [edit its geometry](/docs/patterns#editing-patterns), [apply it as a fill](/docs/patterns#using-patterns), and [clean up unused patterns](/docs/patterns#deleting-unused-patterns).
-
----
-
-## Filters
-
-[Filters](/docs/filters#filters-section) apply non-destructive visual effects to objects — drop shadow, blur, color adjustments, and more. [Add filters](/docs/filters#adding-filters) from a library of presets, [edit filter properties](/docs/filters#editing-filters) including individual primitives, and [remove filters](/docs/filters#remove-filters-from-objects) when no longer needed.
-
----
-
-## Masks and Clipping
-
-[Masks](/docs/masks#mask) use grayscale luminance to control the transparency of an object. [Clipping Paths](/docs/clipping-paths) hide parts of an object outside the clipping shape. [Mask Effect](/docs/masks#mask-effect) lets one layer control the visibility of another. All three can be [removed](/docs/masks#remove-mask-and-mask-effect) when no longer needed.
-
----
-
-## Animation
-
-The [Timeline Panel](/docs/animation#timeline-panel) is where you build animations. [Keyframes](/docs/keyframes#keyframes-overview) record property values at specific points in time — add, move, copy, and delete them to define how objects change. [Loop Animation](/docs/loop-animation#loop-animation-overview) covers the three loop modes: playback loop, inner loop (per-layer), and export loop. [Easing Charts](/docs/easing-charts#easing-charts) control how values change between keyframes — choose from built-in [presets](/docs/easing-charts#easing-presets) or fine-tune curves in the [Easing Function panel](/docs/easing-charts#editing-curves).
-
----
-
-## Save
-
-Pixodesk saves animations as SVG or Lottie JSON. The [File Formats Overview](/docs/svg-and-lottie-file-formats-overview) explains the differences. SVG export options include [CSS Keyframe animation](/docs/svg-css-keyframes), [JavaScript animation](/docs/svg-js-animation), [JS with triggers](/docs/svg-js-triggers), and [JSON-based format](/docs/save#svg-json-based). Lottie animations save as [Lottie JSON](/docs/save#lottie-json). See [Save Options](/docs/save-options) for the full settings reference.
-
----
-
-## Export
-
-[Export Options](/docs/export-options) covers all raster and vector output. Export the animation as a [video](/docs/export#video) (MP4, WebM, GIF) or as a [static image](/docs/export#image) (PNG, JPEG, SVG). You can also [convert an animation to a static format](/docs/convert-animation-to-static-format) to flatten all frames into a single snapshot.
-
----
-
-## Add SVG Animation to Your Project
-
-Drop the saved SVG animation into any web framework. Guides are available for [Web (vanilla)](/docs/add-svg-animation-to-your-project#web), [React](/docs/add-svg-animation-to-your-project#react), [Vue](/docs/add-svg-animation-to-your-project#vue), [Next.js](/docs/add-svg-animation-to-your-project#next), [Nuxt](/docs/add-svg-animation-to-your-project#nuxt), [Astro](/docs/add-svg-animation-to-your-project#astro), and [React Native](/docs/add-svg-animation-to-your-project#react-native).
-
----
-
-## Add Lottie Animation to Your Project
-
-Lottie JSON files play back with a Lottie player library. Guides are available for [Web](/docs/add-lottie-animation-to-your-project#intro-lottie), [React (react-lottie)](/docs/add-lottie-animation-to-your-project#react), [Vue](/docs/add-lottie-animation-to-your-project#vue), [Next.js](/docs/add-lottie-animation-to-your-project#nextjs), [Nuxt](/docs/add-lottie-animation-to-your-project#nuxt), [Astro](/docs/add-lottie-animation-to-your-project#astro), and [React Native (react-native-lottie)](/docs/add-lottie-animation-to-your-project#react-native).
+Details and trade-offs: [File formats: which one to save](/docs/save#file-formats-which-one-to-save).

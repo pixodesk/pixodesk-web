@@ -1,6 +1,6 @@
 ---
 title: "Draw on Canvas"
-description: "Drawing shapes and paths: rectangles, ellipses, groups, bezier paths, round corners and the preset shapes."
+description: "Drawing shapes and paths: rectangles, ellipses, groups, bezier paths, round corners, the preset shapes, freehand and images."
 slug: "docs/draw-on-canvas"
 sidebar:
   order: 30
@@ -9,7 +9,22 @@ draft: false
 
 # Draw on Canvas
 
-Drawing shapes and paths: rectangles, ellipses, groups, bezier paths, round corners and the preset shapes.
+Everything starts with a shape. Pick a tool in the Tools panel (or press its key), drag on the
+canvas, and refine the result in the Properties panel. All shapes are vectors — resize them as
+much as you like, they stay sharp.
+
+| Shape | Tool | Key |
+| :-- | :-- | :-- |
+| Rectangle, square | Rectangle | `R` |
+| Ellipse, circle | Ellipse | `E` |
+| Any line or curve | Pen | `P` |
+| Hand-drawn curve | Freehand | `F` |
+| Star, polygon, spiral | Shape | `W` |
+| Text | Text | `Shift + T` |
+
+While dragging any shape tool: **Shift** constrains proportions (square, circle, 30° steps),
+**Alt / Option** draws from the centre. The tools themselves are described in
+[Tools and toolbar](/docs/canvas#tools-and-toolbar).
 
 ## Rectangles
 
@@ -22,244 +37,140 @@ notes: rectangle drawn and selected
 */}
 ![A rectangle just drawn with the Rectangle tool, resize handles visible](/images/docs/editor/draw/rectangle-drawn.png)
 
-You can draw rectangles using the Rectangle Tool (R) from the Tools Panel.
+Press `R`, then click and drag on the canvas.
 
+- **Shift** — a perfect square.
+- **Alt / Option** — draw from the centre point where you started dragging.
+- Both together — a square growing from the centre.
 
-Click and drag on the canvas to create a rectangle.
-
-
-### Keyboard modifiers
-
-Shift — constrains the shape to a perfect square
-
-
-Option (Alt) — draws the rectangle from the center point where you begin dragging
-
-
-These modifiers can be combined while drawing to control the placement and proportions of the shape.
+After drawing, the **Shape** section of the Properties panel shows the size and the
+**corner radius** (see [Round corners](#round-corners)); the **Transform** section shows position,
+rotation and scale.
 
 ## Ellipses
 
-You can draw ellipses using the Ellipse Tool (E) from the Tools Panel.
+Press `E`, then click and drag.
 
-Click and drag on the canvas to create an ellipse.
+- **Shift** — a perfect circle.
+- **Alt / Option** — draw from the centre.
 
-### Keyboard Modifiers
-
-While drawing, you can use keyboard modifiers to control the shape.
-
-Shift
-
-Constrains the shape to a perfect circle.
-
-Option (Alt)
-
-Draws the ellipse from the center point where you begin dragging.
-
-These modifiers can be combined while drawing to control both the placement and the proportions of the shape.
+The **Shape** section shows the ellipse size; the radii follow from it.
 
 ## Groups
 
-Objects can be grouped to create more complex structures and to organize elements within a document.
+A group makes several objects behave as one: move, transform, animate or colour them together,
+and keep the Object Tree tidy.
 
-Grouping allows multiple objects to behave as a single unit, making it easier to move, transform, and manage them together.
+- **Group** — select the objects and choose **Object › Group** (`⌘ / Ctrl + G`).
+- **Ungroup** — select the group and choose **Object › Ungroup** (`⇧ ⌘ / Ctrl + Shift + G`).
 
-### Group Objects
+Double-click a group on the canvas to work inside it; hold **⌘ / Ctrl** and click to grab one
+object inside a group without entering it. Groups can be nested, and a group is also the
+starting point for the [Repeater](/docs/object-creation-tools#repeater) and
+[Spray](/docs/object-creation-tools#spray) tools.
 
-To group selected objects, choose:
-
-Object → Group
-
-You can also use the keyboard shortcut:
-
-Ctrl + G (Windows)
-
-Cmd + G (macOS)
-
-### Ungroup Objects
-
-To separate objects from a group, choose:
-
-Object → Ungroup
-
-Keyboard shortcut:
-
-Ctrl + Shift + G (Windows)
-
-Cmd + Shift + G (macOS)
-
-Ungrouping restores the objects so they can be edited individually.
+> **Tip:** set a fill on the group and leave the shapes inside on *Unset colour* — all of them
+> follow the group's colour. See [Unset colour](/docs/color#unset-color).
 
 ## Bezier Paths
 
-Pixodesk Animator Studio uses Bézier paths to create custom vector shapes and curves. Paths consist of nodes (points) connected by segments, which can be straight or curved.
+Custom shapes are **paths**: nodes (points) joined by straight or curved segments. The **Pen**
+tool (`P`) draws them; the [Node tool](/docs/edit-paths#node-tool) (`N`) edits them afterwards.
 
-You can create paths using the Pen Tool (P). To edit existing paths and move individual nodes, use the Node Tool (N).
+{/* e2e-screenshot
+app: svga · viewport: 1440x900 · hideDevUi: true
+setup: setup(400, 400); click("toolsPicker.bezier"); addBezier("draw", "M60,300 C120,100 220,100 280,300")
+crop: testId="canvas" padding=0
+annotate: [{"kind":"label","target":"canvas.??.node(1)","text":"curved node with handles","at":"right"}]
+notes: planned — a path with two corner nodes and one curved node, handles visible
+*/}
+<div class="shot">Screenshot: the Pen tool mid-path — corner node, curved node with its two handles, the segment being drawn</div>
 
+### Drawing
 
+1. Press `P` and click on the canvas: the first node.
+2. **Click** again for a **corner node** — a straight segment.
+3. **Click and drag** for a **curved node** — the drag direction sets the curve's angle, the
+   drag distance its strength; the node gets two handles.
+4. Finish with a **double-click**, or press **Escape**. To **close** the shape, click its first
+   node.
 
-The Pen tool draws lines and curves. Click on the canvas to start a path. After that, each click will add a corner node to the path. Press and drag adds a curved node. Double-clicking ends the path. To create a closed path, click the start node of the path.
+Hold **Shift** while placing nodes or dragging handles to snap to 90° angles.
 
-The Pen tool can also be used to connect open paths to each other. Select the first path's node and then select the second path's node to create a connecting segment.
+### Connecting paths
 
+The Pen tool also joins open paths:
 
+- **Close a single open path** — click one open end node, then the other.
+- **Join two paths into one** — select both paths, pick the Pen, click the open end of the first
+  path, then the open end of the second. A new segment connects them.
 
+### Freehand
 
-
-### Pen Tool
-
-The Pen Tool allows you to draw precise straight lines and curved paths.
-
-To start drawing, click on the canvas to create the first node of a path. Each additional click adds another node connected by a line segment.
-
-Creating Straight Segments
-
-Click and release on the canvas to create a corner point.
-
-Corner points produce straight line segments and do not include control handles.
-
-
-
-### Creating Curved Segments
-
-Click and drag to create a curved node.
-
-The distance you drag determines the length (strength) of the curve.
-
-
-The direction you drag determines the angle of the curve.
-
-
-Curved nodes include control handles that define the shape of the Bézier curve.
-
-
-### Constraining Angles
-
-Hold the Shift key while dragging to constrain lines or control handles to 90-degree angles. This helps maintain precise alignment when creating paths.
-
-
-
-
-### Ending a Path
-
-You can finish drawing a path using one of the following methods:
-
-Double-click on the canvas
-
-
-Press the Escape key
-
-
-To create a closed path, click the starting node of the path.
-
-
-### Connecting Paths
-
-You can connect open paths within a single shape or between multiple shapes.
-
-Closing a single open path
-
-Select the first and last nodes of an open shape and connect them to form a closed shape.
-
-Connecting Two Open Paths
-
-Select the two paths that you want to connect.
-
-
-Select the Pen Tool.
-
-
-Click the open node of the first path.
-
-
-Click the open node of the second path.
-
-
-A new segment is created, connecting the two paths into a single continuous path.
+Press `F` and draw with the mouse; the stroke is converted into a smooth bezier path you can edit
+with the Node tool. Good for organic shapes and quick sketches.
 
 ## Round Corners
 
-Rectangles and other vector shapes can have rounded corners.
+Two ways to round corners:
 
-You can control corner rounding in the Properties Panel under the Shape section.
+**Corner radius in the Properties panel** — for rectangles, the **Shape** section has a
+**Corner Radius** with a lock: locked, the horizontal and vertical radius change together;
+unlocked, you set them independently.
 
-### Corner Radius
+**Round Corner tool** (`C`) — rounds *individual* corners of any shape:
 
-Defines the radius used to round the corners of the shape.
+1. Select the shape and press `C`. Every corner gets a handle.
+2. Click a corner (**Shift + click** to pick several) and drag the handle, or type the
+   **Corner Radius** in the toolbar.
+3. Choose the **Corner Type** in the toolbar: **Round** (circular), **Bevel** (straight cut) or
+   **Inverted Round** (concave).
 
-The lock control allows you to link or unlink the horizontal and vertical radius values:
+The toolbar's **Convert to Curves** turns the result into an editable path. Copying a radius value
+from the toolbar field and pasting it with other corners selected applies the same value to them.
 
-Locked — both values change proportionally
-
-
-Unlocked — X and Y radius values can be adjusted independently
-
-
-
-
-### Round Corner Tool
-
-Pixodesk Animator Studio also provides a Round Corner Tool (C) located in the Tools Panel. This tool allows selective rounding of individual corners on vector shapes.
-
-When the Round Corner Tool is active, additional options appear in the Top Panel.
-
-#### Corner Types
-
-You can choose the style of the corner:
-
-Round — smooth circular rounding
-
-Bevel — straight edge cut across the corner
-
-Inverted Round — concave rounded corner
-
-#### Corner Radius
-
-Specifies the rounding radius applied to selected corners.
-
-#### Editing Multiple Corners
-
-You can apply corner settings to multiple corners simultaneously.
-
-Hold Shift to select multiple corners of a shape
-
-Adjust the radius in the Top Panel to apply the same value to all selected corners
-
-You can also copy and paste corner radius values between corners by copying the value from the radius input field and applying it to other selected corners.
-
-#### Editing Corners on the Canvas
-
-Corners can also be edited directly on the canvas.
-
-Drag the corner of the shape to interactively adjust the corner radius until the desired shape is achieved.
+{/* e2e-screenshot
+app: svga · viewport: 1440x900 · hideDevUi: true
+setup: setup(400, 400); click("toolsPicker.rectangle"); move("canvas.bg", "source:22%", "source:28%", "canvas.bg", "drop:72%", "drop:66%"); click("toolsPicker.roundCorner"); click("canvas.el(nm:Rectangle,ty:rect).path(0).radiusControlPoint(0)")
+crop: testId="canvas" padding=0
+annotate: [{"kind":"circle","target":"canvas.??.radiusControlPoint(0)","text":"drag","at":"right"}]
+notes: planned — a rectangle with one corner rounded, the corner handle circled
+*/}
+<div class="shot">Screenshot: the Round Corner tool — one corner rounded, its handle highlighted, the toolbar with radius and corner type</div>
 
 ## Shape Presets (Stars, Polygons, Spirals)
 
-The **Shape tool** (`W`) draws three preset shapes. With the tool active, pick the sub-type —
-**Star**, **Polygon** or **Spiral** — in the toolbar, then click and drag on the canvas. Hold
-**Shift** while drawing to constrain the rotation to 30-degree increments, so the shape is
-aligned precisely (a star points exactly in the direction you want). After creating the shape,
-adjust its appearance in the Properties panel.
+Press `W` and pick the sub-type in the toolbar — **Star**, **Polygon** or **Spiral** — then drag
+on the canvas. **Shift** snaps the rotation to 30° steps, so a star points exactly where you
+want. Each preset has one geometry setting, **Points Count**, in the Properties panel:
 
-Each preset has one geometry property, **Points Count**, whose meaning depends on the sub-type.
+| Preset | Points Count means | Examples |
+| :-- | :-- | :-- |
+| **Star** | number of points (spikes) | 5 = classic star, 3 = triangle star |
+| **Polygon** | number of sides | 3 = triangle, 6 = hexagon |
+| **Spiral** | number of turns | more turns = a longer, denser spiral |
 
-### Stars
+<div class="shot small">Screenshot: a star, a polygon and a spiral side by side, with the Points Count field</div>
 
-Select the **Star** sub-type and drag to draw a star.
+## Images
 
-**Points Count** — the number of points (spikes) that form the star. Increasing the value creates
-a star with more points; decreasing it produces a simpler star shape.
+Raster images (PNG, JPEG, WebP, GIF) are objects too. Drop an image file on the canvas, choose
+**File › Import**, or paste a copied image (**Edit › Paste**); it becomes an image layer you can
+move, scale, rotate, mask, animate and place inside groups like any shape. See
+[Import files](/docs/quick-start#import-and-export) for the ways in.
 
-### Polygons
+The **Image** section of the Properties panel shows the image's **Href** (an embedded
+`data:` image or a linked URL), its **Bounds** (position and size) and **Aspect**: unchecked, the
+image stretches to its bounds; checked, it keeps its ratio with an **X / Y alignment** and
+**meet** (fit inside) or **slice** (fill and crop).
 
-Select the **Polygon** sub-type and drag to draw a regular polygon.
+> **Note:** an image stays a bitmap — it does not get sharper when scaled up. For vector output,
+> redraw it with the Pen tool.
 
-**Points Count** — the number of sides (vertices) of the polygon. Increasing the value creates
-polygons with more sides; decreasing it produces simpler shapes such as triangles or pentagons.
+---
 
-### Spirals
+**Next**
 
-Select the **Spiral** sub-type and drag to draw a spiral.
-
-**Points Count** — the number of turns in the spiral. Increasing the value adds more rotations,
-making the spiral longer and more complex.
+- Style what you drew: [Color](/docs/color).
+- Reshape it: [Edit paths](/docs/edit-paths).
+- Move, align, arrange: [Edit objects](/docs/edit-objects).

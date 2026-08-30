@@ -1,6 +1,6 @@
 ---
 title: "Keyframes"
-description: "How keyframes work, and how to add, select, move, delete, copy and paste them."
+description: "How keyframes work, and how to add, select, move, delete, copy and paste them — and what can be animated."
 slug: "docs/keyframes"
 sidebar:
   order: 150
@@ -9,116 +9,97 @@ draft: false
 
 # Keyframes
 
-How keyframes work, and how to add, select, move, delete, copy and paste them.
+A keyframe records the value of one property at one moment. Two keyframes with different values
+make an animation: the editor fills in every frame in between. That is all there is to it — the
+rest is choosing *what* changes, *when*, and *how* it eases.
 
-## Keyframes Overview
+<div class="shot">Screenshot: the timeline with one layer, its Position row, two keyframe diamonds and the easing mini chart between them</div>
 
-Keyframes are the building blocks of animation in Pixodesk Animator Studio. Each keyframe records the value of a property — such as position, size, colour, or opacity — at a specific point in time. The animation engine calculates the values between any two keyframes automatically, producing smooth transitions.
+## How Keyframes Work
 
-### How Keyframes Work
+- A property has no animation until it has **two** keyframes; everything between them is
+  interpolated, everything before the first and after the last holds still.
+- Add as many keyframes as you like — each is a moment the animation passes through exactly.
+- Every animated property gets its own **row** in the timeline's layer list, with its keyframes
+  as diamonds. Between two diamonds, a **mini chart** shows the easing — click it to change the
+  curve ([Easing charts](/docs/easing-charts)).
+- Time is in **milliseconds** (or frames — the display switches in the timeline toolbar). The
+  animation length is the document's **Duration**
+  ([Document properties](/docs/quick-start#document-properties)).
 
-A property has no animation until it has at least two keyframes. The first keyframe sets the starting state; the second sets the ending state. Everything in between is interpolated.
+## What You Can Animate
 
-You can have as many keyframes on a property as you need. Each one becomes a fixed point in time that the animation passes through exactly.
+Almost every property in the Properties panel that shows a **clock** icon:
 
-### Animated Properties
+| Group | Properties |
+| :-- | :-- |
+| **Transform** | position, rotation, scale, skew, origin |
+| **Appearance** | opacity, fill colour and opacity, stroke colour and opacity, stroke width, dash array and offset |
+| **Stroke trim** | start, end, offset — draw-on and erase effects |
+| **Shape** | rectangle size and corner radius, ellipse radii, path shape (morphing), star / polygon geometry |
+| **Text** | position, offset along a path |
+| **Gradients and filters** | gradient stops and geometry, numeric filter settings |
+| **Along a path** | how far an object has travelled along its motion path |
 
-Almost any property visible in the [Properties Panel](/docs/edit-objects#properties-panel) can be animated: position, scale, rotation, opacity, fill colour, stroke colour, stroke width, and more. Each animated property gets its own row in the [Timeline Layer List](/docs/animation#layer-list), where its keyframes appear as diamond markers.
-
-To enable animation for a property, click the **Toggle animation** button next to that property in the Properties Panel. Once enabled, any value change you make while the playhead is positioned at a frame is recorded as a keyframe.
-
-### Two Ways to Create Keyframes
-
-Pixodesk Animator Studio offers two workflows for creating keyframes:
-
-**Manual keyframes** — you move the playhead to a specific frame, adjust a property value in the Properties Panel, and the keyframe is recorded at that position.
-
-**Auto-pin (Pin Animation State at Frame)** — press `Alt+A` or click the **Pin** button in the Timeline toolbar. This pins the current state of all animated properties at the current frame, making it easy to set up animation states without touching individual properties one by one. See [Add Keyframes](/docs/keyframes#add-keyframes) for details.
-
-### The Timeline
-
-Keyframes are visualised and edited in the [Keyframe Timeline](/docs/animation#keyframe-editor) — the central area of the [Timeline Panel](/docs/animation#timeline-panel). The horizontal axis represents time; each animated property has its own horizontal track. The current playhead position is shown as a vertical line across all tracks.
-
-Between any two keyframes, a small easing preview chart shows the interpolation curve applied to that transition. Click the segment to open the [Easing Panel](/docs/easing-charts#easing-function-panel) and adjust the curve.
+Not everything is available in every saved format — the CSS-only SVG flavour cannot animate path
+shapes or some filters, for example. The preview warns you; see
+[File formats](/docs/save#file-formats-which-one-to-save).
 
 ## Add Keyframes
 
-There are two ways to create keyframes in Pixodesk Animator Studio: recording individual property values manually, or pinning the full state of an object at a frame.
+### Method 1 — change a value at a time
 
-### Enable Animation for a Property
+1. Move the playhead: drag it in the timeline, type a time in the **time** field of the
+   timeline toolbar, or use the previous / next frame buttons.
+2. Select the object.
+3. In the Properties panel, click the **clock** icon next to the property to switch on its
+   animation (the icon stays highlighted), then change the value.
 
-Before a property can have keyframes, animation must be turned on for it. In the [Properties Panel](/docs/edit-objects#properties-panel), each animatable property has a **Toggle animation** button to its left. Click it to enable keyframe recording for that property. The button remains highlighted while animation is active.
+A keyframe appears at the playhead. Move the playhead, change the value again — the second
+keyframe is created and the motion exists. From now on, every value change while the playhead
+sits on a new time adds a keyframe; a change on an existing keyframe edits it.
 
-Once enabled, any value change you make to that property while the playhead is at a given frame creates a keyframe at that position.
+### Method 2 — pin the whole state
 
-### Method 1 — Set a Value at a Frame
+**Pin Animation State at Frame** (`Alt + A`, or the pin button in the timeline toolbar) records a
+keyframe for **every animated property** of the selected objects at the playhead — without
+touching any value. Use it to lock the current look at a moment before you change things
+elsewhere: pin at 0 ms, move to 1000 ms, rearrange the objects, done. **Unpin All**
+(`Alt + Shift + A`) removes all pins. More in [Auto animation](/docs/animation#auto-animation).
 
-1. Move the playhead to the frame where you want to place a keyframe. Drag the playhead in the [Keyframe Timeline](/docs/animation#keyframe-editor), type a frame number in the **Frame** input in the timeline toolbar, or press the previous/next frame buttons.
-2. Select the object on the canvas or in the [Object Tree](/docs/edit-objects#object-tree).
-3. In the [Properties Panel](/docs/edit-objects#properties-panel), change the value of the property you want to animate.
+### Jump between keyframes
 
-A keyframe is added automatically at the current frame for that property. Repeat this at a different frame position to create the second keyframe, and the animation between them is established.
+Each property row in the layer list has **previous** / **next keyframe** arrows that move the
+playhead straight to the neighbouring keyframe, and a dot that shows whether a keyframe exists at
+the current time.
 
-### Method 2 — Pin Animation State at Frame
+## Select, Move and Delete
 
-**Pin Animation State at Frame** (`Alt+A`) records a keyframe for every currently animated property on the selected object at the current playhead position — without needing to change any values manually.
+In the keyframe editor (the centre of the timeline):
 
-This is useful when you want to lock the current appearance of an object at a specific frame before making changes elsewhere in the timeline.
+- **Select** — click a diamond; **⌘ / Ctrl + click** adds to the selection; drag a box across
+  several; **Select All Keyframes** / **Deselect Keyframes** are in the **⋮** menu.
+- **Move** — drag selected diamonds left or right; a group moves together, keeping its spacing.
+  Moving keyframes closer makes that part faster, further apart makes it slower — this is how you
+  time an animation without touching values.
+- **Delete** — select and press `Delete` / `Backspace`, or click **Remove keyframe** on the
+  property row to delete the keyframe at the playhead.
+- **Flip Selected Keyframes** (**⋮** menu) — reverses their order in time, so the motion plays
+  backwards.
 
-- Click the **Pin** button in the [Timeline Panel](/docs/animation#timeline-panel) toolbar, or press `Alt+A`.
-- To remove all pins at once, click **Unpin All** or press `Alt+Shift+A`.
+## Copy and Paste
 
-### Navigating to Keyframes
+Copy keyframes to repeat a motion, or to give another object the same animation:
 
-Once keyframes exist on a property, use the **previous keyframe** and **next keyframe** arrow buttons on each property row in the [Timeline Layer List](/docs/animation#layer-list) to jump the playhead directly between them.
+1. Select the keyframes and press `Ctrl + C`.
+2. Move the playhead to where the copied sequence should **start**.
+3. To paste on **another layer**, select that layer in the Object Tree or the layer list first.
+4. Press `Ctrl + V`. The keyframes land from the playhead onward with their original spacing;
+   properties the target does not have are ignored.
 
-## Select, Move, and Delete Keyframes
+---
 
-Keyframe editing happens in the [Keyframe Timeline](/docs/animation#keyframe-editor) — the central area of the [Timeline Panel](/docs/animation#timeline-panel).
+**Next**
 
-### Selecting Keyframes
-
-- **Click** a keyframe diamond to select it.
-- **Ctrl/Cmd + click** to add keyframes to the current selection.
-- **Drag a selection rectangle** across the timeline to select multiple keyframes at once.
-- Use **Select all keyframes** (the button at the top of the keyframe area) to select every keyframe in the timeline.
-- Use **Deselect keyframes** to clear the selection.
-
-### Moving Keyframes
-
-Drag any selected keyframe left or right to shift it to a different point in time. If multiple keyframes are selected, they all move together, preserving the relative spacing between them.
-
-Moving a keyframe earlier compresses that part of the animation; moving it later stretches it. This is the primary way to adjust the pacing and timing of your animation without changing any property values.
-
-### Deleting Keyframes
-
-To remove a keyframe at the current playhead position on a specific property, click the **Remove keyframe** button on that property row in the [Timeline Layer List](/docs/animation#layer-list).
-
-To delete selected keyframes in the timeline, select them and press `Delete` or `Backspace`.
-
-### Flipping Keyframes
-
-**Flip Selected Keyframes** reverses the time order of selected keyframes. The first keyframe swaps with the last, and so on. This effectively plays that portion of the animation in reverse without manually adjusting individual values. It is available in the timeline **More (⋮)** menu.
-
-## Copy and Paste Keyframes
-
-You can copy keyframes from one position in the timeline and paste them at another, or transfer them between different layers in the same document.
-
-### Copy and Paste Within a Layer
-
-1. Select the keyframes you want to copy in the [Keyframe Timeline](/docs/animation#keyframe-editor).
-2. Press `Ctrl/Cmd+C` to copy.
-3. Move the playhead to the frame where you want the copied keyframes to begin.
-4. Press `Ctrl/Cmd+V` to paste. The keyframes are placed starting at the playhead position, preserving the relative spacing between them.
-
-### Copy Keyframes Between Layers
-
-To transfer keyframes from one layer to another:
-
-1. Select the keyframes on the source layer.
-2. Copy with `Ctrl/Cmd+C`.
-3. Select the target layer in the [Object Tree](/docs/edit-objects#object-tree) or in the [Timeline Layer List](/docs/animation#layer-list).
-4. Move the playhead to the target frame.
-5. Paste with `Ctrl/Cmd+V`.
-
-The keyframes are applied to the matching animated properties on the target layer. Properties that do not exist on the target layer are ignored.
+- Shape the motion between keyframes: [Easing charts](/docs/easing-charts).
+- Repeat part of it: [Loop animation](/docs/loop-animation).

@@ -1,6 +1,6 @@
 ---
 title: "Filters"
-description: "Filter effects: add, configure, edit and remove them."
+description: "Filter effects — shadows, blur, colour adjustments and more: add a preset, tune it, build your own from primitives, share it, remove it."
 slug: "docs/filters"
 sidebar:
   order: 120
@@ -9,142 +9,66 @@ draft: false
 
 # Filters
 
-Filter effects: add, configure, edit and remove them.
+Filters add rendered effects to any object or group — drop shadows, blur, glow, colour
+adjustments, distortion — without changing the object's geometry. They are SVG filters: a chain
+of **primitives** stored once and shared by every object that uses the same filter.
 
-## Adding Filters
+<div class="shot">Screenshot: a shape with a drop shadow and a blurred copy, the Filter section of the Properties panel with the two entries</div>
 
-SVG filters can be applied to any shape, object, or group.
+## Add a Filter
 
-### How to Add a Filter
+1. Select the object or group.
+2. In the Properties panel, open the **Filter** section and click **Add Filter**.
+3. Pick a preset. The effect is applied immediately.
 
-1. Select the layer you want to apply a filter to.
-2. In the Properties Panel, scroll to the **Filter** section.
-3. Click the **Add Filter** button — a dropdown appears with available presets.
-4. Choose a preset to apply it.
+Presets: **Drop Shadow · Inner Shadow · Outline · Gaussian Blur · Motion Blur · Pixelate · Warp
+· Morphology · Saturate · Hue Rotate · Invert · Brightness · Contrast · Opacity · Posterize**.
+Filters already in the document are listed at the top of the same dropdown — choose one to
+share it with another object.
 
-### Available Filter Presets
+Several filters can stack on one object; each is its own entry in the Filter section.
 
-- Drop Shadow
-- Inner Shadow
-- Outline
-- Gaussian Blur
-- Motion Blur
-- Pixelate
-- Warp
-- Morphology
-- Saturate
-- Hue Rotate
-- Invert
-- Brightness
-- Contrast
-- Opacity
-- Posterize
+## Tune a Filter
 
-### Reusing Filters
+Expand the filter's entry in the Filter section:
 
-Once a filter is applied, it is stored in the **Filters** section of the Objects Panel. You can apply the same filter to other layers by selecting them and choosing it from the **Add Filter** dropdown — applied filters appear at the top of the list.
+- **Filter Region** — **Position** (X, Y) and **Size** (X, Y), in % or px. Shadows and blurs
+  extend beyond the object; enlarge the region if the effect looks cut off.
+- **Primitive Units** — the coordinate system the primitives use (usually px).
+- Preset-specific settings — for shadows: **Shadow Radius** (softness), **Offset** (X, Y) and
+  **Shadow Color**; for blurs: the blur amount; for colour presets: the amount.
 
-Editing a shared filter updates all layers that reference it.
+Numeric filter settings are animatable — a blur that sharpens, a shadow that grows.
 
-### Multiple Filters
+## Build Your Own Filter
 
-You can apply multiple filters to the same layer. Each appears as a separate entry in the Filter section of the Properties Panel and can be edited or removed independently.
+Click **Edit** on a filter entry to open the filter editor: a graph of the primitives in order.
+Select a primitive to change its parameters, drag to reorder, and click **+** to add one:
 
-## Filter Properties
+| Group | Primitives |
+| :-- | :-- |
+| **Sources** | Flood, Turbulence, Image |
+| **Modifiers** | Blur, Drop Shadow, Color Matrix, Component Transfer, Morphology, Convolve Matrix, Offset, Tile |
+| **Combiners** | Blend, Composite, Merge, Displacement Map |
+| **Lighting** | Specular Lighting, Diffuse Lighting, Point Light, Spot Light, Distant Light |
 
-When a filter is applied to an object, it appears as an entry in the **Filter** section of the Properties Panel. Expand the entry to access its properties.
+<div class="shot small">Screenshot: the filter editor — three primitives in a chain, one selected with its parameters</div>
 
-### Filter Region
+## Shared Filters and the Filters Section
 
-- **Position** (X, Y) — defines the position of the filter region relative to the object. Controls where the filter effect is rendered; can be used to shift the visible area
-- **Size** (X, Y) — sets the dimensions of the filter region. Increase these values to prevent effects like shadows or blurs from being clipped at the edges
+The **Filters** section of the Objects panel lists every filter in the document: its name, how
+many objects use it, and an expandable tree of its primitives (`<feGaussianBlur/>`,
+`<feOffset/>`, …). Editing a shared filter changes all objects that reference it; if you want to
+change just one object, add a fresh preset to it instead.
 
-Both Position and Size accept a unit (% or px).
+## Remove a Filter
 
-### Primitive Units
+In the object's **Filter** section, click the **bin** icon on the entry. The object loses the
+effect; the filter definition is deleted too when no other object uses it, otherwise it stays in
+the Filters section.
 
-Determines the coordinate system used for the filter primitives — typically `px`, defining how values like position, size, and offsets are interpreted.
+## Filters and the Saved File
 
-### Shadow-Specific Properties
-
-These appear for shadow-based presets (Drop Shadow, Inner Shadow):
-
-- **Shadow Radius** — controls the blur intensity of the shadow. Higher values produce a softer shadow; lower values produce a sharper edge
-- **Offset** (X, Y) — adjusts the horizontal and vertical displacement of the shadow relative to the object
-- **Shadow Color** — the color of the shadow
-
-## Filters Section
-
-The **Filters** section of the [Objects panel](/docs/edit-objects#object-tree) lists all filter definitions
-used in your document.
-
-A filter applies a visual effect to an object using SVG filter primitives. Effects include blur,
-drop shadow, colour adjustments, distortion, and many others. Filters are stored in the SVG
-`<defs>` section and can be reused across multiple objects.
-
-### Panel structure
-
-Each filter entry shows:
-
-- the **filter name** (e.g. "Drop Shadow"),
-- the **number of objects** it is currently applied to,
-- an expandable tree of the **filter primitives** that make up the effect (e.g.
-  `<feGaussianBlur/>`, `<feOffset/>`, `<feFlood/>`).
-
-### Shared filters
-
-Filters are defined once and can be shared across multiple objects. When you apply the same
-filter to several layers, they all reference the same definition — editing it updates all of them.
-
-Only filters with no objects referencing them can be deleted.
-
-### Editing a filter
-
-Unlike Symbols, Markers, and Patterns, filters do not have a dedicated "Filter View". Filters are
-edited inline — click the **Edit** button in the [Properties panel](/docs/edit-objects#properties-panel) next
-to the applied filter, or expand the filter in the Filters section and interact with its
-primitives directly. See [Editing filters](/docs/filters#editing-filters).
-
-## Editing Filters
-
-### Editing Filter Parameters
-
-Each applied filter appears in the Properties Panel with its name, a preview thumbnail, and an **Edit** button. Click **Edit** to open the filter editor, where you can:
-
-- View the composition graph showing the sequence of SVG filter primitives and how they are connected
-- Select individual primitives and modify their parameters in the Properties Panel
-- Drag and reorder primitives to change the visual result
-
-### Adding Filter Primitives
-
-In the filter editor, click the **+** (add) button to insert a new primitive. Available primitives are grouped by category:
-
-**Sources**
-- Flood, Turbulence, Image
-
-**Modifiers**
-- Blur, Drop Shadow, Color Matrix, Component Transfer, Morphology, Convolve Matrix, Offset, Tile
-
-**Combiners**
-- Blend, Composite, Merge, Displacement Map
-
-**Lighting**
-- Specular Lighting, Diffuse Lighting, Point Light, Spot Light, Distant Light
-
-These primitives can be combined and reordered to create custom filter effects.
-
-### Editing a Shared Filter
-
-If a filter is shared by multiple objects, editing it will update all objects that reference it.
-
-## Remove Filters from Objects
-
-### How to Remove
-
-1. Select the object on the canvas or in the Layer Tree.
-2. In the Properties Panel, go to the **Filter** section.
-3. Find the filter entry you want to remove and click the **bin icon** next to it.
-
-The filter is removed from the object. If no other objects reference that filter, it is also removed from the **Filters** section in the Objects Panel.
-
-If the same filter is used by other objects, it remains in the Filters panel.
+Filters are native SVG and are kept in SVG and JSON output. Lottie supports only a subset (drop
+shadow, blur); other primitives are dropped on export — the export preview warns you. See
+[SVG ↔ Lottie support](/docs/introduction#svg--lottie-support).

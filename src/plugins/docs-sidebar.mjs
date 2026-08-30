@@ -71,3 +71,38 @@ export function docsSidebar() {
     }
     return entries.sort((a, b) => a.order - b.order).map(e => e.group);
 }
+
+/**
+ * Dev-server companion: the sidebar above is computed when Astro loads its config, so during
+ * `astro dev` a new section file or a new `##` heading would stay invisible until a manual
+ * restart. This integration watches the docs folder and restarts the dev server whenever the
+ * generated sidebar would differ from the one currently served (content edits that don't touch
+ * headings don't restart anything).
+ */
+export function docsSidebarIntegration() {
+    let served = JSON.stringify(docsSidebar());
+    let timer;
+    return {
+        name: 'docs-sidebar-watch',
+        hooks: {
+            'astro:server:setup'({ server, logger }) {
+                server.watcher.add(DOCS_DIR);
+                const check = (file) => {
+                    if (!file || !file.startsWith(DOCS_DIR) || !/\.mdx?$/.test(file)) return;
+                    clearTimeout(timer);
+                    timer = setTimeout(() => {
+                        let next;
+                        try { next = JSON.stringify(docsSidebar()); } catch { return; }
+                        if (next === served) return;
+                        served = next;
+                        logger.info('docs sidebar changed — restarting the dev server');
+                        server.restart();
+                    }, 300);
+                };
+                server.watcher.on('add', check);
+                server.watcher.on('unlink', check);
+                server.watcher.on('change', check);
+            },
+        },
+    };
+}

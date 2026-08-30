@@ -1,26 +1,61 @@
 ---
-title: "Export"
-description: "The export dialog: Lottie, video, GIF and static images."
+title: "Export to Lottie, Video, Image"
+description: "Export to Lottie and dotLottie, to video and GIF, and to static images — the export dialog and its options."
 slug: "docs/export"
 sidebar:
   order: 190
 draft: false
 ---
 
-# Export
+# Export to Lottie, Video, Image
+
+Besides saving the document as JSON or SVG, the editor **exports** it to other targets: a
+**Lottie** animation (`.json` or `.lottie`) for the Lottie players on web, mobile and desktop, a
+**video** or **GIF**, and a **static image** of any frame. All of them go through the Export
+dialog.
+
+## Lottie and dotLottie
+
+Lottie is the cross-platform animation format played by lottie-web, dotLottie, Lottie for iOS /
+Android and countless integrations. **File › Save As Lottie JSON** writes a `.json` Lottie file,
+**File › Save As dotLottie (.lottie)** the zipped `.lottie` container, and **File › Export…**
+(`⌘ / Ctrl + E`) opens the same **Lottie** tab of the Export dialog:
+
+- **File Type** — `.json` (Lottie player) or `.lottie` (LottieFiles player)
+- **File Name**
+- **Frame Rate (fps)** — the Lottie frame rate the keyframes are resampled to
+- **Inline repeated clones** — write each repeater / clone copy as its own layer instead of a
+  reusable pre-composition (larger file, no precomp indirection)
+- **Duration (sec)**
+- the preview player (**lottie-web** or **LottieFiles**) and the playback speed / loop controls
+  above the preview
+
+Not every editor feature has a Lottie equivalent — the dialog lists warnings above the buttons,
+and [SVG ↔ Lottie support](/docs/introduction#svg--lottie-support) has the full matrix. Review the
+preview before exporting.
 
 The export dialog: Lottie, video, GIF and static images.
 
-## Export options
+## Export Options
 
 **File › Export…** (`⌘ / Ctrl + E`) or the **Export** button on the toolbar opens the export
 dialog. The left side previews the result — with a checkered / white / black background choice,
 playback speed (0.25× – 4×, Auto), a loop toggle and, for Lottie, the player to preview with
 (**lottie-web** or **LottieFiles**). The right side has one tab per target:
 
+{/* e2e-screenshot
+app: svga · viewport: 1440x900 · hideDevUi: true
+setup: setup(400, 400); click("export")
+crop: testId="messageBox" padding=0
+annotate: [{"kind":"number","target":"messageBox.exportType","text":"1","at":"left"},{"kind":"number","target":"messageBox.animation","text":"2","at":"left"},{"kind":"number","target":"messageBox.preview-background","text":"3","at":"left"}]
+notes: planned — the export dialog on the Lottie tab: 1 target tabs, 2 options, 3 preview controls
+*/}
+<div class="shot">Screenshot: the Export dialog — preview on the left, target tabs (Lottie · Video · Gif · Static image) and options on the right</div>
+
+
 | Tab | Writes | Main options |
 | :-- | :-- | :-- |
-| **Lottie** | `.json` / `.lottie` | frame rate, inline repeated clones, duration — see [Save › Lottie JSON](/docs/save#lottie-json) |
+| **Lottie** | `.json` / `.lottie` | frame rate, inline repeated clones, duration — see [Save › Lottie JSON](/docs/export#lottie-and-dotlottie) |
 | **Video** | `.mp4` / `.webm` | frame rate, duration, bitrate, size |
 | **Gif** | `.gif` | frame, frame rate, duration, size, loop |
 | **Static image** | `.png` / `.jpeg` / `.webp` / `.gif` / `.svg` | at frame / at time, size, background, quality, fit content |
@@ -30,24 +65,22 @@ preview before you click **Export**. **Reveal in Finder / Explorer** opens the s
 The tabs shown depend on the document type; Lottie documents also offer a **Pixodesk JSON/SVG**
 tab for the reverse conversion.
 
-## Convert animation to static format
-
-To get a still picture of one moment of the animation, use the **Static image** tab: set **At
-Frame** (or **At Time**), the output **Size**, an optional **Background** colour and **Fit
-content**, and choose `.svg` for a vector snapshot or a raster format. Inside the editor,
-**Object › Convert Element to Static SVG Image Element** bakes a single element to a static image
-element in the document.
-
-## Image
+## Static Image
 
 The **Static image** tab exports one frame. Options: **File Type** (`svg`, `png`, `jpeg`, `webp`,
 `gif`), **Image quality** (0–1, for lossy formats), **At Frame / At Time**, **Size** (width and
 height in pixels; the aspect ratio follows the document unless changed), **Background** colour
 (transparent by default where the format allows it), **Fit content**.
 
-## Video
+## Video and GIF
 
 The **Video** tab renders the whole animation to `.mp4` or `.webm`. Options: **Frame Rate**
 (fps), **Duration** (seconds — defaults to the animation length), **Bitrate**, **Size**. Video has
 no transparency; set the document background first if you need a solid colour. **Gif** exports the
 same way with a **Loop** option and 256 colours per frame.
+## Convert Animation to Static Format
+
+To get a still picture of one moment of the animation, use the **Static image** tab: set **At
+Frame** (or **At Time**), the output **Size**, an optional **Background** colour and **Fit
+content**, and choose `.svg` for a vector snapshot or a raster format.
+

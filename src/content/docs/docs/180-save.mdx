@@ -1,15 +1,170 @@
 ---
-title: "Save"
-description: "Saving the document in each file type, the File section, and the preview panel."
+title: "Save, File Format"
+description: "Which file to save and why — JSON for the Pixodesk player, pre-rendered SVG, or Lottie — the save options, and the preview panel."
 slug: "docs/save"
 sidebar:
   order: 180
 draft: false
 ---
 
-# Save
+# Save, File Format
 
-Saving the document in each file type, the File section, and the preview panel.
+The editor saves one document as any of several files. This section explains what each file
+is and when to choose it, then the save commands and options, and the preview. Lottie, video and
+image output are in [Export to Lottie, Video, Image](/docs/export).
+
+## File Formats: Which One to Save
+
+Pixodesk SVG Animator saves an animation as one of **three kinds of file**: a **JSON** animation
+for the Pixodesk player, a **pre-rendered SVG** with the animation built in, or a **Lottie**
+JSON. The formats are **interchangeable** — the editor converts between them at any time, so you
+can switch when your target platform changes, without losing your work.
+
+You choose the file type when you create a document, and you can change it later in the
+**File** section of the [document properties](/docs/quick-start#file-type) (select nothing, or the `<svg/>` root in the Object
+Tree).
+
+{/* e2e-screenshot
+app: svga · viewport: 1440x900 · hideDevUi: true · date: 2026-08-30
+setup: setup(400, 400, "welcome")
+crop: testId="welcomeScreen" padding=16
+annotate: none
+notes: the welcome screen's New section — file type picker (.json Pixodesk player / .svg CSS keyframes / .svg embedded JS), document and playback defaults
+*/}
+![The file type picker on the welcome screen](/images/docs/editor/get-started/welcome-screen.png)
+
+### The short answer
+
+| You want to… | Save as | Needs JavaScript on the page? |
+| :-- | :-- | :-- |
+| Use it in a **React, Vue, Next.js or Nuxt** app, or control it from code | **JSON (Pixodesk player)** | Yes — the player library |
+| Drop a file into **plain HTML, a CMS or a static site** and have it just play | **SVG + CSS animation** | No |
+| Same, but start it **on click, hover or scroll into view** | **SVG + CSS animation + JS triggers** | A few lines, embedded in the file |
+| One self-contained SVG with **every editor feature** | **SVG + JS animation** | Embedded in the file |
+| Play it with a **Lottie player** (mobile apps, existing Lottie pipelines) | **Lottie JSON** or **.lottie** | The Lottie player |
+
+The player docs have a longer decision page with pros and cons per format:
+[Choosing a format](/app/svga/docs/02-start--choosing-a-format).
+
+### JSON for the Pixodesk player
+
+This is the most flexible format, and the recommended one for web applications.
+
+All animation data, structure and metadata are stored in a single JSON file. At run time the
+Pixodesk player renders the SVG DOM and drives the playback. It integrates with the Pixodesk
+player libraries:
+
+- `@pixodesk/svg-animator-web`
+- `@pixodesk/svg-animator-react`
+- `@pixodesk/svg-animator-vue`
+
+Use it when you need maximum control, programmatic interaction, or framework integration. The
+JSON format is SSR-safe and works well in modern rendering environments. It can be used:
+
+- in applications built with **frameworks** such as **React, Vue, Next.js and Nuxt**, where
+  animations may need to load dynamically or react to application state;
+- in **vanilla JavaScript / DOM** pages, loading animations dynamically and controlling them
+  through the JavaScript API;
+- with **static site generators and CMS platforms** such as **Astro, Jekyll, WordPress and
+  Shopify**.
+
+Save it with **File › Save** (file type `.json`), or **File › Save As JSON (for Web, React,
+Vue)** from a document of another type. How to play it: [Player docs](/app/svga/docs).
+
+### Pre-rendered SVG
+
+A pre-rendered SVG has the animation embedded directly in the document. The file is
+self-contained and runs on its own in modern browsers — no library to install. There are three
+flavours; the editor writes the one you choose.
+
+##### SVG + CSS animation
+
+The animation is written as CSS keyframes inside a `<style>` block in the SVG (file type `.svg`,
+**SVG − CSS keyframes animation, no JS** in the File section or the File menu).
+
+- No `<script>` tag — pure CSS.
+- Ideal for simple, lightweight animations: icons, loaders, logo reveals.
+- Starts on load or on hover. Not every editor feature can be expressed in CSS — the preview
+  warns you when something will not survive.
+
+##### SVG + CSS animation + JS triggers
+
+The same CSS animation plus a minimal JavaScript fragment that starts it on an event:
+
+- click
+- hover
+- scroll into view
+- custom (programmatic) events
+
+The file stays mostly self-contained while reacting to user interaction. You do not choose this
+flavour explicitly: pick **On Click** or **On Scroll into View** (or a Reset / Continue out-action)
+with the CSS file type and the editor adds the script for you.
+
+##### SVG + JS animation
+
+Embeds the Pixodesk player (`@pixodesk/svg-animator-web`) inside a `<script>` tag in the SVG.
+Playback uses one of two engines, chosen with the **JS-Animation** mode (**Auto** picks the best
+one):
+
+- **Web Animations API (WAAPI)** — the browser's native animation engine, high performance;
+- **Animation frames (requestAnimationFrame)** — universal support where WAAPI is not available.
+
+This flavour has maximum compatibility and run-time flexibility in a single SVG file; it is the
+one that supports every editor feature. File type `.svg` with **SVG − Embedded JS animation**;
+**Embed JS Player** decides whether the player is inside the file or referenced as a script.
+
+Save a pre-rendered SVG with **File › Save** (file type `.svg`, with the **SVG − CSS keyframes**
+/ **SVG − Embedded JS** choice in the File menu), or **File › Save As SVG (for static
+websites)**. What the file looks like and how to embed it:
+[Pre-rendered SVG](/app/svga/docs/11-player--prerendered-svg).
+
+### Lottie
+
+A **Lottie JSON** file is designed for cross-platform playback with the Lottie players on web,
+mobile and desktop. It contains vector shapes, animation timelines, and transform and keyframe
+data.
+
+Pixodesk SVG Animator saves Lottie with **File › Save As Lottie JSON**, **File › Save As
+dotLottie (.lottie)**, or the **Export** dialog's **Lottie** tab. Not every editor feature has a
+Lottie equivalent — check [SVG ↔ Lottie feature compatibility](/docs/introduction#svg--lottie-support)
+and the warnings in the export preview.
+
+In **Pixodesk Animator Studio**, Lottie files can also be opened and edited directly in the
+Lottie editor.
+
+## Save Options
+
+{/* e2e-screenshot
+app: svga · viewport: 1440x900 · hideDevUi: true
+setup: setup(400, 400)
+crop: testId="attrs(nm:root,ty:root).file" padding=8
+annotate: none
+notes: planned — the File section of the document properties: File Type, Embed JS Player, Unoptimised JS, JS-Animation mode
+*/}
+<div class="shot small">Screenshot: the File section of the document properties — File Type, Embed JS Player, Unoptimised JS, JS-Animation mode</div>
+
+**File › Save** (`⌘ / Ctrl + S`) writes the document in its current **file type**; **File › Save As…**
+(`⇧ ⌘ / Ctrl + Shift + S`) asks for a new name and location. The file type is a document property —
+the **File** section of the Properties panel when nothing is selected:
+
+- **File Type** — JSON for the Pixodesk player (`.json`), or pre-rendered SVG (`.svg`) with
+  **CSS keyframes** or **Embedded JS** animation (the same choice is a radio in the File menu:
+  *SVG − CSS keyframes animation, no JS* / *SVG − Embedded JS animation*).
+- **JS-Animation** — for embedded JS: **Auto** (the editor picks the engine per feature),
+  **Web Animation API**, or **Animation Frames**; the size of the embedded player is shown next
+  to each choice.
+- **Embed JS Player** — embed the player inside the SVG, or reference it as an external script.
+- **Unoptimised JS** — write the readable, non-minified player (for debugging only).
+
+To write another type without changing your document, use the cross-format commands in the File
+menu: **Save As JSON (for Web, React, Vue)**, **Save As SVG (for static websites)**,
+**Save As Lottie JSON**, **Save As dotLottie (.lottie)**. Which type to pick: [above](#file-formats-which-one-to-save).
+
+### Save Preview Demo
+
+**File › Save Preview Demo…** writes the preview page itself as a standalone HTML file — the
+animation with the same scroll / trigger wrapper the preview uses. Send it to a client or open it
+in any browser to show the animation exactly as it will behave, without a website around it.
 
 ## Preview Panel
 
@@ -30,79 +185,3 @@ Because the preview is generated directly from the current document state, you d
 ### Resizing
 
 The panel can be resized by dragging its edges to adjust width and height as needed.
-
-## Save options
-
-**File › Save** (`⌘ / Ctrl + S`) writes the document in its current **file type**; **File › Save As…**
-(`⇧ ⌘ / Ctrl + Shift + S`) asks for a new name and location. The file type is a document property —
-the **File** section of the Properties panel when nothing is selected:
-
-- **File Type** — JSON for the Pixodesk player (`.json`), or pre-rendered SVG (`.svg`) with
-  **CSS keyframes** or **Embedded JS** animation (the same choice is a radio in the File menu:
-  *SVG − CSS keyframes animation, no JS* / *SVG − Embedded JS animation*).
-- **JS-Animation** — for embedded JS: **Auto** (the editor picks the engine per feature),
-  **Web Animation API**, or **Animation Frames**; the size of the embedded player is shown next
-  to each choice.
-- **Embed JS Player** — embed the player inside the SVG, or reference it as an external script.
-- **Unoptimised JS** — write the readable, non-minified player (for debugging only).
-
-To write another type without changing your document, use the cross-format commands in the File
-menu: **Save As JSON (for Web, React, Vue)**, **Save As SVG (for static websites)**,
-**Save As Lottie JSON**, **Save As dotLottie (.lottie)**. Which type to pick:
-[File formats](/docs/get-started#file-formats-which-one-to-save).
-
-## SVG and Lottie file formats overview
-
-The editor saves three kinds of file — JSON for the Pixodesk player, pre-rendered SVG (three
-flavours) and Lottie — and converts between them at any time. The decision table and the
-description of each format are in
-[Create documents, file formats](/docs/get-started#create-documents-file-formats); this section
-describes the save-side dialogs and fields only.
-
-## Lottie JSON
-
-**File › Save As Lottie JSON** writes a `.json` Lottie file; **File › Save As dotLottie (.lottie)**
-writes the zipped `.lottie` container. Both open the **Export** dialog on its **Lottie** tab:
-
-- **File Type** — `.json` (Lottie player) or `.lottie` (LottieFiles player)
-- **File Name**
-- **Frame Rate (fps)** — the Lottie frame rate the keyframes are resampled to
-- **Inline repeated clones** — write each repeater / clone copy as its own layer instead of a
-  reusable pre-composition (larger file, no precomp indirection)
-- **Duration (sec)**
-- the preview player (**lottie-web** or **LottieFiles**) and the playback speed / loop controls
-  above the preview
-
-Not every editor feature has a Lottie equivalent — the dialog lists warnings above the buttons,
-and [SVG ↔ Lottie support](/docs/get-started#svg--lottie-support) has the full matrix. Review the
-preview before exporting.
-
-## SVG (JSON-based)
-
-The `.json` file type is the Pixodesk player's native format: the document, its animation and
-metadata in one JSON file, rendered by `@pixodesk/svg-animator-web` (and the React / Vue /
-React Native wrappers) at run time. It is SSR-safe and keeps every editor feature. Save it with
-**File › Save** (file type `.json`) or **Save As JSON (for Web, React, Vue)**. How to play it:
-[Player docs](/app/svga/docs).
-
-## SVG (CSS keyframes)
-
-A self-contained SVG whose animation is CSS `@keyframes` in a `<style>` block — no JavaScript at
-all. It plays on load (or on hover), embeds anywhere an SVG can, and is the lightest option. Not
-every feature can be expressed in CSS; the preview warns you when something will be lost. Save it
-with file type `.svg` and **SVG − CSS keyframes animation, no JS**.
-
-## SVG (JS triggers)
-
-The CSS flavour plus a minimal script that starts the animation on an event — **On Click**,
-**On Mouse Over**, **On Scroll into View** or **Programmatic** (see
-[Document properties › Playback triggers](/docs/get-started#playback-triggers)). Pick a trigger
-other than *On Load* with the CSS file type and the editor adds the script automatically.
-
-## SVG (JS animation)
-
-A self-contained SVG with the Pixodesk player embedded in a `<script>` tag. It supports every
-editor feature; the **JS-Animation** mode chooses between the Web Animations API and
-requestAnimationFrame (**Auto** picks per feature). Save it with file type `.svg` and
-**SVG − Embedded JS animation**. What the file looks like and how to embed it:
-[Pre-rendered SVG](/app/svga/docs/11-player--prerendered-svg).

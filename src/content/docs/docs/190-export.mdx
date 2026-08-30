@@ -1,0 +1,53 @@
+---
+title: "Export"
+description: "The export dialog: Lottie, video, GIF and static images."
+slug: "docs/export"
+sidebar:
+  order: 190
+draft: false
+---
+
+# Export
+
+The export dialog: Lottie, video, GIF and static images.
+
+## Export options
+
+**File › Export…** (`⌘ / Ctrl + E`) or the **Export** button on the toolbar opens the export
+dialog. The left side previews the result — with a checkered / white / black background choice,
+playback speed (0.25× – 4×, Auto), a loop toggle and, for Lottie, the player to preview with
+(**lottie-web** or **LottieFiles**). The right side has one tab per target:
+
+| Tab | Writes | Main options |
+| :-- | :-- | :-- |
+| **Lottie** | `.json` / `.lottie` | frame rate, inline repeated clones, duration — see [Save › Lottie JSON](/docs/save#lottie-json) |
+| **Video** | `.mp4` / `.webm` | frame rate, duration, bitrate, size |
+| **Gif** | `.gif` | frame, frame rate, duration, size, loop |
+| **Static image** | `.png` / `.jpeg` / `.webp` / `.gif` / `.svg` | at frame / at time, size, background, quality, fit content |
+
+Warnings for features the target cannot reproduce are listed above the buttons — review the
+preview before you click **Export**. **Reveal in Finder / Explorer** opens the saved file's folder.
+The tabs shown depend on the document type; Lottie documents also offer a **Pixodesk JSON/SVG**
+tab for the reverse conversion.
+
+## Convert animation to static format
+
+To get a still picture of one moment of the animation, use the **Static image** tab: set **At
+Frame** (or **At Time**), the output **Size**, an optional **Background** colour and **Fit
+content**, and choose `.svg` for a vector snapshot or a raster format. Inside the editor,
+**Object › Convert Element to Static SVG Image Element** bakes a single element to a static image
+element in the document.
+
+## Image
+
+The **Static image** tab exports one frame. Options: **File Type** (`svg`, `png`, `jpeg`, `webp`,
+`gif`), **Image quality** (0–1, for lossy formats), **At Frame / At Time**, **Size** (width and
+height in pixels; the aspect ratio follows the document unless changed), **Background** colour
+(transparent by default where the format allows it), **Fit content**.
+
+## Video
+
+The **Video** tab renders the whole animation to `.mp4` or `.webm`. Options: **Frame Rate**
+(fps), **Duration** (seconds — defaults to the animation length), **Bitrate**, **Size**. Video has
+no transparency; set the document background first if you need a solid colour. **Gif** exports the
+same way with a **Loop** option and 256 colours per frame.

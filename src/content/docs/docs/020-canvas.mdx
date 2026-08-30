@@ -1,0 +1,466 @@
+---
+title: "Canvas"
+description: "The tools and the toolbar, what is shown on the canvas, its size, snapping, and moving around it."
+slug: "docs/canvas"
+sidebar:
+  order: 20
+draft: false
+---
+
+# Canvas
+
+The tools and the toolbar, what is shown on the canvas, its size, snapping, and moving around it.
+
+## Tools and Toolbar
+
+### Tools panel
+
+Pixodesk SVG Animator provides a set of tools for creating vector graphics directly on the canvas.
+They live in the **Tools panel**, the vertical strip of buttons on the left side of the workspace.
+The tools build shapes, text and custom paths that can later be animated in the timeline.
+
+{/* e2e-screenshot
+app: svga · viewport: 1440x900 · hideDevUi: true · date: 2026-08-30
+setup: setup(400, 400)
+crop: testId="toolsPicker" padding=8
+annotate: none
+notes: fresh empty document, Selection tool active (highlighted)
+*/}
+![The Tools panel](/images/docs/editor/workspace/tools-panel.png)
+
+Selecting a tool changes the active editing mode, which in turn determines:
+
+- what the **Toolbar** shows (context-sensitive action buttons and options — see [below](#toolbar)),
+- what the **Properties panel** shows on the right,
+- how mouse interactions work on the canvas.
+
+Tools are grouped by function, separated by a divider. The tables give the short version;
+[Tool by tool](#tool-by-tool) describes each tool.
+
+**Selection and editing:**
+
+| Tool | Shortcut | Description |
+|------|----------|-------------|
+| Selection Tool | S | Select and move objects |
+| Node Tool | N | Edit individual bezier nodes on paths |
+| Round Corner | C | Selectively round corners on vector shapes |
+| Shape Builder | B | Merge, subtract, and extract overlapping areas of shapes |
+| Transform Tool | T | Scale and rotate objects using a transform box |
+
+**Object tools:**
+
+| Tool | Shortcut | Description |
+|------|----------|-------------|
+| Repeater Tool | Y | Create radial or linear arrays of an object |
+| Spray | — | Distribute multiple instances of an object across the canvas |
+| Gradient Tool | G | Create and edit gradient fills |
+| Hand Tool | H | Pan the canvas |
+
+**Drawing tools:**
+
+| Tool | Shortcut | Description |
+|------|----------|-------------|
+| Pen Tool | P | Draw freeform Bézier paths and curves |
+| Freehand Tool | F | Draw paths by freehand, converted to smooth bezier curves |
+| Ellipse Tool | E | Draw ellipses and circles |
+| Rectangle Tool | R | Draw rectangles and squares |
+| Shape Tool | W | Draw stars, polygons, or spirals — select the sub-type in the Toolbar |
+| Text Tool | Shift + T | Create and edit text elements |
+
+The Page tool (no shortcut) sits below the divider. The full shortcut list is on
+[Keyboard shortcuts](/docs/useful-info#keyboard-shortcuts).
+
+### Toolbar
+
+The Toolbar is the horizontal bar above the canvas. The **left side is context-sensitive** — its
+content changes with the active tool selected in the [Tools panel](#tools-panel). The
+**right side contains persistent controls** that are always available.
+
+{/* e2e-screenshot
+app: svga · viewport: 1440x900 · hideDevUi: true · date: 2026-08-30
+setup: setup(400, 400)
+crop: testId="toolbar" padding=4
+annotate: none
+notes: empty document, nothing selected — most action buttons are disabled
+*/}
+![The Toolbar with the Selection tool active](/images/docs/editor/workspace/toolbar-selection-tool.png)
+
+{/* e2e-screenshot
+app: svga · viewport: 1440x900 · hideDevUi: true · date: 2026-08-30
+setup: setup(400, 400); click("toolsPicker.rectangle"); move("canvas.bg", "source:22%", "source:28%", "canvas.bg", "drop:72%", "drop:66%")
+crop: testId="toolbar" padding=4
+annotate: none
+notes: rectangle drawn and selected
+*/}
+![The Toolbar with the Rectangle tool active: fill, stroke, stroke width, then the object actions](/images/docs/editor/workspace/toolbar-rectangle-tool.png)
+
+#### Persistent controls
+
+These controls appear on the right side of the Toolbar at all times.
+
+##### Undo / Redo
+
+- **Undo** `Ctrl/Cmd+Z` — reverse the last action
+- **Redo** `Shift+Ctrl/Cmd+Z` — reapply the last undone action
+
+##### Snap
+
+Two toggle buttons and a settings dropdown control snapping behaviour:
+
+- **Snap to Other** — toggle snapping to other objects on the canvas
+- **Snap to Step** — toggle snapping to grid intervals and angle steps
+- **Snap settings** (dropdown) — detailed snap configuration:
+  - **Snap/Align to Other** — enable object-to-object snapping and alignment
+    - What is snapped: Bounding Box Corners and Midpoints, Shape Path Nodes, Control Points
+    - Snap to: Bounding Box Corners and Midpoints, Shape Path Nodes, Page Borders and Midpoint
+    - Align to: Bounding Box Corners and Midpoints, Shape Path Nodes, Page Borders and Midpoint
+  - **Snap to Closest Point on Path** — snap to the nearest point along any path
+  - **Snap threshold** — pixel distance within which snapping activates
+  - **Snap to Step** — snap movement to a fixed grid interval (configurable step size)
+  - **Snap Rotation to Angle Step** — constrain rotation to fixed angle increments
+
+Every option is explained on [Snap](/docs/canvas#snapping-to-objects-and-grid).
+
+##### Canvas
+
+The **Canvas** dropdown controls what is shown on and around the canvas:
+
+- **Show Ruler** — toggle the rulers along the top and left edges
+- **Show Grid** — overlay a grid on the canvas
+- **Show Canvas Outline** — show the canvas boundary outline
+- **Clip Canvas Content** — hide objects outside the canvas boundary
+- **Show Canvas Background** — show or hide the canvas background fill
+- **Canvas Background** — colour picker to set the canvas background colour
+
+Details: [Canvas display options](/docs/canvas#rulers-grid-and-background).
+
+##### Zoom
+
+The **Zoom** dropdown provides zoom shortcuts:
+
+- **Zoom in**
+- **Zoom out**
+- **Zoom 100%** — reset to actual size
+- **Zoom to Fit** — fit the content in the available space
+- **Zoom to Page** — fit the canvas boundary in the view
+- **Zoom to Selection** — zoom to the current selection
+- **Zoom Timeline to Frame Range** — fit the timeline view to the animation duration
+
+Details: [Zoom](/docs/canvas#zoom).
+
+##### Layout
+
+The **Layout** dropdown controls panel and timeline visibility:
+
+- **Maximize Canvas** — hide all panels to maximise the canvas area
+- **Left Panel** — show or hide the Objects panel (left side)
+- **Bottom Panel** — show or hide the Timeline panel (bottom)
+- **Right Panel** — show or hide the Properties panel (right side)
+- **Show Keyframes** — toggle the keyframe editor within the Timeline panel
+- **Show Charts** — toggle the chart panel within the Timeline panel
+
+See [Workspace panels](/docs/get-started#show-hide-and-resize-panels).
+
+##### Dark / Light theme
+
+Toggle between **dark** and **light** application themes.
+
+##### Show Preview panel
+
+Open or close the [Preview panel](/docs/save#preview-panel) — an inline browser frame that renders
+your animation live without saving.
+
+##### Export
+
+Open the export dialog to save or download the animation in the configured file format. See
+[Export options](/docs/export-options).
+
+### Tool by tool
+
+What the Toolbar's left side shows depends on the active tool; each entry below ends with its
+**Toolbar shows** line.
+
+#### Selection Tool `S`
+
+Select, move, and resize objects. Click to select individual objects or groups. Double-click a
+group to select an object inside it. Hold `Ctrl/Cmd` to add objects to a multi-selection.
+
+**Toolbar shows:** Group / Ungroup, Make Symbol, Make Marker, Make Pattern, Arrange, Align,
+Distribute, Flip, Move Along Path, Mask, Path operations (Union, Subtract, Intersect, Exclude,
+Divide) — the standard object actions. The same set appears for the Transform and Hand tools.
+
+#### Node Tool `N`
+
+Edit the nodes and path segments of a selected vector path. Select nodes by clicking individually
+or dragging a selection rectangle. Drag nodes to reshape the path. Double-click a path to add a
+node.
+
+**Toolbar shows:** Add Node, Remove Node, Break at Points, Path Start, Reverse Path, node type
+buttons (Cusp, Smooth, Symmetric, Auto-Smooth), Path operations, Align / Distribute nodes.
+See [Edit paths](/docs/edit-paths#node-tool).
+
+#### Round Corner `C`
+
+Round, bevel, or invert the corners of shapes. Click a corner node and drag to adjust the radius.
+
+**Toolbar shows:** Corner Radius (numeric input), Corner Type (Round / Bevel / Inverted Round),
+Convert to Curves (convert the shape to a fully editable path). See [Round corners](/docs/draw-on-canvas#round-corners).
+
+#### Shape Builder `B`
+
+Combine or subtract overlapping shapes interactively by clicking or dragging across them.
+
+**Toolbar shows:** Mode buttons — Add, Remove, All, Subtract, Intersect, Exclude, Deselect.
+See [Shape builder](/docs/object-creation-tools#shape-builder).
+
+#### Transform Tool `T`
+
+Move, rotate, and scale objects using transform handles. Hold `Shift` to constrain movement to
+horizontal / vertical, constrain rotation to 45° increments, or keep the aspect ratio when scaling.
+
+**Toolbar shows:** the same object actions as the Selection tool. See [Transform](/docs/edit-objects#transform).
+
+#### Repeater Tool `Y`
+
+Create circular or linear repeating patterns from a selected object.
+
+**Toolbar shows:** Count input, Add Circular Repeat, Add Linear Repeat, Add one clone / Remove one
+clone, Cancel Repeat. See [Repeater](/docs/object-creation-tools#repeater).
+
+#### Spray
+
+Spray copies of a selected object across the canvas with randomised size, rotation, and opacity.
+
+**Toolbar shows:** Spray Radius (the area in which copies are sprayed), Amount (copies per
+stroke), Rotation (variation applied to copies), Min / Max Scale, Min / Max Opacity.
+See [Spray](/docs/object-creation-tools#spray).
+
+#### Gradient Tool `G`
+
+Adjust gradient control points for objects with a linear or radial gradient fill or stroke.
+
+**Toolbar shows:** Focal Point toggle (on / off) for radial gradients.
+See [Linear and radial gradients](/docs/color#linear-and-radial-gradients).
+
+#### Hand Tool `H`
+
+Pan around the canvas without affecting content. Click and drag to scroll the view.
+
+**Toolbar shows:** the standard object actions. See [Pan](/docs/canvas#pan).
+
+#### Pen Tool `P`
+
+Draw precise vector paths by clicking to place nodes. Click for straight segments; click and drag
+for curves. Double-click or press `Escape` to finish. Close the path by clicking the start node.
+
+**Toolbar shows:** Fill / Stroke colour pickers, Stroke Width, Path operations.
+See [Bezier paths](/docs/draw-on-canvas#bezier-paths).
+
+#### Freehand Tool `F`
+
+Draw freehand paths by clicking and dragging. The path follows your cursor movement and is
+converted to smooth bezier curves.
+
+**Toolbar shows:** Fill / Stroke colour pickers, Stroke Width.
+
+#### Ellipse Tool `E`
+
+Draw ellipses and circles. Hold `Alt/Option` to draw from the centre. Hold `Shift` to constrain
+to a circle.
+
+**Toolbar shows:** Fill / Stroke colour pickers, Stroke Width. See [Ellipses](/docs/draw-on-canvas#ellipses).
+
+#### Rectangle Tool `R`
+
+Draw rectangles and squares. Hold `Alt/Option` to draw from the centre. Hold `Shift` to constrain
+to a square.
+
+**Toolbar shows:** Fill / Stroke colour pickers, Stroke Width. See [Rectangles](/docs/draw-on-canvas#rectangles).
+
+#### Shape Tool `W`
+
+Draw stars, polygons, and spirals. When the Shape tool is active, three sub-type buttons appear in
+the Toolbar:
+
+- **Star** — a star shape with a configurable number of points
+- **Polygon** — a regular polygon with a configurable number of sides
+- **Spiral** — a spiral with a configurable number of turns
+
+**Toolbar shows:** Fill / Stroke colour pickers, Stroke Width, Shape type (Star / Polygon / Spiral).
+See [Stars](/docs/draw-on-canvas#stars), [Polygons](/docs/draw-on-canvas#polygons), [Spiral](/docs/draw-on-canvas#spirals).
+
+#### Text Tool `Shift + T`
+
+Add and edit text. Click on the canvas to place a text object.
+
+**Toolbar shows:** Fill colour, Font Type, Font Family, Font Style, Font Size, Put Text on Path,
+Text to Bezier Shape. See [Text](/docs/text#text).
+
+#### Page Tool
+
+Select and reposition the page (canvas boundary) within the viewport, and resize the canvas by
+dragging its handles. The Toolbar shows no tool-specific controls — use the persistent Canvas,
+Zoom and Layout dropdowns. See [Change canvas size](/docs/canvas#change-canvas-size).
+
+### Grouping
+
+Objects can be grouped to behave as a single unit, making it easier to move, transform, and manage
+them together. See [Groups](/docs/draw-on-canvas#groups).
+
+## Rulers, Grid and Background
+
+The Canvas is the central area of the workspace where you create, edit, and preview your artwork
+and animations. Everything you draw or animate exists within the canvas boundaries. It displays
+your SVG document at the current zoom level; objects placed outside the canvas boundary are still
+part of the document but can be hidden with **Clip Canvas Content**.
+
+Canvas display options control what is shown on and around the canvas. Access them from the
+**Canvas** dropdown in the top [Toolbar](/docs/canvas#canvas). Canvas size and aspect ratio are
+document properties — see [Change canvas size](/docs/canvas#change-canvas-size) — and the view is moved
+with [Pan](/docs/canvas#pan) and [Zoom](/docs/canvas#zoom).
+
+### Ruler
+
+**Show Ruler** displays rulers along the top and left edges of the canvas. Rulers show measurements in the current document unit and help with precise object placement.
+
+### Grid
+
+**Show Grid** overlays a grid on the canvas as a visual alignment aid. The grid does not affect the final output.
+
+Two grid styles are available:
+
+- **Dot Grid** — displays the grid as evenly spaced dots
+- **Line Grid** — displays the grid as continuous horizontal and vertical lines
+
+Switch between styles in the Canvas dropdown.
+
+### Canvas Outline
+
+**Show Canvas Outline** draws a border around the canvas boundary, making it easy to see where the document edges are.
+
+### Clip Canvas Content
+
+**Clip Canvas Content** hides any objects that extend beyond the canvas boundary. When disabled, objects outside the canvas remain visible in the editor but are cropped in the exported output.
+
+### Canvas Background
+
+**Show Canvas Background** toggles the display of a solid background color behind the canvas.
+
+**Canvas Background** opens a color picker to set the background color. This background is only a display aid — it is not part of the SVG document and does not appear in exports unless explicitly added as a shape.
+
+## Change Canvas Size
+
+You can change the canvas size using two methods.
+
+### Method 1 — Properties Panel
+
+Select the **`<svg/>`** root element at the top of the [Object Tree](/docs/edit-objects#object-tree), or deselect all objects so that document properties are shown in the [Properties Panel](/docs/edit-objects#properties-panel).
+
+Locate the **Content Size** controls under the **View Box** section and enter the desired width and height values. Enable the **lock** icon to scale width and height proportionally, or disable it to edit them independently.
+
+### Method 2 — Page Tool
+
+Select the **Page Tool** from the [Tools Panel](/docs/canvas#tools-and-toolbar).
+
+Drag any corner of the canvas boundary directly on the canvas to resize it interactively.
+
+## Snapping to Objects and Grid
+
+The Snap system helps align objects, nodes, and control points precisely when moving or editing elements.
+
+When snapping is enabled, objects automatically align to nearby geometry, grid points, or other reference elements.
+
+You can add next snap options:
+
+### Snap / Align to Other
+
+Enables snapping behavior between objects and reference points.
+
+#### What Snapped / Aligned
+
+Defines which elements of your object can participate in snapping:
+
+**Bounding Box Corners and Midpoint**<br/>
+**Shape Path Nodes**<br/>
+**Control Points**<br/>
+
+
+
+#### Snap to Other
+
+Defines which elements of other objects your objects can snap to:
+
+**Bounding Box Corners and Midpoint**<br/>
+**Shape Path Nodes**<br/>
+**Page Borders and Midpoint**<br/>
+
+
+
+#### Align with Other
+
+Controls alignment behavior relative to nearby elements.
+
+**Bounding Box Corners and Midpoint**<br/>
+**Shape Path Nodes**<br/>
+**Page Borders and Midpoint**<br/>
+
+**Snap to Closest Point on Path** <br/>
+Snaps objects or nodes to the nearest location along a path.
+
+**Snap Screen Threshold** <br/>
+Defines the distance (in screen pixels) within which snapping becomes active.
+
+### Snap to Step
+
+Snaps movement or transformation to defined increments.
+
+**Snap to Grid** <br/>
+Aligns objects to the visible grid.
+
+**Grid Step** <br/>
+Defines the spacing between grid snap points.
+
+**Snap Rotation to Angle Step** <br/>
+Constrains rotation to specific angle increments.
+
+**Angle Step** <br/>
+Defines the rotation step value.
+
+## Pan and Zoom
+
+Pan and zoom only change how the canvas appears on screen — they never affect the document or the
+final output.
+
+### Pan
+
+Panning moves the canvas view without changing zoom level or affecting objects. Use it to scroll around a large document or to reposition the view after zooming in.
+
+#### How to Pan
+
+- **Hand Tool** `H` — select the Hand Tool, then click and drag anywhere on the canvas to pan freely
+- **Space + drag** — hold `Space` with any tool active to temporarily switch to the Hand Tool; release `Space` to return to the previous tool
+- **Middle mouse button drag** — hold the middle mouse button and drag to pan
+- **Scroll** — scroll vertically with the mouse wheel; hold `Shift` to scroll horizontally
+
+### Zoom
+
+Zoom controls adjust the magnification of the canvas view. They do not affect the document or the final output — only how the canvas appears on screen.
+
+#### How to Zoom
+
+- **Ctrl/Cmd + scroll** — zoom in and out at the cursor position
+- **`+` / `-`** keys — zoom in or out by one step
+- **Zoom dropdown** in the toolbar — access named zoom levels and fit options
+
+#### Zoom Options
+
+- **Zoom In** — increase magnification one step
+- **Zoom Out** — decrease magnification one step
+- **Zoom 100%** — reset to actual size (1:1 pixel ratio)
+- **Zoom to Fit** — fit all document content within the visible window
+- **Zoom to Page** — fit the canvas boundary within the visible window
+- **Zoom to Selection** — zoom in to focus on the currently selected objects
+
+#### Timeline Zoom
+
+To adjust the horizontal zoom of the timeline view (how many frames are visible), use the **Zoom** control in the [Timeline Panel](/docs/animation#zoom). The **Zoom Timeline to Frame Range** option in the Zoom dropdown also fits the timeline view to the full animation duration.

@@ -1,0 +1,108 @@
+---
+/**
+ * Starlight's Sidebar plus a scroll-spy for the docs.
+ *
+ * The docs sidebar is one group per section file whose items are hash links to the file's
+ * `##` headings (see src/plugins/docs-sidebar.mjs). Starlight only marks a link "current" on an
+ * exact path match, so nothing would follow the reader down a long page. The script below keeps
+ * the item of the heading currently on screen marked (aria-current="page"), opens its group and
+ * scrolls it into view; above the first heading the section's "Overview" item is current.
+ */
+import Default from '@astrojs/starlight/components/Sidebar.astro';
+import { SUPER_SECTIONS } from '../../plugins/docs-sidebar.mjs';
+const superLabels = JSON.stringify(Object.values(SUPER_SECTIONS));
+---
+
+<Default {...Astro.props}><slot /></Default>
+<sl-super-sections data-labels={superLabels} hidden></sl-super-sections>
+
+<style is:global>
+    /* Always-open super-sections (Vector Editing, Animation Editing): no caret, not clickable, set apart. */
+    .sidebar-content details.sl-super > summary { cursor: default; pointer-events: none; }
+    .sidebar-content details.sl-super > summary .caret { display: none; }
+    .sidebar-content details.sl-super > summary .group-label > span {
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        font-size: 0.72rem !important;
+        color: var(--sl-color-gray-2) !important;
+    }
+    .sidebar-content details.sl-super > ul { border-inline-start: 0; padding-inline-start: 0.25rem; }
+    /* Nested groups inside a super-section: Starlight styles only top-level summaries, so give the
+       nested ones the same look (no native marker, label + caret on one line). */
+    .sidebar-content details.sl-super details > summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+        list-style: none;
+        cursor: pointer;
+        padding: 0.2em var(--sl-sidebar-item-padding-inline, 0.5rem);
+        line-height: 1.4;
+    }
+    .sidebar-content details.sl-super details > summary::-webkit-details-marker { display: none; }
+    .sidebar-content details.sl-super details > summary .group-label > span { font-weight: 600; }
+    .sidebar-content details.sl-super details[open] > summary .caret { transform: rotate(90deg); }
+    .sidebar-content details.sl-super details > ul { margin-inline-start: 0.5rem; border-inline-start: 1px solid var(--sl-color-hairline-light); padding-inline-start: 0.25rem; }
+</style>
+
+<script>
+    const TOP_OFFSET = 96;   // px from the viewport top at which a heading counts as "reached" (below the sticky header)
+
+    /** Super-sections are always open: mark them, open them, ignore clicks on their summary. */
+    function pinSuperSections() {
+        const holder = document.querySelector<HTMLElement>('sl-super-sections');
+        const labels: Array<string> = holder ? JSON.parse(holder.dataset.labels ?? '[]') : [];
+        if (!labels.length) return;
+        for (const details of document.querySelectorAll<HTMLDetailsElement>('.sidebar-content details')) {
+            const text = details.querySelector(':scope > summary .group-label')?.textContent?.trim();
+            if (!text || !labels.includes(text)) continue;
+            details.classList.add('sl-super');
+            details.open = true;
+            details.addEventListener('toggle', () => { if (!details.open) details.open = true; });
+        }
+    }
+
+    function init() {
+        pinSuperSections();
+        const path = location.pathname.replace(/\/$/, '');
+        const links = Array.from(document.querySelectorAll<HTMLAnchorElement>('.sidebar-content a[href]'))
+            .filter(a => new URL(a.getAttribute('href') ?? '', location.origin).pathname.replace(/\/$/, '') === path);
+        if (!links.length) return;
+        const byId = new Map(links.filter(a => a.hash).map(a => [decodeURIComponent(a.hash.slice(1)), a]));
+        const overview = links.find(a => !a.hash);
+        const headings = Array.from(document.querySelectorAll<HTMLElement>('main h2[id]')).filter(h => byId.has(h.id));
+        if (!headings.length) return;
+
+        let active: HTMLAnchorElement | undefined;
+        const update = () => {
+            let current: HTMLElement | undefined;
+            for (const h of headings) {
+                if (h.getBoundingClientRect().top <= TOP_OFFSET) current = h; else break;
+            }
+            const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+            if (atBottom) current = headings[headings.length - 1];
+            const next = current ? byId.get(current.id) : overview;
+            if (next === active) return;
+            active = next;
+            for (const a of links) a.setAttribute('aria-current', a === active ? 'page' : 'false');
+            if (!active) return;
+            const group = active.closest('details');
+            if (group && !group.open) group.open = true;
+            active.scrollIntoView({ block: 'nearest' });
+        };
+
+        let ticking = false;
+        const onScroll = () => {
+            if (ticking) return;
+            ticking = true;
+            requestAnimationFrame(() => { ticking = false; update(); });
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('hashchange', () => setTimeout(update, 50));
+        window.addEventListener('resize', onScroll);
+        update();
+    }
+
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+    document.addEventListener('astro:page-load', init);
+</script>

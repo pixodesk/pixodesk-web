@@ -1,0 +1,187 @@
+---
+title: "Easing Charts"
+description: "Easing between keyframes: the chart panel, the presets, and editing curves."
+slug: "docs/easing-charts"
+sidebar:
+  order: 170
+draft: false
+---
+
+# Easing Charts
+
+Easing between keyframes: the chart panel, the presets, and editing curves.
+
+## Easing Charts
+
+Easing controls how a property value changes between two keyframes — whether it moves at constant
+speed, accelerates into the end, decelerates from the start, or follows a more complex curve.
+
+In Pixodesk SVG Animator, easing is based on **cubic bezier curves**. Every segment between two
+keyframes has its own curve, which you can view in the Chart Panel and adjust using the Easing
+Function panel.
+
+### The Chart Panel
+
+The Chart Panel occupies the right section of the [Timeline panel](/docs/animation#timeline-panel). It
+shows up to three animation curves simultaneously, each identified by a watermark label:
+
+- **Value** — how the property value changes over time; the curve shape is the interpolation path
+  between keyframes; always visible
+- **Velocity** `ƒ′(t)` — the rate of change; useful for identifying acceleration and deceleration;
+  toggle on via Chart Panel More (⋮) → **Show Velocity Chart**
+- **Acceleration** `ƒ′′(t)` — the second derivative; useful for spotting abrupt changes in motion;
+  toggle on via Chart Panel More (⋮) → **Show Acceleration Chart**
+
+When you click a segment between two keyframes in the keyframe editor, the Chart Panel updates to
+show the easing curve for that specific segment.
+
+#### Editing easing in the chart
+
+Drag the curve **handles** directly in the chart to adjust the easing between keyframes. Changes
+are reflected in real time on the canvas. See [Editing curves](/docs/easing-charts#editing-curves) for
+the full workflow.
+
+#### Multiple properties
+
+When multiple animated properties are selected, their curves are displayed together in the same
+chart. This makes it easy to compare and synchronise the timing of different properties.
+
+#### Chart Panel More menu
+
+The Chart Panel More (⋮) menu contains:
+
+- **Show Velocity Chart** — toggles the Velocity `ƒ′(t)` chart
+- **Show Acceleration Chart** — toggles the Acceleration `ƒ′′(t)` chart
+- **Show values on multiple scales** — when multiple properties with different value ranges are
+  shown together, scales each curve independently so all shapes are visible
+
+### Easing Segments
+
+Between any two keyframes in the [keyframe editor](/docs/animation#keyframe-editor), the
+segment shows a small visual preview of the easing curve applied to that transition.
+
+Clicking a segment does two things at once:
+
+1. Opens the **Easing Function** panel — a floating panel for choosing and adjusting the easing
+2. Updates the Chart Panel to show that segment's curve in detail
+
+### Easing Function Panel
+
+The Easing Function panel is a floating, non-blocking panel that appears when you click a keyframe
+segment. It has two sections side by side:
+
+**Left — curve editor:**
+- A live preview of the bezier curve
+- Three preview modes selectable from the panel header: **Easing function** (value curve),
+  **ƒ′(t) - velocity**, **ƒ′′(t) - acceleration**
+- Draggable control points (**Out** and **In** handles) to shape the curve
+- Numeric inputs for precise handle coordinates (outX, outY, inX, inY)
+
+**Right — preset table:**
+- A grid of built-in easing presets with mini curve previews
+- Rows are easing types; columns are variants (**in**, **out**, **in-out**)
+- Three sort tabs: **By Easing**, **By Velocity**, **By Acceleration** — reorder the presets by
+  their curve character
+
+See [Easing presets](/docs/easing-charts#easing-presets) for the full preset list.
+
+## Easing Presets
+
+The Easing Function panel contains a table of built-in presets — ready-made bezier curves that cover the most common motion feels. Each preset is shown with a mini curve preview so you can judge the shape at a glance.
+
+To open the Easing Function panel, click any segment between two keyframes in the [Keyframe Timeline](/docs/animation#keyframe-editor).
+
+### Preset Table Structure
+
+The presets are arranged in a grid:
+
+- **Rows** — easing curve types (linear, gravity, ease, sine, ease², ease³, ease⁴, ease⁵, circle, expo)
+- **Columns** — variants: **in**, **out**, **in-out**
+
+Click any cell to apply that preset to the selected segment. The [Chart Panel](/docs/easing-charts#easing-charts) updates immediately.
+
+#### Sort Tabs
+
+Three tabs at the top of the preset table reorder the rows:
+
+- **By Easing** — sorted by the shape of the value curve
+- **By Velocity** — sorted by how the rate of change progresses
+- **By Acceleration** — sorted by the sharpness of the curve's acceleration
+
+Switching tabs doesn't change the presets — only the order they appear in.
+
+### Available Presets
+
+| Preset | Character |
+|--------|-----------|
+| **linear** | Constant speed; no acceleration or deceleration |
+| **gravity** | Mimics gravitational acceleration; sharp increase toward the end |
+| **ease** | Gentle ease-in and ease-out; smooth and natural |
+| **sine** | Smooth sinusoidal acceleration; subtle and fluid |
+| **ease²** | Quadratic easing; moderate acceleration |
+| **ease³** | Cubic easing; stronger acceleration than ease² |
+| **ease⁴** | Quartic easing; noticeably sharp entry or exit |
+| **ease⁵** | Quintic easing; very pronounced snap at the start or end |
+| **circle** | Based on a circular arc; fast then sudden stop (or reverse) |
+| **expo** | Exponential curve; dramatic sharp acceleration or deceleration |
+
+Each preset is available in **in** (accelerates at the start), **out** (decelerates at the end), and **in-out** (both ends) variants.
+
+### Custom Easing
+
+After applying a preset, you can fine-tune the curve by dragging the bezier control point handles in the left section of the Easing Function panel. See [Editing Curves](/docs/easing-charts#editing-curves) for details.
+
+## Editing Curves
+
+The Chart Panel and Easing Function panel work together for editing easing. The Chart Panel shows the full curve for analysis; the Easing Function panel provides a focused editor for a single segment.
+
+### Selecting a Segment
+
+Click a segment (the space between two keyframe markers) in the [Keyframe Timeline](/docs/animation#keyframe-editor). This:
+
+- Highlights the segment
+- Updates the Chart Panel to show that segment's curve
+- Opens the Easing Function panel for that segment
+
+To edit a different segment, click it directly in the Keyframe Timeline.
+
+### Editing in the Easing Function Panel
+
+The left side of the Easing Function panel shows the bezier curve for the selected segment. Two draggable control points shape the curve:
+
+- **Out control point** — the handle on the start-keyframe side; controls how the motion leaves the first keyframe
+- **In control point** — the handle on the end-keyframe side; controls how the motion arrives at the second keyframe
+
+Drag either handle to reshape the curve. The [Chart Panel](/docs/easing-charts#easing-charts) updates live as you drag.
+
+For precise adjustments, use the numeric inputs below the curve: **outX**, **outY** (start-side handle), **inX**, **inY** (end-side handle).
+
+To start from a known shape, [apply a preset](/docs/easing-charts#easing-presets) first and then adjust from there.
+
+### Preview Modes
+
+The Easing Function panel has three preview modes, selectable from its header:
+
+- **Easing function** — shows the value curve (the traditional bezier shape)
+- **ƒ′(t) - velocity** — shows the rate of change; useful for judging how snappy or smooth the motion feels
+- **ƒ′′(t) - acceleration** — shows the second derivative; useful for spotting abrupt starts or stops
+
+Switching modes updates both the panel preview and the active chart in the Chart Panel.
+
+### Editing Handles in the Chart Panel
+
+You can also drag the bezier handles directly in the Chart Panel. This is useful when you want to compare the edited segment against other visible property curves at the same time.
+
+### Viewing Multiple Properties
+
+When more than one animated property is selected, all of their curves are drawn in the same Chart Panel. This lets you compare timing across properties — for example, checking that an opacity fade starts where a scale change ends.
+
+#### Multiple Scales
+
+When selected properties have very different value ranges (such as position in pixels alongside opacity as a percentage), their curves may be hard to read on a single axis. Enable **Show values on multiple scales** from the Chart Panel's More (⋮) menu to scale each curve independently.
+
+### Flip Selected Keyframes
+
+**Flip Selected Keyframes** reverses the easing direction of selected keyframes — the in-easing becomes the out-easing and vice versa. Access it from the More (⋮) menu in the Timeline Panel toolbar.
+
+This is useful when you want a reversed motion to feel symmetrical without manually mirroring the handles.

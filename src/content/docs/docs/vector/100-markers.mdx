@@ -1,0 +1,135 @@
+---
+title: "Markers"
+description: "Markers on path starts, mids and ends: create, use, edit and delete them."
+slug: "docs/markers"
+sidebar:
+  order: 100
+draft: false
+---
+
+# Markers
+
+Markers on path starts, mids and ends: create, use, edit and delete them.
+
+## Markers
+
+Markers are reusable graphic elements that can be attached to the start, middle, and end of a path. They are defined once and referenced multiple times, so adding the same marker to many paths does not increase file size.
+
+### Where Markers Appear
+
+Markers are applied to paths at three positions:
+
+- **Start Marker** (`marker-start`) — appears at the beginning of the path
+- **Mid Marker** (`marker-mid`) — appears at each intermediate node along the path
+- **End Marker** (`marker-end`) — appears at the end of the path
+
+Each position can use a different marker, or all three can use the same one.
+
+### Common Uses
+
+- Arrows and line endings
+- Dashed or decorative paths
+- Diagrams, charts, and technical illustrations
+- Motion graphics where repeated elements follow a path
+
+### Notes
+
+- Markers are linked — editing a marker definition updates all paths that reference it
+- Adding more nodes to a path automatically adds more Mid Marker instances
+- Only unused markers (those not applied to any path) can be deleted
+- In SVG, markers are stored inside `<defs>` and referenced via `marker-start`, `marker-mid`, and `marker-end` attributes
+
+### The Markers section
+
+The **Markers** section of the [Objects panel](/docs/edit-objects#object-tree) lists all marker definitions
+stored in the current document.
+
+A marker is a shape that is automatically placed along a path stroke at defined positions —
+Start (the first node), Mid (every intermediate node) and End (the last node). Markers are stored
+in the SVG `<defs>` section and can be applied to any path.
+
+Each marker in the list displays a **thumbnail preview** and its name. Markers that are not
+applied to any path are labeled **Unused**, and a red triangle appears next to the collapsed
+section header; click the **bin icon** to remove an unused marker.
+
+Double-click a marker's thumbnail to enter **Marker View** — an in-place editing mode showing
+only the contents of that marker. Exit Marker View by clicking the **`...`** row at the top of the
+Object Tree. See [Editing markers](/docs/markers#editing-markers).
+
+## Creating Markers
+
+### How to Create a Marker
+
+1. Select one or more objects on the canvas.
+2. Convert them to a marker using one of:
+   - **Object → Make Marker** from the menu
+   - The **Make Marker** button in the Top Panel (available when the Selection or Transform Tool is active)
+
+### What Happens After Creation
+
+- The selected object is removed from the canvas and stored as a marker definition
+- The marker appears in the **Markers** section of the Objects Panel with a preview thumbnail, labeled **Unused**
+
+From this point, you can apply the marker to paths from the Properties Panel.
+
+## Using Markers
+
+### Marker Positions
+
+Markers can be applied to a path in three positions:
+
+- **Start Marker** — appears at the beginning of the path
+- **Mid Marker** — appears at each node along the path
+- **End Marker** — appears at the end of the path
+
+You can assign different markers to each position, or use the same one for all three. Adding more nodes to a path automatically adds more Mid Marker instances.
+
+### Adding a Marker to a Path
+
+1. Select a path in the Layer Tree or on the canvas.
+2. In the Properties Panel, locate the **Start Marker**, **Mid Marker**, and **End Marker** dropdowns.
+3. Click a dropdown and choose a marker — either a user-created marker or one from the built-in library (**Add from Library**).
+
+To ensure marker controls are visible in the Properties Panel, enable **Show Stroke Marker options** in the Properties Sections Bar.
+
+> **Note:** Markers can only be applied to paths. To apply markers to a shape or group, first convert it to a path using **Path → Object to Path**.
+
+### Duplicating a Marker
+
+To create a variation of an existing marker:
+
+1. Open the **Markers** section in the Objects Panel.
+2. Select a marker.
+3. Duplicate it using standard copy (`Cmd/Ctrl + C`) and paste (`Cmd/Ctrl + V`).
+
+A new unused marker appears, which you can edit and apply independently.
+
+## Editing Markers
+
+Editing a marker definition updates all paths that use it.
+
+### How to Edit a Marker
+
+1. Open the **Markers** section in the Objects Panel.
+2. **Double-click** the marker thumbnail to enter Marker View.
+
+Once in Marker View:
+- Select shapes directly on the canvas or in the Marker's Layer Tree
+- Modify shapes, paths, colors, and other properties
+- Adjust properties in the Properties Panel
+
+To return to the main document, click the **three dots (...)** row at the top of the Marker's Layer Tree.
+
+Any changes made in Marker View are automatically applied to all paths using that marker.
+
+## Deleting Unused Markers
+
+Unused markers — those not applied to any path — can be removed to keep your document clean.
+
+### How to Delete
+
+1. Open the **Markers** section in the Objects Panel.
+2. Locate markers labeled **Unused** (shown with a red label).
+3. Click the **bin icon** next to the marker to delete it.
+
+Markers that are still applied to one or more paths cannot be deleted until removed from all paths.

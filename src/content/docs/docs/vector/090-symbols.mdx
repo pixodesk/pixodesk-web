@@ -1,0 +1,150 @@
+---
+title: "Symbols"
+description: "Reusable symbols: create, use, edit, convert and delete them."
+slug: "docs/symbols"
+sidebar:
+  order: 90
+draft: false
+---
+
+# Symbols
+
+Reusable symbols: create, use, edit, convert and delete them.
+
+## Symbols
+
+Shapes, text, paths, and groups can be converted into Symbols and reused across your design. Symbols are stored as a single definition, and each placed instance references that definition — similar to how SVG `<use>` elements work.
+
+### Why Use Symbols
+
+- **Reduce file size** — multiple instances share one definition, keeping the output lean
+- **Global updates** — editing the symbol definition automatically updates all its instances
+- **Consistency** — repeated elements stay in sync without manual updates
+
+### How Symbols Work
+
+When you create a symbol, the original object is replaced by a symbol instance in the Layer Tree. The definition is stored in the **Symbols** section of the Objects Panel.
+
+You can place as many instances of a symbol as needed. All instances remain linked to the same definition.
+
+### Notes
+
+- Symbol instances appear as `<use>` layers in the Layer Tree
+- Editing the symbol definition updates all instances at once
+- Only **unused** symbols (those with no instances on the canvas) can be deleted
+
+### The Symbols section
+
+The **Symbols** section of the [Objects panel](/docs/edit-objects#object-tree) lists all symbol definitions
+stored in the current document.
+
+A symbol is a reusable object definition stored in the SVG `<defs>` section. Once created, you can
+place any number of **instances** of that symbol anywhere on the canvas. All instances share the
+same underlying artwork, so editing the symbol definition updates every instance at once. Each
+instance can have its own position, scale, rotation, opacity, and fill / stroke overrides
+independently of other instances.
+
+Each symbol in the list displays a **thumbnail preview** and its name. If a symbol is not used by
+any instance on the canvas, it is labeled **Unused**, and a red triangle appears next to the
+collapsed section header; click the **bin icon** to remove an unused symbol.
+
+Double-click a symbol's thumbnail to enter **Symbol View** — an in-place editing mode where the
+canvas shows only the contents of that symbol. Exit Symbol View by clicking the **`...`** row at
+the top of the Object Tree. See [Editing symbols](/docs/symbols#editing-symbols).
+
+## Creating Symbols
+
+### How to Create a Symbol
+
+1. Select one or more objects on the canvas.
+2. Convert them to a symbol using one of:
+   - **Object → Make Symbol** from the menu (`Ctrl/Cmd + P`)
+   - The **Make Symbol** button in the Top Panel (available when the Selection or Transform Tool is active)
+
+### What Happens After Creation
+
+- The selected object is replaced by a symbol instance (`<use>` layer) in the Layer Tree
+- The original definition is stored in the **Symbols** section of the Objects Panel
+- The instance on the canvas looks and behaves the same as the original object
+
+From this point, you can drag additional instances of the symbol from the Symbols panel onto the canvas, and all instances will stay in sync with the definition.
+
+## Using Symbols
+
+You can place multiple instances of the same symbol on the canvas. All instances remain linked to the original symbol definition.
+
+### Drag and Drop from the Symbols Panel
+
+1. Open the **Symbols** section in the Objects Panel.
+2. Find the symbol you want to use by its preview.
+3. Drag it onto the canvas to place a new instance.
+
+### Duplicate an Existing Instance
+
+1. Select an existing symbol instance in the Layer Tree or on the canvas.
+2. Duplicate it using:
+   - **Edit → Duplicate** or `Cmd/Ctrl + D`
+   - Standard copy (`Cmd/Ctrl + C`) and paste (`Cmd/Ctrl + V`)
+
+The duplicate is a new linked instance — changes to the symbol definition will update it along with all other instances.
+
+### Symbol Instance Properties
+
+When a symbol instance (`<use/>`) is selected, the Properties Panel shows additional sections specific to instances:
+
+#### Display
+
+- **Offset** — offsets the symbol content within the instance bounding box (X and Y)
+- **Custom Size** — when enabled, lets you override the symbol's natural size with a custom width and height
+
+#### Animation
+
+- **Start** — delays the start of the symbol's internal animation by the specified number of milliseconds
+- **Stretch** — scales the playback speed of the symbol's animation (100% = normal speed)
+- **Crop Time** — when enabled, clips the symbol's animation to the instance's time range
+
+## Editing Symbols
+
+Editing a symbol definition updates all its instances simultaneously.
+
+### How to Edit a Symbol
+
+You can enter Symbol View in two ways:
+
+- Open the **Symbols** section in the Objects Panel and **double-click** the symbol preview thumbnail
+- Select a symbol instance on the canvas and click the **Edit Symbol** button in the Properties Panel
+
+Once in Symbol View:
+1. In Symbol View you can:
+   - Select shapes directly on the canvas or in the Symbol's Layer Tree
+   - Modify shapes, paths, colors, and other properties
+   - Adjust properties in the Properties Panel
+
+4. To return to the main document view, click the **three dots (...)** button at the top of the Symbol's Layer Tree.
+
+Any changes made inside Symbol View are automatically applied to all instances of that symbol in the document.
+
+## Converting Symbols to Objects
+
+You can break the link between a symbol instance and its definition, converting it back into regular editable objects.
+
+### How to Convert
+
+1. Select the symbol instance in the Layer Tree or on the canvas.
+2. Use one of:
+   - **Object → Replace Link with its Referenced Content** from the menu
+   - The corresponding icon in the Top Panel (available when the Selection or Transform Tool is active)
+
+The instance is replaced with a standalone copy of the symbol's contents. It is no longer linked to the symbol definition and will not update when the symbol is edited.
+
+## Deleting Unused Symbols
+
+Unused symbols — those with no instances on the canvas — can be removed to keep your document clean.
+
+### How to Delete
+
+1. Open the **Symbols** section in the Objects Panel.
+2. Locate symbols marked as **Unused** (shown with a red label).
+3. Click the **bin icon** next to the symbol to delete it.
+
+Symbols that still have instances on the canvas cannot be deleted until all their instances are removed.

@@ -1,0 +1,110 @@
+---
+title: "Loop Animation"
+description: "The three loops: playback loop, inner loop, and loop on export."
+slug: "docs/loop-animation"
+sidebar:
+  order: 160
+draft: false
+---
+
+# Loop Animation
+
+The three loops: playback loop, inner loop, and loop on export.
+
+## Loop Animation Overview
+
+Pixodesk Animator Studio has three distinct loop controls, each serving a different purpose. Understanding which one to use saves time when building and previewing animations.
+
+### Playback Loop
+
+The **Loop Animation** toggle in the [Timeline Panel](/docs/animation#timeline-panel) toolbar controls whether the animation repeats during preview playback inside the editor. It has no effect on the exported file.
+
+Use this when you want the animation to replay continuously while you are working on it, without having to press play repeatedly.
+
+See [Loop Animation Playback](/docs/loop-animation#loop-animation-playback).
+
+### Inner Loop
+
+An **Inner Loop** is applied to a specific layer in the timeline. It makes a selected range of keyframes repeat independently — either before or after those keyframes — while the rest of the animation continues normally. The inner loop is part of the document and is included in the exported output.
+
+Use this to create repeating motion on a single object (a spinning icon, a bouncing element) without duplicating keyframes manually.
+
+See [Inner Loop](/docs/loop-animation#inner-loop).
+
+### Export Loop
+
+The **Loop** setting in [Document Properties](/docs/get-started#document-properties) controls whether the entire exported animation plays once or loops continuously in the browser. This is a document-level setting that affects the final output.
+
+Use this when you want the whole animation to run in a continuous loop on the page.
+
+See [Loop Animation on Export](/docs/loop-animation#loop-animation-on-export).
+
+## Loop Animation Playback
+
+The **Loop Animation** button in the [Timeline Panel](/docs/animation#timeline-panel) toolbar makes the animation repeat continuously during preview playback inside the editor.
+
+This setting only affects how the animation plays while you are working — it does not change the exported file or the document's loop settings.
+
+### How to Use
+
+Click **Loop Animation** in the timeline toolbar to toggle it on or off. When active, the playhead returns to the start automatically when it reaches the end of the animation range, so playback continues without interruption.
+
+To loop the exported animation, use the **Loop** setting in [Document Properties](/docs/get-started#document-properties) instead.
+
+## Inner Loop
+
+An Inner Loop makes a selected range of keyframes on a layer repeat independently within the animation. The looping region plays as many times as it fits within the animation duration, while other layers continue unaffected.
+
+This is the right tool when you need one object to repeat a motion — a rotating gear, a blinking cursor, a bouncing dot — without copying keyframes by hand or affecting the rest of the composition.
+
+### Adding an Inner Loop
+
+#### From a Layer Row
+
+1. In the [Timeline Layer List](/docs/animation#layer-list), find the layer you want to loop.
+2. Click the **Loop** button at the end of the layer row. The Inner Loop panel opens.
+
+#### From Selected Keyframes
+
+1. Select the keyframes you want to loop in the [Keyframe Timeline](/docs/animation#keyframe-editor).
+2. Use **Add inner loop to selected keyframes** — the button above the keyframe area or in the **More (⋮)** menu in the timeline toolbar.
+
+### Inner Loop Panel
+
+When the Inner Loop panel is open, you can configure how the loop behaves:
+
+- **Before** — the selected keyframe range repeats before those keyframes in the timeline
+- **After** — the selected keyframe range repeats after those keyframes (the more common setting)
+- **Alternate Direction** — each successive repetition plays in the opposite direction, creating a back-and-forth motion instead of always restarting from the beginning
+
+### Converting to Keyframes
+
+Click **To Keyframes** to expand the inner loop into explicit keyframes. This replaces the loop with the actual repeated keyframe data, which can then be edited individually. Use this when you need to fine-tune specific repetitions after the loop has been set up.
+
+### Removing an Inner Loop
+
+- Click **Cancel Loop** in the Inner Loop panel to remove the loop from that layer.
+- Alternatively, select the keyframes and choose **Remove Inner Loop from Selected Keyframes** in the **More (⋮)** menu.
+
+### Closing the Panel
+
+Click **Close and Keep** to close the Inner Loop panel while keeping the loop applied. The loop remains active on the layer.
+
+## Loop Animation on Export
+
+The **Loop** setting in Document Properties controls whether the exported animation plays once and stops, or repeats continuously in the browser.
+
+### How to Set It
+
+1. Select the **`<svg/>`** root element at the top of the [Object Tree](/docs/edit-objects#object-tree), or deselect all objects so that document properties are shown in the [Properties Panel](/docs/edit-objects#properties-panel).
+2. In the **Animation** section, enable or disable the **Loop** toggle.
+
+When **Loop** is on, the exported animation replays from the beginning each time it finishes. When off, it plays once and holds at the final frame.
+
+### Effect on Export Formats
+
+The Loop setting is respected across all export formats — Pixodesk JSON, JS-Animation, and SVG with JavaScript. For CSS keyframe exports, looping is expressed via `animation-iteration-count: infinite` on the generated CSS.
+
+### Playback Loop vs Export Loop
+
+The **Loop Animation** toggle in the timeline toolbar only affects preview playback inside the editor — it does not change this setting. To control looping in the delivered animation, always use the Document Properties Loop toggle described above.

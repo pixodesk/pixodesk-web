@@ -1,0 +1,225 @@
+---
+title: "Animation Overview"
+description: "The Timeline panel, auto animation by pinning states, and path animation."
+slug: "docs/animation"
+sidebar:
+  order: 140
+draft: false
+---
+
+# Animation Overview
+
+The Timeline panel, auto animation by pinning states, and path animation.
+
+## Timeline Panel
+
+The Timeline panel occupies the bottom of the workspace. It is the primary interface for creating,
+editing and playing keyframe animations.
+
+{/* e2e-screenshot
+app: svga · viewport: 1440x900 · hideDevUi: true · date: 2026-08-30
+setup: setup(400, 400)
+crop: testId="timeline" padding=0
+annotate: none
+notes: empty document, playhead at 0 ms
+*/}
+![The Timeline panel: playback toolbar and layer list (left), keyframe editor (centre), chart panel (right)](/images/docs/editor/workspace/timeline-panel.png)
+
+The panel is divided into three areas:
+
+- **Layer List** (left) — document layers and their animated properties, with per-property
+  navigation and value editing.
+- **Keyframe Editor** (centre) — the visual timeline where keyframes are placed, moved and organised.
+- **Chart Panel** (right) — the Value, Velocity and Acceleration curves for editing easing.
+
+### Playback toolbar
+
+The toolbar runs along the top of the Timeline panel and contains playback and keyframe controls:
+
+- **More (⋮)** — opens additional options:
+  - Show Velocity Mini Charts
+  - Select All Keyframes
+  - Deselect Keyframes
+  - Add Inner Loop to Selected Keyframes
+  - Remove Inner Loop from Selected Keyframes
+  - Flip Selected Keyframes
+- **Go to Animation Start** `Ctrl/Cmd+←` — jumps the playhead to frame 0
+- **Go to Previous Frame** — moves one frame backward
+- **Play / Pause** `Space` — starts or stops playback
+- **Frame / time** — displays the current position; type a value to jump to a specific frame or
+  time, or drag the slider to scrub through the animation
+- **Go to Next Frame** — moves one frame forward
+- **Go to Animation End** `Ctrl/Cmd+→` — jumps the playhead to the last frame
+- **Loop Animation** — toggles continuous looped playback (see [Loop animation playback](/docs/loop-animation#loop-animation-playback))
+- **Pin Animation State at Frame** `Alt+A` — pins the current object state at the playhead position
+  for auto-animation; see [Auto animation](/docs/animation#auto-animation-pin--freeze-state)
+- **Unpin All** `Alt+Shift+A` — removes all pins
+
+See [Pin multiple animation states](/docs/animation#pin-multiple-animation-states) for how to use the pin
+feature to build animations quickly.
+
+### Layer list
+
+The Layer List is the left section of the panel. It displays the document layers and their
+animated properties, mirroring the structure of the [Object Tree](/docs/edit-objects#object-tree).
+
+#### Layer rows
+
+Each layer in the document appears as a row. Layers that have animated properties can be expanded
+to reveal the individual animated property tracks beneath them.
+
+#### Animated property rows
+
+When a layer is expanded, each animated property (such as Position, Scale, Rotation, Opacity, Fill
+Color) appears as its own row. Each property row contains:
+
+- **Keyframe indicator dot** — shows whether a keyframe exists at the current playhead position
+  for this property
+- **Previous keyframe arrow** — jumps the playhead to the previous keyframe for this property
+- **Next keyframe arrow** — jumps the playhead to the next keyframe for this property
+- **Value input** — displays and allows direct editing of the property value at the current frame
+- **Loop button** — opens the [Inner Loop](/docs/loop-animation#inner-loop) dialog for this specific property
+
+#### Expand and collapse
+
+Each layer row has an **expand** arrow to show or hide its animated property tracks. An
+**Expand All** button at the top of the layer list expands all layers at once.
+
+### Keyframe editor
+
+The Keyframe Editor is the central area of the panel. It provides a visual, time-based view of all
+keyframes in the animation.
+
+#### Time ruler
+
+The ruler along the top of the keyframe area shows time in seconds. The current playhead position
+is indicated by a vertical line. Drag the playhead to scrub through the animation and preview it
+at any point in time.
+
+#### Keyframes
+
+Each animated property has a track in the keyframe area. Keyframes appear as diamond-shaped
+markers on the track at the time positions where property values are defined.
+
+- **Select a keyframe** — click it; hold `Ctrl/Cmd` to add to the selection
+- **Move a keyframe** — drag it left or right to shift its time position
+- **Select multiple** — drag a selection rectangle across keyframes
+
+Full details: [Select, move and delete keyframes](/docs/keyframes#select-move-and-delete-keyframes).
+
+#### Easing mini charts
+
+Between any two keyframes, the segment displays a **mini chart** — a small visual representation
+of the easing function applied to that transition. The mini chart gives an at-a-glance preview of
+the curve shape (ease-in, ease-out, linear, …) without opening the chart panel.
+
+Click the segment between two keyframes to select it. This opens the
+[Easing Function panel](/docs/easing-charts#easing-function-panel) and also updates the
+Chart Panel on the right to show the curve for that segment.
+
+#### Animation range
+
+The timeline ruler shows the total animation duration set in the document properties. The
+highlighted region on the ruler represents the active animation range; keyframes outside this
+range are not included in playback. Duration is configured in the
+[Properties panel](/docs/get-started#animation) when the `<svg/>` root is selected.
+
+#### Inner loops
+
+Selected keyframes can be marked as part of an **Inner Loop** — a sub-range that loops
+independently within the main animation. Use **Add Inner Loop to Selected Keyframes** in the More
+(⋮) menu to apply one. See [Inner loop](/docs/loop-animation#inner-loop).
+
+#### Keyframe operations (More menu)
+
+The **More (⋮)** menu in the playback toolbar provides additional operations on selected
+keyframes:
+
+- **Select All Keyframes** — selects every keyframe in the timeline
+- **Deselect Keyframes** — clears the selection
+- **Add Inner Loop to Selected Keyframes**
+- **Remove Inner Loop from Selected Keyframes**
+- **Flip Selected Keyframes** — reverses the order of selected keyframes in time
+
+### Chart panel
+
+The Chart Panel on the right displays the animation curves — **Value**, **Velocity** `ƒ′(t)` and
+**Acceleration** `ƒ′′(t)` — for the selected properties, and lets you drag the curve handles to
+edit the easing. It is described in [Easing charts](/docs/easing-charts#easing-charts).
+
+### Zoom
+
+A **Zoom** control in the top-right corner of the Timeline panel adjusts the horizontal scale of
+the time axis, allowing you to zoom in for precise frame-level editing or zoom out for an overview
+of the full animation. **Zoom Timeline to Frame Range** in the toolbar's Zoom dropdown fits the
+timeline view to the full animation duration.
+
+### Animation shortcuts
+
+- `Space` — Play / Pause
+- `Alt+A` — Pin Animation State at Frame (auto-animation)
+- `Alt+Shift+A` — Unpin All
+- `Ctrl/Cmd+←` / `Ctrl/Cmd+→` — Go to animation start / end
+
+See [Keyboard shortcuts](/docs/useful-info#animation).
+
+## Auto Animation (Pin / Freeze State)
+
+The **Pin Animation State** feature lets you create animations automatically, without manually adding keyframes.
+
+### How It Works
+
+1. Move the playhead to the time position where you want to fix the object's state.
+2. Click **Pin Animation State at Frame** `Alt+A` in the timeline toolbar (or enable it as a toggle to keep it active).
+3. Move the playhead to a different time position.
+4. Modify the object — change its position, scale, color, or any animatable property.
+5. A keyframe is created automatically at the new position.
+
+Repeat steps 3–4 to build up the animation across multiple time points.
+
+### Removing Pins
+
+Click **Unpin All** `Alt+Shift+A` to remove all pins and return to manual keyframe mode.
+
+See also: [Pin Multiple Animation States](/docs/animation#pin-multiple-animation-states)
+
+## Pin Multiple Animation States
+
+You can place multiple pins at different time points to define key states across the animation. Each pin records the object's state at that frame, and keyframes are automatically generated between them as you modify the object.
+
+### Workflow
+
+1. Enable **Pin Animation State at Frame** `Alt+A`.
+2. Move the playhead to the first key position and modify the object — a keyframe is created.
+3. Move the playhead to the next key position and modify the object again — another keyframe is created.
+4. Repeat across as many time points as needed.
+
+This approach lets you build animations quickly by focusing on the key states rather than manually placing and adjusting keyframes.
+
+### Removing Pins
+
+Use **Unpin All** `Alt+Shift+A` to clear all pins when you are done.
+
+## Path Animation
+
+Path animation lets you animate the shape of a path over time by keyframing individual node positions and their control handles. This is how morphing effects are made — a logo changing shape, an icon transitioning between states, or any organic shape transformation.
+
+### How to Animate a Path
+
+1. Select the path and activate the **Node Tool** (N).
+2. Move the playhead to the frame where you want the animation to begin and the shape to hold its current state.
+3. Click **Pin Animation State at Frame** `Alt+A` in the timeline toolbar. This locks the current shape at that frame. Pixodesk automatically moves the playhead forward — by default 1 second — so you are positioned at the next key moment. You can drag the playhead to a different position if you need a shorter or longer interval.
+4. Move nodes or adjust their control handles. Keyframes are created automatically on the path shape.
+5. Repeat steps 3–4 to add more shape states across the timeline.
+
+### Tips
+
+- The number of nodes must stay the same between keyframes — Pixodesk interpolates each node individually. Adding or removing nodes after you start animating will break the interpolation.
+- Use **Unpin All** `Alt+Shift+A` when you are done to return to normal keyframe mode.
+- To fine-tune the timing between shape states, select keyframes in the timeline and adjust their easing curves in the Easing Function panel.
+
+### Related
+
+- [Auto Animation](/docs/animation#auto-animation-pin--freeze-state) — general overview of the Pin Animation State workflow
+- [Node Tool](/docs/edit-paths#node-tool) — editing node positions and control handles
+- [Keyframes Overview](/docs/keyframes#keyframes-overview) — managing keyframes manually

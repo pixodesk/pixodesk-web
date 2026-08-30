@@ -283,3 +283,26 @@ header starlight-theme-select {
     list-style-type: decimal;
     list-style-position: inside
 }
+
+/* ── Current item, both sidebars: unmistakable ─────────────────────────────────────────── */
+/* Right "On this page" TOC (Starlight marks the heading on screen with aria-current="true"). */
+starlight-toc a[aria-current='true'],
+mobile-starlight-toc a[aria-current='true'] {
+    color: #fff !important;
+    background: var(--sl-color-accent);
+    font-weight: 700;
+    border-radius: 0.35rem;
+    box-shadow: inset 0.25rem 0 0 0 var(--sl-color-accent-high);
+    padding-inline-start: 0.75rem;
+}
+starlight-toc a {
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+/* Left sidebar: the section item the reader is in (set by the sidebar scroll-spy) and the current page. */
+.sidebar-content a[aria-current='page'],
+.sidebar-content a[aria-current='page']:hover {
+    color: #fff !important;
+    background-color: var(--sl-color-accent) !important;   /* Starlight's scoped rule would win otherwise */
+    font-weight: 700;
+    box-shadow: inset 0.25rem 0 0 0 var(--sl-color-accent-high);
+}

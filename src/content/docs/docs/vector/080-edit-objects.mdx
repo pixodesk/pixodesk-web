@@ -1,0 +1,560 @@
+---
+title: "Edit Objects"
+description: "The Object Tree and Properties panel, selecting, moving, transforming, arranging, aligning, hiding and locking objects."
+slug: "docs/edit-objects"
+sidebar:
+  order: 80
+draft: false
+---
+
+# Edit Objects
+
+The Object Tree and Properties panel, selecting, moving, transforming, arranging, aligning, hiding and locking objects.
+
+## Object Tree
+
+The **Objects panel** is on the left side of the workspace, next to the Tools panel. It provides
+a complete view of everything in your document — from the layer structure of your artwork to
+reusable definitions and shared colours.
+
+{/* e2e-screenshot
+app: svga · viewport: 1440x900 · hideDevUi: true · date: 2026-08-30
+setup: setup(400, 400); click("toolsPicker.rectangle"); move("canvas.bg", "source:22%", "source:28%", "canvas.bg", "drop:72%", "drop:66%")
+crop: testId="elementTree" padding=0
+annotate: none
+notes: rectangle drawn and selected
+*/}
+![The Object Tree with one rectangle under the Svg root](/images/docs/editor/workspace/objects-panel-rectangle.png)
+
+The panel is divided into several sections. Each section can be **expanded** or **collapsed** by
+clicking its header. When a section is expanded, you can drag its **top edge** to resize it
+vertically — giving more or less space to that section relative to the others.
+
+| Section | What it lists | Details |
+| :-- | :-- | :-- |
+| **Object Tree** | the full hierarchy of SVG elements (this page) | below |
+| **Symbols** | reusable symbol definitions | [Symbols](/docs/symbols#the-symbols-section) |
+| **Markers** | shapes attached to path start / mid / end points | [Markers](/docs/markers#the-markers-section) |
+| **Patterns** | tile definitions used as fills | [Patterns](/docs/patterns#the-patterns-section) |
+| **Filters** | filter definitions and their primitives | [Filters](/docs/filters#filters-section) |
+| **Used Colors** | every colour currently in use | [Used Colors](/docs/color#used-colors) |
+
+The definition sections show a **visual thumbnail** of each item. If a definition exists in the
+document but is not used on the canvas, a **red triangle with an exclamation mark** appears next
+to the section header when the section is collapsed — expand it and click the **bin icon** next
+to the unused item to remove it.
+
+### The Object Tree
+
+The Object Tree is the top section. It shows the full hierarchy of every SVG element in your
+document — shapes, groups, text, symbol instances, and more — as a nested list of named layers.
+
+#### Layer thumbnails
+
+Each row displays a small **visual thumbnail** of the layer's content in front of its name. This
+gives an at-a-glance preview of the shape or group without selecting it. If a layer has no fill
+colour set (unset colour), its thumbnail is shown with a **black fill**.
+
+#### Structure
+
+The tree always starts with the **`<svg/>`** root element at the top. Every other object in your
+document is a child of this root. Clicking the `<svg/>` row selects the document root and shows
+the document-level properties in the [Properties panel](/docs/edit-objects#properties-panel) — canvas size,
+animation duration, aspect ratio, and file settings.
+
+Objects are listed from top to bottom in the same stacking order as they appear on the canvas.
+Objects higher in the list appear in front of objects lower in the list.
+
+#### Selecting objects
+
+- **Click** a row to select that object on the canvas.
+- **Click** the `<svg/>` row to select the document root and view document properties.
+- Hold **`Ctrl/Cmd`** and click to add objects to a multi-selection.
+
+#### Reordering layers
+
+Drag a row up or down to change the stacking order of objects. Moving an object higher in the
+list brings it visually in front of other objects. See also [Arrange objects](/docs/edit-objects#arrange-objects).
+
+#### Visibility and lock
+
+Each row has controls on the right side to:
+
+- **Toggle visibility** — show or hide the object on the canvas without deleting it.
+- **Lock** — prevent the object from being selected or edited on the canvas.
+
+See [Hide and lock objects](/docs/edit-objects#hide-and-lock-objects).
+
+#### Groups
+
+Objects can be nested inside groups. Click the expand arrow next to a group to reveal its
+children. Double-clicking a group on the canvas enters the group, letting you select individual
+objects inside it.
+
+#### Renaming
+
+Double-click a layer name in the tree to rename it. Alternatively, select a layer (click its row
+to make it active) and press **`Enter`** to start renaming. Layer names are stored as the SVG
+element's `id` attribute.
+
+#### Symbol, Marker and Pattern views
+
+Double-clicking a symbol, marker or pattern thumbnail enters an in-place editing view showing
+only that definition. Exit it by clicking the **`...`** row at the top of the Object Tree.
+
+## Properties Panel
+
+{/* e2e-screenshot
+app: svga · viewport: 1440x900 · hideDevUi: true · date: 2026-08-30
+setup: setup(400, 400)
+crop: testId="attrs" padding=0
+annotate: none
+notes: empty document; sections Colors, Content, Display, Animation, Timeline & Trigger visible
+*/}
+![The Properties panel showing the document properties (nothing selected)](/images/docs/editor/workspace/properties-panel-document.png)
+
+The Properties Panel is the vertical panel on the right side of the workspace. It shows properties and settings for the currently selected object. When nothing is selected, it shows the document (SVG canvas) properties.
+
+The panel content is context-sensitive — it changes based on what object is selected, which in turn depends on which tool was used to create it. Different object types (rectangle, text, symbol instance, etc.) show different sections.
+
+### Sections
+
+The Properties Panel is organized into collapsible sections. Each section has an icon on the left that indicates what the section is about.
+
+#### Expanding and Collapsing
+
+- **Expanded** — the section name is visible next to the icon, and all options with their input fields are shown.
+- **Collapsed** — only the first option in the section is visible; the rest are hidden.
+
+To toggle between expanded and collapsed, click the **chevron (›)** on the right side of the section header.
+
+### Document Properties
+
+To view document properties, click the **`<svg/>`** root element at the top of the [Object Tree](/docs/edit-objects#object-tree), or click anywhere on the canvas with nothing selected. The panel then shows document-level settings:
+
+#### Canvas
+
+- **View Box** — the visible area of the SVG canvas, defined by Content Start (X/Y offset) and Content Size (width/height)
+- **Aspect Ratio** — how the content scales inside the view box; controls the alignment (xMid/YMid) and fit mode (meet/slice) when the canvas is resized
+- **Display** — the rendered output width and height in pixels
+
+#### Animation
+
+- **Duration** — total animation duration in milliseconds
+- **Animation Delay** — delay before the animation starts
+- **Frame Rate** — frames per second (fps)
+- **Loop** — whether the animation loops continuously
+- **Timeline** — Time or Scroll (scroll-driven) timeline
+- **Start** — On Load, On Mouse Over, On Click, On Scroll into View or Programmatic, plus Reset on Finish
+
+Every document field is explained on [Manage document properties](/docs/get-started#document-properties).
+
+#### Export
+
+- **File Type** — the export format for the animation:
+  - Pixodesk JSON — native format
+  - JS-Animation — JavaScript-based animation
+  - Web Animation API — uses the browser's native animation API
+  - Animation Frames — exports as individual frames
+
+#### Color
+
+- **Fill** — default fill color for new objects
+- **Stroke** — default stroke color for new objects
+
+### Common Object Sections
+
+{/* e2e-screenshot
+app: svga · viewport: 1440x900 · hideDevUi: true · date: 2026-08-30
+setup: setup(400, 400); click("toolsPicker.rectangle"); move("canvas.bg", "source:22%", "source:28%", "canvas.bg", "drop:72%", "drop:66%")
+crop: testId="attrs" padding=0
+annotate: none
+notes: a freshly drawn rectangle is selected (Rectangle tool still active)
+*/}
+![The Properties panel for a selected rectangle: Colors, Fill, Stroke, Opacity, Transform…](/images/docs/editor/workspace/properties-panel-rectangle.png)
+
+Most objects share these sections:
+
+- **Color** — quick color picker showing fill and stroke side by side, with R/G/B/H/S/L/A inputs; the currently active color (fill or stroke) is highlighted
+- **Fill** — fill type (solid, linear gradient, radial gradient, pattern, none) and its settings
+- **Stroke** — stroke color, width, dash, line cap, and line join
+- **Transform** — position (X/Y), rotation (°), scale (X/Y), and transform origin
+- **Arrange** — align (relative to each selected object or to the page) and distribute controls
+- **Opacity** — overall object opacity
+- **Filters** — lists any applied filters with an **Edit** button; **Add Filter** button at the bottom to add new ones
+- **DOM Attributes** — the element's `id` and `class` (hidden by default — enable it in the sections bar)
+
+### Object-Specific Sections
+
+Depending on the selected object type, additional sections appear:
+
+#### Rectangle
+
+- **Rectangle Size** — width, height, and corner radius
+
+#### Ellipse
+
+- **Ellipse Size** — width and height of the ellipse
+
+#### Text
+
+- **Text** — font family, font style, font size, line height, letter spacing, and text alignment
+
+#### Path
+
+- **Path** — node alignment and distribution controls (Align Points, Distribute Points)
+- **Stroke Markers** — start, mid, and end marker selectors (visible when stroke marker display is enabled in the [sections bar](#sections-bar))
+
+#### Symbol Instance
+
+- **Symbol** — shows the referenced symbol name and an **Edit Symbol** button to enter Symbol View
+- **Offset** — the X/Y offset of the symbol content within its bounding box
+- **Start** — animation start time (ms) for the symbol instance
+
+#### Repeater
+
+- **Repeater** — shown when the object is part of a repeater; displays repeat count and type
+
+### Filters Applied to an Object
+
+When one or more filters are applied to the selected object, each filter appears as its own collapsible section in the panel, showing the filter name and an **Edit** button. Use the **Add Filter** button at the bottom to add another filter.
+
+### Sections bar
+
+The **sections bar** is the narrow vertical strip of icon buttons on the far right edge of the
+workspace, beside the Properties panel. It controls which sections are visible in the panel for
+the currently selected object.
+
+Each button corresponds to a section. Clicking a button **toggles** that section on or off:
+
+- **Highlighted** — the section is currently visible in the Properties panel.
+- **Dimmed** — the section is hidden.
+
+The set of available buttons changes depending on the **type of object selected**. Sections that
+are not relevant to the current selection do not appear in the bar. The same toggles are in the
+**Window** menu.
+
+#### Sections
+
+- **Color** — the combined fill and stroke colour picker with R/G/B/H/S/L/A input fields; lets you
+  quickly switch between editing the fill colour and the stroke colour.
+- **Fill** — the fill type selector (solid, linear gradient, radial gradient, pattern, none) and
+  its related settings.
+- **Stroke** — stroke colour, width, dash pattern, line cap, and line join settings.
+- **Appearance** — opacity and other visual appearance settings for the selected shape or group.
+- **Filter** — applied filters and the **Add Filter** button; each applied filter appears as its
+  own collapsible entry with an **Edit** button.
+- **Transform** — position (X/Y), rotation, scale, and transform origin for the selected object.
+- **Shape** — shape-specific size and geometry options — for example **Rectangle Size** for
+  rectangles or **Ellipse Size** for ellipses. Only available for shape objects.
+- **Arrange** — alignment and distribution controls relative to other selected objects or to the page.
+- **Path** — path node operations, **Align Points** and **Distribute Points**. Only available for
+  objects with editable paths.
+- **DOM Attributes** — the SVG element's `id` and `class` attributes. Hidden by default — click
+  its icon in the bar to show it.
+
+#### Available sections by object type
+
+| Section | SVG Root | Shape / Path | Symbol Instance |
+|---------|:--------:|:------------:|:---------------:|
+| Color | ✓ | ✓ | ✓ |
+| Fill | ✓ | ✓ | ✓ |
+| Stroke | ✓ | ✓ | ✓ |
+| Appearance | | ✓ | ✓ |
+| Filter | | ✓ | ✓ |
+| Transform | | ✓ | ✓ |
+| Shape | | ✓ | |
+| Arrange | | ✓ | ✓ |
+| Path | | ✓ | |
+| DOM Attributes | ✓ | ✓ | ✓ |
+
+## Select Objects
+
+Click an object on the canvas to select it. A selection box with handles appears around the selected object.
+
+### Selecting Multiple Objects
+
+- **Shift + Click** — add or remove individual objects from the selection
+- **Click and drag** — draw a rubber-band box to select all objects within the area
+
+### Selecting in the Layer Tree
+
+- **Shift + Click** — selects a continuous range of adjacent layers
+- **Cmd/Ctrl + Click** — selects multiple non-adjacent layers
+
+### Selecting Inside a Group
+
+To select an individual object within a group directly on the canvas, hold **Cmd/Ctrl** and click the object. Once selected, you can move or transform it independently from the group.
+
+## Duplicate
+
+To duplicate selected objects, you can:
+
+- Choose **Edit → Duplicate** from the menu
+- Press `Cmd/Ctrl + D`
+- Use standard copy (`Cmd/Ctrl + C`) and paste (`Cmd/Ctrl + V`) commands
+
+Duplicated objects are placed directly on top of the originals. You can then drag them to a new position.
+
+## Working with Objects
+
+This section covers how to select, move, transform, and manage objects on the canvas.
+
+| Topic | Description |
+|---|---|
+| [Select Objects](/docs/edit-objects#select-objects) | Click, multi-select, and select within groups |
+| [Move Objects](/docs/edit-objects#move-objects) | Drag, arrow keys, constrain to axis |
+| [Transform](/docs/edit-objects#transform) | Position, rotation, scale, flip, origin |
+| [Move Along Path](/docs/edit-objects#move-along-path) | Animate an object following a path |
+| [Arrange Objects](/docs/edit-objects#arrange-objects) | Control stacking order |
+| [Align and Distribute](/docs/edit-objects#align-and-distribute-objects) | Align and space objects precisely |
+| [Align Origin](/docs/edit-objects#align-origin) | Set the anchor point for transformations |
+| [Duplicate](/docs/edit-objects#duplicate) | Copy objects |
+| [Hide and Lock](/docs/edit-objects#hide-and-lock-objects) | Control visibility and editability |
+
+## Move Objects
+
+Objects can be moved on the canvas using the mouse, keyboard arrow keys, or by entering numeric values in the Properties Panel.
+
+### Moving with the Mouse
+
+Select an object with the Selection Tool, then click and drag it to a new position.
+
+#### Constrain to 90°
+
+Hold **Shift** while dragging to constrain movement to horizontal or vertical directions only. This prevents accidental diagonal movement and is useful for keeping objects aligned on an axis.
+
+### Moving with Arrow Keys
+
+With an object selected, use the arrow keys to nudge it one pixel at a time:
+
+- **← → ↑ ↓** — move 1 px in the arrow direction
+- **Shift + arrow key** — move in larger increments (10 px)
+
+### Moving with Numeric Input
+
+For precise positioning, enter exact X and Y coordinates in the **Position** fields in the **Transform** section of the Properties Panel.
+
+### Moving Objects Within a Group
+
+To move an individual object inside a group without ungrouping:
+
+1. Hold **Cmd/Ctrl** and click the object directly on the canvas to select it within the group.
+2. Drag or use arrow keys to reposition it independently.
+
+## Transform
+
+The Transform section in the Properties Panel lets you precisely position, rotate, scale, and flip objects numerically.
+
+It is accessible when the Selection Tool or Transform Tool is active and an object is selected.
+
+### Origin
+
+The origin is the anchor point used as the reference for all transformations — rotations happen around it, scaling grows or shrinks relative to it.
+
+- Enter X and Y coordinates to set the origin position directly.
+- Click the **Align Origin** button (nine-dot grid icon) to snap the origin to one of nine predefined positions: corners, edge midpoints, or center of the object's bounding box.
+
+### Position
+
+Sets the X and Y coordinates of the object on the canvas, measured from the document origin.
+
+Click the clock icon next to Position to animate the position property over time.
+
+### Rotation
+
+Sets the rotation angle in degrees. Positive values rotate clockwise.
+
+Click the clock icon next to Rotation to animate rotation over time.
+
+### Scale
+
+Sets the horizontal and vertical scale as a percentage of the original size.
+
+- Click the **lock icon** to constrain proportions — both axes scale together.
+- Click the clock icon next to Scale to animate scale over time.
+
+### Flip
+
+Flip operations mirror the object along an axis:
+
+- **Flip Horizontal** — mirrors left to right
+- **Flip Vertical** — mirrors top to bottom
+
+Available via **Object → Transform** menu or the icons in the Top Panel.
+
+### Apply and Reset Transform
+
+- **Apply Transform** — bakes the current transformation into the object's path data, resetting the transform values to their defaults.
+- **Reset Transform** — clears the transform without baking it, returning the object to its untransformed state.
+
+Both are available via buttons in the Transform section of the Properties Panel.
+
+## Move Along Path
+
+The Move Along Path feature lets you animate an object so it follows the shape of a path over time.
+
+### How to Set Up
+
+This action requires two shapes:
+
+1. **The motion path** — a path that defines the route the object will follow. It must be placed **below** the moving object in the Layer Tree.
+
+2. **The moving object** — the shape that will travel along the path. It must be placed **above** the motion path in the Layer Tree.
+
+To link them:
+
+1. Select both shapes.
+2. In the **Path** section of the Properties Panel, click **Move element along path**.
+
+The object is now associated with the path and will follow it during animation.
+
+### Editing the Motion Path
+
+To adjust the shape of the motion path after it has been assigned:
+
+1. Select the object that moves along the path.
+2. Select one or more points on the motion path using the Node Tool.
+3. The **Edit motion path** button in the Path section of the Properties Panel becomes active.
+4. Click it to enter motion path editing mode, where you can reposition nodes to reshape the route.
+
+### Animation
+
+Once the object is linked to a path, you can set keyframes on the object's **Position** property to animate how far along the path it travels at each point in time. See the animation docs for details on adding keyframes.
+
+## Arrange Objects
+
+Objects are rendered on the canvas according to their order in the Layer Tree Panel. Items higher in the list appear in front of those below them.
+
+### Changing Stacking Order
+
+To change the stacking order of a selected object, you can:
+
+- Use **Object → Arrange** menu commands
+- Click **Bring to Front** or **Send to Back** icons in the Top Panel (available when the Selection or Transform Tool is active)
+- Use keyboard shortcuts:
+  - `Ctrl/Cmd + Shift + ]` — Bring to Front
+  - `Ctrl/Cmd + Shift + [` — Send to Back
+- Drag and reorder objects directly in the Layer Tree Panel
+
+## Align and Distribute Objects
+
+### Accessing Alignment Controls
+
+You can align and distribute objects using:
+
+- **Object → Align** and **Object → Distribute** menus
+- Alignment icons in the Top Panel (when Selection or Transform Tool is active)
+- The **Arrange** section of the Properties Panel
+
+### Aligning Objects
+
+#### What to Align
+
+- **Each Selected Shape** — aligns each object individually
+- **All Selection** — treats the entire selection as a group
+
+#### Align Relative To
+
+- **Page** — aligns relative to the document bounds
+- **All Shapes** — aligns relative to the bounding box of all objects
+- **Selected Shapes** — aligns relative to the bounding box of the selection
+- **Axis Origin** — aligns relative to the origin point
+
+#### Horizontal Alignment
+
+- **Left** — aligns objects to the left edge
+- **Center** — aligns objects to the horizontal center
+- **Right** — aligns objects to the right edge
+
+#### Vertical Alignment
+
+- **Top** — aligns objects to the top edge
+- **Middle** — aligns objects to the vertical center
+- **Bottom** — aligns objects to the bottom edge
+
+### Distributing Objects
+
+#### Distribute Horizontally
+
+- **Left Edges** — distributes based on left edges
+- **Centers** — distributes based on horizontal centers
+- **Right Edges** — distributes based on right edges
+- **Gaps** — creates equal spacing between objects
+- **Side by Side** — places objects next to each other without gaps
+
+#### Distribute Vertically
+
+- **Top Edges** — distributes based on top edges
+- **Centers** — distributes based on vertical centers
+- **Bottom Edges** — distributes based on bottom edges
+- **Gaps** — creates equal vertical spacing
+- **Side by Side** — stacks objects without gaps
+
+### Grid Distribution
+
+Arrange objects into a grid layout with the following options:
+
+- **Grid Size** — defines number of columns and rows
+- **Gaps** — sets horizontal and vertical spacing between items
+- **Align** — controls how objects are aligned within each grid cell
+
+### Distribute Along Last Path
+
+Distributes selected objects evenly along a path.
+
+- **Auto-rotate** — rotates each object to follow the direction of the path
+
+The path used for distribution must be placed **below** the distributed objects in the Layer Tree Panel.
+
+## Align Origin
+
+The origin is the anchor point used as the reference for transformations such as scaling, rotation, and positioning.
+
+### How to Access
+
+You can set the anchor point from several places:
+
+- **Object → Transform → Align Anchor Point** (menu)
+- The **Align Origin** button (nine-dot grid icon) in the Top Panel, available when the Selection or Transform Tool is active
+- The **Align Origin** button in the Properties Panel → Transform section, next to the Origin input fields
+
+### Anchor Point Positions
+
+You can choose from nine predefined positions relative to the object's bounding box:
+
+- **Top Left, Top Center, Top Right**
+- **Middle Left, Center, Middle Right**
+- **Bottom Left, Bottom Center, Bottom Right**
+
+The selected position determines the reference point for all transformations. For example, scaling from Top Left keeps that corner fixed while the object grows or shrinks relative to it.
+
+## Object Operations
+
+Boolean operations such as **Unite**, **Subtract**, **Intersect**, and **Exclude**, as well as **Combine**, **Break Apart**, **Stroke to Path**, and **Convert to Bezier Path**, are **path operations** in Pixodesk.
+
+They are accessed via the **Path** menu or the **Path** section of the Properties Panel — not the Object menu.
+
+This is consistent with how professional vector tools (Inkscape, Affinity Designer, Adobe Illustrator) categorise these operations: they act on the geometric path data of shapes, not on object-level properties.
+
+Full documentation for these operations is in the [Path Operations](/docs/edit-paths#path-operations) section:
+
+- [Path Operations](/docs/edit-paths#path-operations) — Unite, Subtract, Intersect, Exclude, Stroke to Path, Convert to Bezier Path
+- [Combine Paths](/docs/edit-paths#combine-paths) — join multiple paths into a compound path
+- [Break Apart](/docs/edit-paths#break-apart) — split a compound path into individual paths
+
+## Hide and Lock Objects
+
+### Hide Objects
+
+Click the **eye icon** next to an object in the Layer Tree Panel to toggle its visibility on or off. Hidden objects are not rendered on the canvas or in exports, but remain in the document.
+
+### Lock Objects
+
+Click the **lock icon** next to an object in the Layer Tree Panel to lock or unlock it.
+
+Locked objects:
+
+- Cannot be selected or modified directly on the canvas
+- Remain visible and accessible in the Layer Tree Panel
+- Can still be selected by clicking their entry in the Layer Tree

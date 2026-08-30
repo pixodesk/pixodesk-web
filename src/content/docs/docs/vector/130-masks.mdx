@@ -1,0 +1,74 @@
+---
+title: "Masks"
+description: "Masks and mask effects — hiding parts of an object with another object."
+slug: "docs/masks"
+sidebar:
+  order: 130
+draft: false
+---
+
+# Masks
+
+Masks and mask effects — hiding parts of an object with another object.
+
+## Masks and Clipping
+
+Pixodesk provides two ways to control the visibility of objects using other shapes:
+
+- **Mask** — uses an SVG `<mask>` element. The masking shape defines the visible area of the objects below it.
+- **Mask Effect** — applies masking as a non-destructive effect. The lower layer controls the visibility of the layer above it.
+
+Both approaches keep all layers editable after creation. See the individual pages for details on how to create and remove each type.
+
+## Mask
+
+A Mask uses one object to control the visible area of objects below it. Only the parts of the underlying objects that fall within the masking shape remain visible.
+
+### How to Create a Mask
+
+1. Select the objects you want to mask together with the masking shape.
+2. Apply the mask using one of:
+   - **Object → Make Mask** from the menu
+   - The **Mask** button in the Top Panel → **Make Mask** (available when the Selection or Transform Tool is active)
+
+### How It Works
+
+- The **topmost** selected object acts as the masking shape
+- Objects outside the mask shape are hidden
+- The mask remains editable — you can transform or adjust it at any time
+
+### Removing a Mask
+
+See [Remove Mask and Mask Effect](/docs/masks#remove-mask-and-mask-effect).
+
+## Mask Effect
+
+A Mask Effect applies masking as a non-destructive effect. Unlike a regular Mask, it uses the **lower** layer to control the visibility of the layer above it — both layers remain independent and fully editable.
+
+### How to Create a Mask Effect
+
+1. Select the objects you want to apply the effect to (the lower layer acts as the mask shape).
+2. Apply using one of:
+   - **Object → Add Mask Effect** from the menu
+   - The **Mask** button in the Top Panel → **Add Mask Effect** (available when the Selection or Transform Tool is active)
+
+### How It Works
+
+- The **lower** object defines the visible region
+- The **upper** object is visible only within the boundaries of the lower object
+- Both layers remain editable and can be transformed or adjusted at any time
+
+### Removing a Mask Effect
+
+See [Remove Mask and Mask Effect](/docs/masks#remove-mask-and-mask-effect).
+
+## Remove Mask and Mask Effect
+
+### How to Remove
+
+1. Select the masked object or group on the canvas or in the Layer Tree.
+2. Use one of:
+   - **Object → Remove Mask** from the menu
+   - The **Mask** button in the Top Panel → **Remove Mask** (available when the Selection or Transform Tool is active)
+
+Removing a mask or mask effect restores the original visibility of all objects.

@@ -117,6 +117,14 @@ vertical. The **Transform** tool (`T`) adds rotate and scale handles: **Shift** 
 
 All transform fields are animatable — this is where most motion comes from.
 
+{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
+app: svga · viewport: 1440x900 · hideDevUi: true
+show: the Transform section — origin with the nine-dot button, position, rotation, scale with lock, flip / apply / reset buttons
+setup: setup(400, 400); draw a rectangle; click("attrs.transform.expand") if collapsed; collapse Colors with click("attrs.color.collapse") to bring the section higher
+crop: testId="attrs.transform" padding=8 with a white matte over it
+annotate: title chips at "left" in a column: "Origin (nine-dot button)", "Position", "Rotation", "Skew", "Scale (with lock)"; plus "Flip / apply / reset" at "top" on the header buttons
+notes: row test-ids: attrs.transform.origin | .translation | .rotation | .skew | .scale, header buttons attrs.transform.flipH/.flipV/.applyTransform/.reset — verify with list_ids.
+*/}
 <div class="shot small">Screenshot: the Transform section — origin with the nine-dot button, position, rotation, scale with lock, flip / apply / reset buttons</div>
 
 ## Duplicate and Copy
@@ -132,6 +140,14 @@ A **clone** is a linked copy of one object: an SVG `<use>` that points at the or
 original — shape, colour, animation — and every clone follows. Clones cost almost nothing in
 file size, which is what the [Spray](/docs/object-creation-tools#spray) tool relies on.
 
+{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
+app: svga · viewport: 1440x900 · hideDevUi: true
+show: an original leaf and three clones of it, one selected showing the Reference section
+setup: setup(400, 400); draw a shape; copy/paste-as-clone it three times (find the menu path or shortcut in the source — Object menu) and arrange them; select one clone
+crop: clip covering the canvas shapes plus the Reference section of the Properties panel
+annotate: title chips: "Original", "Clones" on the canvas; "Reference section" on the panel at "left"
+notes: confirm how a clone is created (Object menu / shortcut) before writing setup; the Reference section only appears for a clone.
+*/}
 <div class="shot">Screenshot: an original leaf and three clones of it, one selected showing the Reference section</div>
 
 1. Select the object.
@@ -173,6 +189,14 @@ dragging rows in the Object Tree.
 With two or more objects selected, use **Object › Align** / **Object › Distribute**, the toolbar
 buttons, or the **Arrange** section of the Properties panel.
 
+{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
+app: svga · viewport: 1440x900 · hideDevUi: true
+show: the Align / Distribute dropdown in the toolbar with the relative-to options
+setup: setup(400, 400); draw three shapes; select all (key("a","meta")); open the align dropdown: click("toolbar.actionsGroup-align")
+crop: clip around the open dropdown plus a little of the toolbar
+annotate: title chips: "Align buttons", "Relative to (selection / canvas / …)" at "right"
+notes: toolbar.actionsGroup-align exists on the selection tool toolbar; the dropdown contents may have their own ids — list_ids while it is open.
+*/}
 <div class="shot small">Screenshot: the Align / Distribute dropdown in the toolbar with the relative-to options</div>
 
 **Align** — first choose what moves and what it aligns to, then the edge:

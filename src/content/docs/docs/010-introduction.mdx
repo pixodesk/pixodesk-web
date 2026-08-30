@@ -25,125 +25,13 @@ with the Lottie editor. Everything in these docs applies to both; where the Stud
 something, the page says so.
 
 {/* e2e-screenshot
-app: svga · viewport: 1440x900 · hideDevUi: true
-setup: setup(400, 400) — then open a finished sample animation (TODO: pick a demo file with keyframes)
-crop: viewport
-annotate: none
-notes: hero picture — the editor with a real animation open (canvas, timeline with keyframes, properties)
-*/}
-<div class="shot tall">Screenshot: the editor with a finished animation open — canvas, timeline with keyframes, properties panel</div>
-
-### The three parts
-
-Pixodesk is three things that work together. Knowing which one you are looking at makes the docs
-much easier to navigate.
-
-| Part | What it is | Where it is documented |
-| :-- | :-- | :-- |
-| **The editor** | This application: the workspace, tools, timeline and export dialogs | These pages |
-| **The player** | A small library that plays the saved JSON animation on a web page — plain HTML, React, Vue or React Native | [Player docs](/app/svga/docs) |
-| **The file format** | The JSON document the editor writes and the player reads, and the pre-rendered SVG files | [Format docs](/app/svga/docs/13-format--format-principles) |
-
-### What you can make
-
-- **Animated icons and illustrations** for websites and apps — a loader, a logo reveal, a
-  character that waves.
-- **Interactive graphics** that start on load, on hover, on click, or when they scroll into view.
-- **Scroll-driven animations** whose progress follows the page scroll.
-- **Static vector graphics** — the editor is a full SVG editor even if you never touch the
-  timeline.
-
-Everything is vector, so the result stays sharp at any size and the files stay small.
-
-### A typical workflow
-
-1. **Create a document** and choose the file type you will save to (you can change it later).
-2. **Draw** shapes, paths and text, or import an existing SVG.
-3. **Style** them — fills, strokes, gradients, filters, masks.
-4. **Animate** by moving the playhead and changing a property; the editor records a keyframe.
-5. **Preview** in the built-in preview panel.
-6. **Save** the file and put it on your page.
-
-If you are new, go to [Quick Start](/docs/quick-start) — create a document and build a bouncing
-ball in about ten minutes.
-
-### How these docs are organised
-
-- **Introduction** — this section: what the editor is, the workspace, which file to save, what
-  survives a Lottie export.
-- **Quick Start** — create a document, your first animation, import and export, document
-  properties.
-- **Canvas** — the tools and the toolbar, rulers and grid, canvas size, snapping, pan and zoom.
-- **Vector editing** — Draw on Canvas · Text · Object Creation Tools · Edit Paths · Color · Edit
-  Objects · Symbols · Markers · Patterns · Filters · Masks.
-- **Animation editing** — Animation Overview · Keyframes · Loop Animation · Easing Charts.
-- **Save · Export** — every file type and the export dialog.
-- **Add … to your project** — putting the result on a page (links into the player docs).
-- **Useful Info** — keyboard shortcuts, preferences, troubleshooting, glossary.
-
-Use the search box for anything specific; every topic is one heading on one page, so the left
-sidebar is also a complete index.
-
-{/* video: 60-second tour of the editor */}
-
-## Workspace Overview
-
-The Pixodesk SVG Animator workspace is a set of fixed panels arranged around a central canvas.
-Each panel has one job. This page names them all; every panel has its own detailed page in the
-section that owns the feature.
-
-{/* e2e-screenshot
 app: svga · viewport: 1440x900 · hideDevUi: true · date: 2026-08-30
-setup: setup(400, 400)
+setup: setup(400, 400); setAppMargin(140)
 crop: viewport
-annotate: annotate([{"kind":"number","theme":"red","halo":"chip","target":"menu","num":"1","text":"Menu","at":"inside","offset":{"x":440,"y":-4}},{"kind":"number","theme":"red","halo":"chip","target":"toolbar","num":"2","text":"Toolbar","at":"inside","offset":{"x":0,"y":-2}},{"kind":"number","theme":"red","halo":"chip","target":"toolsPicker","num":"3","text":"Tools","at":"inside","offset":{"x":4,"y":268}},{"kind":"number","theme":"red","halo":"chip","target":"canvas.bg","num":"4","text":"Canvas","at":"inside"},{"kind":"number","theme":"red","halo":"chip","target":"elementTree","num":"5","text":"Objects panel","at":"inside","offset":{"x":0,"y":64}},{"kind":"number","theme":"red","halo":"chip","target":"attrs","num":"6","text":"Properties panel","at":"inside","offset":{"x":0,"y":-4}},{"kind":"number","theme":"red","halo":"chip","target":"timeline","num":"7","text":"Timeline","at":"inside","offset":{"x":0,"y":44}}], {"scale": 2})
-notes: red theme; scale 2 because the 1440-px shot is shown in a ~710-px column (badge 48 px → 24 px on the page, title 28 px → 14 px); halo: chip — the chosen style (2026-08-30); base for further variants
+annotate: annotate([{"kind":"box","theme":"red","target":"menu","padding":-3,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","target":"toolbar","padding":-3,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","target":"toolsPicker","padding":-3,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","bounds":{"x":330,"y":264,"w":710,"h":403},"padding":-3,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","target":"elementTree","padding":-3,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","target":"attrs","padding":-3,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","target":"timeline","padding":-3,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","bounds":{"x":598,"y":150,"w":70,"h":26},"padding":6,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","bounds":{"x":894,"y":149,"w":348,"h":28},"padding":6,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"number","theme":"red","halo":"chip","target":"menu.*","num":"1","text":"Menu","at":"top","arrow":true,"width":2.5},{"kind":"number","theme":"red","halo":"chip","bounds":{"x":598,"y":150,"w":70,"h":26},"num":"2","text":"File name","at":"top","arrow":true,"width":2.5},{"kind":"number","theme":"red","halo":"chip","bounds":{"x":894,"y":149,"w":348,"h":28},"num":"3","text":"Actions","at":"top","arrow":true,"width":2.5},{"kind":"number","theme":"red","halo":"chip","target":"toolbar","num":"4","text":"Toolbar","at":"inside"},{"kind":"number","theme":"red","halo":"chip","target":"toolsPicker","num":"5","text":"Tools","at":"inside","offset":{"x":0,"y":268}},{"kind":"number","theme":"red","halo":"chip","target":"canvas.bg","num":"6","text":"Canvas","at":"inside"},{"kind":"number","theme":"red","halo":"chip","target":"elementTree","num":"7","text":"Objects panel","at":"inside","offset":{"x":0,"y":64}},{"kind":"number","theme":"red","halo":"chip","target":"attrs","num":"8","text":"Properties panel","at":"inside"},{"kind":"number","theme":"red","halo":"chip","target":"timeline","num":"9","text":"Timeline","at":"inside","offset":{"x":0,"y":44}}], {"scale": 2})
+notes: THE DEFAULT ANNOTATION STYLE (owner decision 2026-08-30) — other options stay available in the renderer (blue theme via color override, per-annotation colors); file-name and actions areas get their own outline+bg boxes (padding 6); blue #08f inset outlines (3 px) + 20 % fill; badges red; setAppMargin(140) = white strip above the app (140 not 100: the 34-px outside clearance needs the room); badges 1–3 sit in it with arrows down to their areas (arrow: true, width 2.5; the 34-px outside clearance gives the tail); file-name and actions bounds hand-measured at this margin (no test-ids, undo x894 … export x1242) — re-measure if the margin changes; canvas box uses hand bounds — the canvas element does not shrink under setAppMargin (sizes from the window, overlaps the timeline); panel badges renumbered 4–9; no arrows — the top badges sit directly above their targets; area boxes listed first so the badges draw on top
 */}
 ![The workspace: 1 menu bar, 2 toolbar, 3 tools panel, 4 canvas, 5 objects panel, 6 properties panel, 7 timeline](/images/docs/editor/workspace/interface-overview.png)
-
-**Variant F1 — area outlines, inset 3 px into the bounds** (E4 badges on top)
-
-{/* e2e-screenshot
-app: svga · viewport: 1440x900 · hideDevUi: true · date: 2026-08-30
-setup: setup(400, 400)
-crop: viewport
-annotate: annotate([{"kind":"box","theme":"red","target":"menu","padding":-3,"stroke":4},{"kind":"box","theme":"red","target":"toolbar","padding":-3,"stroke":4},{"kind":"box","theme":"red","target":"toolsPicker","padding":-3,"stroke":4},{"kind":"box","theme":"red","target":"canvas","padding":-3,"stroke":4},{"kind":"box","theme":"red","target":"elementTree","padding":-3,"stroke":4},{"kind":"box","theme":"red","target":"attrs","padding":-3,"stroke":4},{"kind":"box","theme":"red","target":"timeline","padding":-3,"stroke":4},{"kind":"number","theme":"red","halo":"chip","target":"menu","num":"1","text":"Menu","at":"inside","offset":{"x":440,"y":-4}},{"kind":"number","theme":"red","halo":"chip","target":"toolbar","num":"2","text":"Toolbar","at":"inside","offset":{"x":0,"y":-2}},{"kind":"number","theme":"red","halo":"chip","target":"toolsPicker","num":"3","text":"Tools","at":"inside","offset":{"x":4,"y":268}},{"kind":"number","theme":"red","halo":"chip","target":"canvas.bg","num":"4","text":"Canvas","at":"inside"},{"kind":"number","theme":"red","halo":"chip","target":"elementTree","num":"5","text":"Objects panel","at":"inside","offset":{"x":0,"y":64}},{"kind":"number","theme":"red","halo":"chip","target":"attrs","num":"6","text":"Properties panel","at":"inside","offset":{"x":0,"y":-4}},{"kind":"number","theme":"red","halo":"chip","target":"timeline","num":"7","text":"Timeline","at":"inside","offset":{"x":0,"y":44}}], {"scale": 2})
-notes: outline only; padding -3 insets the rectangle so neighbouring panels do not merge; area boxes listed first so the badges draw on top
-*/}
-![Workspace overview, variant F1: area outlines, inset 3 px into the bounds](/images/docs/editor/workspace/interface-overview-f1.png)
-
-**Variant F2 — translucent colour fill, no outline** (E4 badges on top)
-
-{/* e2e-screenshot
-app: svga · viewport: 1440x900 · hideDevUi: true · date: 2026-08-30
-setup: setup(400, 400)
-crop: viewport
-annotate: annotate([{"kind":"box","theme":"red","target":"menu","padding":-3,"stroke":0,"fill":"solid","fillAlpha":0.28},{"kind":"box","theme":"red","target":"toolbar","padding":-3,"stroke":0,"fill":"solid","fillAlpha":0.28},{"kind":"box","theme":"red","target":"toolsPicker","padding":-3,"stroke":0,"fill":"solid","fillAlpha":0.28},{"kind":"box","theme":"red","target":"canvas","padding":-3,"stroke":0,"fill":"solid","fillAlpha":0.28},{"kind":"box","theme":"red","target":"elementTree","padding":-3,"stroke":0,"fill":"solid","fillAlpha":0.28},{"kind":"box","theme":"red","target":"attrs","padding":-3,"stroke":0,"fill":"solid","fillAlpha":0.28},{"kind":"box","theme":"red","target":"timeline","padding":-3,"stroke":0,"fill":"solid","fillAlpha":0.28},{"kind":"number","theme":"red","halo":"chip","target":"menu","num":"1","text":"Menu","at":"inside","offset":{"x":440,"y":-4}},{"kind":"number","theme":"red","halo":"chip","target":"toolbar","num":"2","text":"Toolbar","at":"inside","offset":{"x":0,"y":-2}},{"kind":"number","theme":"red","halo":"chip","target":"toolsPicker","num":"3","text":"Tools","at":"inside","offset":{"x":4,"y":268}},{"kind":"number","theme":"red","halo":"chip","target":"canvas.bg","num":"4","text":"Canvas","at":"inside"},{"kind":"number","theme":"red","halo":"chip","target":"elementTree","num":"5","text":"Objects panel","at":"inside","offset":{"x":0,"y":64}},{"kind":"number","theme":"red","halo":"chip","target":"attrs","num":"6","text":"Properties panel","at":"inside","offset":{"x":0,"y":-4}},{"kind":"number","theme":"red","halo":"chip","target":"timeline","num":"7","text":"Timeline","at":"inside","offset":{"x":0,"y":44}}], {"scale": 2})
-notes: solid fill at 28 % — 14 % (the default) was invisible on the dark panels; area boxes listed first so the badges draw on top
-*/}
-![Workspace overview, variant F2: translucent colour fill, no outline](/images/docs/editor/workspace/interface-overview-f2.png)
-
-**Variant F3 — translucent hatched fill, no outline** (E4 badges on top)
-
-{/* e2e-screenshot
-app: svga · viewport: 1440x900 · hideDevUi: true · date: 2026-08-30
-setup: setup(400, 400)
-crop: viewport
-annotate: annotate([{"kind":"box","theme":"red","target":"menu","padding":-3,"stroke":0,"fill":"hatch","fillAlpha":0.16},{"kind":"box","theme":"red","target":"toolbar","padding":-3,"stroke":0,"fill":"hatch","fillAlpha":0.16},{"kind":"box","theme":"red","target":"toolsPicker","padding":-3,"stroke":0,"fill":"hatch","fillAlpha":0.16},{"kind":"box","theme":"red","target":"canvas","padding":-3,"stroke":0,"fill":"hatch","fillAlpha":0.16},{"kind":"box","theme":"red","target":"elementTree","padding":-3,"stroke":0,"fill":"hatch","fillAlpha":0.16},{"kind":"box","theme":"red","target":"attrs","padding":-3,"stroke":0,"fill":"hatch","fillAlpha":0.16},{"kind":"box","theme":"red","target":"timeline","padding":-3,"stroke":0,"fill":"hatch","fillAlpha":0.16},{"kind":"number","theme":"red","halo":"chip","target":"menu","num":"1","text":"Menu","at":"inside","offset":{"x":440,"y":-4}},{"kind":"number","theme":"red","halo":"chip","target":"toolbar","num":"2","text":"Toolbar","at":"inside","offset":{"x":0,"y":-2}},{"kind":"number","theme":"red","halo":"chip","target":"toolsPicker","num":"3","text":"Tools","at":"inside","offset":{"x":4,"y":268}},{"kind":"number","theme":"red","halo":"chip","target":"canvas.bg","num":"4","text":"Canvas","at":"inside"},{"kind":"number","theme":"red","halo":"chip","target":"elementTree","num":"5","text":"Objects panel","at":"inside","offset":{"x":0,"y":64}},{"kind":"number","theme":"red","halo":"chip","target":"attrs","num":"6","text":"Properties panel","at":"inside","offset":{"x":0,"y":-4}},{"kind":"number","theme":"red","halo":"chip","target":"timeline","num":"7","text":"Timeline","at":"inside","offset":{"x":0,"y":44}}], {"scale": 2})
-notes: 45° hatch pattern at 16 %; default 35 % was far too heavy; area boxes listed first so the badges draw on top
-*/}
-![Workspace overview, variant F3: translucent hatched fill, no outline](/images/docs/editor/workspace/interface-overview-f3.png)
-
-**Variant F4 — translucent fill + inset outline** (E4 badges on top)
-
-{/* e2e-screenshot
-app: svga · viewport: 1440x900 · hideDevUi: true · date: 2026-08-30
-setup: setup(400, 400)
-crop: viewport
-annotate: annotate([{"kind":"box","theme":"red","target":"menu","padding":-3,"stroke":4,"fill":"solid","fillAlpha":0.22},{"kind":"box","theme":"red","target":"toolbar","padding":-3,"stroke":4,"fill":"solid","fillAlpha":0.22},{"kind":"box","theme":"red","target":"toolsPicker","padding":-3,"stroke":4,"fill":"solid","fillAlpha":0.22},{"kind":"box","theme":"red","target":"canvas","padding":-3,"stroke":4,"fill":"solid","fillAlpha":0.22},{"kind":"box","theme":"red","target":"elementTree","padding":-3,"stroke":4,"fill":"solid","fillAlpha":0.22},{"kind":"box","theme":"red","target":"attrs","padding":-3,"stroke":4,"fill":"solid","fillAlpha":0.22},{"kind":"box","theme":"red","target":"timeline","padding":-3,"stroke":4,"fill":"solid","fillAlpha":0.22},{"kind":"number","theme":"red","halo":"chip","target":"menu","num":"1","text":"Menu","at":"inside","offset":{"x":440,"y":-4}},{"kind":"number","theme":"red","halo":"chip","target":"toolbar","num":"2","text":"Toolbar","at":"inside","offset":{"x":0,"y":-2}},{"kind":"number","theme":"red","halo":"chip","target":"toolsPicker","num":"3","text":"Tools","at":"inside","offset":{"x":4,"y":268}},{"kind":"number","theme":"red","halo":"chip","target":"canvas.bg","num":"4","text":"Canvas","at":"inside"},{"kind":"number","theme":"red","halo":"chip","target":"elementTree","num":"5","text":"Objects panel","at":"inside","offset":{"x":0,"y":64}},{"kind":"number","theme":"red","halo":"chip","target":"attrs","num":"6","text":"Properties panel","at":"inside","offset":{"x":0,"y":-4}},{"kind":"number","theme":"red","halo":"chip","target":"timeline","num":"7","text":"Timeline","at":"inside","offset":{"x":0,"y":44}}], {"scale": 2})
-notes: solid fill 22 % plus the 4-px inset outline; area boxes listed first so the badges draw on top
-*/}
-![Workspace overview, variant F4: translucent fill + inset outline](/images/docs/editor/workspace/interface-overview-f4.png)
 
 ```
 ┌─────────────────────────────────────────────────────────────┐

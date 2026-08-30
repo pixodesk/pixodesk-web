@@ -18,6 +18,14 @@ across the canvas. All three keep the result editable.
 Build complex shapes from simple overlapping ones — merge, subtract or extract the regions where
 they overlap, directly on the canvas, without drawing curves by hand.
 
+{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
+app: svga · viewport: 1440x900 · hideDevUi: true
+show: two overlapping circles with the Shape Builder mesh, one lens-shaped region highlighted
+setup: setup(400, 400); draw two overlapping ellipses; select both; click("toolsPicker.shapeBuilder"); hover the lens-shaped overlap so it highlights
+crop: clip around the two circles
+annotate: title chips: "Overlap regions" and "Click a region to keep or remove it"
+notes: the highlight needs a hover — use goTo() to park the pointer over the region before shooting.
+*/}
 <div class="shot">Screenshot: two overlapping circles with the Shape Builder mesh, one lens-shaped region highlighted</div>
 
 1. Select two or more shapes.
@@ -40,6 +48,14 @@ For the classic boolean operations on whole objects (Unite, Subtract, Intersect,
 Create many synchronised copies of an object with one click — rows, grids, radial arrays — that
 stay linked to the original: edit the original and every copy follows.
 
+{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
+app: svga · viewport: 1440x900 · hideDevUi: true
+show: a single leaf shape repeated eight times in a circle, the Repeater section in the Properties panel
+setup: setup(400, 400); draw one small shape; click("attrs.repeater.repeaterEnabled.setOn"); set copies to 8 and a rotation step so they form a ring
+crop: clip covering the canvas result plus the Repeater section
+annotate: title chips at "left" on the panel: "Copies", "Rotation step", "Offset per copy"
+notes: repeater row ids appear once enabled — list_ids "attrs.repeater.**" after switching it on.
+*/}
 <div class="shot">Screenshot: a single leaf shape repeated eight times in a circle, the Repeater section in the Properties panel</div>
 
 1. Select the object (several objects also work — they repeat as one unit).
@@ -66,6 +82,14 @@ you can restyle the original at any time.
 Scatter copies of an object with organic, randomised size, rotation and opacity — leaves, stars,
 dust, confetti.
 
+{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
+app: svga · viewport: 1440x900 · hideDevUi: true
+show: a cluster of sprayed stars of varying size and opacity, the Spray options in the toolbar
+setup: setup(400, 400); click("toolsPicker.sprayTool"); drag across the canvas to spray
+crop: clip covering the sprayed cluster plus the spray options in the toolbar
+annotate: title chips: "Spray options (size, scatter, opacity)" at "top" on the toolbar row
+notes: spray needs a source shape or preset — check what the tool sprays by default before writing setup.
+*/}
 <div class="shot">Screenshot: a cluster of sprayed stars of varying size and opacity, the Spray options in the toolbar</div>
 
 1. Select the object and group it (`⌘ / Ctrl + G`). A group can hold several shapes — the tool

@@ -144,6 +144,14 @@ Open **File › Preferences** (on macOS: the application menu › Preferences).
 | **Hotkeys** | the complete list of shortcuts, grouped by menu — the same as [Keyboard shortcuts](#keyboard-shortcuts) |
 | **Advanced** | **Reveal Logs in Finder / Explorer** — the log files to attach to a bug report (**Help › Report Issue**) |
 
+{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
+app: svga · viewport: 1440x900 · hideDevUi: true
+show: the Preferences dialog, General tab
+setup: setup(400, 400); open Preferences from the menu (Edit or the app menu — verify the path)
+crop: clip over the dialog
+annotate: title chips: "Tabs", "General settings" — keep it light, the page mostly lists settings
+notes: advanced actions are hidden from this dialog except Show Logs — do not annotate what is not there.
+*/}
 <div class="shot small">Screenshot: the Preferences dialog, General tab</div>
 
 ## Importing From Other Apps
@@ -161,6 +169,14 @@ After opening: check the **Object Tree** for groups you want to animate as one u
 to outlines or import its font ([Text](/docs/text#font)), and remove unused definitions flagged
 in the Objects panel. Raster images inside the SVG stay bitmaps.
 
+{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
+app: svga · viewport: 1440x900 · hideDevUi: true
+show: an SVG exported from Figma just opened — Object Tree with the original layer names
+setup: setup(400, 400); dropFile("<figma-export>.svg") — the file must exist in the e2e OPFS namespace
+crop: clip covering the Object Tree plus the canvas
+annotate: title chips: "Original layer names preserved" on the tree
+notes: needs a real Figma-exported SVG fixture; if none exists, ask the owner or reuse a test fixture.
+*/}
 <div class="shot small">Screenshot: an SVG exported from Figma just opened — Object Tree with the original layer names</div>
 
 ## Troubleshooting

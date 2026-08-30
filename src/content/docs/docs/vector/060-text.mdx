@@ -19,6 +19,14 @@ Press `Shift + T` (the **Text** tool), click on the canvas and type. The text is
 on the canvas; click elsewhere or press **Escape** to finish. Everything about its look lives in
 the **Text** sections of the Properties panel.
 
+{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
+app: svga · viewport: 1440x900 · hideDevUi: true
+show: a text object being typed on the canvas, with the Font / Text sections of the Properties panel
+setup: setup(400, 400); addText(60, 200, "Pixodesk") or click("toolsPicker.text") then click the canvas and type
+crop: clip covering the text on the canvas plus the Font / Text sections of the Properties panel
+annotate: title chips at "left" on the panel rows: "Font family & size", "Weight / style", "Alignment", "Letter & line spacing"
+notes: section ids are under attrs.* — list_ids "attrs.**" with a text object selected to get the real names.
+*/}
 <div class="shot">Screenshot: a text object being typed on the canvas, with the Font / Text sections of the Properties panel</div>
 
 ### Font
@@ -63,6 +71,14 @@ paths, one per character, keeping fill, stroke, opacity and animation — for lo
 node-level editing, or when a font cannot ship with the file. It needs an asset (.ttf) font; the
 text stops being editable as text.
 
+{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
+app: svga · viewport: 1440x900 · hideDevUi: true
+show: the same word as live text and as outlines, nodes visible on the outline version
+setup: setup(400, 400); addText for the same word twice, one above the other; convert the lower one to outlines (Path menu / Object menu — verify), then click("toolsPicker.editBezier") so nodes show
+crop: clip around the two words
+annotate: title chips: "Live text — still editable" (top word) and "Outlines — now a path with nodes" (bottom word)
+notes: find the convert-to-outlines command in the menus before writing setup.
+*/}
 <div class="shot small">Screenshot: the same word as live text and as outlines, nodes visible on the outline version</div>
 
 ## Text Along Path
@@ -70,6 +86,14 @@ text stops being editable as text.
 Text can follow a curve. There are three related commands; which one you see depends on the tool
 and the selection.
 
+{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
+app: svga · viewport: 1440x900 · hideDevUi: true
+show: text flowing along an open curved path, the path's nodes visible
+setup: setup(400, 400); draw a curved bezier path; add a text object; apply text-along-path (verify the command); click("toolsPicker.editBezier") to show the path nodes
+crop: clip around the path + text
+annotate: title chips: "The path" and "Text follows it" with arrows
+notes: note in the page whether the path stays visible/selectable after the text is attached.
+*/}
 <div class="shot">Screenshot: text flowing along an open curved path, the path's nodes visible</div>
 
 ### Put text on a path

@@ -13,6 +13,14 @@ A mask hides part of an object using the shape of another object — a photo ins
 line drawing revealed by a sweeping rectangle, text that shows a gradient through its letters.
 The editor offers three variants; all keep both objects editable and animatable.
 
+{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
+app: svga · viewport: 1440x900 · hideDevUi: true
+show: an image masked by a circle, the mask shape selected, the Object Tree showing the mask relationship
+setup: setup(400, 400); place an image (dropFile) or a coloured rectangle; draw a circle over it; select both; apply Mask (toolbar.actionsGroup-mask)
+crop: clip covering the canvas result plus the Object Tree
+annotate: title chips: "The mask shape", "What it reveals", "Mask relationship in the tree"
+notes: dropFile needs the file in the e2e OPFS namespace — a coloured rectangle is an acceptable stand-in.
+*/}
 <div class="shot">Screenshot: an image masked by a circle, the mask shape selected, the Object Tree showing the mask relationship</div>
 
 | Variant | Which object hides | Menu | Best for |
@@ -53,6 +61,14 @@ below is cut to it — hard-edged, no transparency. A clip made from a single an
 its shape animation; more complex animated clips are frozen at the current frame (a warning tells
 you).
 
+{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
+app: svga · viewport: 1440x900 · hideDevUi: true
+show: text clipped by a star shape, before and after Make Clip Path
+setup: setup(400, 400); addText a word; draw a star over it; select both; Make Clip Path (toolbar.actionsGroup-mask group)
+crop: two clips side by side, or one shot showing the result plus the tree
+annotate: title chips: "Before — text and clip shape" and "After — Make Clip Path"
+notes: if a before/after pair is clearer, produce TWO images and reference both from the page.
+*/}
 <div class="shot small">Screenshot: text clipped by a star shape, before and after Make Clip Path</div>
 
 ## Animating a Mask

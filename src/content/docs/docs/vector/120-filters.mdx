@@ -13,6 +13,14 @@ Filters add rendered effects to any object or group — drop shadows, blur, glow
 adjustments, distortion — without changing the object's geometry. They are SVG filters: a chain
 of **primitives** stored once and shared by every object that uses the same filter.
 
+{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
+app: svga · viewport: 1440x900 · hideDevUi: true
+show: a shape with a drop shadow and a blurred copy, the Filter section of the Properties panel with the two entries
+setup: setup(400, 400); draw two shapes; on each click("attrs.svgFilter.addFilter") and pick Drop Shadow / Blur
+crop: clip covering both shapes plus the Filter section of the selected one
+annotate: title chips: "Drop shadow", "Blur" on the canvas; "Filter list" on the panel at "left"
+notes: attrs.svgFilter.addFilter is confirmed; the picker contents need list_ids while open.
+*/}
 <div class="shot">Screenshot: a shape with a drop shadow and a blurred copy, the Filter section of the Properties panel with the two entries</div>
 
 ## Add a Filter
@@ -52,6 +60,14 @@ Select a primitive to change its parameters, drag to reorder, and click **+** to
 | **Combiners** | Blend, Composite, Merge, Displacement Map |
 | **Lighting** | Specular Lighting, Diffuse Lighting, Point Light, Spot Light, Distant Light |
 
+{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
+app: svga · viewport: 1440x900 · hideDevUi: true
+show: the filter editor — three primitives in a chain, one selected with its parameters
+setup: setup(400, 400); draw a shape; add a filter; open the filter editor and build a three-primitive chain; select the middle primitive
+crop: clip covering the editor
+annotate: title chips: "Primitive chain", "Selected primitive", "Its parameters"
+notes: the editor is probably a dialog — matte it or crop tightly; record its bounds if it has no test-id.
+*/}
 <div class="shot small">Screenshot: the filter editor — three primitives in a chain, one selected with its parameters</div>
 
 ## Shared Filters and the Filters Section

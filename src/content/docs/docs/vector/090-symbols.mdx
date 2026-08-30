@@ -14,6 +14,14 @@ A **symbol** is a piece of artwork defined once and placed many times. Every pla
 file stays small no matter how many you place. In SVG terms: a `<symbol>` in `<defs>` and `<use>`
 instances.
 
+{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
+app: svga · viewport: 1440x900 · hideDevUi: true
+show: three instances of a star symbol on the canvas, the Symbols section of the Objects panel with its thumbnail
+setup: setup(400, 400); draw a star; convert it to a symbol (toolbar.actionsGroup-addSymbol); paste two more instances
+crop: clip covering the three instances plus the Symbols section of the Objects panel
+annotate: title chips: "Instances on the canvas" and "Symbols section with the thumbnail" at "right"/"left"
+notes: the Symbols section sits in the Objects panel like Used Colors — expand it first.
+*/}
 <div class="shot">Screenshot: three instances of a star symbol on the canvas, the Symbols section of the Objects panel with its thumbnail</div>
 
 Use symbols for anything repeated — icons, bullets, characters, UI elements — and for animated
@@ -59,6 +67,14 @@ Changes to the definition apply to every instance at once.
    animation as usual.
 3. Click the **`…`** row at the top of the Object Tree to return to the document.
 
+{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
+app: svga · viewport: 1440x900 · hideDevUi: true
+show: Symbol View — the Object Tree with the "…" row at the top and the symbol's content on the canvas
+setup: setup(400, 400); create a symbol; enter Symbol View (double-click an instance, or the tree row — verify)
+crop: clip covering the Object Tree plus the canvas
+annotate: title chips: "The … row goes back up" (on the tree row) and "Editing the symbol content" (on the canvas)
+notes: confirm how Symbol View is entered and exited before writing setup.
+*/}
 <div class="shot small">Screenshot: Symbol View — the Object Tree with the "…" row at the top and the symbol's content on the canvas</div>
 
 ## Detach an Instance

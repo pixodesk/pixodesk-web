@@ -21,6 +21,14 @@ out of several.
 
 Press `N`, click a path, and its nodes and handles appear.
 
+{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
+app: svga · viewport: 1440x900 · hideDevUi: true
+show: a path in the Node tool — nodes, two selected, handles visible, the node commands in the toolbar
+setup: setup(400, 400); draw a shape; click("toolsPicker.editBezier"); click one node, shift-click a second so two are selected
+crop: clip covering the shape plus the node-command toolbar row
+annotate: title chips: "Nodes", "Selected node with handles", "Node commands" (on the toolbar, at "top")
+notes: node/handle ids appear under canvas.el(...).path(0).* — list_ids with the Node tool active.
+*/}
 <div class="shot">Screenshot: a path in the Node tool — nodes, two selected, handles visible, the node commands in the toolbar</div>
 
 - **Select** — click a node; **Shift + click** adds or removes nodes; **drag** on empty canvas
@@ -56,6 +64,14 @@ With nodes selected, these live in the **Path** menu and in the toolbar:
 Boolean operations combine whole objects into one. Select **two or more** objects and choose the
 command from the **Path** menu; the shapes are processed relative to the **backmost** object.
 
+{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
+app: svga · viewport: 1440x900 · hideDevUi: true
+show: two overlapping shapes and the four results — Unite, Subtract, Intersect, Exclude
+setup: setup(400, 400); build FOUR pairs of overlapping shapes side by side and apply Unite / Subtract / Intersect / Exclude to one pair each (toolbar.actionsGroup-shapePath)
+crop: clip covering all four results in a row
+annotate: title chips under each result: "Unite", "Subtract", "Intersect", "Exclude" at "bottom"
+notes: this is a composed illustration — build it deliberately; the four operations live in the shapePath actions group.
+*/}
 <div class="shot small">Screenshot: two overlapping shapes and the four results — Unite, Subtract, Intersect, Exclude</div>
 
 | Operation | Shortcut | Result |
@@ -90,6 +106,14 @@ Draw half a symmetrical shape and let the editor complete it:
 The path is mirrored across the line between the two nodes and closed — ideal for icons, logos
 and anything symmetrical.
 
+{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
+app: svga · viewport: 1440x900 · hideDevUi: true
+show: half a heart drawn as an open path, then the mirrored, closed heart
+setup: setup(400, 400); addBezier("exact", "<half-heart d>"); then mirror + close the path (verify the commands) and place the result beside the original
+crop: clip covering both halves
+annotate: title chips: "Open half" and "Mirrored and closed" at "bottom"
+notes: use addBezier("exact", …) to get a precise repeatable path instead of hand-drawing.
+*/}
 <div class="shot small">Screenshot: half a heart drawn as an open path, then the mirrored, closed heart</div>
 
 ## Align and Distribute Nodes

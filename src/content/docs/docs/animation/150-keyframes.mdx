@@ -13,6 +13,14 @@ A keyframe records the value of one property at one moment. Two keyframes with d
 make an animation: the editor fills in every frame in between. That is all there is to it — the
 rest is choosing *what* changes, *when*, and *how* it eases.
 
+{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
+app: svga · viewport: 1440x900 · hideDevUi: true
+show: the timeline with one layer, its Position row, two keyframe diamonds and the easing mini chart between them
+setup: setup(400, 400); draw a shape; addKeyframes(... "Position" with two times); select the segment between them
+crop: clip over the timeline rows (testId="timeline" is too wide — crop to the used rows)
+annotate: title chips: "Layer row", "Position row", "Keyframe", "Easing mini chart between keyframes"
+notes: zoomTimelineToRange() helps make the two keyframes fill the crop.
+*/}
 <div class="shot">Screenshot: the timeline with one layer, its Position row, two keyframe diamonds and the easing mini chart between them</div>
 
 ## How Keyframes Work

@@ -18,6 +18,14 @@ build on [Keyframes](/docs/keyframes) and [Easing](/docs/easing-charts).
 An object that follows a route — a car on a road, a plane on a dotted arc, a dot travelling along
 a chart line.
 
+{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
+app: svga · viewport: 1440x900 · hideDevUi: true
+show: a small plane on a curved dashed path, the Position keyframes in the timeline
+setup: setup(400, 400); addBezier("exact", "<curve>"); draw a small triangle/plane shape; apply Motion Path (toolbar.actionsGroup-motionPath)
+crop: clip covering the canvas plus the Position keyframes in the timeline
+annotate: title chips: "Motion path", "The object follows it", "Position keyframes"
+notes: the motionPath actions group exists on the selection toolbar — confirm the exact command.
+*/}
 <div class="shot">Screenshot: a small plane on a curved dashed path, the Position keyframes in the timeline</div>
 
 1. Draw the route with the Pen tool and put it **below** the moving object in the Object Tree.
@@ -34,6 +42,14 @@ Tips: hide the route by giving it no stroke (it still works as a guide); reshape
 Shapes can change shape over time: a logo that morphs into another, an icon that transitions
 between states, a blob that breathes. The path's nodes are animated individually.
 
+{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
+app: svga · viewport: 1440x900 · hideDevUi: true
+show: the same path at two keyframes — a circle-ish blob and a squarish one — with the Node tool active
+setup: setup(400, 400); draw a path; keyframe its shape, then at the second keyframe move nodes with the Node tool so the silhouette changes
+crop: two canvas crops side by side, or one crop at each keyframe
+annotate: title chips: "Keyframe 1", "Keyframe 2", "Same node count"
+notes: shape morphing requires equal node counts — say so in the prose; scrub with input("timeline.currentFrame…").
+*/}
 <div class="shot">Screenshot: the same path at two keyframes — a circle-ish blob and a squarish one — with the Node tool active</div>
 
 1. Select the path and press `N` (Node tool). Convert primitive shapes first
@@ -51,6 +67,14 @@ between states, a blob that breathes. The path's nodes are animated individually
 
 A line that draws itself — signatures, handwriting, diagrams, loaders.
 
+{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
+app: svga · viewport: 1440x900 · hideDevUi: true
+show: a signature path half drawn, the Trim Stroke Effect fields with End at 50 %
+setup: setup(400, 400, {"stroke": "#1b3a63"}); addBezier("exact", "<signature-ish path>"); set stroke width ~8; click("attrs.stroke.expand"); click("attrs.stroke.trimStroke.setOn"); set End to 50%
+crop: clip covering the canvas plus the trim fields
+annotate: title chips: "End = 50 % — half the line is drawn" and "Keyframe End 0 → 100 % to draw it on"
+notes: reuse the recipe from color/trim-stroke.png; the End field is attrs.stroke.start/End.y.input.
+*/}
 <div class="shot">Screenshot: a signature path half drawn, the Trim Stroke Effect fields with End at 50 %</div>
 
 1. Select the path; make sure it has a **stroke** and no fill (for handwriting, use round caps).

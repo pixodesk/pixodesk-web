@@ -15,6 +15,14 @@ while a trim stroke draws it on. Effects live in the Properties panel next to th
 properties, most of them animate, and they are what the Pixodesk player and the file format
 understand as effects. This page is the catalogue; each row links to the full how-to.
 
+{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
+app: svga · viewport: 1440x900 · hideDevUi: true
+show: one shape with several effects visible in its Properties panel — Repeater, Trim Stroke, a Filter
+setup: setup(400, 400); draw one shape with a stroke; enable the Repeater, tick Trim Stroke, add a filter
+crop: testId="attrs" padding=4 (the whole Properties panel) with the sections expanded
+annotate: title chips at "left" on each section: "Repeater", "Trim Stroke", "Filter"
+notes: NOTE: Trim Stroke and Dash Array are mutually exclusive (SvgStrokeAttrs.tsx) — do not try to show both.
+*/}
 <div class="shot">Screenshot: one shape with several effects visible in its Properties panel — Repeater, Trim Stroke, a Filter</div>
 
 | Effect | What it does | Where you set it | Animates | In Lottie |

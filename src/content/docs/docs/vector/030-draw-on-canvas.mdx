@@ -84,6 +84,14 @@ crop: testId="canvas" padding=0
 annotate: [{"kind":"label","target":"canvas.??.node(1)","text":"curved node with handles","at":"right"}]
 notes: planned — a path with two corner nodes and one curved node, handles visible
 */}
+{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
+app: svga · viewport: 1440x900 · hideDevUi: true
+show: the Pen tool mid-path — corner node, curved node with its two handles, the segment being drawn
+setup: setup(400, 400); click("toolsPicker.bezier"); click points on the canvas to place a corner node, then drag on the next click to pull out handles — leave the path unfinished
+crop: clip around the path being drawn
+annotate: title chips: "Corner node", "Curved node", "Direction handles", "Segment being drawn" — all at "top"/"right" with arrows
+notes: the pen tool is toolsPicker.bezier. Use mouse() down/move/up sequences for the handle drag; do not press Escape or the preview segment disappears.
+*/}
 <div class="shot">Screenshot: the Pen tool mid-path — corner node, curved node with its two handles, the segment being drawn</div>
 
 ### Drawing
@@ -136,6 +144,14 @@ crop: testId="canvas" padding=0
 annotate: [{"kind":"circle","target":"canvas.??.radiusControlPoint(0)","text":"drag","at":"right"}]
 notes: planned — a rectangle with one corner rounded, the corner handle circled
 */}
+{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
+app: svga · viewport: 1440x900 · hideDevUi: true
+show: the Round Corner tool — one corner rounded, its handle highlighted, the toolbar with radius and corner type
+setup: setup(400, 400); click("toolsPicker.rectangle"); draw a rectangle; click("toolsPicker.roundCorner"); click a radiusControlPoint then drag it inward
+crop: clip covering the shape plus the toolbar row above it
+annotate: title chips: "Drag to round the corner" (on the control point) and "Radius / corner type" (on the toolbar fields, at "top")
+notes: the rect converts ty:rect -> ty:path on first round — re-run list_ids after the first drag, the element id changes.
+*/}
 <div class="shot">Screenshot: the Round Corner tool — one corner rounded, its handle highlighted, the toolbar with radius and corner type</div>
 
 ## Shape Presets (Stars, Polygons, Spirals)
@@ -150,6 +166,14 @@ want. Each preset has one geometry setting, **Points Count**, in the Properties 
 | **Polygon** | number of sides | 3 = triangle, 6 = hexagon |
 | **Spiral** | number of turns | more turns = a longer, denser spiral |
 
+{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
+app: svga · viewport: 1440x900 · hideDevUi: true
+show: a star, a polygon and a spiral side by side, with the Points Count field
+setup: setup(400, 400); click("toolsPicker.star"); draw three shapes side by side, switching the preset (and Points Count) between them via the toolbar
+crop: clip around the three shapes plus the toolbar preset/points controls
+annotate: title chips: "Shape preset", "Points Count" at "top"; optionally a chip naming each of the three shapes
+notes: find the preset dropdown and points field with list_ids "toolbar.**" while the star tool is active — the tool is addSvgShapePresetTool.
+*/}
 <div class="shot small">Screenshot: a star, a polygon and a spiral side by side, with the Points Count field</div>
 
 ## Images

@@ -13,6 +13,14 @@ A **pattern** is a tile that repeats across the fill or stroke of a shape — st
 textures. Define it once, use it on any number of objects, and position, rotate or scale the tile
 separately on each of them.
 
+{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
+app: svga · viewport: 1440x900 · hideDevUi: true
+show: a rectangle filled with a dot pattern, the Pattern section with translation / rotation / scale, the Patterns section thumbnail
+setup: setup(400, 400); draw a rectangle; set fill type to pattern: click("attrs.color.fill.content.type.pattern"); pick a built-in pattern from the list
+crop: clip covering the filled rectangle plus the Pattern section
+annotate: title chips at "left": "Translation", "Rotation", "Scale", "Tile start / size", "Pattern fill colour"
+notes: the type icon id is confirmed: attrs.color.fill.content.type.pattern. The Pattern section appears below once a pattern is chosen.
+*/}
 <div class="shot">Screenshot: a rectangle filled with a dot pattern, the Pattern section with translation / rotation / scale, the Patterns section thumbnail</div>
 
 ## Create a Pattern

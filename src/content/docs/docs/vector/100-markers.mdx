@@ -13,6 +13,14 @@ A **marker** is a small graphic that a path draws at its nodes — an arrowhead 
 every node, a decoration at the start. Markers are defined once and referenced by any number of
 paths, so a diagram with fifty arrows stores one arrowhead.
 
+{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
+app: svga · viewport: 1440x900 · hideDevUi: true
+show: a curved path with an arrowhead end marker and dot mid markers, the Markers section showing both definitions
+setup: setup(400, 400, {"stroke": "#1b3a63"}); draw a curved open path with a visible stroke width; add an end marker and mid markers via the Markers section
+crop: clip covering the path plus the Markers section
+annotate: title chips: "End marker", "Mid markers" on the canvas; "Marker definitions" on the panel
+notes: find the Markers section ids with list_ids "attrs.**" for a path with a stroke.
+*/}
 <div class="shot">Screenshot: a curved path with an arrowhead end marker and dot mid markers, the Markers section showing both definitions</div>
 
 Three positions, each with its own marker (or the same one for all):

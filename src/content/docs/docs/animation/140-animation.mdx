@@ -84,6 +84,14 @@ The fastest way to animate: **pin** a state, move in time, change things. Pinnin
 keyframe for every animated property of the selected objects at the playhead, so you never
 touch individual values.
 
+{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
+app: svga · viewport: 1440x900 · hideDevUi: true
+show: a shape pinned at 0 ms and moved at 1000 ms — the timeline showing keyframes created automatically on Position and Rotation
+setup: setup(400, 400); draw a shape; get_document_state to check useTimeMsVsFrame; addKeyframes("Rectangle", "Position", {...}) then also Rotation
+crop: clip covering the canvas shape plus the timeline rows
+annotate: title chips: "Keyframes created automatically", "Position row", "Rotation row"
+notes: ALWAYS read current attribute values before writing keyframesMapping — a freshly drawn shape has a non-zero translation.
+*/}
 <div class="shot">Screenshot: a shape pinned at 0 ms and moved at 1000 ms — the timeline showing keyframes created automatically on Position and Rotation</div>
 
 1. Set the playhead where the current look should hold (usually `0 ms`).
@@ -102,6 +110,14 @@ lay out the key states first and refine timing and easing afterwards.
 How the saved animation plays on the page is set on the document (select nothing): the
 **Animation** section and the **Timeline & Trigger** section of the Properties panel.
 
+{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
+app: svga · viewport: 1440x900 · hideDevUi: true
+show: the Animation and Timeline & Trigger sections — Duration, Delay, Loop with Direction / Iterations, Start with On Click and its out-action
+setup: setup(400, 400); select nothing so the document Properties show; expand the Animation and Timeline & Trigger sections; set Loop on and Start = On Click
+crop: testId="attrs" padding=4 with a matte, or a clip over the two sections
+annotate: title chips at "left": "Duration", "Delay", "Loop — direction / iterations", "Start — On Click", "Out action"
+notes: these are document-level properties: click empty canvas first so nothing is selected.
+*/}
 <div class="shot small">Screenshot: the Animation and Timeline & Trigger sections — Duration, Delay, Loop with Direction / Iterations, Start with On Click and its out-action</div>
 
 ### Timing
@@ -146,6 +162,14 @@ advances — parallax, progress indicators, stories that unfold as you read. Set
 **Scroll** in the **Timeline & Trigger** section (the switch is available when the document is
 already scroll-driven or experimental features are enabled in the preferences).
 
+{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
+app: svga · viewport: 1440x900 · hideDevUi: true
+show: Timeline set to Scroll — the Preset dropdown and the start / end diagram
+setup: setup(400, 400); document properties; set the Timeline mode to Scroll
+crop: clip over the Timeline & Trigger section
+annotate: title chips: "Timeline: Scroll", "Preset", "Start / end diagram"
+notes: confirm the exact control name and the presets available before writing the prose.
+*/}
 <div class="shot">Screenshot: Timeline set to Scroll — the Preset dropdown and the start / end diagram</div>
 
 Start from a **Preset** — it fills in all the fields below:

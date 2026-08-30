@@ -16,6 +16,14 @@ motion feel natural instead of mechanical.
 In Pixodesk SVG Animator every segment between two keyframes has its own **cubic bezier** curve.
 You see it in the **Chart Panel** and shape it in the **Easing Function** panel.
 
+{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
+app: svga · viewport: 1440x900 · hideDevUi: true
+show: the timeline with a segment selected — the mini chart, the Chart Panel curve on the right and the floating Easing Function panel
+setup: setup(400, 400); shape + two Position keyframes; timelineClick("Rectangle.Position", "keyframeRange(0)") to open the easing editor
+crop: clip covering the timeline plus the chart panel on the right
+annotate: title chips: "Mini chart on the segment", "Chart panel", "Easing Function panel"
+notes: timelineClick with keyframeRange(N) is the documented way to open the editor.
+*/}
 <div class="shot">Screenshot: the timeline with a segment selected — the mini chart, the Chart Panel curve on the right and the floating Easing Function panel</div>
 
 ## How Easing Works
@@ -75,6 +83,14 @@ The left half of the Easing Function panel is the curve editor:
 You can also drag the handles directly in the Chart Panel, which is handy when comparing the
 segment with other properties' curves.
 
+{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
+app: svga · viewport: 1440x900 · hideDevUi: true
+show: the Easing Function panel — curve editor with handles on the left, preset grid on the right
+setup: same as above, then crop to the floating Easing Function panel alone
+crop: clip over the panel with a white matte around it
+annotate: title chips: "Curve editor with handles", "Preset grid"
+notes: preset button ids are timeline.easingEditor.<preset> — see get_dsl_docs timelineClick notes.
+*/}
 <div class="shot small">Screenshot: the Easing Function panel — curve editor with handles on the left, preset grid on the right</div>
 
 **Flip Selected Keyframes** (timeline **⋮** menu) reverses selected keyframes in time, so an

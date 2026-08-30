@@ -50,6 +50,14 @@ crop: testId="messageBox" padding=0
 annotate: [{"kind":"number","target":"messageBox.exportType","text":"1","at":"left"},{"kind":"number","target":"messageBox.animation","text":"2","at":"left"},{"kind":"number","target":"messageBox.preview-background","text":"3","at":"left"}]
 notes: planned — the export dialog on the Lottie tab: 1 target tabs, 2 options, 3 preview controls
 */}
+{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
+app: svga · viewport: 1440x900 · hideDevUi: true
+show: the Export dialog — preview on the left, target tabs (Lottie · Video · Gif · Static image) and options on the right
+setup: setup(400, 400); draw something so the preview is not empty; open the export dialog: click("export")
+crop: clip over the dialog (it is large — likely most of the viewport)
+annotate: title chips: "Preview", "Target tabs — Lottie · Video · Gif · Static image", "Options for the selected target"
+notes: the top-bar button id is confirmed: "export". Take the shot with the Lottie tab active to match the page order.
+*/}
 <div class="shot">Screenshot: the Export dialog — preview on the left, target tabs (Lottie · Video · Gif · Static image) and options on the right</div>
 
 

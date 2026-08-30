@@ -27,6 +27,14 @@ to the start and playback continues. Nothing is saved to the file — it is a vi
 An inner loop repeats a range of keyframes on one layer for as long as the animation lasts, while
 everything else plays normally — without copying keyframes by hand.
 
+{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
+app: svga · viewport: 1440x900 · hideDevUi: true
+show: a Rotation row with two keyframes and the inner-loop region extending after them, the Inner Loop panel open
+setup: setup(400, 400); shape + two Rotation keyframes; enable the inner loop for that row and extend the region
+crop: clip over the timeline row plus the Inner Loop panel
+annotate: title chips: "Keyframes", "Loop region", "Inner Loop settings"
+notes: find how the inner loop is enabled (row context menu or panel) before writing setup.
+*/}
 <div class="shot">Screenshot: a Rotation row with two keyframes and the inner-loop region extending after them, the Inner Loop panel open</div>
 
 ### Add one

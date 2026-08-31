@@ -14,15 +14,14 @@ A **symbol** is a piece of artwork defined once and placed many times. Every pla
 file stays small no matter how many you place. In SVG terms: a `<symbol>` in `<defs>` and `<use>`
 instances.
 
-{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
-app: svga · viewport: 1440x900 · hideDevUi: true
-show: three instances of a star symbol on the canvas, the Symbols section of the Objects panel with its thumbnail
-setup: setup(400, 400); draw a star; convert it to a symbol (toolbar.actionsGroup-addSymbol); paste two more instances
-crop: clip covering the three instances plus the Symbols section of the Objects panel
-annotate: title chips: "Instances on the canvas" and "Symbols section with the thumbnail" at "right"/"left"
-notes: the Symbols section sits in the Objects panel like Used Colors — expand it first.
+{/* e2e-screenshot
+app: svga · viewport: 1440x900 · hideDevUi: true · date: 2026-08-31
+setup: setup(400, 400, {"fill": "#f0be3c", "stroke": "#1b3a63"}); click("toolsPicker.star"); move("canvas.bg", "source:100", "source:150", "canvas.bg", "drop:100", "drop:105"); click("toolsPicker.select"); click("toolbar.actionsGroup-addSymbol.makePrecomp"); key("d", "meta"); move("canvas.el(nm:Clone_2,ty:use)", 120, 0); key("d", "meta"); move("canvas.el(nm:Clone_3,ty:use)", 170, 0); click("elementTree.blocks.header.title")
+crop: clip={"x":0,"y":40,"w":1000,"h":620}
+annotate: annotate([{"kind":"box","theme":"red","bounds":{"x":7,"y":113,"w":244,"h":96},"padding":2,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","target":"elementTree.blocks","padding":3,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"title","theme":"red","halo":"chip","bounds":{"x":7,"y":113,"w":244,"h":96},"text":"Three instances of one symbol","at":"right","offset":{"x":180,"y":-40},"arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","target":"elementTree.blocks","text":"Symbols section — the master copy","at":"right","offset":{"x":180,"y":0},"arrow":true,"width":2.5,"arrowFill":"accent"}])
+notes: scale 1.4 (1000-px crop). Make Symbol is toolbar.actionsGroup-addSymbol.makePrecomp (NOT in a menu with a "symbol" id — the group also holds svgClone, svgMakeMarker, svgMakePattern). Instances are ty:use and are named Clone / Clone_2 / …; the Symbols section of the Objects panel is elementTree.blocks and starts collapsed.
 */}
-<div class="shot">Screenshot: three instances of a star symbol on the canvas, the Symbols section of the Objects panel with its thumbnail</div>
+![Three instances of one star symbol on the canvas, with the Symbols section of the Objects panel showing the master copy](/images/docs/editor/symbols/symbol-instances.png)
 
 Use symbols for anything repeated — icons, bullets, characters, UI elements — and for animated
 building blocks: an instance can start its symbol's animation later, play it faster, or crop it.

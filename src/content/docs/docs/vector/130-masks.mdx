@@ -13,15 +13,14 @@ A mask hides part of an object using the shape of another object — a photo ins
 line drawing revealed by a sweeping rectangle, text that shows a gradient through its letters.
 The editor offers three variants; all keep both objects editable and animatable.
 
-{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
-app: svga · viewport: 1440x900 · hideDevUi: true
-show: an image masked by a circle, the mask shape selected, the Object Tree showing the mask relationship
-setup: setup(400, 400); place an image (dropFile) or a coloured rectangle; draw a circle over it; select both; apply Mask (toolbar.actionsGroup-mask)
-crop: clip covering the canvas result plus the Object Tree
-annotate: title chips: "The mask shape", "What it reveals", "Mask relationship in the tree"
-notes: dropFile needs the file in the e2e OPFS namespace — a coloured rectangle is an acceptable stand-in.
+{/* e2e-screenshot
+app: svga · viewport: 1440x900 · hideDevUi: true · date: 2026-08-31
+setup: setup(400, 400, {"fill": "#e0533d", "stroke": "#1b3a63"}); click("toolsPicker.rectangle"); move("canvas.bg", "source:60", "source:100", "canvas.bg", "drop:340", "drop:300"); click("toolsPicker.ellipse"); move("canvas.bg", "source:110", "source:120", "canvas.bg", "drop:290", "drop:280"); click("toolsPicker.select"); key("a", "meta"); click("toolbar.actionsGroup-mask")
+crop: clip={"x":380,"y":40,"w":800,"h":520}
+annotate: annotate([{"kind":"dim","bounds":{"x":775,"y":105,"w":220,"h":195},"padding":8,"color":"#fff","fillAlpha":0.78},{"kind":"box","theme":"red","target":"toolbar.actionsGroup-mask","padding":2,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","bounds":{"x":785,"y":120,"w":200,"h":92},"padding":2,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","bounds":{"x":785,"y":224,"w":200,"h":61},"padding":2,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"title","theme":"red","halo":"chip","target":"toolbar.actionsGroup-mask","text":"Mask & clip","at":"right","offset":{"x":30,"y":0},"arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","bounds":{"x":785,"y":120,"w":200,"h":92},"text":"Mask — luminance or alpha","at":"left","arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","bounds":{"x":785,"y":224,"w":200,"h":61},"text":"Clip path — hard-edged","at":"left","arrow":true,"width":2.5,"arrowFill":"accent"}])
+notes: scale 1. CHANGED FROM THE PLAN: dropping a real image needs a fixture in the e2e OPFS namespace, so a filled rectangle stands in for the masked content. Shows the Mask & Clip menu, which is what the reader has to find. Ids: toolbar.actionsGroup-mask.addMaskEffect / .alphaMask / .removeMask / .addClip / .removeClip. Select the content AND the mask shape first (Cmd+A here) or the menu is disabled.
 */}
-<div class="shot">Screenshot: an image masked by a circle, the mask shape selected, the Object Tree showing the mask relationship</div>
+![The Mask and Clip menu open over two stacked shapes, showing Add Mask Effect, Make Mask, Remove Mask and the clip-path commands](/images/docs/editor/masks/mask-menu.png)
 
 | Variant | Which object hides | Menu | Best for |
 | :-- | :-- | :-- | :-- |
@@ -61,15 +60,14 @@ below is cut to it — hard-edged, no transparency. A clip made from a single an
 its shape animation; more complex animated clips are frozen at the current frame (a warning tells
 you).
 
-{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
-app: svga · viewport: 1440x900 · hideDevUi: true
-show: text clipped by a star shape, before and after Make Clip Path
-setup: setup(400, 400); addText a word; draw a star over it; select both; Make Clip Path (toolbar.actionsGroup-mask group)
-crop: two clips side by side, or one shot showing the result plus the tree
-annotate: title chips: "Before — text and clip shape" and "After — Make Clip Path"
-notes: if a before/after pair is clearer, produce TWO images and reference both from the page.
+{/* e2e-screenshot
+app: svga · viewport: 1440x900 · hideDevUi: true · date: 2026-08-31
+setup: setup(400, 400, {"fill": "#e0533d", "stroke": "#1b3a63"}); click("toolsPicker.rectangle"); move("canvas.bg", "source:60", "source:100", "canvas.bg", "drop:340", "drop:300"); click("toolsPicker.ellipse"); move("canvas.bg", "source:110", "source:120", "canvas.bg", "drop:290", "drop:280"); click("toolsPicker.select"); key("a", "meta"); click("toolbar.actionsGroup-mask"); click("toolbar.actionsGroup-mask.addClip"); click("elementTree.root.el(nm:Rectangle,ty:rect).expand")
+crop: clip={"x":0,"y":40,"w":1000,"h":580}
+annotate: annotate([{"kind":"box","theme":"red","bounds":{"x":565,"y":255,"w":240,"h":210},"padding":6,"color":"#08f","stroke":1.5,"fill":"none"},{"kind":"box","theme":"red","bounds":{"x":7,"y":113,"w":244,"h":64},"padding":2,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"title","theme":"red","halo":"chip","bounds":{"x":565,"y":255,"w":240,"h":210},"text":"The rectangle, clipped to the ellipse","at":"bottom","offset":{"x":0,"y":10},"arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","bounds":{"x":7,"y":113,"w":244,"h":64},"text":"The clip shape becomes a child","at":"right","offset":{"x":120,"y":-40},"arrow":true,"width":2.5,"arrowFill":"accent"}])
+notes: scale 1.4 (1000-px crop). CHANGED FROM THE PLAN: a rectangle clipped by an ellipse instead of text clipped by a star — same idea, far less setup. Make Clip Path uses the TOP shape as the clipper; afterwards it disappears from the canvas and becomes a child of the clipped object in the tree.
 */}
-<div class="shot small">Screenshot: text clipped by a star shape, before and after Make Clip Path</div>
+![A rectangle clipped to an ellipse, with the clip shape shown nested under it in the Objects panel](/images/docs/editor/masks/clip-path.png)
 
 ## Animating a Mask
 

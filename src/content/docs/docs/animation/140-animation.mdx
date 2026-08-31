@@ -84,15 +84,14 @@ The fastest way to animate: **pin** a state, move in time, change things. Pinnin
 keyframe for every animated property of the selected objects at the playhead, so you never
 touch individual values.
 
-{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
-app: svga · viewport: 1440x900 · hideDevUi: true
-show: a shape pinned at 0 ms and moved at 1000 ms — the timeline showing keyframes created automatically on Position and Rotation
-setup: setup(400, 400); draw a shape; get_document_state to check useTimeMsVsFrame; addKeyframes("Rectangle", "Position", {...}) then also Rotation
-crop: clip covering the canvas shape plus the timeline rows
-annotate: title chips: "Keyframes created automatically", "Position row", "Rotation row"
-notes: ALWAYS read current attribute values before writing keyframesMapping — a freshly drawn shape has a non-zero translation.
+{/* e2e-screenshot
+app: svga · viewport: 1440x900 · hideDevUi: true · date: 2026-08-31
+setup: setup(400, 400, {"fill": "#e0533d", "stroke": "#1b3a63"}); click("toolsPicker.ellipse"); move("canvas.bg", "source:60", "source:60", "canvas.bg", "drop:150", "drop:150"); addKeyframes("Ellipse", "Position", {"0":{"x":105,"y":105},"500":{"x":105,"y":300},"1000":{"x":105,"y":105}}); addKeyframes("Ellipse", "Rotation", {"0":0,"1000":180}); input("timeline.currentFrame(unit:milliseconds).input", "500")
+crop: clip={"x":0,"y":380,"w":1040,"h":460}
+annotate: annotate([{"kind":"box","theme":"red","bounds":{"x":500,"y":716,"w":420,"h":58},"padding":3,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","bounds":{"x":20,"y":716,"w":470,"h":58},"padding":3,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","target":"canvas.el(nm:Ellipse,ty:ellipse)","padding":10,"color":"#08f","stroke":1.5,"fill":"none"},{"kind":"title","theme":"red","halo":"chip","bounds":{"x":500,"y":716,"w":420,"h":58},"text":"Keyframes appear as you move the shape","at":"bottom","offset":{"x":90,"y":0},"arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","bounds":{"x":20,"y":716,"w":470,"h":58},"text":"One row per animated property","at":"bottom","offset":{"x":-40,"y":0},"arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","target":"canvas.el(nm:Ellipse,ty:ellipse)","text":"The shape at 500 ms","at":"right","arrow":true,"width":2.5,"arrowFill":"accent"}])
+notes: scale 1.45 (1040-px crop). Playhead scrubbed with input("timeline.currentFrame(unit:milliseconds).input", "500") so the canvas shows the mid-animation state and the panel fields show the interpolated values.
 */}
-<div class="shot">Screenshot: a shape pinned at 0 ms and moved at 1000 ms — the timeline showing keyframes created automatically on Position and Rotation</div>
+![A shape animated on Position and Rotation: the two keyframe rows in the timeline and the shape at the 500 ms playhead](/images/docs/editor/animation/auto-keyframes.png)
 
 1. Set the playhead where the current look should hold (usually `0 ms`).
 2. Click **Pin Animation State at Frame** (`Alt + A`).
@@ -110,15 +109,14 @@ lay out the key states first and refine timing and easing afterwards.
 How the saved animation plays on the page is set on the document (select nothing): the
 **Animation** section and the **Timeline & Trigger** section of the Properties panel.
 
-{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
-app: svga · viewport: 1440x900 · hideDevUi: true
-show: the Animation and Timeline & Trigger sections — Duration, Delay, Loop with Direction / Iterations, Start with On Click and its out-action
-setup: setup(400, 400); select nothing so the document Properties show; expand the Animation and Timeline & Trigger sections; set Loop on and Start = On Click
-crop: testId="attrs" padding=4 with a matte, or a clip over the two sections
-annotate: title chips at "left": "Duration", "Delay", "Loop — direction / iterations", "Start — On Click", "Out action"
-notes: these are document-level properties: click empty canvas first so nothing is selected.
+{/* e2e-screenshot
+app: svga · viewport: 1440x900 · hideDevUi: true · date: 2026-08-31
+setup: setup(400, 400, {"fill": "#e0533d", "stroke": "#1b3a63"}); click("toolsPicker.ellipse"); move("canvas.bg", "source:60", "source:60", "canvas.bg", "drop:150", "drop:150"); addKeyframes("Ellipse", "Position", {"0":{"x":105,"y":105},"500":{"x":105,"y":300},"1000":{"x":105,"y":105}}); click("elementTree.root.title"); click("attrs.animation.loop.setOn"); click("attrs.animation.start.start.click"); click("attrs.color.collapse")
+crop: clip={"x":640,"y":52,"w":800,"h":660}
+annotate: annotate([{"kind":"dim","bounds":{"x":1041,"y":203,"w":383,"h":462},"padding":8,"color":"#fff","fillAlpha":0.8},{"kind":"box","theme":"red","target":"attrs.animation.duration","padding":2,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","target":"attrs.animation.loop","padding":2,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","target":"attrs.animation.start","padding":2,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"title","theme":"red","halo":"chip","target":"attrs.animation.duration","text":"Duration, delay, frame rate","at":"left","arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","target":"attrs.animation.loop","text":"Loop","at":"left","arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","target":"attrs.animation.start","text":"What starts the animation","at":"left","arrow":true,"width":2.5,"arrowFill":"accent"}])
+notes: scale 1.1 (800-px crop). These are DOCUMENT properties — click the tree root (elementTree.root.title) so nothing else is selected. Ticking Loop reveals Iterations and Direction; choosing a Start other than On Load reveals its own extra rows (On Scroll into View adds Threshold and On Scroll Out).
 */}
-<div class="shot small">Screenshot: the Animation and Timeline & Trigger sections — Duration, Delay, Loop with Direction / Iterations, Start with On Click and its out-action</div>
+![The Animation and Timeline & Trigger sections of the document properties: duration, delay, frame rate, loop and the start trigger](/images/docs/editor/animation/animation-settings.png)
 
 ### Timing
 

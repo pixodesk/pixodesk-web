@@ -141,15 +141,14 @@ crop: testId="attrs(nm:root,ty:root).file" padding=8
 annotate: none
 notes: planned — the File section of the document properties: File Type, Embed JS Player, Unoptimised JS, JS-Animation mode
 */}
-{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
-app: svga · viewport: 1440x900 · hideDevUi: true
-show: the File section of the document properties — File Type, Embed JS Player, Unoptimised JS, JS-Animation mode
-setup: setup(400, 400); nothing selected; expand the File section of the document Properties
-crop: testId of the File section + padding, with a white matte
-annotate: title chips at "left": "File Type", "Embed JS Player", "Unoptimised JS", "JS-Animation mode"
-notes: rows may be conditional on the chosen file type — pick the type that shows them all.
+{/* e2e-screenshot
+app: svga · viewport: 1440x900 · hideDevUi: true · date: 2026-08-31
+setup: setup(400, 400); click("elementTree.root.title"); click("attrs.color.collapse"); click("attrs.animation.collapse")
+crop: clip={"x":640,"y":360,"w":800,"h":380}
+annotate: annotate([{"kind":"dim","target":"attrs.file","padding":8,"color":"#fff","fillAlpha":0.8},{"kind":"box","theme":"red","target":"attrs.file.fileType","padding":2,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","target":"attrs.file.externalJs","padding":2,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","target":"attrs.file.unoptimisedJs","padding":2,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","target":"attrs.file.mode","padding":2,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"title","theme":"red","halo":"chip","target":"attrs.file.fileType","text":"File Type","at":"left","arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","target":"attrs.file.externalJs","text":"Embed the JS player","at":"left","arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","target":"attrs.file.unoptimisedJs","text":"Unoptimised JS","at":"left","arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","target":"attrs.file.mode","text":"JS animation mode","at":"left","arrow":true,"width":2.5,"arrowFill":"accent"}])
+notes: scale 1.1 (800-px crop). The section is labelled RUNTIME in the UI (its test-id is attrs.file) — the page text was corrected to match. Collapse Colors and Animation first or it sits below the fold.
 */}
-<div class="shot small">Screenshot: the File section of the document properties — File Type, Embed JS Player, Unoptimised JS, JS-Animation mode</div>
+![The Runtime section of the document properties: File Type, Embed JS Player, Unoptimised JS and the JS-Animation mode](/images/docs/editor/save/file-section.png)
 
 **File › Save** (`⌘ / Ctrl + S`) writes the document in its current **file type**; **File › Save As…**
 (`⇧ ⌘ / Ctrl + Shift + S`) asks for a new name and location. The file type is a document property —

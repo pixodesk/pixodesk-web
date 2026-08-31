@@ -311,18 +311,17 @@ them together. See [Groups](/docs/draw-on-canvas#groups).
 
 The canvas is the white page in the middle of the workspace: your document, at the current zoom.
 Objects can sit outside its edge — they stay in the document but are cut off in the output. What
-is drawn *around* the page is up to you; the **Canvas** dropdown on the toolbar (and the **View**
-menu) holds the switches:
+is drawn *around* the page is up to you; the **Canvas** dropdown on the canvas toolbar (the icon
+strip down the right-hand edge of the canvas) and the **View** menu hold the switches:
 
-{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
-app: svga · viewport: 1440x900 · hideDevUi: true
-show: the Canvas dropdown open — Show Ruler, Show Grid (dot / line), Canvas Outline, Clip Canvas Content, Background colour
-setup: setup(400, 400); then open the Canvas display dropdown in the toolbar (find it with list_ids "toolbar.**" — it is a dropdown button, not a panel section)
-crop: testId of the open dropdown + padding 8; matte over it if the labels need room
-annotate: title chips: "Show Ruler", "Grid: dot / line", "Canvas Outline", "Clip Canvas Content", "Background colour" — one per row of the menu, at "right" with arrows
-notes: the dropdown is a popup: it may have no test-id — if so, measure its bounds from a clean crop and record them here. Keep the menu open while shooting (the screenshot tool does not click).
+{/* e2e-screenshot
+app: svga · viewport: 1440x900 · hideDevUi: true · date: 2026-08-31
+setup: setup(400, 400); click("grid")
+crop: clip={"x":500,"y":100,"w":600,"h":560}
+annotate: annotate([{"kind":"dim","bounds":{"x":806,"y":266,"w":240,"h":366},"padding":3,"color":"#fff","fillAlpha":0.78},{"kind":"box","theme":"red","target":"grid","padding":2,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","target":"grid.showRuler","padding":1,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","bounds":{"x":808,"y":372,"w":220,"h":96},"padding":1,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","target":"grid.showPageOutline","padding":1,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","target":"grid.clipPageContent","padding":1,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","bounds":{"x":808,"y":532,"w":220,"h":92},"padding":1,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"title","theme":"red","halo":"chip","target":"grid","text":"Canvas dropdown","at":"left","arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","target":"grid.showRuler","text":"Rulers","at":"left","arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","bounds":{"x":808,"y":372,"w":220,"h":96},"text":"Grid — dot or line","at":"left","arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","target":"grid.showPageOutline","text":"Page outline","at":"left","arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","target":"grid.clipPageContent","text":"Clip to the page","at":"left","arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","bounds":{"x":808,"y":532,"w":220,"h":92},"text":"Background colour","at":"left","arrow":true,"width":2.5,"arrowFill":"accent"}])
+notes: scale 1 (600-px crop). The Canvas dropdown hangs off the vertical toolbar on the right edge of the canvas — test-id "grid" (the button) and "grid.*" (the rows). Translucent matte (fillAlpha 0.78) instead of an opaque one so the ruler, canvas and Properties-panel edge stay visible for context. The hole covers button + popup; the popup itself has no test-id, bounds measured by pixel analysis (panel background differs from the workspace background).
 */}
-<div class="shot small">Screenshot: the Canvas dropdown open — Show Ruler, Show Grid (dot / line), Canvas Outline, Clip Canvas Content, Background colour</div>
+![The Canvas dropdown open on the canvas toolbar, with rulers, grid, page outline, clipping and background rows annotated](/images/docs/editor/canvas/canvas-dropdown.png)
 
 | Option | What it does | Shortcut |
 | :-- | :-- | :-- |
@@ -338,8 +337,9 @@ notes: the dropdown is a popup: it may have no test-id — if so, measure its bo
 
 The canvas size is the document's **view box**. Two ways to change it:
 
-- **Numbers** — select nothing (or the `<svg/>` root) and, in the **View Box** section of the
-  Properties panel, set **Content Size**. The **lock** keeps width and height proportional.
+- **Numbers** — select nothing (or the `<svg/>` root) and set **W** and **H** on the **Content**
+  row of the Properties panel. The **lock** beside them keeps width and height proportional;
+  the **Display** row below shows the size the animation is placed at.
 - **On the canvas** — pick the **Page** tool (bottom of the Tools panel) and drag a corner of the
   page.
 
@@ -347,32 +347,30 @@ Resizing the page does not scale the artwork; move or scale the objects afterwar
 the page scales when it is placed on a web page — **Aspect Ratio** (meet / slice, alignment) and
 **Display** size — is set in the same place: [Document properties](/docs/quick-start#document-properties).
 
-{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
-app: svga · viewport: 1440x900 · hideDevUi: true
-show: the Page tool dragging the canvas corner, the View Box fields updating
-setup: setup(400, 400); click("toolsPicker.pageTool"); move a canvas corner handle inward, e.g. move("canvas.cpSE", -60, -60)
-crop: clip covering the canvas plus the Properties panel View Box fields (~x330..1440)
-annotate: title chips: "Drag a corner to resize the canvas" (on the handle, at "top") and "View Box updates" (on the View Box row in the panel, at "left")
-notes: verify the corner-handle test-id with list_ids "canvas.**" while the Page tool is active; the View Box row lives in the document Properties panel (no element selected).
+{/* e2e-screenshot
+app: svga · viewport: 1440x900 · hideDevUi: true · date: 2026-08-31
+setup: setup(400, 400); click("toolsPicker.pageTool"); move("canvas.se", "source:50%", "source:50%", "canvas.bg", "drop:80%", "drop:78%"); click("attrs.color.collapse")
+crop: clip={"x":400,"y":52,"w":1040,"h":600}
+annotate: annotate([{"kind":"box","theme":"red","target":"canvas.se","padding":8,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","target":"attrs.svg","padding":2,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"title","theme":"red","halo":"chip","target":"canvas.se","text":"Drag a corner with the Page tool","at":"left","arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","target":"attrs.svg","text":"Content size updates","at":"bottom","offset":{"x":-90,"y":0},"arrow":true,"width":2.5,"arrowFill":"accent"}], {"scale": 1.45})
+notes: scale 1.45 (1040-px crop). Page tool handles are canvas.nw/ne/sw/se. Colors collapsed so the CONTENT row sits high; the crop keeps the top toolbar, ruler and panel header for context. The canvas ends up 320x312 — the numbers in the picture are the resized values.
 */}
-<div class="shot small">Screenshot: the Page tool dragging the canvas corner, the View Box fields updating</div>
+![The Page tool: dragging the canvas corner handle while the Content size fields in the Properties panel update](/images/docs/editor/canvas/canvas-resize.png)
 
 ## Snapping to Objects and Grid
 
 Snapping pulls what you drag — objects, nodes, control points — onto nearby geometry so things
-line up without zooming in. Two toggles on the toolbar switch it on and off (**Snap to Other**,
-**Snap to Step**); the **Snap settings** dropdown next to them, and the **View** menu, hold the
-details.
+line up without zooming in. Everything lives in the **Snap** dropdown on the canvas toolbar (the
+icon strip down the right-hand edge of the canvas): two master switches — **Snap/Align to Other**
+and **Snap to Step** — each with its own group of options underneath.
 
-{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
-app: svga · viewport: 1440x900 · hideDevUi: true
-show: dragging a rectangle — a snap guide line appearing at another shape's edge
-setup: setup(400, 400); draw two rectangles; then drag the second one until its edge aligns with the first (move("canvas.el(...)", dx, dy) with a value that lands on the alignment)
-crop: clip around the two shapes on the canvas
-annotate: title chip "Snap guide" pointing at the guide line, at "right"
-notes: the guide only exists mid-drag — it will NOT survive a normal move() which ends with pointerup. Use mouse("down") + mouse("move") and shoot BEFORE mouse("up").
+{/* e2e-screenshot
+app: svga · viewport: 1440x1100 · hideDevUi: true · date: 2026-08-31
+setup: setup(400, 400, {"fill": "#3d7fd6"}); click("toolsPicker.rectangle"); move("canvas.bg", "source:100", "source:60", "canvas.bg", "drop:190", "drop:150"); move("canvas.bg", "source:100", "source:230", "canvas.bg", "drop:180", "drop:320"); click("toolsPicker.select"); click("Snap"); click("Snap.SnapToOther")
+crop: clip={"x":480,"y":150,"w":620,"h":890}
+annotate: annotate([{"kind":"dim","bounds":{"x":728,"y":210,"w":302,"h":812},"padding":4,"color":"#fff","fillAlpha":0.78},{"kind":"box","theme":"red","target":"Snap","padding":2,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","target":"Snap.SnapToOther","padding":1,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","bounds":{"x":746,"y":349,"w":282,"h":96},"padding":1,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","bounds":{"x":746,"y":488,"w":282,"h":96},"padding":1,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","bounds":{"x":746,"y":626,"w":282,"h":96},"padding":1,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","target":"Snap.SnapToStep","padding":1,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"title","theme":"red","halo":"chip","target":"Snap","text":"Snap settings","at":"left","arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","target":"Snap.SnapToOther","text":"Snap to Other","at":"left","arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","bounds":{"x":746,"y":349,"w":282,"h":96},"text":"What is snapped","at":"left","arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","bounds":{"x":746,"y":488,"w":282,"h":96},"text":"Snap to","at":"left","arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","bounds":{"x":746,"y":626,"w":282,"h":96},"text":"Align with","at":"left","arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","target":"Snap.SnapToStep","text":"Snap to Step","at":"left","arrow":true,"width":2.5,"arrowFill":"accent"}])
+notes: scale 1 (620-px crop). VIEWPORT 1440x1100 for this one — the dropdown is ~760 px tall and does not fit in 900; reset to 1440x900 afterwards. Snap/Align to Other is clicked ON so the sub-options are not greyed out. Translucent matte keeps the canvas and panel visible for context. A live snap GUIDE was tried first and abandoned: it only exists between pointerdown and pointerup, and a scripted mouse() drag did not move the shape — the settings dropdown documents the section better anyway.
 */}
-<div class="shot small">Screenshot: dragging a rectangle — a snap guide line appearing at another shape's edge</div>
+![The Snap settings dropdown: Snap to Other with its What is snapped / Snap to / Align with groups, and Snap to Step below](/images/docs/editor/canvas/snap-settings.png)
 
 ### Snap / Align to Other
 

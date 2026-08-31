@@ -20,11 +20,12 @@ Tree**, is the element hierarchy: every shape, path, text, group, image and inst
 row, nested as on the canvas.
 
 {/* e2e-screenshot
-app: svga · viewport: 1440x900 · hideDevUi: true · date: 2026-08-30
-setup: setup(400, 400); click("toolsPicker.rectangle"); move("canvas.bg", "source:22%", "source:28%", "canvas.bg", "drop:72%", "drop:66%")
-crop: testId="elementTree" padding=0
-annotate: none
-notes: rectangle drawn and selected
+app: svga · viewport: 1440x900 · hideDevUi: true · date: 2026-08-31
+setup: setup(400, 400, {"fill": "#e0533d", "stroke": "#1b3a63"}); click("toolsPicker.rectangle"); move("canvas.bg", "source:40", "source:60", "canvas.bg", "drop:170", "drop:170"); click("toolsPicker.ellipse"); move("canvas.bg", "source:215", "source:60", "canvas.bg", "drop:350", "drop:170"); color("attrs.color.fill.content.value", "rgba(61,127,214,1)"); click("toolsPicker.star"); move("canvas.bg", "source:105", "source:280", "canvas.bg", "drop:105", "drop:215"); color("attrs.color.fill.content.value", "rgba(240,190,60,1)"); click("elementTree.root.el(nm:Rectangle,ty:rect).title"); click("elementTree.root.el(nm:Ellipse,ty:ellipse).title", undefined, undefined, "meta"); key("g", "meta"); click("elementTree.root.el(nm:Star,ty:path).title")
+crop: clip={"x":0,"y":40,"w":800,"h":560}
+annotate: annotate([{"kind":"dim","target":"elementTree","padding":6,"color":"#fff","fillAlpha":0.75},{"kind":"box","theme":"red","target":"elementTree.header","padding":2,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","target":"elementTree.root.el(nm:Star,ty:path)","padding":1,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","bounds":{"x":7,"y":145,"w":244,"h":96},"padding":1,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","bounds":{"x":197,"y":181,"w":44,"h":24},"padding":2,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"title","theme":"red","halo":"chip","target":"elementTree.header","text":"Search the tree","at":"right","arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","target":"elementTree.root.el(nm:Star,ty:path)","text":"Selected object","at":"right","offset":{"x":110,"y":0},"arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","bounds":{"x":7,"y":145,"w":244,"h":96},"text":"A group, opened","at":"right","offset":{"x":230,"y":-24},"arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","bounds":{"x":197,"y":181,"w":44,"h":24},"text":"Lock · hide","at":"right","offset":{"x":110,"y":60},"arrow":true,"width":2.5,"arrowFill":"accent"}])
+notes: scale 1. RE-SHOT 2026-08-31 with a real document — the previous version showed a single lonely rectangle, which taught the reader nothing about a tree. Now: a star, plus a group holding an ellipse and a rectangle, each with its colour thumbnail. Translucent matte over the panel so the canvas stays visible behind.
+*/}
 */}
 ![The Object Tree with one rectangle under the Svg root](/images/docs/editor/workspace/objects-panel-rectangle.png)
 
@@ -117,15 +118,14 @@ vertical. The **Transform** tool (`T`) adds rotate and scale handles: **Shift** 
 
 All transform fields are animatable — this is where most motion comes from.
 
-{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
-app: svga · viewport: 1440x900 · hideDevUi: true
-show: the Transform section — origin with the nine-dot button, position, rotation, scale with lock, flip / apply / reset buttons
-setup: setup(400, 400); draw a rectangle; click("attrs.transform.expand") if collapsed; collapse Colors with click("attrs.color.collapse") to bring the section higher
-crop: testId="attrs.transform" padding=8 with a white matte over it
-annotate: title chips at "left" in a column: "Origin (nine-dot button)", "Position", "Rotation", "Skew", "Scale (with lock)"; plus "Flip / apply / reset" at "top" on the header buttons
-notes: row test-ids: attrs.transform.origin | .translation | .rotation | .skew | .scale, header buttons attrs.transform.flipH/.flipV/.applyTransform/.reset — verify with list_ids.
+{/* e2e-screenshot
+app: svga · viewport: 1440x900 · hideDevUi: true · date: 2026-08-31
+setup: setup(400, 400, {"fill": "#e0533d", "stroke": "#1b3a63"}); click("toolsPicker.rectangle"); move("canvas.bg", "source:40", "source:60", "canvas.bg", "drop:170", "drop:170"); click("toolsPicker.ellipse"); move("canvas.bg", "source:215", "source:60", "canvas.bg", "drop:350", "drop:170"); color("attrs.color.fill.content.value", "rgba(61,127,214,1)"); click("toolsPicker.star"); move("canvas.bg", "source:105", "source:280", "canvas.bg", "drop:105", "drop:215"); color("attrs.color.fill.content.value", "rgba(240,190,60,1)"); click("elementTree.root.el(nm:Rectangle,ty:rect).title"); click("elementTree.root.el(nm:Ellipse,ty:ellipse).title", undefined, undefined, "meta"); key("g", "meta"); click("elementTree.root.el(nm:Star,ty:path).title"); click("attrs.color.collapse")
+crop: clip={"x":640,"y":52,"w":800,"h":460}
+annotate: annotate([{"kind":"dim","target":"attrs.transform","padding":8,"color":"#fff","fillAlpha":0.8},{"kind":"box","theme":"red","bounds":{"x":1177,"y":263,"w":108,"h":24},"padding":3,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","target":"attrs.transform.origin","padding":2,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","target":"attrs.transform.translation","padding":2,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","target":"attrs.transform.rotation","padding":2,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","target":"attrs.transform.scale","padding":2,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"title","theme":"red","halo":"chip","bounds":{"x":1177,"y":263,"w":108,"h":24},"text":"Flip · apply · reset","at":"top","offset":{"x":-40,"y":0},"arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","target":"attrs.transform.origin","text":"Origin — the anchor point","at":"left","arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","target":"attrs.transform.translation","text":"Position","at":"left","arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","target":"attrs.transform.rotation","text":"Rotation","at":"left","arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","target":"attrs.transform.scale","text":"Scale, with lock","at":"left","arrow":true,"width":2.5,"arrowFill":"accent"}])
+notes: scale 1; translucent matte so the canvas and the sections above stay visible. Uses the shared demo scene (rectangle + ellipse grouped, plus a star) so the picture is not one lonely shape. Rows: attrs.transform.origin / .translation / .rotation / .skew / .scale; header buttons flipH / flipV / applyTransform / reset.
 */}
-<div class="shot small">Screenshot: the Transform section — origin with the nine-dot button, position, rotation, scale with lock, flip / apply / reset buttons</div>
+![The Transform section of the Properties panel: origin, position, rotation, scale with its lock, and the flip / apply / reset buttons](/images/docs/editor/objects/transform-section.png)
 
 ## Duplicate and Copy
 
@@ -140,15 +140,14 @@ A **clone** is a linked copy of one object: an SVG `<use>` that points at the or
 original — shape, colour, animation — and every clone follows. Clones cost almost nothing in
 file size, which is what the [Spray](/docs/object-creation-tools#spray) tool relies on.
 
-{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
-app: svga · viewport: 1440x900 · hideDevUi: true
-show: an original leaf and three clones of it, one selected showing the Reference section
-setup: setup(400, 400); draw a shape; copy/paste-as-clone it three times (find the menu path or shortcut in the source — Object menu) and arrange them; select one clone
-crop: clip covering the canvas shapes plus the Reference section of the Properties panel
-annotate: title chips: "Original", "Clones" on the canvas; "Reference section" on the panel at "left"
-notes: confirm how a clone is created (Object menu / shortcut) before writing setup; the Reference section only appears for a clone.
+{/* e2e-screenshot
+app: svga · viewport: 1440x900 · hideDevUi: true · date: 2026-08-31
+setup: setup(400, 400, {"fill": "#3d7fd6", "stroke": "#1b3a63"}); click("toolsPicker.star"); move("canvas.bg", "source:90", "source:150", "canvas.bg", "drop:90", "drop:110"); click("toolsPicker.select"); click("toolbar.actionsGroup-addSymbol.svgClone"); move("canvas.el(nm:Clone,ty:use)", 110, 0); click("toolbar.actionsGroup-addSymbol.svgClone"); move("canvas.el(nm:Clone_2,ty:use)", 220, 0)
+crop: clip={"x":0,"y":40,"w":1440,"h":500}
+annotate: annotate([{"kind":"box","theme":"red","target":"elementTree.root.el(nm:Star,ty:path)","padding":2,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","bounds":{"x":7,"y":113,"w":244,"h":64},"padding":2,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","target":"attrs.svg","padding":3,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"title","theme":"red","halo":"chip","target":"elementTree.root.el(nm:Star,ty:path)","text":"The original","at":"right","offset":{"x":140,"y":0},"arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","bounds":{"x":7,"y":113,"w":244,"h":64},"text":"Two clones of it","at":"right","offset":{"x":140,"y":-40},"arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","target":"attrs.svg","text":"Reference — which object it clones","at":"left","offset":{"x":-40,"y":0},"arrow":true,"width":2.5,"arrowFill":"accent"}])
+notes: scale 2 (full-width crop). Clone is toolbar.actionsGroup-addSymbol.svgClone — the Edit > Clone MENU submenu will NOT open under a scripted click, so use the toolbar group. A clone is ty:use; its Reference section (attrs.svg) shows Href pointing at the original, plus Retime options.
 */}
-<div class="shot">Screenshot: an original leaf and three clones of it, one selected showing the Reference section</div>
+![One original star and two clones of it, with the Reference section of the selected clone showing what it points at](/images/docs/editor/objects/clones.png)
 
 1. Select the object.
 2. Choose **Edit › Clone › Create Linked Clone** (`⌥ / Alt + D`). The clone appears in place of
@@ -189,15 +188,14 @@ dragging rows in the Object Tree.
 With two or more objects selected, use **Object › Align** / **Object › Distribute**, the toolbar
 buttons, or the **Arrange** section of the Properties panel.
 
-{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
-app: svga · viewport: 1440x900 · hideDevUi: true
-show: the Align / Distribute dropdown in the toolbar with the relative-to options
-setup: setup(400, 400); draw three shapes; select all (key("a","meta")); open the align dropdown: click("toolbar.actionsGroup-align")
-crop: clip around the open dropdown plus a little of the toolbar
-annotate: title chips: "Align buttons", "Relative to (selection / canvas / …)" at "right"
-notes: toolbar.actionsGroup-align exists on the selection tool toolbar; the dropdown contents may have their own ids — list_ids while it is open.
+{/* e2e-screenshot
+app: svga · viewport: 1440x900 · hideDevUi: true · date: 2026-08-31
+setup: setup(400, 400, {"fill": "#e0533d", "stroke": "#1b3a63"}); click("toolsPicker.rectangle"); move("canvas.bg", "source:40", "source:60", "canvas.bg", "drop:170", "drop:170"); click("toolsPicker.ellipse"); move("canvas.bg", "source:215", "source:60", "canvas.bg", "drop:350", "drop:170"); color("attrs.color.fill.content.value", "rgba(61,127,214,1)"); click("toolsPicker.star"); move("canvas.bg", "source:105", "source:280", "canvas.bg", "drop:105", "drop:215"); color("attrs.color.fill.content.value", "rgba(240,190,60,1)"); key("a", "meta"); click("toolbar.actionsGroup-align")
+crop: clip={"x":230,"y":40,"w":780,"h":480}
+annotate: annotate([{"kind":"dim","bounds":{"x":560,"y":120,"w":220,"h":280},"padding":8,"color":"#fff","fillAlpha":0.78},{"kind":"box","theme":"red","target":"toolbar.actionsGroup-align","padding":2,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","bounds":{"x":571,"y":135,"w":197,"h":52},"padding":2,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","bounds":{"x":571,"y":210,"w":197,"h":104},"padding":2,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","bounds":{"x":571,"y":337,"w":104,"h":52},"padding":2,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"title","theme":"red","halo":"chip","target":"toolbar.actionsGroup-align","text":"Align & distribute","at":"right","offset":{"x":30,"y":0},"arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","bounds":{"x":571,"y":135,"w":197,"h":52},"text":"Each object, or all as one","at":"left","arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","bounds":{"x":571,"y":210,"w":197,"h":104},"text":"Relative to page or selection","at":"left","arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","bounds":{"x":571,"y":337,"w":104,"h":52},"text":"Align edges & centres","at":"left","arrow":true,"width":2.5,"arrowFill":"accent"}])
+notes: scale 1. Select everything first (Cmd+A) or the dropdown is disabled. The popup has no test-id of its own — row ids are toolbar.actionsGroup-align.align.alignMode.* / .alignRelativeTo.* / .alignLeft...alignBottom; the popup rectangle is hand-measured. Distribute lives in the neighbouring actionsGroup-distribute button.
 */}
-<div class="shot small">Screenshot: the Align / Distribute dropdown in the toolbar with the relative-to options</div>
+![The Align dropdown open with all objects selected: mode, relative-to options and the align buttons](/images/docs/editor/objects/align-distribute.png)
 
 **Align** — first choose what moves and what it aligns to, then the edge:
 

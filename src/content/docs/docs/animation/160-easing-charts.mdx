@@ -16,15 +16,14 @@ motion feel natural instead of mechanical.
 In Pixodesk SVG Animator every segment between two keyframes has its own **cubic bezier** curve.
 You see it in the **Chart Panel** and shape it in the **Easing Function** panel.
 
-{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
-app: svga · viewport: 1440x900 · hideDevUi: true
-show: the timeline with a segment selected — the mini chart, the Chart Panel curve on the right and the floating Easing Function panel
-setup: setup(400, 400); shape + two Position keyframes; timelineClick("Rectangle.Position", "keyframeRange(0)") to open the easing editor
-crop: clip covering the timeline plus the chart panel on the right
-annotate: title chips: "Mini chart on the segment", "Chart panel", "Easing Function panel"
-notes: timelineClick with keyframeRange(N) is the documented way to open the editor.
+{/* e2e-screenshot
+app: svga · viewport: 1440x900 · hideDevUi: true · date: 2026-08-31
+setup: setup(400, 400, {"fill": "#e0533d", "stroke": "#1b3a63"}); click("toolsPicker.ellipse"); move("canvas.bg", "source:60", "source:60", "canvas.bg", "drop:150", "drop:150"); addKeyframes("Ellipse", "Position", {"0":{"x":105,"y":105},"500":{"x":105,"y":300},"1000":{"x":105,"y":105}}); addKeyframes("Ellipse", "Rotation", {"0":0,"1000":180}); input("timeline.currentFrame(unit:milliseconds).input", "500"); timelineClick("Ellipse.Position", "keyframeRange(0)"); click("timeline.easingEditor.easeInOutCubic"); click("timeline.easingEditor.close")
+crop: clip={"x":0,"y":640,"w":1440,"h":260}
+annotate: annotate([{"kind":"box","theme":"red","bounds":{"x":508,"y":718,"w":412,"h":26},"padding":3,"color":"#08f","stroke":1.5,"fill":"none"},{"kind":"box","theme":"red","target":"timeline.charts","padding":3,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"title","theme":"red","halo":"chip","bounds":{"x":508,"y":718,"w":412,"h":26},"text":"Easing shown on the segment","at":"bottom","offset":{"x":-60,"y":0},"arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","target":"timeline.charts","text":"Value · velocity · acceleration","at":"left","offset":{"x":-30,"y":80},"arrow":true,"width":2.5,"arrowFill":"accent"}])
+notes: scale 2 (full-width crop). An ease must be APPLIED for the mini chart to show a curve — a linear segment draws a flat bar. timelineClick(path, "keyframeRange(N)") opens the easing editor; preset buttons are timeline.easingEditor.<preset>; close it before shooting so the timeline and the Chart panel are both visible.
 */}
-<div class="shot">Screenshot: the timeline with a segment selected — the mini chart, the Chart Panel curve on the right and the floating Easing Function panel</div>
+![The timeline with an eased segment showing its mini chart, and the Chart panel with value, velocity and acceleration curves](/images/docs/editor/animation/easing-charts.png)
 
 ## How Easing Works
 
@@ -83,15 +82,14 @@ The left half of the Easing Function panel is the curve editor:
 You can also drag the handles directly in the Chart Panel, which is handy when comparing the
 segment with other properties' curves.
 
-{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
-app: svga · viewport: 1440x900 · hideDevUi: true
-show: the Easing Function panel — curve editor with handles on the left, preset grid on the right
-setup: same as above, then crop to the floating Easing Function panel alone
-crop: clip over the panel with a white matte around it
-annotate: title chips: "Curve editor with handles", "Preset grid"
-notes: preset button ids are timeline.easingEditor.<preset> — see get_dsl_docs timelineClick notes.
+{/* e2e-screenshot
+app: svga · viewport: 1440x900 · hideDevUi: true · date: 2026-08-31
+setup: setup(400, 400, {"fill": "#e0533d", "stroke": "#1b3a63"}); click("toolsPicker.ellipse"); move("canvas.bg", "source:60", "source:60", "canvas.bg", "drop:150", "drop:150"); addKeyframes("Ellipse", "Position", {"0":{"x":105,"y":105},"500":{"x":105,"y":300},"1000":{"x":105,"y":105}}); timelineClick("Ellipse.Position", "keyframeRange(0)")
+crop: clip={"x":240,"y":100,"w":1040,"h":640}
+annotate: annotate([{"kind":"dim","target":"timeline.easingEditor","padding":8,"color":"#fff","fillAlpha":0.78},{"kind":"box","theme":"red","bounds":{"x":521,"y":180,"w":260,"h":440},"padding":4,"color":"#08f","stroke":1.5,"fill":"none"},{"kind":"box","theme":"red","bounds":{"x":796,"y":224,"w":186,"h":436},"padding":4,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"box","theme":"red","bounds":{"x":525,"y":638,"w":260,"h":34},"padding":3,"color":"#08f","stroke":1.5,"fill":"solid","fillAlpha":0.2},{"kind":"title","theme":"red","halo":"chip","bounds":{"x":521,"y":180,"w":260,"h":440},"text":"Curve editor — drag the handles","at":"left","offset":{"x":0,"y":-150},"arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","bounds":{"x":796,"y":224,"w":186,"h":436},"text":"Preset grid","at":"right","offset":{"x":0,"y":-150},"arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","bounds":{"x":525,"y":638,"w":260,"h":34},"text":"Exact handle values","at":"left","arrow":true,"width":2.5,"arrowFill":"accent"}])
+notes: scale 1.45 (1040-px crop). The panel is timeline.easingEditor; its inner areas (curve editor, preset grid, the four handle fields) have no group ids, so those rectangles are hand-measured — re-measure if the panel is resized. Preset buttons: timeline.easingEditor.linear / .easeInOutCubic / … (full list via list_ids).
 */}
-<div class="shot small">Screenshot: the Easing Function panel — curve editor with handles on the left, preset grid on the right</div>
+![The Easing function panel: the curve editor with its handles, the velocity and acceleration charts, and the preset grid](/images/docs/editor/animation/easing-editor.png)
 
 **Flip Selected Keyframes** (timeline **⋮** menu) reverses selected keyframes in time, so an
 *ease-in* motion becomes its mirror-image *ease-out* — useful for symmetric back-and-forth

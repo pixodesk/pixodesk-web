@@ -13,15 +13,14 @@ A **marker** is a small graphic that a path draws at its nodes — an arrowhead 
 every node, a decoration at the start. Markers are defined once and referenced by any number of
 paths, so a diagram with fifty arrows stores one arrowhead.
 
-{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
-app: svga · viewport: 1440x900 · hideDevUi: true
-show: a curved path with an arrowhead end marker and dot mid markers, the Markers section showing both definitions
-setup: setup(400, 400, {"stroke": "#1b3a63"}); draw a curved open path with a visible stroke width; add an end marker and mid markers via the Markers section
-crop: clip covering the path plus the Markers section
-annotate: title chips: "End marker", "Mid markers" on the canvas; "Marker definitions" on the panel
-notes: find the Markers section ids with list_ids "attrs.**" for a path with a stroke.
+{/* e2e-screenshot
+app: svga · viewport: 1440x900 · hideDevUi: true · date: 2026-09-01
+setup: setup(400, 400, {"stroke": "#1b3a63"}); addBezier("exact", "M 50 300 C 90 190, 130 190, 170 250 C 200 295, 230 140, 270 130 C 305 122, 345 80, 260 100"); click("attrs.color.fill.content.type.noColor"); click("attrs.color.collapse"); input("attrs.stroke.width.input", "4"); click("attrs.transform.collapse"); click("attrs.endMarker.markerPicker"); click("attrs.endMarker.markerPicker.libMarker6"); click("attrs.midMarker.markerPicker"); click("attrs.midMarker.markerPicker.libMarker4")
+crop: clip={"x":400,"y":100,"w":1035,"h":570}
+annotate: annotate([{"kind":"title","theme":"red","halo":"chip","bounds":{"x":735,"y":252,"w":48,"h":28},"text":"End marker","at":"left","offset":{"x":-90,"y":-30},"arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","bounds":{"x":634,"y":448,"w":28,"h":28},"text":"Mid markers","at":"bottom","offset":{"x":0,"y":30},"arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","bounds":{"x":1041,"y":467,"w":383,"h":72},"text":"Marker slots","at":"left","offset":{"x":-60,"y":0},"arrow":true,"width":2.5,"arrowFill":"accent"}],{"scale":1.45})
+notes: scale 1.45 (1035-px crop). THREE things had to be true or the picture shows nothing: (1) the path needs SEVERAL vertices — a 2-point path has no interior nodes, so mid markers never render (first attempt showed none); (2) fill must be NO COLOR — `attrs.color.fill.content.type.noColor`, since a filled path hides its own stroke and markers (setup's {"fill":"none"} does NOT do this, tinycolor cannot parse "none"); (3) stroke width 4 so the markers are big enough to read. The marker library popup's items have NO test-ids until it is OPEN — click the `markerPicker`, then `list_ids` shows `…markerPicker.libMarker0-8` (6 = arrowhead, 4 = dot). The path deliberately ENDS heading back left (last control pulls to 260,100) so the arrowhead does not sit under the bounding-box corner handle — it did in the first take. Collapse Colors and Transform to lift the marker rows above the fold. Chips use hand bounds — canvas marker instances have no test-id of their own.
 */}
-<div class="shot">Screenshot: a curved path with an arrowhead end marker and dot mid markers, the Markers section showing both definitions</div>
+![A curved path with dot markers at its interior nodes and an arrowhead at the end, beside the Start / Mid / End marker slots in the Properties panel](/images/docs/editor/vector/markers.png)
 
 Three positions, each with its own marker (or the same one for all):
 

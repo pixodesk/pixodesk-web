@@ -53,11 +53,11 @@ selected. It is context-sensitive: a rectangle, a text and a symbol instance sho
 sections.
 
 {/* e2e-screenshot
-app: svga · viewport: 1440x900 · hideDevUi: true · date: 2026-08-30
-setup: setup(400, 400); click("toolsPicker.rectangle"); move("canvas.bg", "source:22%", "source:28%", "canvas.bg", "drop:72%", "drop:66%")
-crop: testId="attrs" padding=0
+app: svga · viewport: 1440x900 · hideDevUi: true · date: 2026-09-01
+setup: (see tools-panel in vector/020-canvas.mdx for the two shapes) then click("elementTree.root.el(nm:Rectangle,ty:rect).title"); click("attrs.color.collapse")
+crop: clip={"x":560,"y":44,"w":880,"h":628}
 annotate: none
-notes: a freshly drawn rectangle is selected (Rectangle tool still active)
+notes: WIDER CONTEXT (owner request 2026-09-01) — was a bare testId="attrs" crop. The crop now shows the selected rectangle on the canvas NEXT TO the panel describing it, which is the whole point of the picture. Same crop as the document-properties shot in 015-quick-start so the two read as a pair. Collapse the colour picker first (`attrs.color.collapse`) or the wheel fills the panel.
 */}
 ![The Properties panel for a selected rectangle: Colors, Fill, Stroke, Opacity, Transform…](/images/docs/editor/workspace/properties-panel-rectangle.png)
 

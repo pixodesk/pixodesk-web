@@ -15,15 +15,14 @@ while a trim stroke draws it on. Effects live in the Properties panel next to th
 properties, most of them animate, and they are what the Pixodesk player and the file format
 understand as effects. This page is the catalogue; each row links to the full how-to.
 
-{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
-app: svga · viewport: 1440x900 · hideDevUi: true
-show: one shape with several effects visible in its Properties panel — Repeater, Trim Stroke, a Filter
-setup: setup(400, 400); draw one shape with a stroke; enable the Repeater, tick Trim Stroke, add a filter
-crop: testId="attrs" padding=4 (the whole Properties panel) with the sections expanded
-annotate: title chips at "left" on each section: "Repeater", "Trim Stroke", "Filter"
-notes: NOTE: Trim Stroke and Dash Array are mutually exclusive (SvgStrokeAttrs.tsx) — do not try to show both.
+{/* e2e-screenshot
+app: svga · viewport: 1440x900 · hideDevUi: true · date: 2026-09-01
+setup: setup(400, 400, {"fill": "#3d7de0", "stroke": "#1b3a63"}); click("toolsPicker.star"); move("canvas.bg", "source:130", "source:130", "canvas.bg", "drop:200", "drop:200"); click("toolsPicker.select"); click("attrs.repeater.repeaterEnabled.setOn"); click("attrs.stroke.expand"); click("attrs.stroke.trimStroke.setOn"); click("attrs.color.collapse"); click("attrs.transform.collapse"); input("attrs.stroke.width.input", "6"); input("attrs.stroke.start/End.y.input", "60")
+crop: clip={"x":400,"y":100,"w":1040,"h":570}
+annotate: annotate([{"kind":"title","theme":"red","halo":"chip","bounds":{"x":1057,"y":229,"w":359,"h":110},"text":"Trim Stroke","at":"left","offset":{"x":-70,"y":0},"arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","bounds":{"x":1057,"y":460,"w":359,"h":110},"text":"Repeater","at":"left","offset":{"x":-70,"y":0},"arrow":true,"width":2.5,"arrowFill":"accent"}],{"scale":1.46})
+notes: scale 1.46 (1040-px crop). TWO effects, not three: the Filters gallery thumbnails have NO test-ids even while the popup is open (checked again 2026-09-01 with list_ids — unlike the marker picker, which does expose libMarker0-8), so a filter preset cannot be applied by script; the Filters row also falls below the fold once Stroke and Repeater are expanded. Do not retry without ids. Trim Stroke must be made VISIBLE to be worth showing — stroke width 6 and Start/End end at 60 %, so each outline stops short; at width 1 and 0-100 % the tick in the panel is the only evidence. Repeater is switched on BEFORE collapsing Colors/Transform, and it also switches the active tool to the Repeater (hence the extra canvas handles). Trim Stroke and Dash Array are mutually exclusive (SvgStrokeAttrs.tsx) — do not try to show both.
 */}
-<div class="shot">Screenshot: one shape with several effects visible in its Properties panel — Repeater, Trim Stroke, a Filter</div>
+![A star with Trim Stroke and the Repeater applied: three copies on the canvas, each outline drawn only part-way round, with both effect sections open in the Properties panel](/images/docs/editor/vector/effects-stacked.png)
 
 | Effect | What it does | Where you set it | Animates | In Lottie |
 | :-- | :-- | :-- | :-: | :-: |

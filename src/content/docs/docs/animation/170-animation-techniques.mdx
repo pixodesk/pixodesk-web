@@ -18,15 +18,14 @@ build on [Keyframes](/docs/keyframes) and [Easing](/docs/easing-charts).
 An object that follows a route — a car on a road, a plane on a dotted arc, a dot travelling along
 a chart line.
 
-{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
-app: svga · viewport: 1440x900 · hideDevUi: true
-show: a small plane on a curved dashed path, the Position keyframes in the timeline
-setup: setup(400, 400); addBezier("exact", "<curve>"); draw a small triangle/plane shape; apply Motion Path (toolbar.actionsGroup-motionPath)
-crop: clip covering the canvas plus the Position keyframes in the timeline
-annotate: title chips: "Motion path", "The object follows it", "Position keyframes"
-notes: the motionPath actions group exists on the selection toolbar — confirm the exact command.
+{/* e2e-screenshot
+app: svga · viewport: 1440x900 · hideDevUi: true · date: 2026-09-01
+setup: setup(400, 400, {"fill": "#e0533d", "stroke": "#1b3a63"}); addBezier("exact", "M 40 300 C 110 140, 220 360, 350 120"); click("attrs.color.fill.content.type.noColor"); click("toolsPicker.star"); move("canvas.bg", "source:40", "source:300", "canvas.bg", "drop:75", "drop:335"); click("toolsPicker.select"); click("elementTree.root.el(nm:Path,ty:path).title", undefined, undefined, "meta"); click("toolbar.actionsGroup-motionPath"); click("toolbar.actionsGroup-motionPath.makeAlongPath"); input("timeline.currentFrame(unit:milliseconds).input", "450"); click("elementTree.root.el(nm:Star,ty:path).title"); color("attrs.color.fill.content.value", "rgba(224,83,61,1)"); input("attrs.transform.scale.x.input", "45"); click("attrs.color.collapse")
+crop: clip={"x":0,"y":44,"w":1050,"h":830}
+annotate: annotate([{"kind":"title","theme":"red","halo":"chip","bounds":{"x":520,"y":480,"w":40,"h":40},"text":"The route (a path)","at":"bottom","offset":{"x":0,"y":40},"arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","bounds":{"x":638,"y":421,"w":56,"h":56},"text":"The object follows it","at":"top","offset":{"x":0,"y":-60},"arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","bounds":{"x":500,"y":718,"w":425,"h":26},"text":"Motion Path keyframes","at":"bottom","offset":{"x":0,"y":15},"arrow":true,"width":2.5,"arrowFill":"accent"}],{"scale":1.48})
+notes: scale 1.48 (1050-px crop). The command is `toolbar.actionsGroup-motionPath` → `.makeAlongPath` — the group must be OPENED first, its children only get ids then (same pattern as the marker picker). BOTH objects must be selected: click the mover, then meta-click the route in the tree. The route is drawn FIRST but ends up BELOW the star in the tree, which is what the page's step 1 asks for. The star loses its fill to the earlier `noColor` click (that click lands on whatever is selected), so re-select it afterwards and set the colour back with `color(…, "rgba(224,83,61,1)")`; scale 45 % keeps the traveller small enough that the dashed route stays readable. Playhead parked at 450 ms so the star sits MID-route — at 0 ms it covers the start point and the picture looks static.
 */}
-<div class="shot">Screenshot: a small plane on a curved dashed path, the Position keyframes in the timeline</div>
+![A small red star part-way along a dashed curved route on the canvas, with its Motion Path keyframes in the timeline](/images/docs/editor/animation/motion-path.png)
 
 1. Draw the route with the Pen tool and put it **below** the moving object in the Object Tree.
 2. Select both and click **Move Element Along Path** (toolbar, or the **Path** section).
@@ -67,15 +66,14 @@ notes: shape morphing requires equal node counts — say so in the prose; scrub 
 
 A line that draws itself — signatures, handwriting, diagrams, loaders.
 
-{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
-app: svga · viewport: 1440x900 · hideDevUi: true
-show: a signature path half drawn, the Trim Stroke Effect fields with End at 50 %
-setup: setup(400, 400, {"stroke": "#1b3a63"}); addBezier("exact", "<signature-ish path>"); set stroke width ~8; click("attrs.stroke.expand"); click("attrs.stroke.trimStroke.setOn"); set End to 50%
-crop: clip covering the canvas plus the trim fields
-annotate: title chips: "End = 50 % — half the line is drawn" and "Keyframe End 0 → 100 % to draw it on"
-notes: reuse the recipe from color/trim-stroke.png; the End field is attrs.stroke.start/End.y.input.
+{/* e2e-screenshot
+app: svga · viewport: 1440x900 · hideDevUi: true · date: 2026-09-01
+setup: setup(400, 400, {"stroke": "#1b3a63"}); addBezier("exact", "M 40 250 C 70 150, 100 320, 130 220 C 155 140, 175 260, 200 230 C 230 195, 215 130, 245 150 C 275 170, 250 265, 285 250 C 320 235, 330 180, 355 160"); click("attrs.color.fill.content.type.noColor"); click("attrs.color.collapse"); input("attrs.stroke.width.input", "8"); click("attrs.stroke.expand"); click("attrs.stroke.trimStroke.setOn"); input("attrs.stroke.start/End.y.input", "50"); click("attrs.transform.collapse")
+crop: clip={"x":400,"y":100,"w":1040,"h":570}
+annotate: annotate([{"kind":"title","theme":"red","halo":"chip","bounds":{"x":700,"y":375,"w":24,"h":24},"text":"The line stops half-way","at":"bottom","offset":{"x":0,"y":50},"arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","bounds":{"x":1057,"y":331,"w":359,"h":30},"text":"End = 50%","at":"left","offset":{"x":-70,"y":0},"arrow":true,"width":2.5,"arrowFill":"accent"}],{"scale":1.46})
+notes: scale 1.46 (1040-px crop). Fill MUST be cleared via `attrs.color.fill.content.type.noColor` — a filled squiggle hides its own stroke and the trim is invisible (setup's {"fill":"none"} does not do it, tinycolor cannot parse "none"). Stroke width 8 so the half-drawn line reads at docs size. `Start/End` is ONE row with two fields: `.x.input` = start, `.y.input` = end — the 50 here is the END. The canvas chip uses hand bounds at the point where the stroke stops (no test-id for a partial stroke); re-measure if the path changes. Collapse Colors and Transform so the trim fields sit mid-panel rather than below the fold.
 */}
-<div class="shot">Screenshot: a signature path half drawn, the Trim Stroke Effect fields with End at 50 %</div>
+![A hand-written-looking curve drawn only half-way, with Trim Stroke ticked and Start/End set to 0 % and 50 % in the Properties panel](/images/docs/editor/animation/trim-stroke-draw-on.png)
 
 1. Select the path; make sure it has a **stroke** and no fill (for handwriting, use round caps).
 2. In the **Stroke** section tick **Trim Stroke Effect**.

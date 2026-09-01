@@ -27,15 +27,14 @@ to the start and playback continues. Nothing is saved to the file — it is a vi
 An inner loop repeats a range of keyframes on one layer for as long as the animation lasts, while
 everything else plays normally — without copying keyframes by hand.
 
-{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
-app: svga · viewport: 1440x900 · hideDevUi: true
-show: a Rotation row with two keyframes and the inner-loop region extending after them, the Inner Loop panel open
-setup: setup(400, 400); shape + two Rotation keyframes; enable the inner loop for that row and extend the region
-crop: clip over the timeline row plus the Inner Loop panel
-annotate: title chips: "Keyframes", "Loop region", "Inner Loop settings"
-notes: find how the inner loop is enabled (row context menu or panel) before writing setup.
+{/* e2e-screenshot
+app: svga · viewport: 1440x900 · hideDevUi: true · date: 2026-09-01
+setup: setup(400, 400, {"fill": "#3d7de0", "stroke": "#1b3a63"}); click("toolsPicker.star"); move("canvas.bg", "source:200", "source:200", "canvas.bg", "drop:280", "drop:280"); addKeyframes("Star", "Rotation", {"0":0,"300":120}); click("timeline.animatedAttrs.el(nm:Star,ty:path).Rotation.loop")
+crop: clip={"x":0,"y":440,"w":1085,"h":425}
+annotate: annotate([{"kind":"title","theme":"red","halo":"chip","bounds":{"x":505,"y":720,"w":140,"h":24},"text":"The two keyframes","at":"bottom","offset":{"x":0,"y":15},"arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","bounds":{"x":650,"y":720,"w":355,"h":24},"text":"Repeated to the end","at":"bottom","offset":{"x":0,"y":15},"arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","bounds":{"x":430,"y":520,"w":455,"h":185},"text":"Inner Loop settings","at":"left","offset":{"x":-30,"y":0},"arrow":true,"width":2.5,"arrowFill":"accent"}],{"scale":1.53})
+notes: scale 1.53 (1085-px crop). The inner loop is switched on by the per-row LOOP BUTTON in the timeline layer list — `timeline.animatedAttrs.el(nm:Star,ty:path).Rotation.loop` — which both enables it and opens the Inner Loop panel in one click. Keyframes are put at 0 and 300 ms deliberately: the loop repeats that range across the remaining ~700 ms, so the repeats are visible as extra diamonds; two keyframes spanning the whole duration would loop exactly once and show nothing. Crop is the BOTTOM band of the window (canvas edge + panel + timeline row) — the Inner Loop panel floats over the canvas, so a timeline-only crop would cut it. Both timeline chips use offset y 15: at 60 the second one falls outside the crop.
 */}
-<div class="shot">Screenshot: a Rotation row with two keyframes and the inner-loop region extending after them, the Inner Loop panel open</div>
+![The Inner Loop panel open over the canvas, with the Rotation row below showing the two original keyframes and their repeats continuing to the end of the timeline](/images/docs/editor/animation/inner-loop.png)
 
 ### Add one
 

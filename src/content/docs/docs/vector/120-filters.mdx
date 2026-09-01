@@ -59,13 +59,18 @@ Select a primitive to change its parameters, drag to reorder, and click **+** to
 | **Combiners** | Blend, Composite, Merge, Displacement Map |
 | **Lighting** | Specular Lighting, Diffuse Lighting, Point Light, Spot Light, Distant Light |
 
-{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
+{/* e2e-screenshot-plan  — BLOCKED (re-checked 2026-09-01), needs an app change first
 app: svga · viewport: 1440x900 · hideDevUi: true
 show: the filter editor — three primitives in a chain, one selected with its parameters
-setup: setup(400, 400); draw a shape; add a filter; open the filter editor and build a three-primitive chain; select the middle primitive
+setup: setup(400, 400); draw a shape; click("attrs.svgFilter.addFilter") opens the PRESET gallery — and stops there
 crop: clip covering the editor
 annotate: title chips: "Primitive chain", "Selected primitive", "Its parameters"
-notes: the editor is probably a dialog — matte it or crop tightly; record its bounds if it has no test-id.
+notes: BLOCKER — a filter cannot be applied by script, so the editor can never be reached. `attrs.svgFilter.addFilter`
+  opens the preset gallery, but its 15 thumbnails have NO test-ids even while the popup is OPEN (verified twice with
+  list_ids — 2026-08-31 and again 2026-09-01; contrast the marker picker, which DOES expose `…markerPicker.libMarker0-8`
+  once open, and is why markers could be shot). Until a preset thumbnail carries a `data-test-id` this shot is
+  impossible — ask the owner before adding one. The preset gallery itself is already documented by
+  filter-presets.png above; do not re-shoot that as a substitute for the editor.
 */}
 <div class="shot small">Screenshot: the filter editor — three primitives in a chain, one selected with its parameters</div>
 

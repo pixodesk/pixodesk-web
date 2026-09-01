@@ -124,8 +124,8 @@ while playing continues from the new position.
 **Controlled time:**
 
 ```tsx
-<PixodeskSvgAnimator doc={doc} timeMs={timeMs} />
-<Slider minimumValue={0} maximumValue={2000} value={timeMs} onValueChange={setTimeMs} />
+<PixodeskSvgAnimator doc={doc} time={time} />
+<Slider minimumValue={0} maximumValue={2000} value={time} onValueChange={setTime} />
 ```
 
 ## Props
@@ -138,7 +138,7 @@ while playing continues from the new position.
 | `pause` | `boolean` | pause |
 | `apiRef` | `RefObject<RnAnimatorApi>` | imperative control |
 | `time` | `number` | seek to a fraction 0–1 of the whole timeline |
-| `timeMs` | `number` | seek to ms |
+| `time` | `number` | seek to ms |
 | `duration` · `delay` | `number` | ms overrides |
 | `iterations` | `number \| 'infinite'` | |
 | `fill` | `'forwards' \| 'backwards' \| 'both' \| 'none'` | |
@@ -149,7 +149,7 @@ while playing continues from the new position.
 | `onError` | `(error, componentStack?) => void` | the document could not be compiled or rendered |
 | `fallback` | `(error) => ReactElement \| null` | rendered in place of a failed animation (default: nothing) |
 
-With none of `autoplay` / `play` / `pause` / `time` / `timeMs` set, the first frame renders
+With none of `autoplay` / `play` / `pause` / `progress` / `time` set, the first frame renders
 statically.
 
 ### Differences from the React package

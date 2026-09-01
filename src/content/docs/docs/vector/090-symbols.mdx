@@ -66,13 +66,24 @@ Changes to the definition apply to every instance at once.
    animation as usual.
 3. Click the **`…`** row at the top of the Object Tree to return to the document.
 
-{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
+{/* e2e-screenshot-plan  — BLOCKED (investigated 2026-09-01), needs an app change first
 app: svga · viewport: 1440x900 · hideDevUi: true
 show: Symbol View — the Object Tree with the "…" row at the top and the symbol's content on the canvas
-setup: setup(400, 400); create a symbol; enter Symbol View (double-click an instance, or the tree row — verify)
+setup: SOLVED up to the last step —
+  setup(400, 400, {"fill": "#3d7de0", "stroke": "#1b3a63"}); click("toolsPicker.star"); move("canvas.bg", "source:120", "source:120", "canvas.bg", "drop:180", "drop:180"); click("toolsPicker.select");
+  click("toolbar.actionsGroup-addSymbol"); click("toolbar.actionsGroup-addSymbol.makePrecomp")   // Symbol + first Clone instance
+  click("toolbar.actionsGroup-addSymbol.svgClone"); move("canvas.el(nm:Clone_2,ty:use)", 150, 60) // second instance
+  click("elementTree.blocks.header.title")                                                        // expands the SYMBOLS section
 crop: clip covering the Object Tree plus the canvas
 annotate: title chips: "The … row goes back up" (on the tree row) and "Editing the symbol content" (on the canvas)
-notes: confirm how Symbol View is entered and exited before writing setup.
+notes: BLOCKER — Symbol View cannot be entered by script. Both documented routes end at a control with NO test-id:
+  (1) the symbol THUMBNAIL in the SYMBOLS section (`elementTree.blocks`) — a double-click at an offset does land
+      (the thumbnail highlights and the panel switches to the symbol's own properties: Content W/H, Aspect Ratio)
+      but it does NOT enter Symbol View;
+  (2) the **Edit Symbol** button in the instance's Properties panel (REFERENCE → Href row, `attrs.svg.href`) —
+      offset clicks by px and by % were both tried and neither fires it.
+  Double-clicking the instance ON CANVAS does nothing either. Unblocking needs a `data-test-id` on the Edit Symbol
+  button (or on the symbol thumbnail) in the app — ask the owner before adding one. Do NOT retry with offset clicks.
 */}
 <div class="shot small">Screenshot: Symbol View — the Object Tree with the "…" row at the top and the symbol's content on the canvas</div>
 

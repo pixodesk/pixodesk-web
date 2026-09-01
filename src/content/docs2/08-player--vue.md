@@ -40,13 +40,13 @@ Pick one — they are mutually exclusive, and take precedence in the order liste
 Uses the trigger saved in the document (load / hover / click / scroll into view) and its out
 action. Override with `startOn` / `outAction` / `scrollIntoViewThreshold`.
 
-### 2 · Controlled time (`time` / `timeMs`)
+### 2 · Controlled time (`progress` / `time`)
 
 > **Example:** [`vue/controlled-time`](../examples/docs-examples/src/cases/vue/controlled-time/) — `pnpm example:docs`, then open `#vue/controlled-time`.
 
 ```vue
 <PixodeskSvgAnimator :doc="animation" :time="0.5" />     <!-- fraction of the whole timeline -->
-<PixodeskSvgAnimator :doc="animation" :timeMs="500" />   <!-- absolute ms -->
+<PixodeskSvgAnimator :doc="animation" :time="500" />   <!-- absolute ms -->
 ```
 
 Changing the value seeks the existing animator — nothing is recreated.
@@ -93,7 +93,7 @@ const animator = ref<VueAnimatorApi | null>(null);
 `VueAnimatorApi`: `play()`, `pause()`, `cancel()`, `finish()`, `isPlaying()`,
 `setPlaybackRate(rate)`, `getCurrentTime()`, `setCurrentTime(ms)`.
 
-With none of `autoplay` / `time` / `timeMs` / `play` / `pause` set, the first frame renders
+With none of `autoplay` / `progress` / `time` / `play` / `pause` set, the first frame renders
 statically and the ref is your only control.
 
 ## Props
@@ -105,7 +105,7 @@ statically and the ref is your only control.
 | `play` | `boolean` | play unconditionally |
 | `pause` | `boolean` | pause |
 | `time` | `number` | seek to a fraction 0–1 of the whole timeline (duration × iterations) |
-| `timeMs` | `number` | seek to ms |
+| `time` | `number` | seek to ms |
 | `duration` · `delay` | `number` | ms overrides |
 | `iterations` | `number \| 'infinite'` | |
 | `direction` | `'normal' \| 'reverse' \| 'alternate' \| 'alternate-reverse'` | |

@@ -67,7 +67,7 @@ const api = useRef<ReactAnimatorApi>(null);
 Uses the trigger saved in the document — on load, on hover, on click, when scrolled into view
 — and its out action. Override with `startOn` / `outAction` / `scrollIntoViewThreshold`.
 
-### 3 · Controlled time (`time` / `timeMs`)
+### 3 · Controlled time (`progress` / `time`)
 
 > **Example:** [`react/controlled-time`](../examples/docs-examples/src/cases/react/controlled-time/) — `pnpm example:docs`, then open `#react/controlled-time`.
 
@@ -75,13 +75,13 @@ Render one frame, and scrub by changing the prop. The animator is **not** recrea
 it just seeks.
 
 ```tsx
-const [timeMs, setTimeMs] = useState(0);
+const [time, setTime] = useState(0);
 
-<PixodeskSvgAnimator doc={animation} timeMs={timeMs} />
-<input type="range" min={0} max={2000} value={timeMs} onChange={e => setTimeMs(+e.target.value)} />
+<PixodeskSvgAnimator doc={animation} time={time} />
+<input type="range" min={0} max={2000} value={time} onChange={e => setTime(+e.target.value)} />
 ```
 
-`time` is a fraction 0–1 of the whole timeline (duration × iterations); `timeMs` is absolute.
+`time` is a fraction 0–1 of the whole timeline (duration × iterations); `time` is absolute.
 
 ### 4 · Declarative play / pause
 
@@ -97,7 +97,7 @@ const [pause, setPause] = useState(false);
 `play && !pause` plays; `pause` pauses; `play === false` jumps to the end state; a pause that is
 switched back off resumes.
 
-With none of `apiRef` / `autoplay` / `time` / `timeMs` / `play` / `pause` set, the component
+With none of `apiRef` / `autoplay` / `progress` / `time` / `play` / `pause` set, the component
 renders the first frame statically.
 
 ## Props
@@ -113,7 +113,7 @@ renders the first frame statically.
 | `pause` | `boolean` | pause current playback |
 | `apiRef` | `RefObject<ReactAnimatorApi>` | imperative control |
 | `time` | `number` | seek to a fraction 0–1 of the whole timeline |
-| `timeMs` | `number` | seek to a time in ms |
+| `time` | `number` | seek to a time in ms |
 | **Timing overrides** | | *(each replaces the document's `animator` value)* |
 | `duration` | `number` | ms for one iteration |
 | `delay` | `number` | ms before start (negative = start part-way through) |
@@ -135,7 +135,7 @@ renders the first frame statically.
 | `onStop` | `() => void` | fires alongside **any** halt: pause, cancel, finish, remove |
 
 Swapping `doc` (or `className` / `style` / the control mode) recreates the animator; the
-torn-down instance emits `onCancel`, `onRemove` and `onStop`. Scrubbing `time` / `timeMs` does
+torn-down instance emits `onCancel`, `onRemove` and `onStop`. Scrubbing `progress` / `time` does
 not recreate anything.
 
 ## CSS-flavour SVGs — `PixodeskSvgCssAnimator`

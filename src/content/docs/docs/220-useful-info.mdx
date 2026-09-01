@@ -144,15 +144,14 @@ Open **File › Preferences** (on macOS: the application menu › Preferences).
 | **Hotkeys** | the complete list of shortcuts, grouped by menu — the same as [Keyboard shortcuts](#keyboard-shortcuts) |
 | **Advanced** | **Reveal Logs in Finder / Explorer** — the log files to attach to a bug report (**Help › Report Issue**) |
 
-{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
-app: svga · viewport: 1440x900 · hideDevUi: true
-show: the Preferences dialog, General tab
-setup: setup(400, 400); open Preferences from the menu (Edit or the app menu — verify the path)
-crop: clip over the dialog
-annotate: title chips: "Tabs", "General settings" — keep it light, the page mostly lists settings
-notes: advanced actions are hidden from this dialog except Show Logs — do not annotate what is not there.
+{/* e2e-screenshot
+app: svga · viewport: 1440x900 · hideDevUi: true · date: 2026-09-01
+setup: setup(400, 400); click("menu.file"); click("menu.file.showPreferences")
+crop: clip={"x":170,"y":44,"w":1105,"h":810}
+annotate: annotate([{"kind":"title","theme":"red","halo":"chip","bounds":{"x":236,"y":100,"w":152,"h":112},"text":"Sections","at":"bottom","offset":{"x":0,"y":40},"arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","bounds":{"x":716,"y":166,"w":180,"h":128},"text":"Theme and language","at":"left","offset":{"x":-80,"y":0},"arrow":true,"width":2.5,"arrowFill":"accent"}],{"scale":1.55})
+notes: scale 1.55 (1105-px crop). Preferences is NOT under Edit — it is `menu.file.showPreferences` (WebAppMenuUi routes it through `DevWebAppApi.callElectronAction`, which mounts the real `PreferencesDialog` inside `devPreferencesDialog`; in Electron the same dialog opens from the app menu on macOS). The dialog's inner controls have no test-ids, so both chips use hand-measured bounds. "App version: dev" is what the browser build reports — an Electron build shows a real version number there. The right-hand chip must sit on the LEFT of the settings block: placed right, it runs off the crop edge. Advanced holds only Reveal Logs — do not annotate settings that are not there.
 */}
-<div class="shot small">Screenshot: the Preferences dialog, General tab</div>
+![The Preferences dialog on its General section, with the General / Hotkeys / Advanced list on the left and the app version, appearance and language settings on the right](/images/docs/editor/get-started/preferences-general.png)
 
 ## Importing From Other Apps
 

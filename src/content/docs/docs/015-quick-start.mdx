@@ -80,15 +80,14 @@ settings in [Document properties](#document-properties).
 
 Ten minutes, one bouncing ball, every part of the workflow once. Follow along in a new document.
 
-{/* e2e-screenshot-plan  — fill in, rename to e2e-screenshot, delete the div below
-app: svga · viewport: 1440x900 · hideDevUi: true
-show: the finished bouncing-ball document — ellipse on the canvas, Position row with three keyframes in the timeline
-setup: the quick-start sequence itself: setup(400, 400); ellipse; addKeyframes("Ellipse", "Position", {0, mid, end}) with a bounce
-crop: viewport, or a clip covering canvas + timeline
-annotate: title chips: "The ball", "Position row with three keyframes", "Play button"
-notes: follow the page steps exactly so the picture matches what the reader just did.
+{/* e2e-screenshot
+app: svga · viewport: 1440x900 · hideDevUi: true · date: 2026-09-01
+setup: setup(400, 400, {"fill": "#2a7fff", "stroke": "none"}); click("toolsPicker.ellipse"); move("canvas.bg", "source:160", "source:20", "canvas.bg", "drop:240", "drop:100"); addKeyframes("Ellipse", "Position", {"0":{"x":200,"y":60},"500":{"x":200,"y":320},"1000":{"x":200,"y":60}}); click("toolsPicker.select"); click("attrs.color.collapse"); click("timeline.goToAnimationStart")
+crop: clip={"x":0,"y":44,"w":1050,"h":830}
+annotate: annotate([{"kind":"title","theme":"red","halo":"chip","target":"canvas.el(nm:Ellipse,ty:ellipse)","text":"The ball","at":"left","offset":{"x":-120,"y":0},"arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","bounds":{"x":500,"y":718,"w":425,"h":26},"text":"Position row — three keyframes","at":"bottom","offset":{"x":0,"y":15},"arrow":true,"width":2.5,"arrowFill":"accent"},{"kind":"title","theme":"red","halo":"chip","target":"timeline.togglePlay","text":"Play","at":"bottom","offset":{"x":0,"y":45},"arrow":true,"width":2.5,"arrowFill":"accent"}],{"scale":1.48})
+notes: scale 1.48 (1050-px crop). Follows the page steps: 80-px ball near the top, Position keyframes at 0 / 500 / 1000 ms (down and back). Keeping the ball SELECTED is deliberate — the red motion path down the canvas is what makes the fall readable in a still. Playhead sent back to 0 (`timeline.goToAnimationStart`) so the ball sits at its start position, not mid-fall. Collapse the colour picker (`attrs.color.collapse`) — it is open after a fresh draw and would swallow the Properties panel. `at:"left"` with a NEGATIVE x offset pushes the chip AWAY from the target (a positive one drags it onto the ball); bottom chips use small offsets (15/45) or they fall outside the crop.
 */}
-<div class="shot">Screenshot: the finished bouncing-ball document — ellipse on the canvas, Position row with three keyframes in the timeline</div>
+![The finished bouncing-ball document: the ball and its motion path on the canvas, the Position row with three keyframes in the timeline, and the Play button](/images/docs/editor/get-started/bouncing-ball.png)
 
 ### 1. Create the document
 
@@ -204,11 +203,11 @@ Then put the file on your page: [Add SVG animation to your project](/docs/add-sv
 ## Document Properties
 
 {/* e2e-screenshot
-app: svga · viewport: 1440x900 · hideDevUi: true · date: 2026-08-30
-setup: setup(400, 400)
-crop: testId="attrs" padding=0
+app: svga · viewport: 1440x900 · hideDevUi: true · date: 2026-09-01
+setup: (see tools-panel in vector/020-canvas.mdx for the two shapes) then click("attrs.color.collapse"); click("elementTree.root.title")
+crop: clip={"x":560,"y":44,"w":880,"h":628}
 annotate: none
-notes: empty document; sections Colors, Content, Display, Animation, Timeline & Trigger visible
+notes: WIDER CONTEXT (owner request 2026-09-01) — was a bare testId="attrs" crop, which showed a floating column of controls with nothing to place it. The crop now carries the right half of the canvas and the canvas-side strip, so the panel is visibly attached to the document it describes. Nothing selected ⇒ the header reads "Document" and the sections are Colors, Content, Display, Animation, Timeline & Trigger, Runtime. Collapse the colour picker first (`attrs.color.collapse`) or the wheel fills the panel and hides the section list.
 */}
 ![The Properties panel showing the document properties (nothing selected)](/images/docs/editor/workspace/properties-panel-document.png)
 
